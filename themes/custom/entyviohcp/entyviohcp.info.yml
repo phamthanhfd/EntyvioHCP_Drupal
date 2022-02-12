@@ -1,0 +1,16 @@
+name: EntyvioHCP
+type: theme
+description: 'The official Entyvio® site for healthcare professionals. See Detailed Important Safety Information and full Prescribing Information.'
+core_version_requirement: ^8 || ^9
+libraries:
+  - entyviohcp/global-styling
+base theme: classy
+regions:
+  top-header: 'Top Header'
+  header: 'Header'
+  highlight: 'Highlight'
+  about: "About"
+  services: 'Services'
+  content: 'Content'
+  footer: 'Footer'
+  sticky_bar: 'Sticky Bar'

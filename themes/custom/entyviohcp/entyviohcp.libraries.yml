@@ -1,0 +1,11 @@
+global-styling:
+  version: 1.x
+  js:
+    js/entyviohcp.js: {}
+    includes/bootstrap/js/bt.js: {}
+  css:
+    theme:
+      includes/bootstrap/css/style.css: {}
+      css/style.css: {}
+      css/header.css: {}
+      'http://fonts.cdnfonts.com/css/gotham': { type: external, minified: true }
