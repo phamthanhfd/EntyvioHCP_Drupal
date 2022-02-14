@@ -11,6 +11,19 @@
   padding: 0 30px;
   max-width: 1366px;
 }
+@media(max-width: 1396px){
+  #block-topheaderpushdown .layout, #block-headerlinkslist .layout, #block-entivyomainnavigation{
+    max-width: 100%;
+  }
+  #block-entivyomainnavigation .field--name-field-link-in-main-navigation .field__items{
+    max-width: unset;
+  }
+}
+@media(max-width: 960px){
+  #block-entivyomainnavigation .field--name-field-link-in-main-navigation .field__items a{
+    padding: 15px 17px;
+  }
+}
 #block-topheaderpushdown .layout .layout__region.layout__region--content{
   display: flex;
   margin: 0 auto;

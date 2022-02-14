@@ -37,7 +37,17 @@
 </section>
 <footer aria-label="Site footer" class="footer" id="footer" role="contentinfo">
    <div class="footer_container">
-       {{ page.footer }}
+    <div class="footer-logo">
+       {{ page.footer_logo }}
+    </div>
+    <div>
+      <div>
+       {{ page.footer_menu }}
+      </div>
+      <div>
+       {{ page.footer_content }}
+       </div>
+    </div>
    </div>
 </footer>
 {% if page.sticky-bar %}
