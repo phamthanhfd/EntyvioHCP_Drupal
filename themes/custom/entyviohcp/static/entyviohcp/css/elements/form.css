@@ -1,0 +1,246 @@
+/***********************************/
+/**** **** MATRIX SETTINGS **** ***/
+/*********************************/
+/* Usage: Update matrix gutter HTML: <nav data-matrix=""> <a> <a> SASS: @include matrix_setting([number of matrix], [gutter space], '[child element]');
+ Example: @include matrix_setting(2, 30px, 'div');
+ */
+/************************************************/
+/**** **** TYPEFACE SETTINGS (LOCAL) v2 **** ***/
+/**********************************************/
+/* Usage: $local-font-settings: ( (Gotham, Gotham-Light_Web, '200'), (Gotham, Gotham-Book_Web, '400'), (Gotham, Gotham-Medium_Web, '500') );
+ $font_path : '../_assets/core/fonts';
+ Usage: @include localFontSetup($local-font-settings, $font_path);
+ Usage: @mixin gotham($font) {
+	 font-family: 'Gotham', sans-serif;
+	 @if $font == light {
+		 font-weight: 200;
+	}
+	 @else if $font == book {
+		 font-weight: 400;
+	}
+	 @else if $font == medium {
+		 font-weight: 500;
+	}
+}
+ body {
+	 @include gotham(book);
+}
+ */
+/*****************************/
+/**** **** ANIMATION **** ***/
+/***************************/
+/* Usage: @include animationFrames(fade) {
+	 0% {
+		 opacity: 1;
+	}
+	 50% {
+		 opacity: 0;
+	}
+}
+ */
+/* Usage: @include animation(300ms fade ease-in-out forwards, 100);
+ */
+/**************************************/
+/**** *** PAGE WIDTH SETTINGS **** ***/
+/************************************/
+/**** **** GRID MIXIN **** ***/
+/****************************/
+/**** **** FLEX SET **** ***/
+/**************************/
+/******************************/
+/**** **** RESET LIST **** ***/
+/****************************/
+/*****************************/
+/**** **** FOR PRINT **** ***/
+/***************************/
+/**** **** SETTING UP TYPEFACE **** ***/
+/**** **** PREMADE VIEWPORT **** ***/
+/**** **** CUSTOM VIEWPORT **** ***/
+/* Usage: @include viewport-custom(200, 300) {
+	 h1 {
+		 font-size: 20px;
+	}
+}
+ */
+/**** **** SPECIFIC VIEWPORT **** ***/
+/* ipad specific */
+/* iphone 6/7/8 specific */
+/* ie11 specific */
+/**** **** PRIMARY TYPE **** ***/
+/**** **** TEXT TYPE **** ***/
+/**** **** CLOSE **** ***/
+/* Usage: @include close-icon([width of icon], [height of icon], [icon colour]);
+ Examples: @include close-icon(25px, 3px, brand(primary));
+ @include close-icon($width: 25px);
+ @include close-icon;
+ */
+/* init */
+ [data-icon="close"] span {
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 width: 100%;
+	 height: 100%;
+	 transform: translate(-50%, -50%);
+}
+ [data-icon="close"] span:before, [data-icon="close"] span:after {
+	 content: '';
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 width: 100%;
+	 height: 3px;
+	 transform-origin: 0 0;
+	 background: brand(primary);
+}
+ [data-icon="close"] span:before {
+	 transform: rotate(45deg) translate(-50%, -50%);
+}
+ [data-icon="close"] span:after {
+	 transform: rotate(-45deg) translate(-50%, -50%);
+}
+/**** **** HAMBURGER **** ***/
+/* Usage: @include hamburger([width of icon], [height of icon], [space between lines], [icon colour]);
+ Examples: @include hamburger(25px, 2px, 1, #fff);
+ @include hamburger($width: 25px, $bg: #f00);
+ @include hamburger;
+ */
+/* init */
+ [data-icon="hamburger"] span {
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 width: 100%;
+	 height: 3px;
+	 transform: translate(-50%, -50%);
+	 background: brand(primary);
+}
+ [data-icon="hamburger"] span:before, [data-icon="hamburger"] span:after {
+	 content: '';
+	 position: absolute;
+	 left: 0;
+	 width: 100%;
+	 height: 3px;
+	 transform-origin: 0 0;
+	 background: brand(primary);
+}
+ [data-icon="hamburger"] span:before {
+	 bottom: 7.5px;
+}
+ [data-icon="hamburger"] span:after {
+	 top: 7.5px;
+}
+/**** **** PLUS/MINUS **** ***/
+/* Usage: @plus-minus-icon([width of icon], [height of icon], [icon colour]);
+ Examples: @plus-minus-icon(25px, 2px, #fff);
+ @include plus-minus-icon($width: 13px);
+ @plus-minus-icon;
+ */
+/* init */
+ [data-icon="plus-minus"] span {
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 width: 100%;
+	 height: 100%;
+	 transform: translate(-50%, -50%);
+}
+ [data-icon="plus-minus"] span:before, [data-icon="plus-minus"] span:after {
+	 content: '';
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 width: 100%;
+	 height: 3px;
+	 transform-origin: 0 0;
+	 background: brand(primary);
+}
+ [data-icon="plus-minus"] span:before {
+	 transform: translate(-50%, -50%);
+}
+ [data-icon="plus-minus"] span:after {
+	 transform: rotate(90deg) translate(-50%, -50%);
+}
+/**** **** YELLOW CIRCLE WORD ICONS **** ***/
+/* Usage: <p data-dot>Vs</p> */
+/****************************/
+/**** **** LANGUAGE **** ***/
+/**************************/
+/* en or cn */
+/***********************************/
+/**** **** LAYOUT SETTINGS **** ***/
+/*********************************/
+/*********************************/
+/**** **** GRID SETTINGS **** ***/
+/*******************************/
+/**********************************/
+/**** **** BRAND SETTINGS **** ***/
+/********************************/
+/* form */
+/*********************************/
+/**** **** PATH SETTINGS **** ***/
+/*******************************/
+/*************************************/
+/**** **** TYPEFACE SETTINGS **** ***/
+/***********************************/
+/************************/
+/**** *** FORMS **** ***/
+/**********************/
+/**** **** COMMON **** ***/
+ [data-form] {
+	 position: relative;
+	 display: inline-block;
+	/* styling is done on label */
+}
+ [data-form] input {
+	 position: absolute;
+	 top: 0;
+	 left: 0;
+	 margin: 0;
+	 padding: 0;
+	 width: 100%;
+	 height: 100%;
+	 cursor: pointer;
+	 appearance: none;
+	 -webkit-appearance: none;
+	 z-index: 1;
+}
+ [data-form] label {
+	 position: relative;
+	 display: inline-block;
+	 z-index: 2;
+}
+/**** **** CHECKBOX **** ***/
+/**** **** RADIO **** ***/
+ [data-form="radio"] {
+	 margin-right: 8px;
+}
+ [data-form="radio"] label {
+	 font-family: 'Gotham', sans-serif;
+	 font-weight: 400;
+	 padding: 17px 20px 13px 43px;
+	 border: 1px solid #ededed;
+	 background: brand(light);
+}
+ @else if {
+	 font-size: 13px;
+}
+ [data-form="radio"] label:before {
+	 content: '';
+	 position: absolute;
+	 top: 50%;
+	 left: 12px;
+	 width: 17px;
+	 height: 17px;
+	 transform: translateY(-50%);
+	 border: 1px solid #ededed;
+	 border-radius: 100%;
+	 background: brand(light);
+	 transition: all 300ms ease-in;
+	 will-change: border background;
+}
+ [data-form="radio"] input:checked + label:before {
+	 border: 1px solid brand(primary);
+	 background: brand(primary);
+}
+ 

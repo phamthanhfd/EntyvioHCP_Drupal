@@ -6,6 +6,16 @@ global-styling:
   css:
     theme:
       includes/bootstrap/css/style.css: {}
+      css/core/reset.css: {}
+      css/core/global.css: {}
+      css/core/grid.css: {}
+      css/elements/button.css: {}
+      css/elements/form.css: {}
+      css/elements/icon.css: {}
+      css/elements/table.css: {}
+      css/layout/body.css: {}
       css/style.css: {}
       css/header.css: {}
       'http://fonts.cdnfonts.com/css/gotham': { type: external, minified: true }
+
+

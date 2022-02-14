@@ -1,0 +1,1518 @@
+/***********************************/
+/**** **** MATRIX SETTINGS **** ***/
+/*********************************/
+/* Usage: Update matrix gutter HTML: <nav data-matrix=""> <a> <a> SASS: @include matrix_setting([number of matrix], [gutter space], '[child element]');
+ Example: @include matrix_setting(2, 30px, 'div');
+ */
+/************************************************/
+/**** **** TYPEFACE SETTINGS (LOCAL) v2 **** ***/
+/**********************************************/
+/* Usage: $local-font-settings: ( (Gotham, Gotham-Light_Web, '200'), (Gotham, Gotham-Book_Web, '400'), (Gotham, Gotham-Medium_Web, '500') );
+ $font_path : '../_assets/core/fonts';
+ Usage: @include localFontSetup($local-font-settings, $font_path);
+ Usage: @mixin gotham($font) {
+	 font-family: 'Gotham', sans-serif;
+	 @if $font == light {
+		 font-weight: 200;
+	}
+	 @else if $font == book {
+		 font-weight: 400;
+	}
+	 @else if $font == medium {
+		 font-weight: 500;
+	}
+}
+ body {
+	 @include gotham(book);
+}
+ */
+/*****************************/
+/**** **** ANIMATION **** ***/
+/***************************/
+/* Usage: @include animationFrames(fade) {
+	 0% {
+		 opacity: 1;
+	}
+	 50% {
+		 opacity: 0;
+	}
+}
+ */
+/* Usage: @include animation(300ms fade ease-in-out forwards, 100);
+ */
+/**************************************/
+/**** *** PAGE WIDTH SETTINGS **** ***/
+/************************************/
+/**** **** GRID MIXIN **** ***/
+/****************************/
+/**** **** FLEX SET **** ***/
+/**************************/
+/******************************/
+/**** **** RESET LIST **** ***/
+/****************************/
+/*****************************/
+/**** **** FOR PRINT **** ***/
+/***************************/
+/**** **** SETTING UP TYPEFACE **** ***/
+/**** **** PREMADE VIEWPORT **** ***/
+/**** **** CUSTOM VIEWPORT **** ***/
+/* Usage: @include viewport-custom(200, 300) {
+	 h1 {
+		 font-size: 20px;
+	}
+}
+ */
+/**** **** SPECIFIC VIEWPORT **** ***/
+/* ipad specific */
+/* iphone 6/7/8 specific */
+/* ie11 specific */
+/**** **** PRIMARY TYPE **** ***/
+/**** **** TEXT TYPE **** ***/
+/**** **** CLOSE **** ***/
+/* Usage: @include close-icon([width of icon], [height of icon], [icon colour]);
+ Examples: @include close-icon(25px, 3px, brand(primary));
+ @include close-icon($width: 25px);
+ @include close-icon;
+ */
+/* init */
+ [data-icon="close"] span {
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 width: 100%;
+	 height: 100%;
+	 transform: translate(-50%, -50%);
+}
+ [data-icon="close"] span:before, [data-icon="close"] span:after {
+	 content: '';
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 width: 100%;
+	 height: 3px;
+	 transform-origin: 0 0;
+	 background: brand(primary);
+}
+ [data-icon="close"] span:before {
+	 transform: rotate(45deg) translate(-50%, -50%);
+}
+ [data-icon="close"] span:after {
+	 transform: rotate(-45deg) translate(-50%, -50%);
+}
+/**** **** HAMBURGER **** ***/
+/* Usage: @include hamburger([width of icon], [height of icon], [space between lines], [icon colour]);
+ Examples: @include hamburger(25px, 2px, 1, #fff);
+ @include hamburger($width: 25px, $bg: #f00);
+ @include hamburger;
+ */
+/* init */
+ [data-icon="hamburger"] span {
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 width: 100%;
+	 height: 3px;
+	 transform: translate(-50%, -50%);
+	 background: brand(primary);
+}
+ [data-icon="hamburger"] span:before, [data-icon="hamburger"] span:after {
+	 content: '';
+	 position: absolute;
+	 left: 0;
+	 width: 100%;
+	 height: 3px;
+	 transform-origin: 0 0;
+	 background: brand(primary);
+}
+ [data-icon="hamburger"] span:before {
+	 bottom: 7.5px;
+}
+ [data-icon="hamburger"] span:after {
+	 top: 7.5px;
+}
+/**** **** PLUS/MINUS **** ***/
+/* Usage: @plus-minus-icon([width of icon], [height of icon], [icon colour]);
+ Examples: @plus-minus-icon(25px, 2px, #fff);
+ @include plus-minus-icon($width: 13px);
+ @plus-minus-icon;
+ */
+/* init */
+ [data-icon="plus-minus"] span {
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 width: 100%;
+	 height: 100%;
+	 transform: translate(-50%, -50%);
+}
+ [data-icon="plus-minus"] span:before, [data-icon="plus-minus"] span:after {
+	 content: '';
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 width: 100%;
+	 height: 3px;
+	 transform-origin: 0 0;
+	 background: brand(primary);
+}
+ [data-icon="plus-minus"] span:before {
+	 transform: translate(-50%, -50%);
+}
+ [data-icon="plus-minus"] span:after {
+	 transform: rotate(90deg) translate(-50%, -50%);
+}
+/**** **** YELLOW CIRCLE WORD ICONS **** ***/
+/* Usage: <p data-dot>Vs</p> */
+/****************************/
+/**** **** LANGUAGE **** ***/
+/**************************/
+/* en or cn */
+/***********************************/
+/**** **** LAYOUT SETTINGS **** ***/
+/*********************************/
+/*********************************/
+/**** **** GRID SETTINGS **** ***/
+/*******************************/
+/**********************************/
+/**** **** BRAND SETTINGS **** ***/
+/********************************/
+/* form */
+/*********************************/
+/**** **** PATH SETTINGS **** ***/
+/*******************************/
+/*************************************/
+/**** **** TYPEFACE SETTINGS **** ***/
+/***********************************/
+/***********************************/
+/** ** DOSING & ADMINISTRATION ** **/
+/***********************************/
+ [data-page-id="DosingAdministration"] {
+	/**** **** MOBILE **** ***/
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+	/**** **** DESKTOP **** ***/
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ [data-page-id="DosingAdministration"] h1 {
+	 position: absolute;
+	 top: 44%;
+	 left: 50%;
+	 color: brand(light);
+	 transform: translate(-50%, -50%);
+	 z-index: 1;
+}
+ [data-page-id="DosingAdministration"] .pi-link {
+	 font-weight: 700;
+	 color: brand(primary);
+	 text-decoration: none;
+}
+ [data-page-id="DosingAdministration"] .pi-link:hover {
+	 text-decoration: underline;
+}
+ [data-page-id="DosingAdministration"] #first_section {
+	 background: url(path(background)/purple-gradient.svg) 50% 0 repeat-y;
+}
+ [data-page-id="DosingAdministration"] #first_section .simple-dosing p {
+	 color: brand(light);
+	 margin-bottom: 0;
+}
+ [data-page-id="DosingAdministration"] #second_section > div {
+	 background-color: brand(light);
+}
+ [data-page-id="DosingAdministration"] #third_section {
+	 background: url(path(background)/common-page-bg.svg) 50% top no-repeat;
+}
+ [data-page-id="DosingAdministration"] #third_section .starting-maintaining .flex-container {
+	 background: brand(light);
+}
+ [data-page-id="DosingAdministration"] #third_section .starting-maintaining .flex-container .tile {
+	 border: 1px solid #abadb3;
+	 text-align: center;
+	 background: brand(light);
+}
+ [data-page-id="DosingAdministration"] #third_section .starting-maintaining .flex-container .tile h3 {
+	 font-family: 'Knockout', sans-serif;
+	 font-weight: 400;
+	 color: brand(primary);
+	 padding: 25px;
+	 background: brand(primary_light);
+}
+ @else if {
+	 font-size: 30px;
+}
+ [data-page-id="DosingAdministration"] #third_section .starting-maintaining .flex-container .tile p {
+	 color: #6a6a6a;
+	 font-size: 16px;
+}
+ [data-page-id="DosingAdministration"] #third_section .starting-maintaining .flex-container .tile p.footnote {
+	 font-family: 'Gotham', sans-serif;
+	 font-weight: 400;
+}
+ @else if {
+	 font-size: 12px;
+}
+ [data-page-id="DosingAdministration"] #third_section .starting-maintaining .summary {
+	 font-family: 'Gotham', sans-serif;
+	 font-size: inherit;
+	 font-weight: 700;
+	 padding: 30px 0;
+	 color: brand(light);
+}
+ @else if {
+	 font-size: inheritpx;
+}
+ [data-page-id="DosingAdministration"] #third_section .dosing-administration .container {
+	 background: brand(light);
+}
+ [data-page-id="DosingAdministration"] #third_section .dosing-administration .container h3 {
+	 font-family: 'Knockout', sans-serif;
+	 font-weight: 400;
+	 color: brand(primary);
+}
+ @else if {
+	 font-size: 30px;
+}
+ [data-page-id="DosingAdministration"] #third_section .dosing-administration .container li {
+	 font-family: 'Gotham', sans-serif;
+	 font-weight: 400;
+	 line-height: 20px;
+	 color: brand(dark);
+	 margin-bottom: 0;
+}
+ @else if {
+	 font-size: 16px;
+}
+ [data-page-id="DosingAdministration"] #third_section .dosing-administration .container p {
+	 font-family: 'Gotham', sans-serif;
+	 font-weight: 400;
+	 line-height: 20px;
+	 color: brand(dark);
+	 margin-bottom: 0;
+	 padding: 30px 0 10px;
+}
+ @else if {
+	 font-size: 16px;
+}
+ [data-page-id="DosingAdministration"] #third_section .dosing-video .container {
+	 background: brand(light);
+}
+ [data-page-id="DosingAdministration"] #third_section .dosing-video .container video {
+	 width: 100%;
+	 height: auto;
+}
+ [data-page-id="DosingAdministration"] #third_section .dosing-video .container .disclaimer {
+	 color: brand(dark);
+	 text-align: center;
+	 font-family: 'Gotham', sans-serif;
+	 font-weight: 400;
+	 padding: 20px 0 0;
+	 margin-bottom: 0;
+}
+ @else if {
+	 font-size: 16px;
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-id="DosingAdministration"] #first_section, [data-page-id="DosingAdministration"] #third_section {
+			 background-size: cover;
+		}
+		 [data-page-id="DosingAdministration"] #first_section .simple-dosing {
+			 padding-top: 5px;
+		}
+		 [data-page-id="DosingAdministration"] #first_section h2 {
+			 margin-bottom: 20px;
+		}
+		 [data-page-id="DosingAdministration"] article > div {
+			 padding: 0;
+		}
+		 [data-page-id="DosingAdministration"] article > div p {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 line-height: 20px;
+			 padding-bottom: 25px;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+		 [data-page-id="DosingAdministration"] article > div p sup {
+			 top: -7px;
+			 font-size: 10px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section h2 {
+			 margin: 0;
+			 padding: 40px 0 20px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .starting-maintaining .flex-container {
+			 background: none;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .starting-maintaining .flex-container .tile.tile-1 {
+			 margin-bottom: 30px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .starting-maintaining .flex-container .tile.tile-2 img {
+			 padding-bottom: 0;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .starting-maintaining .flex-container .tile p {
+			 padding: 30px 0 15px;
+			 margin-bottom: 0;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .starting-maintaining .flex-container .tile p.footnote {
+			 padding-top: 20px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .starting-maintaining .flex-container .tile img {
+			 padding-bottom: 30px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .starting-maintaining .summary {
+			 font-size: 16px;
+			 margin-bottom: 0;
+			 padding-bottom: 0;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .container {
+			 padding: 0 20px 20px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .container .image-container img {
+			 width: 60px;
+			 height: auto;
+			 padding-top: 30px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .container .image-container img.administration {
+			 width: 60px;
+			 padding-top: 20px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .container .image-container img.monitoring {
+			 width: 80px;
+			 padding-bottom: 10px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .container .image-container img.therapies {
+			 width: 65px;
+			 padding-bottom: 10px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .container .image-container img.prior {
+			 width: 65px;
+			 padding-bottom: 10px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .container .copy-container {
+			 border-bottom: 2px solid brand(secondary);
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .container .copy-container.no-border {
+			 border-bottom: none;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .container p {
+			 text-align: left;
+			 padding-top: 20px;
+			 padding-bottom: 0;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .container ul {
+			 margin-bottom: 10px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .container li {
+			 padding-top: 5px;
+			 padding-bottom: 10px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .container li sup {
+			 top: -7px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-video .container {
+			 padding: 20px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-id="DosingAdministration"] #first_section, [data-page-id="DosingAdministration"] #third_section {
+			 background-size: cover;
+		}
+		 [data-page-id="DosingAdministration"] #first_section .simple-dosing {
+			 padding-top: 5px;
+		}
+		 [data-page-id="DosingAdministration"] #first_section h2 {
+			 margin-bottom: 20px;
+		}
+		 [data-page-id="DosingAdministration"] article > div {
+			 padding: 0;
+		}
+		 [data-page-id="DosingAdministration"] article > div p {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 line-height: 20px;
+			 padding-bottom: 25px;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+		 [data-page-id="DosingAdministration"] article > div p sup {
+			 top: -7px;
+			 font-size: 10px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section h2 {
+			 margin: 0;
+			 padding: 40px 0 20px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .starting-maintaining .flex-container {
+			 background: none;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .starting-maintaining .flex-container .tile.tile-1 {
+			 margin-bottom: 30px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .starting-maintaining .flex-container .tile.tile-2 img {
+			 padding-bottom: 0;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .starting-maintaining .flex-container .tile p {
+			 padding: 30px 0 15px;
+			 margin-bottom: 0;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .starting-maintaining .flex-container .tile p.footnote {
+			 padding-top: 20px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .starting-maintaining .flex-container .tile img {
+			 padding-bottom: 30px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .starting-maintaining .summary {
+			 font-size: 16px;
+			 margin-bottom: 0;
+			 padding-bottom: 0;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .container {
+			 padding: 0 20px 20px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .container .image-container img {
+			 width: 60px;
+			 height: auto;
+			 padding-top: 30px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .container .image-container img.administration {
+			 width: 60px;
+			 padding-top: 20px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .container .image-container img.monitoring {
+			 width: 80px;
+			 padding-bottom: 10px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .container .image-container img.therapies {
+			 width: 65px;
+			 padding-bottom: 10px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .container .image-container img.prior {
+			 width: 65px;
+			 padding-bottom: 10px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .container .copy-container {
+			 border-bottom: 2px solid brand(secondary);
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .container .copy-container.no-border {
+			 border-bottom: none;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .container p {
+			 text-align: left;
+			 padding-top: 20px;
+			 padding-bottom: 0;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .container ul {
+			 margin-bottom: 10px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .container li {
+			 padding-top: 5px;
+			 padding-bottom: 10px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .container li sup {
+			 top: -7px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-video .container {
+			 padding: 20px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-id="DosingAdministration"] #first_section, [data-page-id="DosingAdministration"] #third_section {
+			 background-size: cover;
+		}
+		 [data-page-id="DosingAdministration"] #first_section .simple-dosing {
+			 padding-top: 5px;
+		}
+		 [data-page-id="DosingAdministration"] #first_section h2 {
+			 margin-bottom: 20px;
+		}
+		 [data-page-id="DosingAdministration"] article > div {
+			 padding: 0;
+		}
+		 [data-page-id="DosingAdministration"] article > div p {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 line-height: 20px;
+			 padding-bottom: 25px;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+		 [data-page-id="DosingAdministration"] article > div p sup {
+			 top: -7px;
+			 font-size: 10px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section h2 {
+			 margin: 0;
+			 padding: 40px 0 20px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .starting-maintaining .flex-container {
+			 background: none;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .starting-maintaining .flex-container .tile.tile-1 {
+			 margin-bottom: 30px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .starting-maintaining .flex-container .tile.tile-2 img {
+			 padding-bottom: 0;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .starting-maintaining .flex-container .tile p {
+			 padding: 30px 0 15px;
+			 margin-bottom: 0;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .starting-maintaining .flex-container .tile p.footnote {
+			 padding-top: 20px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .starting-maintaining .flex-container .tile img {
+			 padding-bottom: 30px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .starting-maintaining .summary {
+			 font-size: 16px;
+			 margin-bottom: 0;
+			 padding-bottom: 0;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .container {
+			 padding: 0 20px 20px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .container .image-container img {
+			 width: 60px;
+			 height: auto;
+			 padding-top: 30px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .container .image-container img.administration {
+			 width: 60px;
+			 padding-top: 20px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .container .image-container img.monitoring {
+			 width: 80px;
+			 padding-bottom: 10px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .container .image-container img.therapies {
+			 width: 65px;
+			 padding-bottom: 10px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .container .image-container img.prior {
+			 width: 65px;
+			 padding-bottom: 10px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .container .copy-container {
+			 border-bottom: 2px solid brand(secondary);
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .container .copy-container.no-border {
+			 border-bottom: none;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .container p {
+			 text-align: left;
+			 padding-top: 20px;
+			 padding-bottom: 0;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .container ul {
+			 margin-bottom: 10px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .container li {
+			 padding-top: 5px;
+			 padding-bottom: 10px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .container li sup {
+			 top: -7px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-video .container {
+			 padding: 20px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-id="DosingAdministration"] #first_section, [data-page-id="DosingAdministration"] #third_section {
+			 background-size: cover;
+		}
+		 [data-page-id="DosingAdministration"] #first_section .simple-dosing {
+			 padding-top: 5px;
+		}
+		 [data-page-id="DosingAdministration"] #first_section h2 {
+			 margin-bottom: 20px;
+		}
+		 [data-page-id="DosingAdministration"] article > div {
+			 padding: 0;
+		}
+		 [data-page-id="DosingAdministration"] article > div p {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 line-height: 20px;
+			 padding-bottom: 25px;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+		 [data-page-id="DosingAdministration"] article > div p sup {
+			 top: -7px;
+			 font-size: 10px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section h2 {
+			 margin: 0;
+			 padding: 40px 0 20px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .starting-maintaining .flex-container {
+			 background: none;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .starting-maintaining .flex-container .tile.tile-1 {
+			 margin-bottom: 30px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .starting-maintaining .flex-container .tile.tile-2 img {
+			 padding-bottom: 0;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .starting-maintaining .flex-container .tile p {
+			 padding: 30px 0 15px;
+			 margin-bottom: 0;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .starting-maintaining .flex-container .tile p.footnote {
+			 padding-top: 20px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .starting-maintaining .flex-container .tile img {
+			 padding-bottom: 30px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .starting-maintaining .summary {
+			 font-size: 16px;
+			 margin-bottom: 0;
+			 padding-bottom: 0;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .container {
+			 padding: 0 20px 20px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .container .image-container img {
+			 width: 60px;
+			 height: auto;
+			 padding-top: 30px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .container .image-container img.administration {
+			 width: 60px;
+			 padding-top: 20px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .container .image-container img.monitoring {
+			 width: 80px;
+			 padding-bottom: 10px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .container .image-container img.therapies {
+			 width: 65px;
+			 padding-bottom: 10px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .container .image-container img.prior {
+			 width: 65px;
+			 padding-bottom: 10px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .container .copy-container {
+			 border-bottom: 2px solid brand(secondary);
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .container .copy-container.no-border {
+			 border-bottom: none;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .container p {
+			 text-align: left;
+			 padding-top: 20px;
+			 padding-bottom: 0;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .container ul {
+			 margin-bottom: 10px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .container li {
+			 padding-top: 5px;
+			 padding-bottom: 10px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .container li sup {
+			 top: -7px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-video .container {
+			 padding: 20px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-id="DosingAdministration"] #first_section, [data-page-id="DosingAdministration"] #third_section {
+			 background-size: cover;
+		}
+		 [data-page-id="DosingAdministration"] #first_section .simple-dosing {
+			 padding-top: 5px;
+		}
+		 [data-page-id="DosingAdministration"] #first_section h2 {
+			 margin-bottom: 20px;
+		}
+		 [data-page-id="DosingAdministration"] article > div {
+			 padding: 0;
+		}
+		 [data-page-id="DosingAdministration"] article > div p {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 line-height: 20px;
+			 padding-bottom: 25px;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+		 [data-page-id="DosingAdministration"] article > div p sup {
+			 top: -7px;
+			 font-size: 10px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section h2 {
+			 margin: 0;
+			 padding: 40px 0 20px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .starting-maintaining .flex-container {
+			 background: none;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .starting-maintaining .flex-container .tile.tile-1 {
+			 margin-bottom: 30px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .starting-maintaining .flex-container .tile.tile-2 img {
+			 padding-bottom: 0;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .starting-maintaining .flex-container .tile p {
+			 padding: 30px 0 15px;
+			 margin-bottom: 0;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .starting-maintaining .flex-container .tile p.footnote {
+			 padding-top: 20px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .starting-maintaining .flex-container .tile img {
+			 padding-bottom: 30px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .starting-maintaining .summary {
+			 font-size: 16px;
+			 margin-bottom: 0;
+			 padding-bottom: 0;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .container {
+			 padding: 0 20px 20px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .container .image-container img {
+			 width: 60px;
+			 height: auto;
+			 padding-top: 30px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .container .image-container img.administration {
+			 width: 60px;
+			 padding-top: 20px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .container .image-container img.monitoring {
+			 width: 80px;
+			 padding-bottom: 10px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .container .image-container img.therapies {
+			 width: 65px;
+			 padding-bottom: 10px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .container .image-container img.prior {
+			 width: 65px;
+			 padding-bottom: 10px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .container .copy-container {
+			 border-bottom: 2px solid brand(secondary);
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .container .copy-container.no-border {
+			 border-bottom: none;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .container p {
+			 text-align: left;
+			 padding-top: 20px;
+			 padding-bottom: 0;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .container ul {
+			 margin-bottom: 10px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .container li {
+			 padding-top: 5px;
+			 padding-bottom: 10px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .container li sup {
+			 top: -7px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-video .container {
+			 padding: 20px;
+		}
+	}
+}
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) {
+	 [data-page-id="DosingAdministration"] #first_section, [data-page-id="DosingAdministration"] #third_section {
+		 background-size: 100% auto;
+	}
+	 [data-page-id="DosingAdministration"] article > div {
+		 padding: 0 50px;
+	}
+	 [data-page-id="DosingAdministration"] article > div p {
+		 font-family: 'Gotham', sans-serif;
+		 font-weight: 700;
+		 padding-bottom: 35px;
+	}
+	 @else if {
+		 font-size: 22px;
+	}
+	 [data-page-id="DosingAdministration"] article > div p sup {
+		 top: -10px;
+		 font-size: 14px;
+	}
+	 [data-page-id="DosingAdministration"] #third_section .starting-maintaining .flex-container {
+		 display: flex;
+		 justify-content: space-between;
+		 padding: 40px;
+	}
+	 [data-page-id="DosingAdministration"] #third_section .starting-maintaining .flex-container .tile-1 {
+		 width: calc(66.67% - 20px);
+	}
+	 [data-page-id="DosingAdministration"] #third_section .starting-maintaining .flex-container .tile-2 {
+		 width: calc(33.33% - 20px);
+	}
+	 [data-page-id="DosingAdministration"] #third_section .starting-maintaining .flex-container p {
+		 padding: 20px 0;
+		 margin-bottom: 0;
+	}
+	 [data-page-id="DosingAdministration"] #third_section .starting-maintaining .flex-container p.footnote {
+		 padding: 0 0 15px;
+	}
+	 [data-page-id="DosingAdministration"] #third_section .starting-maintaining .flex-container img {
+		 padding-bottom: 15px;
+	}
+	 [data-page-id="DosingAdministration"] #third_section .starting-maintaining .summary {
+		 font-size: 22px;
+		 padding-bottom: 20px;
+	}
+	 [data-page-id="DosingAdministration"] #third_section .starting-maintaining .summary sup {
+		 top: -7px;
+	}
+	 [data-page-id="DosingAdministration"] #third_section .dosing-administration .container {
+		 padding: 40px;
+	}
+	 [data-page-id="DosingAdministration"] #third_section .dosing-administration .flex-container {
+		 display: flex;
+		 justify-content: space-between;
+	}
+	 [data-page-id="DosingAdministration"] #third_section .dosing-administration .flex-container.flex-1 {
+		 padding-bottom: 30px;
+	}
+	 [data-page-id="DosingAdministration"] #third_section .dosing-administration .item {
+		 width: calc((100% - 20px) / 2);
+	}
+	 [data-page-id="DosingAdministration"] #third_section .dosing-administration .item .flex-container {
+		 justify-content: flex-start;
+	}
+	 [data-page-id="DosingAdministration"] #third_section .dosing-administration .image-container {
+		 position: relative;
+		 min-width: 100px;
+	}
+	 [data-page-id="DosingAdministration"] #third_section .dosing-administration .image-container img {
+		 height: auto;
+		 position: absolute;
+		 top: -3px;
+	}
+	 [data-page-id="DosingAdministration"] #third_section .dosing-administration .image-container img.administration {
+		 width: 60px;
+		 left: 0px;
+	}
+	 [data-page-id="DosingAdministration"] #third_section .dosing-administration .image-container img.monitoring {
+		 width: 85px;
+		 left: -10px;
+	}
+	 [data-page-id="DosingAdministration"] #third_section .dosing-administration .image-container img.therapies {
+		 width: 70px;
+		 left: 10px;
+	}
+	 [data-page-id="DosingAdministration"] #third_section .dosing-administration .image-container img.prior {
+		 width: 65px;
+		 left: -10px;
+	}
+	 [data-page-id="DosingAdministration"] #third_section .dosing-administration .copy-container {
+		 max-width: 75%;
+	}
+	 [data-page-id="DosingAdministration"] #third_section .dosing-administration .copy-container h3 {
+		 border-bottom: 2px solid brand(secondary);
+		 padding-bottom: 5px;
+	}
+	 [data-page-id="DosingAdministration"] #third_section .dosing-administration .copy-container ul {
+		 padding-top: 5px;
+		 padding-right: 90px;
+	}
+	 [data-page-id="DosingAdministration"] #third_section .dosing-administration .copy-container li {
+		 padding-top: 5px;
+	}
+	 [data-page-id="DosingAdministration"] #third_section .dosing-administration .copy-container li sup {
+		 top: -5px;
+		 font-size: 12px;
+	}
+	 [data-page-id="DosingAdministration"] #third_section .dosing-video .container {
+		 padding: 40px;
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-id="DosingAdministration"] #first_section, [data-page-id="DosingAdministration"] #third_section {
+			 background-size: 100% auto;
+		}
+		 [data-page-id="DosingAdministration"] article > div {
+			 padding: 0 50px;
+		}
+		 [data-page-id="DosingAdministration"] article > div p {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 padding-bottom: 35px;
+		}
+		 @else if {
+			 font-size: 22px;
+		}
+		 [data-page-id="DosingAdministration"] article > div p sup {
+			 top: -10px;
+			 font-size: 14px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .starting-maintaining .flex-container {
+			 display: flex;
+			 justify-content: space-between;
+			 padding: 40px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .starting-maintaining .flex-container .tile-1 {
+			 width: calc(66.67% - 20px);
+		}
+		 [data-page-id="DosingAdministration"] #third_section .starting-maintaining .flex-container .tile-2 {
+			 width: calc(33.33% - 20px);
+		}
+		 [data-page-id="DosingAdministration"] #third_section .starting-maintaining .flex-container p {
+			 padding: 20px 0;
+			 margin-bottom: 0;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .starting-maintaining .flex-container p.footnote {
+			 padding: 0 0 15px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .starting-maintaining .flex-container img {
+			 padding-bottom: 15px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .starting-maintaining .summary {
+			 font-size: 22px;
+			 padding-bottom: 20px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .starting-maintaining .summary sup {
+			 top: -7px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .container {
+			 padding: 40px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .flex-container {
+			 display: flex;
+			 justify-content: space-between;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .flex-container.flex-1 {
+			 padding-bottom: 30px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .item {
+			 width: calc((100% - 20px) / 2);
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .item .flex-container {
+			 justify-content: flex-start;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .image-container {
+			 position: relative;
+			 min-width: 100px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .image-container img {
+			 height: auto;
+			 position: absolute;
+			 top: -3px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .image-container img.administration {
+			 width: 60px;
+			 left: 0px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .image-container img.monitoring {
+			 width: 85px;
+			 left: -10px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .image-container img.therapies {
+			 width: 70px;
+			 left: 10px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .image-container img.prior {
+			 width: 65px;
+			 left: -10px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .copy-container {
+			 max-width: 75%;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .copy-container h3 {
+			 border-bottom: 2px solid brand(secondary);
+			 padding-bottom: 5px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .copy-container ul {
+			 padding-top: 5px;
+			 padding-right: 90px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .copy-container li {
+			 padding-top: 5px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .copy-container li sup {
+			 top: -5px;
+			 font-size: 12px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-video .container {
+			 padding: 40px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-id="DosingAdministration"] #first_section, [data-page-id="DosingAdministration"] #third_section {
+			 background-size: 100% auto;
+		}
+		 [data-page-id="DosingAdministration"] article > div {
+			 padding: 0 50px;
+		}
+		 [data-page-id="DosingAdministration"] article > div p {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 padding-bottom: 35px;
+		}
+		 @else if {
+			 font-size: 22px;
+		}
+		 [data-page-id="DosingAdministration"] article > div p sup {
+			 top: -10px;
+			 font-size: 14px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .starting-maintaining .flex-container {
+			 display: flex;
+			 justify-content: space-between;
+			 padding: 40px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .starting-maintaining .flex-container .tile-1 {
+			 width: calc(66.67% - 20px);
+		}
+		 [data-page-id="DosingAdministration"] #third_section .starting-maintaining .flex-container .tile-2 {
+			 width: calc(33.33% - 20px);
+		}
+		 [data-page-id="DosingAdministration"] #third_section .starting-maintaining .flex-container p {
+			 padding: 20px 0;
+			 margin-bottom: 0;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .starting-maintaining .flex-container p.footnote {
+			 padding: 0 0 15px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .starting-maintaining .flex-container img {
+			 padding-bottom: 15px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .starting-maintaining .summary {
+			 font-size: 22px;
+			 padding-bottom: 20px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .starting-maintaining .summary sup {
+			 top: -7px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .container {
+			 padding: 40px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .flex-container {
+			 display: flex;
+			 justify-content: space-between;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .flex-container.flex-1 {
+			 padding-bottom: 30px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .item {
+			 width: calc((100% - 20px) / 2);
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .item .flex-container {
+			 justify-content: flex-start;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .image-container {
+			 position: relative;
+			 min-width: 100px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .image-container img {
+			 height: auto;
+			 position: absolute;
+			 top: -3px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .image-container img.administration {
+			 width: 60px;
+			 left: 0px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .image-container img.monitoring {
+			 width: 85px;
+			 left: -10px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .image-container img.therapies {
+			 width: 70px;
+			 left: 10px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .image-container img.prior {
+			 width: 65px;
+			 left: -10px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .copy-container {
+			 max-width: 75%;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .copy-container h3 {
+			 border-bottom: 2px solid brand(secondary);
+			 padding-bottom: 5px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .copy-container ul {
+			 padding-top: 5px;
+			 padding-right: 90px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .copy-container li {
+			 padding-top: 5px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .copy-container li sup {
+			 top: -5px;
+			 font-size: 12px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-video .container {
+			 padding: 40px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-id="DosingAdministration"] #first_section, [data-page-id="DosingAdministration"] #third_section {
+			 background-size: 100% auto;
+		}
+		 [data-page-id="DosingAdministration"] article > div {
+			 padding: 0 50px;
+		}
+		 [data-page-id="DosingAdministration"] article > div p {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 padding-bottom: 35px;
+		}
+		 @else if {
+			 font-size: 22px;
+		}
+		 [data-page-id="DosingAdministration"] article > div p sup {
+			 top: -10px;
+			 font-size: 14px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .starting-maintaining .flex-container {
+			 display: flex;
+			 justify-content: space-between;
+			 padding: 40px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .starting-maintaining .flex-container .tile-1 {
+			 width: calc(66.67% - 20px);
+		}
+		 [data-page-id="DosingAdministration"] #third_section .starting-maintaining .flex-container .tile-2 {
+			 width: calc(33.33% - 20px);
+		}
+		 [data-page-id="DosingAdministration"] #third_section .starting-maintaining .flex-container p {
+			 padding: 20px 0;
+			 margin-bottom: 0;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .starting-maintaining .flex-container p.footnote {
+			 padding: 0 0 15px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .starting-maintaining .flex-container img {
+			 padding-bottom: 15px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .starting-maintaining .summary {
+			 font-size: 22px;
+			 padding-bottom: 20px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .starting-maintaining .summary sup {
+			 top: -7px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .container {
+			 padding: 40px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .flex-container {
+			 display: flex;
+			 justify-content: space-between;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .flex-container.flex-1 {
+			 padding-bottom: 30px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .item {
+			 width: calc((100% - 20px) / 2);
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .item .flex-container {
+			 justify-content: flex-start;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .image-container {
+			 position: relative;
+			 min-width: 100px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .image-container img {
+			 height: auto;
+			 position: absolute;
+			 top: -3px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .image-container img.administration {
+			 width: 60px;
+			 left: 0px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .image-container img.monitoring {
+			 width: 85px;
+			 left: -10px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .image-container img.therapies {
+			 width: 70px;
+			 left: 10px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .image-container img.prior {
+			 width: 65px;
+			 left: -10px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .copy-container {
+			 max-width: 75%;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .copy-container h3 {
+			 border-bottom: 2px solid brand(secondary);
+			 padding-bottom: 5px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .copy-container ul {
+			 padding-top: 5px;
+			 padding-right: 90px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .copy-container li {
+			 padding-top: 5px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .copy-container li sup {
+			 top: -5px;
+			 font-size: 12px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-video .container {
+			 padding: 40px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-id="DosingAdministration"] #first_section, [data-page-id="DosingAdministration"] #third_section {
+			 background-size: 100% auto;
+		}
+		 [data-page-id="DosingAdministration"] article > div {
+			 padding: 0 50px;
+		}
+		 [data-page-id="DosingAdministration"] article > div p {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 padding-bottom: 35px;
+		}
+		 @else if {
+			 font-size: 22px;
+		}
+		 [data-page-id="DosingAdministration"] article > div p sup {
+			 top: -10px;
+			 font-size: 14px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .starting-maintaining .flex-container {
+			 display: flex;
+			 justify-content: space-between;
+			 padding: 40px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .starting-maintaining .flex-container .tile-1 {
+			 width: calc(66.67% - 20px);
+		}
+		 [data-page-id="DosingAdministration"] #third_section .starting-maintaining .flex-container .tile-2 {
+			 width: calc(33.33% - 20px);
+		}
+		 [data-page-id="DosingAdministration"] #third_section .starting-maintaining .flex-container p {
+			 padding: 20px 0;
+			 margin-bottom: 0;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .starting-maintaining .flex-container p.footnote {
+			 padding: 0 0 15px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .starting-maintaining .flex-container img {
+			 padding-bottom: 15px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .starting-maintaining .summary {
+			 font-size: 22px;
+			 padding-bottom: 20px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .starting-maintaining .summary sup {
+			 top: -7px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .container {
+			 padding: 40px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .flex-container {
+			 display: flex;
+			 justify-content: space-between;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .flex-container.flex-1 {
+			 padding-bottom: 30px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .item {
+			 width: calc((100% - 20px) / 2);
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .item .flex-container {
+			 justify-content: flex-start;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .image-container {
+			 position: relative;
+			 min-width: 100px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .image-container img {
+			 height: auto;
+			 position: absolute;
+			 top: -3px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .image-container img.administration {
+			 width: 60px;
+			 left: 0px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .image-container img.monitoring {
+			 width: 85px;
+			 left: -10px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .image-container img.therapies {
+			 width: 70px;
+			 left: 10px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .image-container img.prior {
+			 width: 65px;
+			 left: -10px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .copy-container {
+			 max-width: 75%;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .copy-container h3 {
+			 border-bottom: 2px solid brand(secondary);
+			 padding-bottom: 5px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .copy-container ul {
+			 padding-top: 5px;
+			 padding-right: 90px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .copy-container li {
+			 padding-top: 5px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .copy-container li sup {
+			 top: -5px;
+			 font-size: 12px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-video .container {
+			 padding: 40px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-id="DosingAdministration"] #first_section, [data-page-id="DosingAdministration"] #third_section {
+			 background-size: 100% auto;
+		}
+		 [data-page-id="DosingAdministration"] article > div {
+			 padding: 0 50px;
+		}
+		 [data-page-id="DosingAdministration"] article > div p {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 padding-bottom: 35px;
+		}
+		 @else if {
+			 font-size: 22px;
+		}
+		 [data-page-id="DosingAdministration"] article > div p sup {
+			 top: -10px;
+			 font-size: 14px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .starting-maintaining .flex-container {
+			 display: flex;
+			 justify-content: space-between;
+			 padding: 40px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .starting-maintaining .flex-container .tile-1 {
+			 width: calc(66.67% - 20px);
+		}
+		 [data-page-id="DosingAdministration"] #third_section .starting-maintaining .flex-container .tile-2 {
+			 width: calc(33.33% - 20px);
+		}
+		 [data-page-id="DosingAdministration"] #third_section .starting-maintaining .flex-container p {
+			 padding: 20px 0;
+			 margin-bottom: 0;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .starting-maintaining .flex-container p.footnote {
+			 padding: 0 0 15px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .starting-maintaining .flex-container img {
+			 padding-bottom: 15px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .starting-maintaining .summary {
+			 font-size: 22px;
+			 padding-bottom: 20px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .starting-maintaining .summary sup {
+			 top: -7px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .container {
+			 padding: 40px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .flex-container {
+			 display: flex;
+			 justify-content: space-between;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .flex-container.flex-1 {
+			 padding-bottom: 30px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .item {
+			 width: calc((100% - 20px) / 2);
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .item .flex-container {
+			 justify-content: flex-start;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .image-container {
+			 position: relative;
+			 min-width: 100px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .image-container img {
+			 height: auto;
+			 position: absolute;
+			 top: -3px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .image-container img.administration {
+			 width: 60px;
+			 left: 0px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .image-container img.monitoring {
+			 width: 85px;
+			 left: -10px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .image-container img.therapies {
+			 width: 70px;
+			 left: 10px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .image-container img.prior {
+			 width: 65px;
+			 left: -10px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .copy-container {
+			 max-width: 75%;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .copy-container h3 {
+			 border-bottom: 2px solid brand(secondary);
+			 padding-bottom: 5px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .copy-container ul {
+			 padding-top: 5px;
+			 padding-right: 90px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .copy-container li {
+			 padding-top: 5px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-administration .copy-container li sup {
+			 top: -5px;
+			 font-size: 12px;
+		}
+		 [data-page-id="DosingAdministration"] #third_section .dosing-video .container {
+			 padding: 40px;
+		}
+	}
+}
+ 

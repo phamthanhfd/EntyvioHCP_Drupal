@@ -1,0 +1,4980 @@
+/***********************************/
+/**** **** MATRIX SETTINGS **** ***/
+/*********************************/
+/* Usage: Update matrix gutter HTML: <nav data-matrix=""> <a> <a> SASS: @include matrix_setting([number of matrix], [gutter space], '[child element]');
+ Example: @include matrix_setting(2, 30px, 'div');
+ */
+/************************************************/
+/**** **** TYPEFACE SETTINGS (LOCAL) v2 **** ***/
+/**********************************************/
+/* Usage: $local-font-settings: ( (Gotham, Gotham-Light_Web, '200'), (Gotham, Gotham-Book_Web, '400'), (Gotham, Gotham-Medium_Web, '500') );
+ $font_path : '../_assets/core/fonts';
+ Usage: @include localFontSetup($local-font-settings, $font_path);
+ Usage: @mixin gotham($font) {
+	 font-family: 'Gotham', sans-serif;
+	 @if $font == light {
+		 font-weight: 200;
+	}
+	 @else if $font == book {
+		 font-weight: 400;
+	}
+	 @else if $font == medium {
+		 font-weight: 500;
+	}
+}
+ body {
+	 @include gotham(book);
+}
+ */
+/*****************************/
+/**** **** ANIMATION **** ***/
+/***************************/
+/* Usage: @include animationFrames(fade) {
+	 0% {
+		 opacity: 1;
+	}
+	 50% {
+		 opacity: 0;
+	}
+}
+ */
+/* Usage: @include animation(300ms fade ease-in-out forwards, 100);
+ */
+/**************************************/
+/**** *** PAGE WIDTH SETTINGS **** ***/
+/************************************/
+/**** **** GRID MIXIN **** ***/
+/****************************/
+/**** **** FLEX SET **** ***/
+/**************************/
+/******************************/
+/**** **** RESET LIST **** ***/
+/****************************/
+/*****************************/
+/**** **** FOR PRINT **** ***/
+/***************************/
+/**** **** SETTING UP TYPEFACE **** ***/
+/**** **** PREMADE VIEWPORT **** ***/
+/**** **** CUSTOM VIEWPORT **** ***/
+/* Usage: @include viewport-custom(200, 300) {
+	 h1 {
+		 font-size: 20px;
+	}
+}
+ */
+/**** **** SPECIFIC VIEWPORT **** ***/
+/* ipad specific */
+/* iphone 6/7/8 specific */
+/* ie11 specific */
+/**** **** PRIMARY TYPE **** ***/
+/**** **** TEXT TYPE **** ***/
+/**** **** CLOSE **** ***/
+/* Usage: @include close-icon([width of icon], [height of icon], [icon colour]);
+ Examples: @include close-icon(25px, 3px, brand(primary));
+ @include close-icon($width: 25px);
+ @include close-icon;
+ */
+/* init */
+ [data-icon="close"] span {
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 width: 100%;
+	 height: 100%;
+	 transform: translate(-50%, -50%);
+}
+ [data-icon="close"] span:before, [data-icon="close"] span:after {
+	 content: '';
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 width: 100%;
+	 height: 3px;
+	 transform-origin: 0 0;
+	 background: brand(primary);
+}
+ [data-icon="close"] span:before {
+	 transform: rotate(45deg) translate(-50%, -50%);
+}
+ [data-icon="close"] span:after {
+	 transform: rotate(-45deg) translate(-50%, -50%);
+}
+/**** **** HAMBURGER **** ***/
+/* Usage: @include hamburger([width of icon], [height of icon], [space between lines], [icon colour]);
+ Examples: @include hamburger(25px, 2px, 1, #fff);
+ @include hamburger($width: 25px, $bg: #f00);
+ @include hamburger;
+ */
+/* init */
+ [data-icon="hamburger"] span {
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 width: 100%;
+	 height: 3px;
+	 transform: translate(-50%, -50%);
+	 background: brand(primary);
+}
+ [data-icon="hamburger"] span:before, [data-icon="hamburger"] span:after {
+	 content: '';
+	 position: absolute;
+	 left: 0;
+	 width: 100%;
+	 height: 3px;
+	 transform-origin: 0 0;
+	 background: brand(primary);
+}
+ [data-icon="hamburger"] span:before {
+	 bottom: 7.5px;
+}
+ [data-icon="hamburger"] span:after {
+	 top: 7.5px;
+}
+/**** **** PLUS/MINUS **** ***/
+/* Usage: @plus-minus-icon([width of icon], [height of icon], [icon colour]);
+ Examples: @plus-minus-icon(25px, 2px, #fff);
+ @include plus-minus-icon($width: 13px);
+ @plus-minus-icon;
+ */
+/* init */
+ [data-icon="plus-minus"] span {
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 width: 100%;
+	 height: 100%;
+	 transform: translate(-50%, -50%);
+}
+ [data-icon="plus-minus"] span:before, [data-icon="plus-minus"] span:after {
+	 content: '';
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 width: 100%;
+	 height: 3px;
+	 transform-origin: 0 0;
+	 background: brand(primary);
+}
+ [data-icon="plus-minus"] span:before {
+	 transform: translate(-50%, -50%);
+}
+ [data-icon="plus-minus"] span:after {
+	 transform: rotate(90deg) translate(-50%, -50%);
+}
+/**** **** YELLOW CIRCLE WORD ICONS **** ***/
+/* Usage: <p data-dot>Vs</p> */
+/****************************/
+/**** **** LANGUAGE **** ***/
+/**************************/
+/* en or cn */
+/***********************************/
+/**** **** LAYOUT SETTINGS **** ***/
+/*********************************/
+/*********************************/
+/**** **** GRID SETTINGS **** ***/
+/*******************************/
+/**********************************/
+/**** **** BRAND SETTINGS **** ***/
+/********************************/
+/* form */
+/*********************************/
+/**** **** PATH SETTINGS **** ***/
+/*******************************/
+/*************************************/
+/**** **** TYPEFACE SETTINGS **** ***/
+/***********************************/
+/***********************************/
+/**** ***** SAFETY PROFILE ***** ***/
+/***********************************/
+ [data-page-category="AccessSupport"] #body {
+	 background: brand(light);
+}
+ [data-page-category="AccessSupport"] h2.primary {
+	 color: brand(primary);
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-category="AccessSupport"] h2.primary {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 24px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-category="AccessSupport"] h2.primary {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 24px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-category="AccessSupport"] h2.primary {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 24px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-category="AccessSupport"] h2.primary {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 24px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-category="AccessSupport"] h2.primary {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 24px;
+		}
+	}
+}
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) {
+	 [data-page-category="AccessSupport"] h2.primary {
+		 font-family: 'Gotham', sans-serif;
+		 font-weight: 700;
+	}
+	 @else if {
+		 font-size: 30px;
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-category="AccessSupport"] h2.primary {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 30px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-category="AccessSupport"] h2.primary {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 30px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-category="AccessSupport"] h2.primary {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 30px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-category="AccessSupport"] h2.primary {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 30px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-category="AccessSupport"] h2.primary {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 30px;
+		}
+	}
+}
+ [data-page-category="AccessSupport"] h2.teritary {
+	 position: relative;
+	 color: brand(teritary);
+	 text-transform: uppercase;
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-category="AccessSupport"] h2.teritary {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 22px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-category="AccessSupport"] h2.teritary {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 22px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-category="AccessSupport"] h2.teritary {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 22px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-category="AccessSupport"] h2.teritary {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 22px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-category="AccessSupport"] h2.teritary {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 22px;
+		}
+	}
+}
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) {
+	 [data-page-category="AccessSupport"] h2.teritary {
+		 font-family: 'Gotham', sans-serif;
+		 font-weight: 700;
+	}
+	 @else if {
+		 font-size: 32px;
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-category="AccessSupport"] h2.teritary {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 32px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-category="AccessSupport"] h2.teritary {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 32px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-category="AccessSupport"] h2.teritary {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 32px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-category="AccessSupport"] h2.teritary {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 32px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-category="AccessSupport"] h2.teritary {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 32px;
+		}
+	}
+}
+ [data-page-category="AccessSupport"] .btn.btn-secondary:not(.back-to-top) {
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-category="AccessSupport"] .btn.btn-secondary:not(.back-to-top) {
+			 margin-bottom: 16px;
+			 padding: 15px;
+			 font-size: 16px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-category="AccessSupport"] .btn.btn-secondary:not(.back-to-top) {
+			 margin-bottom: 16px;
+			 padding: 15px;
+			 font-size: 16px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-category="AccessSupport"] .btn.btn-secondary:not(.back-to-top) {
+			 margin-bottom: 16px;
+			 padding: 15px;
+			 font-size: 16px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-category="AccessSupport"] .btn.btn-secondary:not(.back-to-top) {
+			 margin-bottom: 16px;
+			 padding: 15px;
+			 font-size: 16px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-category="AccessSupport"] .btn.btn-secondary:not(.back-to-top) {
+			 margin-bottom: 16px;
+			 padding: 15px;
+			 font-size: 16px;
+		}
+	}
+}
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) {
+	 [data-page-category="AccessSupport"] .btn.btn-secondary:not(.back-to-top) {
+		 padding: 20px;
+		 font-size: 18px;
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-category="AccessSupport"] .btn.btn-secondary:not(.back-to-top) {
+			 padding: 20px;
+			 font-size: 18px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-category="AccessSupport"] .btn.btn-secondary:not(.back-to-top) {
+			 padding: 20px;
+			 font-size: 18px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-category="AccessSupport"] .btn.btn-secondary:not(.back-to-top) {
+			 padding: 20px;
+			 font-size: 18px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-category="AccessSupport"] .btn.btn-secondary:not(.back-to-top) {
+			 padding: 20px;
+			 font-size: 18px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-category="AccessSupport"] .btn.btn-secondary:not(.back-to-top) {
+			 padding: 20px;
+			 font-size: 18px;
+		}
+	}
+}
+ [data-page-category="AccessSupport"] #indication_bar {
+	 top: -46px;
+}
+ [data-page-category="AccessSupport"] .navigation-wrapper {
+	 position: relative;
+	 margin-bottom: 30px;
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-category="AccessSupport"] .navigation-wrapper {
+			 padding: 63px 0 23px 0;
+			 background: url(path(background)/mobile-entyvioconnect-bg.svg) 50% top repeat-y;
+			 background-size: cover;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-category="AccessSupport"] .navigation-wrapper {
+			 padding: 63px 0 23px 0;
+			 background: url(path(background)/mobile-entyvioconnect-bg.svg) 50% top repeat-y;
+			 background-size: cover;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-category="AccessSupport"] .navigation-wrapper {
+			 padding: 63px 0 23px 0;
+			 background: url(path(background)/mobile-entyvioconnect-bg.svg) 50% top repeat-y;
+			 background-size: cover;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-category="AccessSupport"] .navigation-wrapper {
+			 padding: 63px 0 23px 0;
+			 background: url(path(background)/mobile-entyvioconnect-bg.svg) 50% top repeat-y;
+			 background-size: cover;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-category="AccessSupport"] .navigation-wrapper {
+			 padding: 63px 0 23px 0;
+			 background: url(path(background)/mobile-entyvioconnect-bg.svg) 50% top repeat-y;
+			 background-size: cover;
+		}
+	}
+}
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) {
+	 [data-page-category="AccessSupport"] .navigation-wrapper {
+		 top: -43px;
+		 padding: calc(30px + 63px) 0 23px 0;
+		 background: url(path(background)/desktop-entyvioconnect-bg.svg) 50% top repeat-y;
+		 background-size: 100% auto;
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-category="AccessSupport"] .navigation-wrapper {
+			 top: -43px;
+			 padding: calc(30px + 63px) 0 23px 0;
+			 background: url(path(background)/desktop-entyvioconnect-bg.svg) 50% top repeat-y;
+			 background-size: 100% auto;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-category="AccessSupport"] .navigation-wrapper {
+			 top: -43px;
+			 padding: calc(30px + 63px) 0 23px 0;
+			 background: url(path(background)/desktop-entyvioconnect-bg.svg) 50% top repeat-y;
+			 background-size: 100% auto;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-category="AccessSupport"] .navigation-wrapper {
+			 top: -43px;
+			 padding: calc(30px + 63px) 0 23px 0;
+			 background: url(path(background)/desktop-entyvioconnect-bg.svg) 50% top repeat-y;
+			 background-size: 100% auto;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-category="AccessSupport"] .navigation-wrapper {
+			 top: -43px;
+			 padding: calc(30px + 63px) 0 23px 0;
+			 background: url(path(background)/desktop-entyvioconnect-bg.svg) 50% top repeat-y;
+			 background-size: 100% auto;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-category="AccessSupport"] .navigation-wrapper {
+			 top: -43px;
+			 padding: calc(30px + 63px) 0 23px 0;
+			 background: url(path(background)/desktop-entyvioconnect-bg.svg) 50% top repeat-y;
+			 background-size: 100% auto;
+		}
+	}
+}
+ [data-page-category="AccessSupport"] .navigation-wrapper > section {
+	 margin: auto;
+	 width: 100%;
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-category="AccessSupport"] .navigation-wrapper > section {
+			 padding: 0 page-gutter(mobile);
+			 max-width: max-page-width(mobile);
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-category="AccessSupport"] .navigation-wrapper > section {
+			 padding: 0 page-gutter(mobile);
+			 max-width: max-page-width(mobile);
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-category="AccessSupport"] .navigation-wrapper > section {
+			 padding: 0 page-gutter(mobile);
+			 max-width: max-page-width(mobile);
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-category="AccessSupport"] .navigation-wrapper > section {
+			 padding: 0 page-gutter(mobile);
+			 max-width: max-page-width(mobile);
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-category="AccessSupport"] .navigation-wrapper > section {
+			 padding: 0 page-gutter(mobile);
+			 max-width: max-page-width(mobile);
+		}
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-category="AccessSupport"] .navigation-wrapper > section {
+			 padding: 0 90px;
+			 max-width: max-page-width(laptop);
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-category="AccessSupport"] .navigation-wrapper > section {
+			 padding: 0 90px;
+			 max-width: max-page-width(laptop);
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-category="AccessSupport"] .navigation-wrapper > section {
+			 padding: 0 90px;
+			 max-width: max-page-width(laptop);
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-category="AccessSupport"] .navigation-wrapper > section {
+			 padding: 0 90px;
+			 max-width: max-page-width(laptop);
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-category="AccessSupport"] .navigation-wrapper > section {
+			 padding: 0 90px;
+			 max-width: max-page-width(laptop);
+		}
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-category="AccessSupport"] .navigation-wrapper > section {
+			 padding: 0 90px;
+			 max-width: max-page-width(desktop);
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-category="AccessSupport"] .navigation-wrapper > section {
+			 padding: 0 90px;
+			 max-width: max-page-width(desktop);
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-category="AccessSupport"] .navigation-wrapper > section {
+			 padding: 0 90px;
+			 max-width: max-page-width(desktop);
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-category="AccessSupport"] .navigation-wrapper > section {
+			 padding: 0 90px;
+			 max-width: max-page-width(desktop);
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-category="AccessSupport"] .navigation-wrapper > section {
+			 padding: 0 90px;
+			 max-width: max-page-width(desktop);
+		}
+	}
+}
+ [data-page-category="AccessSupport"] .navigation-wrapper h2 {
+	 color: brand(light);
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-category="AccessSupport"] .navigation-wrapper h2 {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 500;
+			 margin-bottom: 24px;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-category="AccessSupport"] .navigation-wrapper h2 {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 500;
+			 margin-bottom: 24px;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-category="AccessSupport"] .navigation-wrapper h2 {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 500;
+			 margin-bottom: 24px;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-category="AccessSupport"] .navigation-wrapper h2 {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 500;
+			 margin-bottom: 24px;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-category="AccessSupport"] .navigation-wrapper h2 {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 500;
+			 margin-bottom: 24px;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+	}
+}
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) {
+	 [data-page-category="AccessSupport"] .navigation-wrapper h2 {
+		 font-family: 'Gotham', sans-serif;
+		 font-weight: 500;
+		 margin-bottom: 30px;
+	}
+	 @else if {
+		 font-size: 24px;
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-category="AccessSupport"] .navigation-wrapper h2 {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 500;
+			 margin-bottom: 30px;
+		}
+		 @else if {
+			 font-size: 24px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-category="AccessSupport"] .navigation-wrapper h2 {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 500;
+			 margin-bottom: 30px;
+		}
+		 @else if {
+			 font-size: 24px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-category="AccessSupport"] .navigation-wrapper h2 {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 500;
+			 margin-bottom: 30px;
+		}
+		 @else if {
+			 font-size: 24px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-category="AccessSupport"] .navigation-wrapper h2 {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 500;
+			 margin-bottom: 30px;
+		}
+		 @else if {
+			 font-size: 24px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-category="AccessSupport"] .navigation-wrapper h2 {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 500;
+			 margin-bottom: 30px;
+		}
+		 @else if {
+			 font-size: 24px;
+		}
+	}
+}
+ [data-page-category="AccessSupport"] .navigation-wrapper h2 strong {
+	 display: block;
+	 text-transform: uppercase;
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-category="AccessSupport"] .navigation-wrapper h2 strong {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 margin-top: 35px;
+		}
+		 @else if {
+			 font-size: 22px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-category="AccessSupport"] .navigation-wrapper h2 strong {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 margin-top: 35px;
+		}
+		 @else if {
+			 font-size: 22px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-category="AccessSupport"] .navigation-wrapper h2 strong {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 margin-top: 35px;
+		}
+		 @else if {
+			 font-size: 22px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-category="AccessSupport"] .navigation-wrapper h2 strong {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 margin-top: 35px;
+		}
+		 @else if {
+			 font-size: 22px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-category="AccessSupport"] .navigation-wrapper h2 strong {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 margin-top: 35px;
+		}
+		 @else if {
+			 font-size: 22px;
+		}
+	}
+}
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) {
+	 [data-page-category="AccessSupport"] .navigation-wrapper h2 strong {
+		 font-family: 'Gotham', sans-serif;
+		 font-weight: 700;
+		 margin-top: 35px;
+	}
+	 @else if {
+		 font-size: 43px;
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-category="AccessSupport"] .navigation-wrapper h2 strong {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 margin-top: 35px;
+		}
+		 @else if {
+			 font-size: 43px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-category="AccessSupport"] .navigation-wrapper h2 strong {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 margin-top: 35px;
+		}
+		 @else if {
+			 font-size: 43px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-category="AccessSupport"] .navigation-wrapper h2 strong {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 margin-top: 35px;
+		}
+		 @else if {
+			 font-size: 43px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-category="AccessSupport"] .navigation-wrapper h2 strong {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 margin-top: 35px;
+		}
+		 @else if {
+			 font-size: 43px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-category="AccessSupport"] .navigation-wrapper h2 strong {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 margin-top: 35px;
+		}
+		 @else if {
+			 font-size: 43px;
+		}
+	}
+}
+ [data-page-category="AccessSupport"] .navigation-wrapper .navigation-temp {
+	 display: flex;
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-category="AccessSupport"] .navigation-wrapper .navigation-temp {
+			 flex-wrap: wrap;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-category="AccessSupport"] .navigation-wrapper .navigation-temp {
+			 flex-wrap: wrap;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-category="AccessSupport"] .navigation-wrapper .navigation-temp {
+			 flex-wrap: wrap;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-category="AccessSupport"] .navigation-wrapper .navigation-temp {
+			 flex-wrap: wrap;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-category="AccessSupport"] .navigation-wrapper .navigation-temp {
+			 flex-wrap: wrap;
+		}
+	}
+}
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) {
+	 [data-page-category="AccessSupport"] .navigation-wrapper .navigation-temp {
+		 justify-content: space-between;
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-category="AccessSupport"] .navigation-wrapper .navigation-temp {
+			 justify-content: space-between;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-category="AccessSupport"] .navigation-wrapper .navigation-temp {
+			 justify-content: space-between;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-category="AccessSupport"] .navigation-wrapper .navigation-temp {
+			 justify-content: space-between;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-category="AccessSupport"] .navigation-wrapper .navigation-temp {
+			 justify-content: space-between;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-category="AccessSupport"] .navigation-wrapper .navigation-temp {
+			 justify-content: space-between;
+		}
+	}
+}
+ [data-page-category="AccessSupport"] .navigation-wrapper .navigation-temp .btn-secondary {
+	 text-align: center;
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-category="AccessSupport"] .navigation-wrapper .navigation-temp .btn-secondary {
+			 flex: 0 0 100%;
+			 max-width: 100%;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-category="AccessSupport"] .navigation-wrapper .navigation-temp .btn-secondary {
+			 flex: 0 0 100%;
+			 max-width: 100%;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-category="AccessSupport"] .navigation-wrapper .navigation-temp .btn-secondary {
+			 flex: 0 0 100%;
+			 max-width: 100%;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-category="AccessSupport"] .navigation-wrapper .navigation-temp .btn-secondary {
+			 flex: 0 0 100%;
+			 max-width: 100%;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-category="AccessSupport"] .navigation-wrapper .navigation-temp .btn-secondary {
+			 flex: 0 0 100%;
+			 max-width: 100%;
+		}
+	}
+}
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) {
+	 [data-page-category="AccessSupport"] .navigation-wrapper .navigation-temp .btn-secondary {
+		 flex: 0 0 calc(25% - 25px);
+		 max-width: calc(25% - 25px);
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-category="AccessSupport"] .navigation-wrapper .navigation-temp .btn-secondary {
+			 flex: 0 0 calc(25% - 25px);
+			 max-width: calc(25% - 25px);
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-category="AccessSupport"] .navigation-wrapper .navigation-temp .btn-secondary {
+			 flex: 0 0 calc(25% - 25px);
+			 max-width: calc(25% - 25px);
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-category="AccessSupport"] .navigation-wrapper .navigation-temp .btn-secondary {
+			 flex: 0 0 calc(25% - 25px);
+			 max-width: calc(25% - 25px);
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-category="AccessSupport"] .navigation-wrapper .navigation-temp .btn-secondary {
+			 flex: 0 0 calc(25% - 25px);
+			 max-width: calc(25% - 25px);
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-category="AccessSupport"] .navigation-wrapper .navigation-temp .btn-secondary {
+			 flex: 0 0 calc(25% - 25px);
+			 max-width: calc(25% - 25px);
+		}
+	}
+}
+ [data-page-category="AccessSupport"] .navigation-wrapper .navigation-temp .btn-secondary.selected {
+	 background-color: brand(primary);
+	 color: white;
+}
+ [data-page-category="AccessSupport"] .navigation-wrapper .subheading p {
+	 color: brand(light);
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-category="AccessSupport"] .navigation-wrapper .subheading p {
+			 margin-top: 24px;
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-category="AccessSupport"] .navigation-wrapper .subheading p {
+			 margin-top: 24px;
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-category="AccessSupport"] .navigation-wrapper .subheading p {
+			 margin-top: 24px;
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-category="AccessSupport"] .navigation-wrapper .subheading p {
+			 margin-top: 24px;
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-category="AccessSupport"] .navigation-wrapper .subheading p {
+			 margin-top: 24px;
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+	}
+}
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) {
+	 [data-page-category="AccessSupport"] .navigation-wrapper .subheading p {
+		 margin-top: 40px;
+		 font-family: 'Gotham', sans-serif;
+		 font-weight: 700;
+	}
+	 @else if {
+		 font-size: 22px;
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-category="AccessSupport"] .navigation-wrapper .subheading p {
+			 margin-top: 40px;
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 22px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-category="AccessSupport"] .navigation-wrapper .subheading p {
+			 margin-top: 40px;
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 22px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-category="AccessSupport"] .navigation-wrapper .subheading p {
+			 margin-top: 40px;
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 22px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-category="AccessSupport"] .navigation-wrapper .subheading p {
+			 margin-top: 40px;
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 22px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-category="AccessSupport"] .navigation-wrapper .subheading p {
+			 margin-top: 40px;
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 22px;
+		}
+	}
+}
+ [data-page-category="AccessSupport"] .navigation-wrapper .offer-support-link {
+	 position: relative;
+	 color: brand(light);
+	 text-decoration: none;
+}
+ [data-page-category="AccessSupport"] .navigation-wrapper .offer-support-link:after {
+	 content: '';
+	 position: relative;
+	 bottom: -2px;
+	 padding-left: 18px;
+	 width: 17px;
+	 height: 17px;
+	 display: inline-block;
+	 background: url(path(icon)/ec-chevron-right.svg) 50% top repeat-y;
+	 background-size: auto 100%;
+}
+ [data-page-category="AccessSupport"] .navigation-wrapper .offer-support-link:hover {
+	 text-decoration: underline;
+}
+ [data-page-category="AccessSupport"] #first_section > div.section {
+	 margin: auto;
+	 width: 100%;
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-category="AccessSupport"] #first_section > div.section {
+			 padding: 0 page-gutter(mobile);
+			 max-width: max-page-width(mobile);
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-category="AccessSupport"] #first_section > div.section {
+			 padding: 0 page-gutter(mobile);
+			 max-width: max-page-width(mobile);
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-category="AccessSupport"] #first_section > div.section {
+			 padding: 0 page-gutter(mobile);
+			 max-width: max-page-width(mobile);
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-category="AccessSupport"] #first_section > div.section {
+			 padding: 0 page-gutter(mobile);
+			 max-width: max-page-width(mobile);
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-category="AccessSupport"] #first_section > div.section {
+			 padding: 0 page-gutter(mobile);
+			 max-width: max-page-width(mobile);
+		}
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-category="AccessSupport"] #first_section > div.section {
+			 padding: 0 90px;
+			 max-width: max-page-width(laptop);
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-category="AccessSupport"] #first_section > div.section {
+			 padding: 0 90px;
+			 max-width: max-page-width(laptop);
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-category="AccessSupport"] #first_section > div.section {
+			 padding: 0 90px;
+			 max-width: max-page-width(laptop);
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-category="AccessSupport"] #first_section > div.section {
+			 padding: 0 90px;
+			 max-width: max-page-width(laptop);
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-category="AccessSupport"] #first_section > div.section {
+			 padding: 0 90px;
+			 max-width: max-page-width(laptop);
+		}
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-category="AccessSupport"] #first_section > div.section {
+			 padding: 0 90px;
+			 max-width: max-page-width(desktop);
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-category="AccessSupport"] #first_section > div.section {
+			 padding: 0 90px;
+			 max-width: max-page-width(desktop);
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-category="AccessSupport"] #first_section > div.section {
+			 padding: 0 90px;
+			 max-width: max-page-width(desktop);
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-category="AccessSupport"] #first_section > div.section {
+			 padding: 0 90px;
+			 max-width: max-page-width(desktop);
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-category="AccessSupport"] #first_section > div.section {
+			 padding: 0 90px;
+			 max-width: max-page-width(desktop);
+		}
+	}
+}
+ [data-page-category="AccessSupport"] #first_section > div.section p, [data-page-category="AccessSupport"] #first_section > div.section ul li {
+	 font-family: 'Gotham', sans-serif;
+	 font-weight: 400;
+}
+ @else if {
+	 font-size: 16px;
+}
+ [data-page-category="AccessSupport"] #first_section > div.section p.footnote {
+	 font-size: 12px;
+}
+ [data-page-category="AccessSupport"] #first_section #insurance-support > section, [data-page-category="AccessSupport"] #first_section #affordability > section {
+	 display: flex;
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) {
+	 [data-page-category="AccessSupport"] #first_section #insurance-support > section, [data-page-category="AccessSupport"] #first_section #affordability > section {
+		 padding: 35px;
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-category="AccessSupport"] #first_section #insurance-support > section, [data-page-category="AccessSupport"] #first_section #affordability > section {
+			 padding: 35px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-category="AccessSupport"] #first_section #insurance-support > section, [data-page-category="AccessSupport"] #first_section #affordability > section {
+			 padding: 35px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-category="AccessSupport"] #first_section #insurance-support > section, [data-page-category="AccessSupport"] #first_section #affordability > section {
+			 padding: 35px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-category="AccessSupport"] #first_section #insurance-support > section, [data-page-category="AccessSupport"] #first_section #affordability > section {
+			 padding: 35px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-category="AccessSupport"] #first_section #insurance-support > section, [data-page-category="AccessSupport"] #first_section #affordability > section {
+			 padding: 35px;
+		}
+	}
+}
+ [data-page-category="AccessSupport"] #first_section #insurance-support h2, [data-page-category="AccessSupport"] #first_section #affordability h2 {
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-category="AccessSupport"] #first_section #insurance-support h2, [data-page-category="AccessSupport"] #first_section #affordability h2 {
+			 margin: 0 0 25px 0;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-category="AccessSupport"] #first_section #insurance-support h2, [data-page-category="AccessSupport"] #first_section #affordability h2 {
+			 margin: 0 0 25px 0;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-category="AccessSupport"] #first_section #insurance-support h2, [data-page-category="AccessSupport"] #first_section #affordability h2 {
+			 margin: 0 0 25px 0;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-category="AccessSupport"] #first_section #insurance-support h2, [data-page-category="AccessSupport"] #first_section #affordability h2 {
+			 margin: 0 0 25px 0;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-category="AccessSupport"] #first_section #insurance-support h2, [data-page-category="AccessSupport"] #first_section #affordability h2 {
+			 margin: 0 0 25px 0;
+		}
+	}
+}
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) {
+	 [data-page-category="AccessSupport"] #first_section #insurance-support h2, [data-page-category="AccessSupport"] #first_section #affordability h2 {
+		 margin: 40px 0;
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-category="AccessSupport"] #first_section #insurance-support h2, [data-page-category="AccessSupport"] #first_section #affordability h2 {
+			 margin: 40px 0;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-category="AccessSupport"] #first_section #insurance-support h2, [data-page-category="AccessSupport"] #first_section #affordability h2 {
+			 margin: 40px 0;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-category="AccessSupport"] #first_section #insurance-support h2, [data-page-category="AccessSupport"] #first_section #affordability h2 {
+			 margin: 40px 0;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-category="AccessSupport"] #first_section #insurance-support h2, [data-page-category="AccessSupport"] #first_section #affordability h2 {
+			 margin: 40px 0;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-category="AccessSupport"] #first_section #insurance-support h2, [data-page-category="AccessSupport"] #first_section #affordability h2 {
+			 margin: 40px 0;
+		}
+	}
+}
+ [data-page-category="AccessSupport"] #first_section #insurance-support p, [data-page-category="AccessSupport"] #first_section #affordability p, [data-page-category="AccessSupport"] #first_section #insurance-support ul li, [data-page-category="AccessSupport"] #first_section #affordability ul li {
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-category="AccessSupport"] #first_section #insurance-support p, [data-page-category="AccessSupport"] #first_section #affordability p, [data-page-category="AccessSupport"] #first_section #insurance-support ul li, [data-page-category="AccessSupport"] #first_section #affordability ul li {
+			 font-size: 16px;
+			 margin-bottom: 10px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-category="AccessSupport"] #first_section #insurance-support p, [data-page-category="AccessSupport"] #first_section #affordability p, [data-page-category="AccessSupport"] #first_section #insurance-support ul li, [data-page-category="AccessSupport"] #first_section #affordability ul li {
+			 font-size: 16px;
+			 margin-bottom: 10px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-category="AccessSupport"] #first_section #insurance-support p, [data-page-category="AccessSupport"] #first_section #affordability p, [data-page-category="AccessSupport"] #first_section #insurance-support ul li, [data-page-category="AccessSupport"] #first_section #affordability ul li {
+			 font-size: 16px;
+			 margin-bottom: 10px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-category="AccessSupport"] #first_section #insurance-support p, [data-page-category="AccessSupport"] #first_section #affordability p, [data-page-category="AccessSupport"] #first_section #insurance-support ul li, [data-page-category="AccessSupport"] #first_section #affordability ul li {
+			 font-size: 16px;
+			 margin-bottom: 10px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-category="AccessSupport"] #first_section #insurance-support p, [data-page-category="AccessSupport"] #first_section #affordability p, [data-page-category="AccessSupport"] #first_section #insurance-support ul li, [data-page-category="AccessSupport"] #first_section #affordability ul li {
+			 font-size: 16px;
+			 margin-bottom: 10px;
+		}
+	}
+}
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) {
+	 [data-page-category="AccessSupport"] #first_section #insurance-support p, [data-page-category="AccessSupport"] #first_section #affordability p, [data-page-category="AccessSupport"] #first_section #insurance-support ul li, [data-page-category="AccessSupport"] #first_section #affordability ul li {
+		 font-size: 22px;
+		 margin-bottom: 10px;
+		 line-height: 24px;
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-category="AccessSupport"] #first_section #insurance-support p, [data-page-category="AccessSupport"] #first_section #affordability p, [data-page-category="AccessSupport"] #first_section #insurance-support ul li, [data-page-category="AccessSupport"] #first_section #affordability ul li {
+			 font-size: 22px;
+			 margin-bottom: 10px;
+			 line-height: 24px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-category="AccessSupport"] #first_section #insurance-support p, [data-page-category="AccessSupport"] #first_section #affordability p, [data-page-category="AccessSupport"] #first_section #insurance-support ul li, [data-page-category="AccessSupport"] #first_section #affordability ul li {
+			 font-size: 22px;
+			 margin-bottom: 10px;
+			 line-height: 24px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-category="AccessSupport"] #first_section #insurance-support p, [data-page-category="AccessSupport"] #first_section #affordability p, [data-page-category="AccessSupport"] #first_section #insurance-support ul li, [data-page-category="AccessSupport"] #first_section #affordability ul li {
+			 font-size: 22px;
+			 margin-bottom: 10px;
+			 line-height: 24px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-category="AccessSupport"] #first_section #insurance-support p, [data-page-category="AccessSupport"] #first_section #affordability p, [data-page-category="AccessSupport"] #first_section #insurance-support ul li, [data-page-category="AccessSupport"] #first_section #affordability ul li {
+			 font-size: 22px;
+			 margin-bottom: 10px;
+			 line-height: 24px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-category="AccessSupport"] #first_section #insurance-support p, [data-page-category="AccessSupport"] #first_section #affordability p, [data-page-category="AccessSupport"] #first_section #insurance-support ul li, [data-page-category="AccessSupport"] #first_section #affordability ul li {
+			 font-size: 22px;
+			 margin-bottom: 10px;
+			 line-height: 24px;
+		}
+	}
+}
+ [data-page-category="AccessSupport"] #first_section #insurance-support .content, [data-page-category="AccessSupport"] #first_section #affordability .content, [data-page-category="AccessSupport"] #first_section #insurance-support .image, [data-page-category="AccessSupport"] #first_section #affordability .image {
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-category="AccessSupport"] #first_section #insurance-support .content, [data-page-category="AccessSupport"] #first_section #affordability .content, [data-page-category="AccessSupport"] #first_section #insurance-support .image, [data-page-category="AccessSupport"] #first_section #affordability .image {
+			 flex: 0 0 100%;
+			 max-width: 100%;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-category="AccessSupport"] #first_section #insurance-support .content, [data-page-category="AccessSupport"] #first_section #affordability .content, [data-page-category="AccessSupport"] #first_section #insurance-support .image, [data-page-category="AccessSupport"] #first_section #affordability .image {
+			 flex: 0 0 100%;
+			 max-width: 100%;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-category="AccessSupport"] #first_section #insurance-support .content, [data-page-category="AccessSupport"] #first_section #affordability .content, [data-page-category="AccessSupport"] #first_section #insurance-support .image, [data-page-category="AccessSupport"] #first_section #affordability .image {
+			 flex: 0 0 100%;
+			 max-width: 100%;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-category="AccessSupport"] #first_section #insurance-support .content, [data-page-category="AccessSupport"] #first_section #affordability .content, [data-page-category="AccessSupport"] #first_section #insurance-support .image, [data-page-category="AccessSupport"] #first_section #affordability .image {
+			 flex: 0 0 100%;
+			 max-width: 100%;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-category="AccessSupport"] #first_section #insurance-support .content, [data-page-category="AccessSupport"] #first_section #affordability .content, [data-page-category="AccessSupport"] #first_section #insurance-support .image, [data-page-category="AccessSupport"] #first_section #affordability .image {
+			 flex: 0 0 100%;
+			 max-width: 100%;
+		}
+	}
+}
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) {
+	 [data-page-category="AccessSupport"] #first_section #insurance-support .content, [data-page-category="AccessSupport"] #first_section #affordability .content, [data-page-category="AccessSupport"] #first_section #insurance-support .image, [data-page-category="AccessSupport"] #first_section #affordability .image {
+		 flex: 0 0 50%;
+		 max-width: 50%;
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-category="AccessSupport"] #first_section #insurance-support .content, [data-page-category="AccessSupport"] #first_section #affordability .content, [data-page-category="AccessSupport"] #first_section #insurance-support .image, [data-page-category="AccessSupport"] #first_section #affordability .image {
+			 flex: 0 0 50%;
+			 max-width: 50%;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-category="AccessSupport"] #first_section #insurance-support .content, [data-page-category="AccessSupport"] #first_section #affordability .content, [data-page-category="AccessSupport"] #first_section #insurance-support .image, [data-page-category="AccessSupport"] #first_section #affordability .image {
+			 flex: 0 0 50%;
+			 max-width: 50%;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-category="AccessSupport"] #first_section #insurance-support .content, [data-page-category="AccessSupport"] #first_section #affordability .content, [data-page-category="AccessSupport"] #first_section #insurance-support .image, [data-page-category="AccessSupport"] #first_section #affordability .image {
+			 flex: 0 0 50%;
+			 max-width: 50%;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-category="AccessSupport"] #first_section #insurance-support .content, [data-page-category="AccessSupport"] #first_section #affordability .content, [data-page-category="AccessSupport"] #first_section #insurance-support .image, [data-page-category="AccessSupport"] #first_section #affordability .image {
+			 flex: 0 0 50%;
+			 max-width: 50%;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-category="AccessSupport"] #first_section #insurance-support .content, [data-page-category="AccessSupport"] #first_section #affordability .content, [data-page-category="AccessSupport"] #first_section #insurance-support .image, [data-page-category="AccessSupport"] #first_section #affordability .image {
+			 flex: 0 0 50%;
+			 max-width: 50%;
+		}
+	}
+}
+ [data-page-category="AccessSupport"] #first_section #insurance-support .image, [data-page-category="AccessSupport"] #first_section #affordability .image {
+	 text-align: center;
+	 position: relative;
+}
+ [data-page-category="AccessSupport"] #first_section #insurance-support .image.insurance-support, [data-page-category="AccessSupport"] #first_section #affordability .image.insurance-support {
+	 min-height: 404px;
+}
+ [data-page-category="AccessSupport"] #first_section #insurance-support .image .insurance-support, [data-page-category="AccessSupport"] #first_section #affordability .image .insurance-support {
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 transform: translate(-50%, -50%);
+}
+ @media screen and (min-width: 960px) and (max-width: 1060px) {
+	 [data-page-category="AccessSupport"] #first_section #insurance-support .image .insurance-support, [data-page-category="AccessSupport"] #first_section #affordability .image .insurance-support {
+		 width: 90%;
+		 top: 53%;
+	}
+}
+ [data-page-category="AccessSupport"] #first_section #insurance-support .image .affordability, [data-page-category="AccessSupport"] #first_section #affordability .image .affordability, [data-page-category="AccessSupport"] #first_section #insurance-support .image .patient-education, [data-page-category="AccessSupport"] #first_section #affordability .image .patient-education {
+	 position: absolute;
+	 top: 53%;
+	 left: 50%;
+	 transform: translate(-50%, -50%);
+}
+ @media screen and (min-width: 960px) and (max-width: 1060px) {
+	 [data-page-category="AccessSupport"] #first_section #insurance-support .image .affordability, [data-page-category="AccessSupport"] #first_section #affordability .image .affordability, [data-page-category="AccessSupport"] #first_section #insurance-support .image .patient-education, [data-page-category="AccessSupport"] #first_section #affordability .image .patient-education {
+		 width: 90%;
+	}
+}
+ [data-page-category="AccessSupport"] #first_section #affordability {
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ [data-page-category="AccessSupport"] #first_section #affordability h3 {
+	 font-family: 'Gotham', sans-serif;
+	 font-weight: 700;
+	 color: brand(primary);
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ @else if {
+	 font-size: 24px;
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-category="AccessSupport"] #first_section #affordability h3 {
+			 margin: 0 0 25px 0;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-category="AccessSupport"] #first_section #affordability h3 {
+			 margin: 0 0 25px 0;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-category="AccessSupport"] #first_section #affordability h3 {
+			 margin: 0 0 25px 0;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-category="AccessSupport"] #first_section #affordability h3 {
+			 margin: 0 0 25px 0;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-category="AccessSupport"] #first_section #affordability h3 {
+			 margin: 0 0 25px 0;
+		}
+	}
+}
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) {
+	 [data-page-category="AccessSupport"] #first_section #affordability h3 {
+		 margin: 0 0 30px 0;
+		 font-size: 30px;
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-category="AccessSupport"] #first_section #affordability h3 {
+			 margin: 0 0 30px 0;
+			 font-size: 30px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-category="AccessSupport"] #first_section #affordability h3 {
+			 margin: 0 0 30px 0;
+			 font-size: 30px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-category="AccessSupport"] #first_section #affordability h3 {
+			 margin: 0 0 30px 0;
+			 font-size: 30px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-category="AccessSupport"] #first_section #affordability h3 {
+			 margin: 0 0 30px 0;
+			 font-size: 30px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-category="AccessSupport"] #first_section #affordability h3 {
+			 margin: 0 0 30px 0;
+			 font-size: 30px;
+		}
+	}
+}
+ [data-page-category="AccessSupport"] #first_section #affordability p.normal {
+	 font-size: 16px;
+}
+ [data-page-category="AccessSupport"] #first_section #affordability ul li {
+	 font-size: 16px;
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-category="AccessSupport"] #first_section #affordability .content > div {
+			 padding: 25px 20px;
+			 border: 1px solid #898a8c;
+			 border-bottom: 0;
+			 background: #f4e8f3;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-category="AccessSupport"] #first_section #affordability .content > div {
+			 padding: 25px 20px;
+			 border: 1px solid #898a8c;
+			 border-bottom: 0;
+			 background: #f4e8f3;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-category="AccessSupport"] #first_section #affordability .content > div {
+			 padding: 25px 20px;
+			 border: 1px solid #898a8c;
+			 border-bottom: 0;
+			 background: #f4e8f3;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-category="AccessSupport"] #first_section #affordability .content > div {
+			 padding: 25px 20px;
+			 border: 1px solid #898a8c;
+			 border-bottom: 0;
+			 background: #f4e8f3;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-category="AccessSupport"] #first_section #affordability .content > div {
+			 padding: 25px 20px;
+			 border: 1px solid #898a8c;
+			 border-bottom: 0;
+			 background: #f4e8f3;
+		}
+	}
+}
+ [data-page-category="AccessSupport"] #first_section #FormsResources {
+	 margin-bottom: 30px;
+}
+ [data-page-category="AccessSupport"] #first_section #FormsResources .content {
+	 display: flex;
+	 flex-wrap: wrap;
+	 justify-content: space-between;
+	 box-shadow: 0 0 7px 0 rgba(61, 5, 58, 0.4);
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-category="AccessSupport"] #first_section #FormsResources .content {
+			 padding: 30px 15px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-category="AccessSupport"] #first_section #FormsResources .content {
+			 padding: 30px 15px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-category="AccessSupport"] #first_section #FormsResources .content {
+			 padding: 30px 15px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-category="AccessSupport"] #first_section #FormsResources .content {
+			 padding: 30px 15px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-category="AccessSupport"] #first_section #FormsResources .content {
+			 padding: 30px 15px;
+		}
+	}
+}
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) {
+	 [data-page-category="AccessSupport"] #first_section #FormsResources .content {
+		 padding: 42px;
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-category="AccessSupport"] #first_section #FormsResources .content {
+			 padding: 42px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-category="AccessSupport"] #first_section #FormsResources .content {
+			 padding: 42px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-category="AccessSupport"] #first_section #FormsResources .content {
+			 padding: 42px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-category="AccessSupport"] #first_section #FormsResources .content {
+			 padding: 42px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-category="AccessSupport"] #first_section #FormsResources .content {
+			 padding: 42px;
+		}
+	}
+}
+ [data-page-category="AccessSupport"] #first_section #FormsResources .content > div {
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-category="AccessSupport"] #first_section #FormsResources .content > div {
+			 flex: 0 0 100%;
+			 max-width: 100%;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-category="AccessSupport"] #first_section #FormsResources .content > div {
+			 flex: 0 0 100%;
+			 max-width: 100%;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-category="AccessSupport"] #first_section #FormsResources .content > div {
+			 flex: 0 0 100%;
+			 max-width: 100%;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-category="AccessSupport"] #first_section #FormsResources .content > div {
+			 flex: 0 0 100%;
+			 max-width: 100%;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-category="AccessSupport"] #first_section #FormsResources .content > div {
+			 flex: 0 0 100%;
+			 max-width: 100%;
+		}
+	}
+}
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) {
+	 [data-page-category="AccessSupport"] #first_section #FormsResources .content > div {
+		 flex: 0 0 calc(50% - 17px);
+		 max-width: calc(50% - 17px);
+	}
+	 [data-page-category="AccessSupport"] #first_section #FormsResources .content > div:nth-of-type(2) {
+		 padding-left: 42px;
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-category="AccessSupport"] #first_section #FormsResources .content > div {
+			 flex: 0 0 calc(50% - 17px);
+			 max-width: calc(50% - 17px);
+		}
+		 [data-page-category="AccessSupport"] #first_section #FormsResources .content > div:nth-of-type(2) {
+			 padding-left: 42px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-category="AccessSupport"] #first_section #FormsResources .content > div {
+			 flex: 0 0 calc(50% - 17px);
+			 max-width: calc(50% - 17px);
+		}
+		 [data-page-category="AccessSupport"] #first_section #FormsResources .content > div:nth-of-type(2) {
+			 padding-left: 42px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-category="AccessSupport"] #first_section #FormsResources .content > div {
+			 flex: 0 0 calc(50% - 17px);
+			 max-width: calc(50% - 17px);
+		}
+		 [data-page-category="AccessSupport"] #first_section #FormsResources .content > div:nth-of-type(2) {
+			 padding-left: 42px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-category="AccessSupport"] #first_section #FormsResources .content > div {
+			 flex: 0 0 calc(50% - 17px);
+			 max-width: calc(50% - 17px);
+		}
+		 [data-page-category="AccessSupport"] #first_section #FormsResources .content > div:nth-of-type(2) {
+			 padding-left: 42px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-category="AccessSupport"] #first_section #FormsResources .content > div {
+			 flex: 0 0 calc(50% - 17px);
+			 max-width: calc(50% - 17px);
+		}
+		 [data-page-category="AccessSupport"] #first_section #FormsResources .content > div:nth-of-type(2) {
+			 padding-left: 42px;
+		}
+	}
+}
+ [data-page-category="AccessSupport"] #first_section #FormsResources h2 {
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-category="AccessSupport"] #first_section #FormsResources h2 {
+			 margin: 0 0 30px 0;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-category="AccessSupport"] #first_section #FormsResources h2 {
+			 margin: 0 0 30px 0;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-category="AccessSupport"] #first_section #FormsResources h2 {
+			 margin: 0 0 30px 0;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-category="AccessSupport"] #first_section #FormsResources h2 {
+			 margin: 0 0 30px 0;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-category="AccessSupport"] #first_section #FormsResources h2 {
+			 margin: 0 0 30px 0;
+		}
+	}
+}
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) {
+	 [data-page-category="AccessSupport"] #first_section #FormsResources h2 {
+		 margin: 40px 0 30px 0;
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-category="AccessSupport"] #first_section #FormsResources h2 {
+			 margin: 40px 0 30px 0;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-category="AccessSupport"] #first_section #FormsResources h2 {
+			 margin: 40px 0 30px 0;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-category="AccessSupport"] #first_section #FormsResources h2 {
+			 margin: 40px 0 30px 0;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-category="AccessSupport"] #first_section #FormsResources h2 {
+			 margin: 40px 0 30px 0;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-category="AccessSupport"] #first_section #FormsResources h2 {
+			 margin: 40px 0 30px 0;
+		}
+	}
+}
+ [data-page-category="AccessSupport"] #first_section #FormsResources h3 {
+	 margin-bottom: 20px;
+	 flex: 0 0 100%;
+	 max-width: 100%;
+	 color: brand(primary);
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-category="AccessSupport"] #first_section #FormsResources h3 {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 24px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-category="AccessSupport"] #first_section #FormsResources h3 {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 24px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-category="AccessSupport"] #first_section #FormsResources h3 {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 24px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-category="AccessSupport"] #first_section #FormsResources h3 {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 24px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-category="AccessSupport"] #first_section #FormsResources h3 {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 24px;
+		}
+	}
+}
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) {
+	 [data-page-category="AccessSupport"] #first_section #FormsResources h3 {
+		 font-family: 'Gotham', sans-serif;
+		 font-weight: 700;
+	}
+	 @else if {
+		 font-size: 30px;
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-category="AccessSupport"] #first_section #FormsResources h3 {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 30px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-category="AccessSupport"] #first_section #FormsResources h3 {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 30px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-category="AccessSupport"] #first_section #FormsResources h3 {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 30px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-category="AccessSupport"] #first_section #FormsResources h3 {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 30px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-category="AccessSupport"] #first_section #FormsResources h3 {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 30px;
+		}
+	}
+}
+ [data-page-category="AccessSupport"] #first_section #FormsResources p {
+	 flex: 0 0 100%;
+	 max-width: 100%;
+	 color: brand(primary);
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) {
+	 [data-page-category="AccessSupport"] #first_section #FormsResources p {
+		 font-family: 'Gotham', sans-serif;
+		 font-weight: 400;
+	}
+	 @else if {
+		 font-size: 22px;
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-category="AccessSupport"] #first_section #FormsResources p {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 400;
+		}
+		 @else if {
+			 font-size: 22px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-category="AccessSupport"] #first_section #FormsResources p {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 400;
+		}
+		 @else if {
+			 font-size: 22px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-category="AccessSupport"] #first_section #FormsResources p {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 400;
+		}
+		 @else if {
+			 font-size: 22px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-category="AccessSupport"] #first_section #FormsResources p {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 400;
+		}
+		 @else if {
+			 font-size: 22px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-category="AccessSupport"] #first_section #FormsResources p {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 400;
+		}
+		 @else if {
+			 font-size: 22px;
+		}
+	}
+}
+ [data-page-category="AccessSupport"] #first_section #FormsResources .content p {
+	 color: unset;
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-category="AccessSupport"] #first_section #FormsResources .content p {
+			 font-size: 14px;
+			 margin-bottom: 0;
+			 padding: 0 15px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-category="AccessSupport"] #first_section #FormsResources .content p {
+			 font-size: 14px;
+			 margin-bottom: 0;
+			 padding: 0 15px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-category="AccessSupport"] #first_section #FormsResources .content p {
+			 font-size: 14px;
+			 margin-bottom: 0;
+			 padding: 0 15px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-category="AccessSupport"] #first_section #FormsResources .content p {
+			 font-size: 14px;
+			 margin-bottom: 0;
+			 padding: 0 15px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-category="AccessSupport"] #first_section #FormsResources .content p {
+			 font-size: 14px;
+			 margin-bottom: 0;
+			 padding: 0 15px;
+		}
+	}
+}
+ [data-page-category="AccessSupport"] #first_section #FormsResources .content p.insurance-support-description {
+	 color: brand(primary);
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-category="AccessSupport"] #first_section #FormsResources .content p.insurance-support-description {
+			 font-size: 20px;
+			 margin-bottom: 25px;
+			 padding: 0;
+			 line-height: 24px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-category="AccessSupport"] #first_section #FormsResources .content p.insurance-support-description {
+			 font-size: 20px;
+			 margin-bottom: 25px;
+			 padding: 0;
+			 line-height: 24px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-category="AccessSupport"] #first_section #FormsResources .content p.insurance-support-description {
+			 font-size: 20px;
+			 margin-bottom: 25px;
+			 padding: 0;
+			 line-height: 24px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-category="AccessSupport"] #first_section #FormsResources .content p.insurance-support-description {
+			 font-size: 20px;
+			 margin-bottom: 25px;
+			 padding: 0;
+			 line-height: 24px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-category="AccessSupport"] #first_section #FormsResources .content p.insurance-support-description {
+			 font-size: 20px;
+			 margin-bottom: 25px;
+			 padding: 0;
+			 line-height: 24px;
+		}
+	}
+}
+ [data-page-category="AccessSupport"] #first_section #FormsResources .content ul {
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-category="AccessSupport"] #first_section #FormsResources .content ul {
+			 padding: 0 15px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-category="AccessSupport"] #first_section #FormsResources .content ul {
+			 padding: 0 15px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-category="AccessSupport"] #first_section #FormsResources .content ul {
+			 padding: 0 15px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-category="AccessSupport"] #first_section #FormsResources .content ul {
+			 padding: 0 15px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-category="AccessSupport"] #first_section #FormsResources .content ul {
+			 padding: 0 15px;
+		}
+	}
+}
+ [data-page-category="AccessSupport"] #first_section #affordability_download {
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ [data-page-category="AccessSupport"] #first_section #affordability_download > div {
+	 display: flex;
+	 justify-content: space-between;
+	 flex-wrap: wrap;
+}
+ [data-page-category="AccessSupport"] #first_section #affordability_download .download-section h3 {
+	 font-family: 'Gotham', sans-serif;
+	 font-weight: 700;
+	 color: brand(primary);
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ @else if {
+	 font-size: 30px;
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-category="AccessSupport"] #first_section #affordability_download .download-section h3 {
+			 margin-bottom: 30px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-category="AccessSupport"] #first_section #affordability_download .download-section h3 {
+			 margin-bottom: 30px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-category="AccessSupport"] #first_section #affordability_download .download-section h3 {
+			 margin-bottom: 30px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-category="AccessSupport"] #first_section #affordability_download .download-section h3 {
+			 margin-bottom: 30px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-category="AccessSupport"] #first_section #affordability_download .download-section h3 {
+			 margin-bottom: 30px;
+		}
+	}
+}
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) {
+	 [data-page-category="AccessSupport"] #first_section #affordability_download .download-section h3 {
+		 margin-bottom: 50px;
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-category="AccessSupport"] #first_section #affordability_download .download-section h3 {
+			 margin-bottom: 50px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-category="AccessSupport"] #first_section #affordability_download .download-section h3 {
+			 margin-bottom: 50px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-category="AccessSupport"] #first_section #affordability_download .download-section h3 {
+			 margin-bottom: 50px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-category="AccessSupport"] #first_section #affordability_download .download-section h3 {
+			 margin-bottom: 50px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-category="AccessSupport"] #first_section #affordability_download .download-section h3 {
+			 margin-bottom: 50px;
+		}
+	}
+}
+ [data-page-category="AccessSupport"] #first_section #affordability_download .download-section h4 {
+	 font-family: 'Gotham', sans-serif;
+	 font-weight: 400;
+	 margin-bottom: 25px;
+	 color: brand(primary);
+}
+ @else if {
+	 font-size: 22px;
+}
+ [data-page-category="AccessSupport"] #first_section #affordability_download .download-section, [data-page-category="AccessSupport"] #first_section #affordability_download #entyvioconnect_contact {
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-category="AccessSupport"] #first_section #affordability_download .download-section, [data-page-category="AccessSupport"] #first_section #affordability_download #entyvioconnect_contact {
+			 flex: 0 0 100%;
+			 max-width: 100%;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-category="AccessSupport"] #first_section #affordability_download .download-section, [data-page-category="AccessSupport"] #first_section #affordability_download #entyvioconnect_contact {
+			 flex: 0 0 100%;
+			 max-width: 100%;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-category="AccessSupport"] #first_section #affordability_download .download-section, [data-page-category="AccessSupport"] #first_section #affordability_download #entyvioconnect_contact {
+			 flex: 0 0 100%;
+			 max-width: 100%;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-category="AccessSupport"] #first_section #affordability_download .download-section, [data-page-category="AccessSupport"] #first_section #affordability_download #entyvioconnect_contact {
+			 flex: 0 0 100%;
+			 max-width: 100%;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-category="AccessSupport"] #first_section #affordability_download .download-section, [data-page-category="AccessSupport"] #first_section #affordability_download #entyvioconnect_contact {
+			 flex: 0 0 100%;
+			 max-width: 100%;
+		}
+	}
+}
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) {
+	 [data-page-category="AccessSupport"] #first_section #affordability_download .download-section, [data-page-category="AccessSupport"] #first_section #affordability_download #entyvioconnect_contact {
+		 flex: 0 0 calc(50% - 17px);
+		 max-width: calc(50% - 17px);
+		 margin: 0 0 20px 0;
+		 padding: 42px;
+		 box-shadow: 0 0 7px 0 rgba(61, 5, 58, 0.4);
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-category="AccessSupport"] #first_section #affordability_download .download-section, [data-page-category="AccessSupport"] #first_section #affordability_download #entyvioconnect_contact {
+			 flex: 0 0 calc(50% - 17px);
+			 max-width: calc(50% - 17px);
+			 margin: 0 0 20px 0;
+			 padding: 42px;
+			 box-shadow: 0 0 7px 0 rgba(61, 5, 58, 0.4);
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-category="AccessSupport"] #first_section #affordability_download .download-section, [data-page-category="AccessSupport"] #first_section #affordability_download #entyvioconnect_contact {
+			 flex: 0 0 calc(50% - 17px);
+			 max-width: calc(50% - 17px);
+			 margin: 0 0 20px 0;
+			 padding: 42px;
+			 box-shadow: 0 0 7px 0 rgba(61, 5, 58, 0.4);
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-category="AccessSupport"] #first_section #affordability_download .download-section, [data-page-category="AccessSupport"] #first_section #affordability_download #entyvioconnect_contact {
+			 flex: 0 0 calc(50% - 17px);
+			 max-width: calc(50% - 17px);
+			 margin: 0 0 20px 0;
+			 padding: 42px;
+			 box-shadow: 0 0 7px 0 rgba(61, 5, 58, 0.4);
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-category="AccessSupport"] #first_section #affordability_download .download-section, [data-page-category="AccessSupport"] #first_section #affordability_download #entyvioconnect_contact {
+			 flex: 0 0 calc(50% - 17px);
+			 max-width: calc(50% - 17px);
+			 margin: 0 0 20px 0;
+			 padding: 42px;
+			 box-shadow: 0 0 7px 0 rgba(61, 5, 58, 0.4);
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-category="AccessSupport"] #first_section #affordability_download .download-section, [data-page-category="AccessSupport"] #first_section #affordability_download #entyvioconnect_contact {
+			 flex: 0 0 calc(50% - 17px);
+			 max-width: calc(50% - 17px);
+			 margin: 0 0 20px 0;
+			 padding: 42px;
+			 box-shadow: 0 0 7px 0 rgba(61, 5, 58, 0.4);
+		}
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-category="AccessSupport"] #first_section #affordability_download .download-section {
+			 margin-top: 25px;
+			 order: 2;
+		}
+		 [data-page-category="AccessSupport"] #first_section #affordability_download .download-section h3 {
+			 font-size: 24px;
+		}
+		 [data-page-category="AccessSupport"] #first_section #affordability_download #entyvioconnect_contact {
+			 padding: 10px;
+			 order: 1;
+			 border: 1px solid #898a8c;
+			 border-top: 0;
+			 background: brand(primary_light);
+		}
+		 [data-page-category="AccessSupport"] #first_section #affordability_download #entyvioconnect_contact > div {
+			 padding: 25px;
+			 background: brand(light);
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-category="AccessSupport"] #first_section #affordability_download .download-section {
+			 margin-top: 25px;
+			 order: 2;
+		}
+		 [data-page-category="AccessSupport"] #first_section #affordability_download .download-section h3 {
+			 font-size: 24px;
+		}
+		 [data-page-category="AccessSupport"] #first_section #affordability_download #entyvioconnect_contact {
+			 padding: 10px;
+			 order: 1;
+			 border: 1px solid #898a8c;
+			 border-top: 0;
+			 background: brand(primary_light);
+		}
+		 [data-page-category="AccessSupport"] #first_section #affordability_download #entyvioconnect_contact > div {
+			 padding: 25px;
+			 background: brand(light);
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-category="AccessSupport"] #first_section #affordability_download .download-section {
+			 margin-top: 25px;
+			 order: 2;
+		}
+		 [data-page-category="AccessSupport"] #first_section #affordability_download .download-section h3 {
+			 font-size: 24px;
+		}
+		 [data-page-category="AccessSupport"] #first_section #affordability_download #entyvioconnect_contact {
+			 padding: 10px;
+			 order: 1;
+			 border: 1px solid #898a8c;
+			 border-top: 0;
+			 background: brand(primary_light);
+		}
+		 [data-page-category="AccessSupport"] #first_section #affordability_download #entyvioconnect_contact > div {
+			 padding: 25px;
+			 background: brand(light);
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-category="AccessSupport"] #first_section #affordability_download .download-section {
+			 margin-top: 25px;
+			 order: 2;
+		}
+		 [data-page-category="AccessSupport"] #first_section #affordability_download .download-section h3 {
+			 font-size: 24px;
+		}
+		 [data-page-category="AccessSupport"] #first_section #affordability_download #entyvioconnect_contact {
+			 padding: 10px;
+			 order: 1;
+			 border: 1px solid #898a8c;
+			 border-top: 0;
+			 background: brand(primary_light);
+		}
+		 [data-page-category="AccessSupport"] #first_section #affordability_download #entyvioconnect_contact > div {
+			 padding: 25px;
+			 background: brand(light);
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-category="AccessSupport"] #first_section #affordability_download .download-section {
+			 margin-top: 25px;
+			 order: 2;
+		}
+		 [data-page-category="AccessSupport"] #first_section #affordability_download .download-section h3 {
+			 font-size: 24px;
+		}
+		 [data-page-category="AccessSupport"] #first_section #affordability_download #entyvioconnect_contact {
+			 padding: 10px;
+			 order: 1;
+			 border: 1px solid #898a8c;
+			 border-top: 0;
+			 background: brand(primary_light);
+		}
+		 [data-page-category="AccessSupport"] #first_section #affordability_download #entyvioconnect_contact > div {
+			 padding: 25px;
+			 background: brand(light);
+		}
+	}
+}
+ [data-page-category="AccessSupport"] #first_section #affordability_download .legal {
+	 flex: 0 0 100%;
+	 max-width: 100%;
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-category="AccessSupport"] #first_section #affordability_download .legal {
+			 order: 3;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-category="AccessSupport"] #first_section #affordability_download .legal {
+			 order: 3;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-category="AccessSupport"] #first_section #affordability_download .legal {
+			 order: 3;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-category="AccessSupport"] #first_section #affordability_download .legal {
+			 order: 3;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-category="AccessSupport"] #first_section #affordability_download .legal {
+			 order: 3;
+		}
+	}
+}
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) {
+	 [data-page-category="AccessSupport"] #first_section #affordability_download .legal {
+		 margin-bottom: 50px;
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-category="AccessSupport"] #first_section #affordability_download .legal {
+			 margin-bottom: 50px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-category="AccessSupport"] #first_section #affordability_download .legal {
+			 margin-bottom: 50px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-category="AccessSupport"] #first_section #affordability_download .legal {
+			 margin-bottom: 50px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-category="AccessSupport"] #first_section #affordability_download .legal {
+			 margin-bottom: 50px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-category="AccessSupport"] #first_section #affordability_download .legal {
+			 margin-bottom: 50px;
+		}
+	}
+}
+ [data-page-category="AccessSupport"] #first_section #affordability_download .legal p {
+	 position: relative;
+	 padding-left: 4px;
+	 font-size: 12px;
+}
+ [data-page-category="AccessSupport"] #first_section #affordability_download .legal p .sup {
+	 position: absolute;
+	 left: 0;
+}
+ [data-page-category="AccessSupport"] #first_section #insurance-denied > section {
+	 border: 1px solid #8d898d;
+	 background: brand(primary_light);
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-category="AccessSupport"] #first_section #insurance-denied > section {
+			 padding: 8px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-category="AccessSupport"] #first_section #insurance-denied > section {
+			 padding: 8px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-category="AccessSupport"] #first_section #insurance-denied > section {
+			 padding: 8px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-category="AccessSupport"] #first_section #insurance-denied > section {
+			 padding: 8px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-category="AccessSupport"] #first_section #insurance-denied > section {
+			 padding: 8px;
+		}
+	}
+}
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) {
+	 [data-page-category="AccessSupport"] #first_section #insurance-denied > section {
+		 padding: 50px;
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-category="AccessSupport"] #first_section #insurance-denied > section {
+			 padding: 50px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-category="AccessSupport"] #first_section #insurance-denied > section {
+			 padding: 50px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-category="AccessSupport"] #first_section #insurance-denied > section {
+			 padding: 50px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-category="AccessSupport"] #first_section #insurance-denied > section {
+			 padding: 50px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-category="AccessSupport"] #first_section #insurance-denied > section {
+			 padding: 50px;
+		}
+	}
+}
+ [data-page-category="AccessSupport"] #first_section #insurance-denied h2 {
+	 flex: 0 0 100%;
+	 max-width: 100%;
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-category="AccessSupport"] #first_section #insurance-denied h2 {
+			 margin: 25px 15px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-category="AccessSupport"] #first_section #insurance-denied h2 {
+			 margin: 25px 15px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-category="AccessSupport"] #first_section #insurance-denied h2 {
+			 margin: 25px 15px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-category="AccessSupport"] #first_section #insurance-denied h2 {
+			 margin: 25px 15px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-category="AccessSupport"] #first_section #insurance-denied h2 {
+			 margin: 25px 15px;
+		}
+	}
+}
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) {
+	 [data-page-category="AccessSupport"] #first_section #insurance-denied h2 {
+		 margin: 0 0 50px 0;
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-category="AccessSupport"] #first_section #insurance-denied h2 {
+			 margin: 0 0 50px 0;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-category="AccessSupport"] #first_section #insurance-denied h2 {
+			 margin: 0 0 50px 0;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-category="AccessSupport"] #first_section #insurance-denied h2 {
+			 margin: 0 0 50px 0;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-category="AccessSupport"] #first_section #insurance-denied h2 {
+			 margin: 0 0 50px 0;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-category="AccessSupport"] #first_section #insurance-denied h2 {
+			 margin: 0 0 50px 0;
+		}
+	}
+}
+ [data-page-category="AccessSupport"] #first_section #insurance-denied p, [data-page-category="AccessSupport"] #first_section #insurance-denied ul li {
+	 margin-bottom: 20px;
+	 line-height: 15px;
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-category="AccessSupport"] #first_section #insurance-denied p, [data-page-category="AccessSupport"] #first_section #insurance-denied ul li {
+			 font-size: 14px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-category="AccessSupport"] #first_section #insurance-denied p, [data-page-category="AccessSupport"] #first_section #insurance-denied ul li {
+			 font-size: 14px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-category="AccessSupport"] #first_section #insurance-denied p, [data-page-category="AccessSupport"] #first_section #insurance-denied ul li {
+			 font-size: 14px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-category="AccessSupport"] #first_section #insurance-denied p, [data-page-category="AccessSupport"] #first_section #insurance-denied ul li {
+			 font-size: 14px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-category="AccessSupport"] #first_section #insurance-denied p, [data-page-category="AccessSupport"] #first_section #insurance-denied ul li {
+			 font-size: 14px;
+		}
+	}
+}
+ [data-page-category="AccessSupport"] #first_section #insurance-denied p strong, [data-page-category="AccessSupport"] #first_section #insurance-denied ul li strong {
+	 color: brand(primary);
+}
+ [data-page-category="AccessSupport"] #first_section #insurance-denied .insurance-denied-content {
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-category="AccessSupport"] #first_section #insurance-denied .insurance-denied-content .content {
+			 padding: 0 15px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-category="AccessSupport"] #first_section #insurance-denied .insurance-denied-content .content {
+			 padding: 0 15px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-category="AccessSupport"] #first_section #insurance-denied .insurance-denied-content .content {
+			 padding: 0 15px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-category="AccessSupport"] #first_section #insurance-denied .insurance-denied-content .content {
+			 padding: 0 15px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-category="AccessSupport"] #first_section #insurance-denied .insurance-denied-content .content {
+			 padding: 0 15px;
+		}
+	}
+}
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) {
+	 [data-page-category="AccessSupport"] #first_section #insurance-denied .insurance-denied-content {
+		 display: flex;
+	}
+	 [data-page-category="AccessSupport"] #first_section #insurance-denied .insurance-denied-content > div {
+		 flex: 0 0 50%;
+		 max-width: 50%;
+	}
+	 [data-page-category="AccessSupport"] #first_section #insurance-denied .insurance-denied-content .content {
+		 padding-right: 35px;
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-category="AccessSupport"] #first_section #insurance-denied .insurance-denied-content {
+			 display: flex;
+		}
+		 [data-page-category="AccessSupport"] #first_section #insurance-denied .insurance-denied-content > div {
+			 flex: 0 0 50%;
+			 max-width: 50%;
+		}
+		 [data-page-category="AccessSupport"] #first_section #insurance-denied .insurance-denied-content .content {
+			 padding-right: 35px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-category="AccessSupport"] #first_section #insurance-denied .insurance-denied-content {
+			 display: flex;
+		}
+		 [data-page-category="AccessSupport"] #first_section #insurance-denied .insurance-denied-content > div {
+			 flex: 0 0 50%;
+			 max-width: 50%;
+		}
+		 [data-page-category="AccessSupport"] #first_section #insurance-denied .insurance-denied-content .content {
+			 padding-right: 35px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-category="AccessSupport"] #first_section #insurance-denied .insurance-denied-content {
+			 display: flex;
+		}
+		 [data-page-category="AccessSupport"] #first_section #insurance-denied .insurance-denied-content > div {
+			 flex: 0 0 50%;
+			 max-width: 50%;
+		}
+		 [data-page-category="AccessSupport"] #first_section #insurance-denied .insurance-denied-content .content {
+			 padding-right: 35px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-category="AccessSupport"] #first_section #insurance-denied .insurance-denied-content {
+			 display: flex;
+		}
+		 [data-page-category="AccessSupport"] #first_section #insurance-denied .insurance-denied-content > div {
+			 flex: 0 0 50%;
+			 max-width: 50%;
+		}
+		 [data-page-category="AccessSupport"] #first_section #insurance-denied .insurance-denied-content .content {
+			 padding-right: 35px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-category="AccessSupport"] #first_section #insurance-denied .insurance-denied-content {
+			 display: flex;
+		}
+		 [data-page-category="AccessSupport"] #first_section #insurance-denied .insurance-denied-content > div {
+			 flex: 0 0 50%;
+			 max-width: 50%;
+		}
+		 [data-page-category="AccessSupport"] #first_section #insurance-denied .insurance-denied-content .content {
+			 padding-right: 35px;
+		}
+	}
+}
+ [data-page-category="AccessSupport"] #first_section #downloads {
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ [data-page-category="AccessSupport"] #first_section #downloads > section {
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-category="AccessSupport"] #first_section #downloads > section {
+			 padding: 65px 0 0 0;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-category="AccessSupport"] #first_section #downloads > section {
+			 padding: 65px 0 0 0;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-category="AccessSupport"] #first_section #downloads > section {
+			 padding: 65px 0 0 0;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-category="AccessSupport"] #first_section #downloads > section {
+			 padding: 65px 0 0 0;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-category="AccessSupport"] #first_section #downloads > section {
+			 padding: 65px 0 0 0;
+		}
+	}
+}
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) {
+	 [data-page-category="AccessSupport"] #first_section #downloads > section {
+		 padding: 35px 0;
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-category="AccessSupport"] #first_section #downloads > section {
+			 padding: 35px 0;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-category="AccessSupport"] #first_section #downloads > section {
+			 padding: 35px 0;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-category="AccessSupport"] #first_section #downloads > section {
+			 padding: 35px 0;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-category="AccessSupport"] #first_section #downloads > section {
+			 padding: 35px 0;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-category="AccessSupport"] #first_section #downloads > section {
+			 padding: 35px 0;
+		}
+	}
+}
+ [data-page-category="AccessSupport"] #first_section #downloads .download-section {
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-category="AccessSupport"] #first_section #downloads .download-section {
+			 padding: 0 30px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-category="AccessSupport"] #first_section #downloads .download-section {
+			 padding: 0 30px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-category="AccessSupport"] #first_section #downloads .download-section {
+			 padding: 0 30px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-category="AccessSupport"] #first_section #downloads .download-section {
+			 padding: 0 30px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-category="AccessSupport"] #first_section #downloads .download-section {
+			 padding: 0 30px;
+		}
+	}
+}
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) {
+	 [data-page-category="AccessSupport"] #first_section #downloads .download-section {
+		 display: flex;
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-category="AccessSupport"] #first_section #downloads .download-section {
+			 display: flex;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-category="AccessSupport"] #first_section #downloads .download-section {
+			 display: flex;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-category="AccessSupport"] #first_section #downloads .download-section {
+			 display: flex;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-category="AccessSupport"] #first_section #downloads .download-section {
+			 display: flex;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-category="AccessSupport"] #first_section #downloads .download-section {
+			 display: flex;
+		}
+	}
+}
+ [data-page-category="AccessSupport"] #first_section #downloads .left, [data-page-category="AccessSupport"] #first_section #downloads .right {
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) {
+	 [data-page-category="AccessSupport"] #first_section #downloads .left, [data-page-category="AccessSupport"] #first_section #downloads .right {
+		 flex: 0 0 50%;
+		 max-width: 50%;
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-category="AccessSupport"] #first_section #downloads .left, [data-page-category="AccessSupport"] #first_section #downloads .right {
+			 flex: 0 0 50%;
+			 max-width: 50%;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-category="AccessSupport"] #first_section #downloads .left, [data-page-category="AccessSupport"] #first_section #downloads .right {
+			 flex: 0 0 50%;
+			 max-width: 50%;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-category="AccessSupport"] #first_section #downloads .left, [data-page-category="AccessSupport"] #first_section #downloads .right {
+			 flex: 0 0 50%;
+			 max-width: 50%;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-category="AccessSupport"] #first_section #downloads .left, [data-page-category="AccessSupport"] #first_section #downloads .right {
+			 flex: 0 0 50%;
+			 max-width: 50%;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-category="AccessSupport"] #first_section #downloads .left, [data-page-category="AccessSupport"] #first_section #downloads .right {
+			 flex: 0 0 50%;
+			 max-width: 50%;
+		}
+	}
+}
+ [data-page-category="AccessSupport"] #first_section #downloads h2 {
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-category="AccessSupport"] #first_section #downloads h2 {
+			 margin: 0 8px 25px 8px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-category="AccessSupport"] #first_section #downloads h2 {
+			 margin: 0 8px 25px 8px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-category="AccessSupport"] #first_section #downloads h2 {
+			 margin: 0 8px 25px 8px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-category="AccessSupport"] #first_section #downloads h2 {
+			 margin: 0 8px 25px 8px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-category="AccessSupport"] #first_section #downloads h2 {
+			 margin: 0 8px 25px 8px;
+		}
+	}
+}
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) {
+	 [data-page-category="AccessSupport"] #first_section #downloads h2 {
+		 margin: 0 0 50px 0;
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-category="AccessSupport"] #first_section #downloads h2 {
+			 margin: 0 0 50px 0;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-category="AccessSupport"] #first_section #downloads h2 {
+			 margin: 0 0 50px 0;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-category="AccessSupport"] #first_section #downloads h2 {
+			 margin: 0 0 50px 0;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-category="AccessSupport"] #first_section #downloads h2 {
+			 margin: 0 0 50px 0;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-category="AccessSupport"] #first_section #downloads h2 {
+			 margin: 0 0 50px 0;
+		}
+	}
+}
+ [data-page-category="AccessSupport"] #first_section #downloads ul {
+	 list-style-type: none;
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-category="AccessSupport"] #first_section #downloads p {
+			 padding: 0 8px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-category="AccessSupport"] #first_section #downloads p {
+			 padding: 0 8px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-category="AccessSupport"] #first_section #downloads p {
+			 padding: 0 8px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-category="AccessSupport"] #first_section #downloads p {
+			 padding: 0 8px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-category="AccessSupport"] #first_section #downloads p {
+			 padding: 0 8px;
+		}
+	}
+}
+ [data-page-category="AccessSupport"] #first_section #at-a-glance > section {
+	 position: relative;
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-category="AccessSupport"] #first_section #at-a-glance > section {
+			 padding: 50px 0 0 0;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-category="AccessSupport"] #first_section #at-a-glance > section {
+			 padding: 50px 0 0 0;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-category="AccessSupport"] #first_section #at-a-glance > section {
+			 padding: 50px 0 0 0;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-category="AccessSupport"] #first_section #at-a-glance > section {
+			 padding: 50px 0 0 0;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-category="AccessSupport"] #first_section #at-a-glance > section {
+			 padding: 50px 0 0 0;
+		}
+	}
+}
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) {
+	 [data-page-category="AccessSupport"] #first_section #at-a-glance > section {
+		 padding: 70px 0 0 0;
+		 border-top: 2px solid brand(primary);
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-category="AccessSupport"] #first_section #at-a-glance > section {
+			 padding: 70px 0 0 0;
+			 border-top: 2px solid brand(primary);
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-category="AccessSupport"] #first_section #at-a-glance > section {
+			 padding: 70px 0 0 0;
+			 border-top: 2px solid brand(primary);
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-category="AccessSupport"] #first_section #at-a-glance > section {
+			 padding: 70px 0 0 0;
+			 border-top: 2px solid brand(primary);
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-category="AccessSupport"] #first_section #at-a-glance > section {
+			 padding: 70px 0 0 0;
+			 border-top: 2px solid brand(primary);
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-category="AccessSupport"] #first_section #at-a-glance > section {
+			 padding: 70px 0 0 0;
+			 border-top: 2px solid brand(primary);
+		}
+	}
+}
+ [data-page-category="AccessSupport"] #first_section #at-a-glance h2 {
+	 margin-bottom: 25px;
+}
+ [data-page-category="AccessSupport"] #first_section #at-a-glance h2 em {
+	 text-transform: none;
+}
+ [data-page-category="AccessSupport"] #first_section #at-a-glance p {
+	 font-family: 'Gotham', sans-serif;
+	 font-weight: 700;
+	 color: brand(dark);
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ @else if {
+	 font-size: 16px;
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-category="AccessSupport"] #first_section #at-a-glance p {
+			 margin-bottom: 25px;
+			 line-height: 20px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-category="AccessSupport"] #first_section #at-a-glance p {
+			 margin-bottom: 25px;
+			 line-height: 20px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-category="AccessSupport"] #first_section #at-a-glance p {
+			 margin-bottom: 25px;
+			 line-height: 20px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-category="AccessSupport"] #first_section #at-a-glance p {
+			 margin-bottom: 25px;
+			 line-height: 20px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-category="AccessSupport"] #first_section #at-a-glance p {
+			 margin-bottom: 25px;
+			 line-height: 20px;
+		}
+	}
+}
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) {
+	 [data-page-category="AccessSupport"] #first_section #at-a-glance p {
+		 margin-bottom: 40px;
+		 font-size: 22px;
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-category="AccessSupport"] #first_section #at-a-glance p {
+			 margin-bottom: 40px;
+			 font-size: 22px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-category="AccessSupport"] #first_section #at-a-glance p {
+			 margin-bottom: 40px;
+			 font-size: 22px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-category="AccessSupport"] #first_section #at-a-glance p {
+			 margin-bottom: 40px;
+			 font-size: 22px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-category="AccessSupport"] #first_section #at-a-glance p {
+			 margin-bottom: 40px;
+			 font-size: 22px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-category="AccessSupport"] #first_section #at-a-glance p {
+			 margin-bottom: 40px;
+			 font-size: 22px;
+		}
+	}
+}
+ [data-page-category="AccessSupport"] #first_section #at-a-glance img {
+	 width: 100%;
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-category="AccessSupport"] #first_section #at-a-glance img {
+			 padding: 30px;
+			 border: 1px solid #8d898d;
+			 background: brand(primary_light);
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-category="AccessSupport"] #first_section #at-a-glance img {
+			 padding: 30px;
+			 border: 1px solid #8d898d;
+			 background: brand(primary_light);
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-category="AccessSupport"] #first_section #at-a-glance img {
+			 padding: 30px;
+			 border: 1px solid #8d898d;
+			 background: brand(primary_light);
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-category="AccessSupport"] #first_section #at-a-glance img {
+			 padding: 30px;
+			 border: 1px solid #8d898d;
+			 background: brand(primary_light);
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-category="AccessSupport"] #first_section #at-a-glance img {
+			 padding: 30px;
+			 border: 1px solid #8d898d;
+			 background: brand(primary_light);
+		}
+	}
+}
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) {
+	 [data-page-category="AccessSupport"] #first_section #at-a-glance img {
+		 padding: 70px 40px 0 40px;
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-category="AccessSupport"] #first_section #at-a-glance img {
+			 padding: 70px 40px 0 40px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-category="AccessSupport"] #first_section #at-a-glance img {
+			 padding: 70px 40px 0 40px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-category="AccessSupport"] #first_section #at-a-glance img {
+			 padding: 70px 40px 0 40px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-category="AccessSupport"] #first_section #at-a-glance img {
+			 padding: 70px 40px 0 40px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-category="AccessSupport"] #first_section #at-a-glance img {
+			 padding: 70px 40px 0 40px;
+		}
+	}
+}
+ [data-page-category="AccessSupport"] #first_section #entyvioconnect_contact {
+	 padding: 35px;
+	 text-align: center;
+	 background: brand(light);
+}
+ [data-page-category="AccessSupport"] #first_section #entyvioconnect_contact img {
+	 margin-bottom: 28px;
+	 width: 80px;
+}
+ [data-page-category="AccessSupport"] #first_section #entyvioconnect_contact p {
+	 font-family: 'Gotham', sans-serif;
+	 font-weight: 700;
+	 color: brand(primary);
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ @else if {
+	 font-size: 16px;
+}
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) {
+	 [data-page-category="AccessSupport"] #first_section #entyvioconnect_contact p {
+		 font-size: 22px;
+		 line-height: 24px;
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-category="AccessSupport"] #first_section #entyvioconnect_contact p {
+			 font-size: 22px;
+			 line-height: 24px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-category="AccessSupport"] #first_section #entyvioconnect_contact p {
+			 font-size: 22px;
+			 line-height: 24px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-category="AccessSupport"] #first_section #entyvioconnect_contact p {
+			 font-size: 22px;
+			 line-height: 24px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-category="AccessSupport"] #first_section #entyvioconnect_contact p {
+			 font-size: 22px;
+			 line-height: 24px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-category="AccessSupport"] #first_section #entyvioconnect_contact p {
+			 font-size: 22px;
+			 line-height: 24px;
+		}
+	}
+}
+ [data-page-category="AccessSupport"] #first_section #entyvioconnect_contact p span {
+	 font-family: 'Gotham', sans-serif;
+	 font-weight: 400;
+	 margin-top: 10px;
+	 color: brand(dark);
+	 display: block;
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ @else if {
+	 font-size: 16px;
+}
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) {
+	 [data-page-category="AccessSupport"] #first_section #entyvioconnect_contact p span {
+		 font-size: 22px;
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-category="AccessSupport"] #first_section #entyvioconnect_contact p span {
+			 font-size: 22px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-category="AccessSupport"] #first_section #entyvioconnect_contact p span {
+			 font-size: 22px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-category="AccessSupport"] #first_section #entyvioconnect_contact p span {
+			 font-size: 22px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-category="AccessSupport"] #first_section #entyvioconnect_contact p span {
+			 font-size: 22px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-category="AccessSupport"] #first_section #entyvioconnect_contact p span {
+			 font-size: 22px;
+		}
+	}
+}
+ [data-page-category="AccessSupport"] #first_section #entyvioconnect_contact a {
+	 color: brand(primary);
+	 text-decoration: none;
+}
+ [data-page-category="AccessSupport"] #first_section #entyvioconnect_contact a:hover {
+	 text-decoration: underline;
+}
+ [data-page-category="AccessSupport"] #first_section .contact-purple-bg {
+	 margin: 50px 0 80px 0;
+	 padding: 40px;
+	 width: 100%;
+	 border: 1px solid #8d898d;
+	 text-align: center;
+	 background: brand(primary_light);
+}
+ [data-page-category="AccessSupport"] #first_section .contact-purple-bg h3, [data-page-category="AccessSupport"] #first_section .contact-purple-bg a {
+	 font-family: 'Gotham', sans-serif;
+	 font-weight: 700;
+	 color: brand(primary);
+}
+ @else if {
+	 font-size: 22px;
+}
+ [data-page-category="AccessSupport"] #first_section [data-icon] {
+	 position: relative;
+	 margin-bottom: 25px;
+	 display: flex;
+	 align-items: center;
+	 min-height: 36px;
+}
+ [data-page-category="AccessSupport"] #first_section [data-icon] a {
+	 font-family: 'Gotham', sans-serif;
+	 font-weight: 700;
+	 padding-left: 50px;
+	 display: inline-block;
+	 color: brand(primary);
+	 text-decoration: none;
+}
+ @else if {
+	 font-size: 16px;
+}
+ [data-page-category="AccessSupport"] #first_section [data-icon] a:hover {
+	 text-decoration: underline;
+}
+ [data-page-category="AccessSupport"] #first_section [data-icon]:before {
+	 content: '';
+	 position: absolute;
+	 top: 0;
+	 left: 0;
+	 width: 36px;
+	 height: 36px;
+}
+ [data-page-category="AccessSupport"] #first_section [data-icon="download"]:before {
+	 background: url(path(icon)/res-download.svg) 0 0 no-repeat;
+	 background-size: 100% auto;
+}
+ [data-page-category="AccessSupport"] #first_section [data-icon="site"]:before {
+	 background: url(path(icon)/ec-site.svg) 0 0 no-repeat;
+	 background-size: 100% auto;
+}
+/* from laptop to desktop */
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) {
+	 [data-page-id="PatientCare"] #first_section #affordability_download {
+		 margin-bottom: 70px;
+	}
+	 [data-page-id="PatientCare"] #first_section #affordability ul li {
+		 line-height: 19px;
+	}
+}
+/* only desktop */
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-id="PatientCare"] #first_section #affordability_download {
+			 margin-bottom: 70px;
+		}
+		 [data-page-id="PatientCare"] #first_section #affordability ul li {
+			 line-height: 19px;
+		}
+	}
+}
+/* only laptop */
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-id="PatientCare"] #first_section #affordability_download {
+			 margin-bottom: 70px;
+		}
+		 [data-page-id="PatientCare"] #first_section #affordability ul li {
+			 line-height: 19px;
+		}
+	}
+}
+/* only tablet */
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-id="PatientCare"] #first_section #affordability_download {
+			 margin-bottom: 70px;
+		}
+		 [data-page-id="PatientCare"] #first_section #affordability ul li {
+			 line-height: 19px;
+		}
+	}
+}
+/* only mobile */
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-id="PatientCare"] #first_section #affordability_download {
+			 margin-bottom: 70px;
+		}
+		 [data-page-id="PatientCare"] #first_section #affordability ul li {
+			 line-height: 19px;
+		}
+	}
+}
+/* only mobile small */
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-id="PatientCare"] #first_section #affordability_download {
+			 margin-bottom: 70px;
+		}
+		 [data-page-id="PatientCare"] #first_section #affordability ul li {
+			 line-height: 19px;
+		}
+	}
+}
+ [data-page-id="InsuranceSupport"] {
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ [data-page-id="InsuranceSupport"] #first_section #insurance-support #local-coverage {
+	 margin-top: 24px;
+}
+ [data-page-id="InsuranceSupport"] #first_section #insurance-support #local-coverage .btn-wrapper {
+	 margin: 24px 0;
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-id="InsuranceSupport"] #first_section #insurance-denied .footnote {
+			 line-height: 14px;
+			 font-size: 10px;
+		}
+		 [data-page-id="InsuranceSupport"] #first_section #insurance-support #first-paragraph {
+			 margin-bottom: 25px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-id="InsuranceSupport"] #first_section #insurance-denied .footnote {
+			 line-height: 14px;
+			 font-size: 10px;
+		}
+		 [data-page-id="InsuranceSupport"] #first_section #insurance-support #first-paragraph {
+			 margin-bottom: 25px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-id="InsuranceSupport"] #first_section #insurance-denied .footnote {
+			 line-height: 14px;
+			 font-size: 10px;
+		}
+		 [data-page-id="InsuranceSupport"] #first_section #insurance-support #first-paragraph {
+			 margin-bottom: 25px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-id="InsuranceSupport"] #first_section #insurance-denied .footnote {
+			 line-height: 14px;
+			 font-size: 10px;
+		}
+		 [data-page-id="InsuranceSupport"] #first_section #insurance-support #first-paragraph {
+			 margin-bottom: 25px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-id="InsuranceSupport"] #first_section #insurance-denied .footnote {
+			 line-height: 14px;
+			 font-size: 10px;
+		}
+		 [data-page-id="InsuranceSupport"] #first_section #insurance-support #first-paragraph {
+			 margin-bottom: 25px;
+		}
+	}
+}
+ [data-page-id="Affordability"] {
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-id="Affordability"] #first_section #affordability #first-paragraph {
+			 margin-bottom: 25px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-id="Affordability"] #first_section #affordability #first-paragraph {
+			 margin-bottom: 25px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-id="Affordability"] #first_section #affordability #first-paragraph {
+			 margin-bottom: 25px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-id="Affordability"] #first_section #affordability #first-paragraph {
+			 margin-bottom: 25px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-id="Affordability"] #first_section #affordability #first-paragraph {
+			 margin-bottom: 25px;
+		}
+	}
+}
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) {
+	 [data-page-id="Affordability"] #first_section #affordability ul li {
+		 line-height: 19px;
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-id="Affordability"] #first_section #affordability ul li {
+			 line-height: 19px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-id="Affordability"] #first_section #affordability ul li {
+			 line-height: 19px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-id="Affordability"] #first_section #affordability ul li {
+			 line-height: 19px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-id="Affordability"] #first_section #affordability ul li {
+			 line-height: 19px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-id="Affordability"] #first_section #affordability ul li {
+			 line-height: 19px;
+		}
+	}
+}
+ [data-page-id="PatientCare"] {
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-id="PatientCare"] #first_section #affordability #first-paragraph {
+			 margin-bottom: 25px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-id="PatientCare"] #first_section #affordability #first-paragraph {
+			 margin-bottom: 25px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-id="PatientCare"] #first_section #affordability #first-paragraph {
+			 margin-bottom: 25px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-id="PatientCare"] #first_section #affordability #first-paragraph {
+			 margin-bottom: 25px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-id="PatientCare"] #first_section #affordability #first-paragraph {
+			 margin-bottom: 25px;
+		}
+	}
+}
+ [data-page-id="FormsResources"] #first_section .contact-purple-bg a {
+	 text-decoration: none;
+	 font-size: inherit;
+}
+ [data-page-id="FormsResources"] #first_section #affordability_download .download-section {
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-id="FormsResources"] #first_section #affordability_download .download-section {
+			 margin: 0 0 20px 0;
+			 padding: 30px 15px;
+			 box-shadow: 0 0 7px 0 rgba(61, 5, 58, 0.4);
+		}
+		 [data-page-id="FormsResources"] #first_section #affordability_download .download-section ul {
+			 padding: 0 15px;
+		}
+		 [data-page-id="FormsResources"] #first_section #affordability_download .download-section ul li:last-of-type {
+			 margin-bottom: 0;
+		}
+		 [data-page-id="FormsResources"] #first_section #affordability_download .download-section h4 {
+			 font-size: 20px;
+			 line-height: 24px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-id="FormsResources"] #first_section #affordability_download .download-section {
+			 margin: 0 0 20px 0;
+			 padding: 30px 15px;
+			 box-shadow: 0 0 7px 0 rgba(61, 5, 58, 0.4);
+		}
+		 [data-page-id="FormsResources"] #first_section #affordability_download .download-section ul {
+			 padding: 0 15px;
+		}
+		 [data-page-id="FormsResources"] #first_section #affordability_download .download-section ul li:last-of-type {
+			 margin-bottom: 0;
+		}
+		 [data-page-id="FormsResources"] #first_section #affordability_download .download-section h4 {
+			 font-size: 20px;
+			 line-height: 24px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-id="FormsResources"] #first_section #affordability_download .download-section {
+			 margin: 0 0 20px 0;
+			 padding: 30px 15px;
+			 box-shadow: 0 0 7px 0 rgba(61, 5, 58, 0.4);
+		}
+		 [data-page-id="FormsResources"] #first_section #affordability_download .download-section ul {
+			 padding: 0 15px;
+		}
+		 [data-page-id="FormsResources"] #first_section #affordability_download .download-section ul li:last-of-type {
+			 margin-bottom: 0;
+		}
+		 [data-page-id="FormsResources"] #first_section #affordability_download .download-section h4 {
+			 font-size: 20px;
+			 line-height: 24px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-id="FormsResources"] #first_section #affordability_download .download-section {
+			 margin: 0 0 20px 0;
+			 padding: 30px 15px;
+			 box-shadow: 0 0 7px 0 rgba(61, 5, 58, 0.4);
+		}
+		 [data-page-id="FormsResources"] #first_section #affordability_download .download-section ul {
+			 padding: 0 15px;
+		}
+		 [data-page-id="FormsResources"] #first_section #affordability_download .download-section ul li:last-of-type {
+			 margin-bottom: 0;
+		}
+		 [data-page-id="FormsResources"] #first_section #affordability_download .download-section h4 {
+			 font-size: 20px;
+			 line-height: 24px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-id="FormsResources"] #first_section #affordability_download .download-section {
+			 margin: 0 0 20px 0;
+			 padding: 30px 15px;
+			 box-shadow: 0 0 7px 0 rgba(61, 5, 58, 0.4);
+		}
+		 [data-page-id="FormsResources"] #first_section #affordability_download .download-section ul {
+			 padding: 0 15px;
+		}
+		 [data-page-id="FormsResources"] #first_section #affordability_download .download-section ul li:last-of-type {
+			 margin-bottom: 0;
+		}
+		 [data-page-id="FormsResources"] #first_section #affordability_download .download-section h4 {
+			 font-size: 20px;
+			 line-height: 24px;
+		}
+	}
+}
+ [data-page-id="FormsResources"] #first_section #affordability_download .download-section h3 {
+	 margin-bottom: 20px;
+}
+ [data-page-id="FormsResources"] #first_section .contact-purple-bg {
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-id="FormsResources"] #first_section .contact-purple-bg {
+			 order: 3;
+			 margin: 30px 0 40px;
+			 padding: 30px 24px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-id="FormsResources"] #first_section .contact-purple-bg {
+			 order: 3;
+			 margin: 30px 0 40px;
+			 padding: 30px 24px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-id="FormsResources"] #first_section .contact-purple-bg {
+			 order: 3;
+			 margin: 30px 0 40px;
+			 padding: 30px 24px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-id="FormsResources"] #first_section .contact-purple-bg {
+			 order: 3;
+			 margin: 30px 0 40px;
+			 padding: 30px 24px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-id="FormsResources"] #first_section .contact-purple-bg {
+			 order: 3;
+			 margin: 30px 0 40px;
+			 padding: 30px 24px;
+		}
+	}
+}
+ [data-page-id="FormsResources"] #first_section .contact-purple-bg h3 {
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-id="FormsResources"] #first_section .contact-purple-bg h3 {
+			 font-size: 16px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-id="FormsResources"] #first_section .contact-purple-bg h3 {
+			 font-size: 16px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-id="FormsResources"] #first_section .contact-purple-bg h3 {
+			 font-size: 16px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-id="FormsResources"] #first_section .contact-purple-bg h3 {
+			 font-size: 16px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-id="FormsResources"] #first_section .contact-purple-bg h3 {
+			 font-size: 16px;
+		}
+	}
+}
+ 

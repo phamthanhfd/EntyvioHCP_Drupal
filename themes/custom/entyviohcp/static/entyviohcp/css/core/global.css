@@ -1,0 +1,202 @@
+/*================ Color Variables ================*/
+	:root {
+		--mq-desktop: 1800;
+		--mq-laptop: 960;
+		--mq-tablet: 1024;
+		--mq-mobile: 959;
+		--mq-mobile-sm: 374;
+		
+	  }
+/********************************/
+/**** **** GLOBAL STYLE **** ***/
+/******************************/
+/**** **** PREMADE VIEWPORT **** ***/
+/**** **** CUSTOM VIEWPORT **** ***/
+/* Usage: @include viewport-custom(200, 300) {
+	 h1 {
+		 font-size: 20px;
+	}
+}
+ */
+/**** **** SPECIFIC VIEWPORT **** ***/
+/* ipad specific */
+/* iphone 6/7/8 specific */
+/* ie11 specific */
+/**** **** FOCUS **** ***/
+ *:focus {
+	 -webkit-box-shadow: 0px 0px 11px 2px brand(primary);
+	 -moz-box-shadow: 0px 0px 11px 2px brand(primary);
+	 box-shadow: 0px 0px 11px 2px brand(primary);
+	 outline: none;
+}
+/**** *** PLACEHOLDER COLOUR **** ***/
+ ::-webkit-input-placeholder {
+	 color: brand(light);
+}
+ :-ms-input-placeholder {
+	 color: brand(light);
+}
+ ::placeholder {
+	 color: brand(light);
+}
+/**** **** SKIP NAVIGATION **** ***/
+ .skip-navigation {
+	 font-family: 'Gotham', sans-serif;
+	 position: fixed;
+	 top: -55px;
+	 left: 8px;
+	 padding: 0 20px;
+	 min-height: 48px;
+	 line-height: 48px;
+	 color: brand(primary);
+	 border: 2px solid brand(primary);
+	 border-radius: 0 0 8px 8px;
+	 z-index: 10;
+	 text-decoration: none;
+	 background: brand(light);
+	 transition: top 300ms ease-in-out;
+	 will-change: top;
+}
+ .skip-navigation.active, .skip-navigation:focus {
+	 top: -2px;
+}
+/**** **** HIDDEN **** ***/
+ [hidden], .hidden {
+	 display: none !important;
+}
+/**** **** VISUALLY HIDDEN **** ***/
+ .visuallyhidden {
+	 border: 0;
+	 clip: rect(0 0 0 0);
+	 height: 1px;
+	 margin: -1px;
+	 overflow: hidden;
+	 padding: 0;
+	 position: absolute;
+	 width: 1px;
+}
+/**** **** MOBILE/DESKTOP ONLY **** ***/
+/* from laptop to desktop */
+/* only desktop */
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: var(--mq-desktop)px) and (max-width: 9999px) {
+		 [data-only*="desktop"] {
+			 display: none;
+		}
+	}
+}
+/* only laptop */
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: var(--mq-laptop)px) and (max-width: var(--mq-desktop)px) {
+		 [data-only*="desktop"] {
+			 display: none;
+		}
+	}
+}
+/* only tablet */
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: var(--mq-mobile)px) and (max-width: mq(tablet)px) {
+		 [data-only*="desktop"] {
+			 display: none;
+		}
+	}
+}
+/* only mobile */
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : var(--mq-mobile)px) {
+		 [data-only*="desktop"] {
+			 display: none;
+		}
+	}
+}
+/* only mobile small */
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : var(--mq-mobile-sm)px) {
+		 [data-only*="desktop"] {
+			 display: none;
+		}
+	}
+}
+/* from laptop to desktop */
+ @media screen and (min-width: var(--mq-laptop)px) and (max-width: 9999px) {
+	 [data-only*="mobile"] {
+		 display: none;
+	}
+}
+/* only desktop */
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: var(--mq-desktop)px) and (max-width: 9999px) {
+		 [data-only*="mobile"] {
+			 display: none;
+		}
+	}
+}
+/* only laptop */
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: var(--mq-laptop)px) and (max-width: var(--mq-desktop)px) {
+		 [data-only*="mobile"] {
+			 display: none;
+		}
+	}
+}
+/* only tablet */
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: var(--mq-mobile)px) and (max-width: mq(tablet)px) {
+		 [data-only*="mobile"] {
+			 display: none;
+		}
+	}
+}
+/* only mobile */
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : var(--mq-mobile)px) {
+		 [data-only*="mobile"] {
+			 display: none;
+		}
+	}
+}
+/* only mobile small */
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : var(--mq-mobile-sm)px) {
+		 [data-only*="mobile"] {
+			 display: none;
+		}
+	}
+}
+/**** **** NO LINE BREAK **** ***/
+ nobr, .nobr {
+	 white-space: nowrap;
+}
+/**** **** ENTYVIOCONNECT STYLING **** ***/
+/**** **** FLOAT SETS **** ***/
+ [data-float="right"] {
+	 float: right;
+}
+ [data-float="left"] {
+	 float: left;
+}
+ [data-float="none"] {
+	 float: none;
+}
+/**** **** TEXT ALIGN SETS **** ***/
+ [data-text-align="right"] {
+	 text-align: right;
+}
+ [data-text-align="left"] {
+	 text-align: left;
+}
+ [data-text-align="center"] {
+	 text-align: center;
+}
+/**** **** FORMS **** ***/
+ button[disabled] {
+	 cursor: wait;
+}
+/**** **** MARGINS **** ***/
+ .no-margin {
+	 margin: 0;
+}
+ .no-margin-bottom {
+	 margin-bottom: 0;
+}
+ 

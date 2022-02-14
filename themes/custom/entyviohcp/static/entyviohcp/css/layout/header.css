@@ -1,0 +1,2824 @@
+/***********************************/
+/**** **** MATRIX SETTINGS **** ***/
+/*********************************/
+/* Usage: Update matrix gutter HTML: <nav data-matrix=""> <a> <a> SASS: @include matrix_setting([number of matrix], [gutter space], '[child element]');
+ Example: @include matrix_setting(2, 30px, 'div');
+ */
+/************************************************/
+/**** **** TYPEFACE SETTINGS (LOCAL) v2 **** ***/
+/**********************************************/
+/* Usage: $local-font-settings: ( (Gotham, Gotham-Light_Web, '200'), (Gotham, Gotham-Book_Web, '400'), (Gotham, Gotham-Medium_Web, '500') );
+ $font_path : '../_assets/core/fonts';
+ Usage: @include localFontSetup($local-font-settings, $font_path);
+ Usage: @mixin gotham($font) {
+	 font-family: 'Gotham', sans-serif;
+	 @if $font == light {
+		 font-weight: 200;
+	}
+	 @else if $font == book {
+		 font-weight: 400;
+	}
+	 @else if $font == medium {
+		 font-weight: 500;
+	}
+}
+ body {
+	 @include gotham(book);
+}
+ */
+/*****************************/
+/**** **** ANIMATION **** ***/
+/***************************/
+/* Usage: @include animationFrames(fade) {
+	 0% {
+		 opacity: 1;
+	}
+	 50% {
+		 opacity: 0;
+	}
+}
+ */
+/* Usage: @include animation(300ms fade ease-in-out forwards, 100);
+ */
+/**************************************/
+/**** *** PAGE WIDTH SETTINGS **** ***/
+/************************************/
+/**** **** GRID MIXIN **** ***/
+/****************************/
+/**** **** FLEX SET **** ***/
+/**************************/
+/******************************/
+/**** **** RESET LIST **** ***/
+/****************************/
+/*****************************/
+/**** **** FOR PRINT **** ***/
+/***************************/
+/**** **** SETTING UP TYPEFACE **** ***/
+/**** **** PREMADE VIEWPORT **** ***/
+/**** **** CUSTOM VIEWPORT **** ***/
+/* Usage: @include viewport-custom(200, 300) {
+	 h1 {
+		 font-size: 20px;
+	}
+}
+ */
+/**** **** SPECIFIC VIEWPORT **** ***/
+/* ipad specific */
+/* iphone 6/7/8 specific */
+/* ie11 specific */
+/**** **** PRIMARY TYPE **** ***/
+/**** **** TEXT TYPE **** ***/
+/**** **** CLOSE **** ***/
+/* Usage: @include close-icon([width of icon], [height of icon], [icon colour]);
+ Examples: @include close-icon(25px, 3px, brand(primary));
+ @include close-icon($width: 25px);
+ @include close-icon;
+ */
+/* init */
+ [data-icon="close"] span {
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 width: 100%;
+	 height: 100%;
+	 transform: translate(-50%, -50%);
+}
+ [data-icon="close"] span:before, [data-icon="close"] span:after {
+	 content: '';
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 width: 100%;
+	 height: 3px;
+	 transform-origin: 0 0;
+	 background: brand(primary);
+}
+ [data-icon="close"] span:before {
+	 transform: rotate(45deg) translate(-50%, -50%);
+}
+ [data-icon="close"] span:after {
+	 transform: rotate(-45deg) translate(-50%, -50%);
+}
+/**** **** HAMBURGER **** ***/
+/* Usage: @include hamburger([width of icon], [height of icon], [space between lines], [icon colour]);
+ Examples: @include hamburger(25px, 2px, 1, #fff);
+ @include hamburger($width: 25px, $bg: #f00);
+ @include hamburger;
+ */
+/* init */
+ [data-icon="hamburger"] span {
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 width: 100%;
+	 height: 3px;
+	 transform: translate(-50%, -50%);
+	 background: brand(primary);
+}
+ [data-icon="hamburger"] span:before, [data-icon="hamburger"] span:after {
+	 content: '';
+	 position: absolute;
+	 left: 0;
+	 width: 100%;
+	 height: 3px;
+	 transform-origin: 0 0;
+	 background: brand(primary);
+}
+ [data-icon="hamburger"] span:before {
+	 bottom: 7.5px;
+}
+ [data-icon="hamburger"] span:after {
+	 top: 7.5px;
+}
+/**** **** PLUS/MINUS **** ***/
+/* Usage: @plus-minus-icon([width of icon], [height of icon], [icon colour]);
+ Examples: @plus-minus-icon(25px, 2px, #fff);
+ @include plus-minus-icon($width: 13px);
+ @plus-minus-icon;
+ */
+/* init */
+ [data-icon="plus-minus"] span {
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 width: 100%;
+	 height: 100%;
+	 transform: translate(-50%, -50%);
+}
+ [data-icon="plus-minus"] span:before, [data-icon="plus-minus"] span:after {
+	 content: '';
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 width: 100%;
+	 height: 3px;
+	 transform-origin: 0 0;
+	 background: brand(primary);
+}
+ [data-icon="plus-minus"] span:before {
+	 transform: translate(-50%, -50%);
+}
+ [data-icon="plus-minus"] span:after {
+	 transform: rotate(90deg) translate(-50%, -50%);
+}
+/**** **** YELLOW CIRCLE WORD ICONS **** ***/
+/* Usage: <p data-dot>Vs</p> */
+/****************************/
+/**** **** LANGUAGE **** ***/
+/**************************/
+/* en or cn */
+/***********************************/
+/**** **** LAYOUT SETTINGS **** ***/
+/*********************************/
+/*********************************/
+/**** **** GRID SETTINGS **** ***/
+/*******************************/
+/**********************************/
+/**** **** BRAND SETTINGS **** ***/
+/********************************/
+/* form */
+/*********************************/
+/**** **** PATH SETTINGS **** ***/
+/*******************************/
+/*************************************/
+/**** **** TYPEFACE SETTINGS **** ***/
+/***********************************/
+/**************************/
+/**** **** HEADER **** ***/
+/************************/
+/**** **** MOBILE **** ***/
+/* from laptop to desktop */
+/* only desktop */
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		/* layout */
+		 header[data-device="mobile"] {
+			 position: fixed;
+			 top: 0;
+			 left: 0;
+			 width: 100%;
+			 z-index: 5;
+			 box-shadow: 0 0 5px 2px rgba(0, 0, 0, );
+			 background: brand(light);
+			 transition: top 300ms ease-in;
+			 will-change: top;
+			/* For pushdown */
+			/* For U.S. Healthcare Professional type */
+			/* logo */
+			/* hamburger menu */
+		}
+		 header[data-device="mobile"] > div {
+			 display: flex;
+			 align-items: center;
+			 justify-content: space-between;
+			 height: 80px;
+		}
+		 header[data-device="mobile"] > div.for-us-hcp {
+			 height: 30px;
+			 background: brand(primary_light);
+		}
+		 header[data-device="mobile"] .pushdown {
+			 height: unset;
+		}
+		 header[data-device="mobile"] .pushdown .container {
+			 margin: 0 auto;
+			 width: 100%;
+		}
+		 header[data-device="mobile"] .pushdown .container .flex-container {
+			 display: flex;
+			 justify-content: space-around;
+			 align-items: center;
+			 padding: 10px;
+			 height: 70px;
+		}
+		 header[data-device="mobile"] .pushdown .container .flex-container .description {
+			 color: brand(primary);
+			 font-size: 14px;
+			 line-height: 18px;
+			 font-weight: bold;
+			 letter-spacing: -1px;
+			 padding-right: 10px;
+			 margin-bottom: 0;
+		}
+		 header[data-device="mobile"] .pushdown .container .flex-container .btn.btn-primary {
+			 padding: 10px 8px;
+			 width: 135px;
+			 min-width: 135px;
+			 text-align: center;
+			 height: fit-content;
+		}
+		 header[data-device="mobile"] .pushdown.hidden {
+			 display: none;
+		}
+		 header[data-device="mobile"] > div.for-us-hcp {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 400;
+			 margin: 0;
+			 color: brand(primary);
+			 width: 100%;
+			 text-transform: uppercase;
+			 text-align: center;
+		}
+		 @else if {
+			 font-size: 13px;
+		}
+		 header[data-device="mobile"] > div.for-us-hcp p {
+			 margin-bottom: 0;
+			 width: 100%;
+		}
+		 header[data-device="mobile"] .logo {
+			 margin-left: page-gutter(mobile);
+			 width: 140px;
+			 display: block;
+		}
+		 header[data-device="mobile"] .logo img {
+			 width: 100%;
+		}
+		 header[data-device="mobile"] button[data-mobile-menu] {
+			 position: relative;
+			 margin-right: page-gutter(mobile);
+			 width: 45px;
+			 height: 45px;
+		}
+		 header[data-device="mobile"] button[data-mobile-menu] span {
+			 position: absolute;
+			 top: 50%;
+			 left: 50%;
+			 width: 25px;
+			 height: 3px;
+			 transform: translate(-50%, -50%);
+			 background: brand(primary);
+		}
+		 header[data-device="mobile"] button[data-mobile-menu] span:before, header[data-device="mobile"] button[data-mobile-menu] span:after {
+			 content: '';
+			 position: absolute;
+			 left: 0;
+			 width: 25px;
+			 height: 3px;
+			 transform-origin: 0 0;
+			 background: brand(primary);
+		}
+		 header[data-device="mobile"] button[data-mobile-menu] span:before {
+			 bottom: 7.5px;
+		}
+		 header[data-device="mobile"] button[data-mobile-menu] span:after {
+			 top: 7.5px;
+		}
+		 header[data-device="mobile"] .eyebrow {
+			 height: auto;
+		}
+		 header[data-device="mobile"] .eyebrow ul {
+			 list-style-type: none;
+			 margin: 0 10px 10px 10px;
+			 display: flex;
+			 justify-content: space-between;
+		}
+		 header[data-device="mobile"] .eyebrow li {
+			 position: relative;
+			 padding: 0 10px;
+			 text-align: center;
+		}
+		 header[data-device="mobile"] .eyebrow li:after {
+			 content: '';
+			 position: absolute;
+			 top: 50%;
+			 right: 0;
+			 transform: translateY(-50%);
+			 width: 1px;
+			 height: 25px;
+			 background: brand(primary);
+		}
+		 header[data-device="mobile"] .eyebrow li a {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 color: brand(primary);
+			 text-decoration: none;
+		}
+		 @else if {
+			 font-size: 11px;
+		}
+		 header[data-device="mobile"] .eyebrow li:last-child:after {
+			 content: none;
+		}
+		 html[data-mobile-menu-expanded="true"] {
+			 overflow: hidden;
+		}
+		 html.scroll-state-down header[data-device="mobile"] {
+			 top: -226px;
+			 box-shadow: 0 0 0 0 rgba(0, 0, 0, );
+		}
+	}
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) and screen and (min-width: 360px) and (max-width: 374px) {
+		 header[data-device="mobile"] .pushdown .container .flex-container .description {
+			 font-size: 13px;
+		}
+	}
+}
+/* only laptop */
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		/* layout */
+		 header[data-device="mobile"] {
+			 position: fixed;
+			 top: 0;
+			 left: 0;
+			 width: 100%;
+			 z-index: 5;
+			 box-shadow: 0 0 5px 2px rgba(0, 0, 0, );
+			 background: brand(light);
+			 transition: top 300ms ease-in;
+			 will-change: top;
+			/* For pushdown */
+			/* For U.S. Healthcare Professional type */
+			/* logo */
+			/* hamburger menu */
+		}
+		 header[data-device="mobile"] > div {
+			 display: flex;
+			 align-items: center;
+			 justify-content: space-between;
+			 height: 80px;
+		}
+		 header[data-device="mobile"] > div.for-us-hcp {
+			 height: 30px;
+			 background: brand(primary_light);
+		}
+		 header[data-device="mobile"] .pushdown {
+			 height: unset;
+		}
+		 header[data-device="mobile"] .pushdown .container {
+			 margin: 0 auto;
+			 width: 100%;
+		}
+		 header[data-device="mobile"] .pushdown .container .flex-container {
+			 display: flex;
+			 justify-content: space-around;
+			 align-items: center;
+			 padding: 10px;
+			 height: 70px;
+		}
+		 header[data-device="mobile"] .pushdown .container .flex-container .description {
+			 color: brand(primary);
+			 font-size: 14px;
+			 line-height: 18px;
+			 font-weight: bold;
+			 letter-spacing: -1px;
+			 padding-right: 10px;
+			 margin-bottom: 0;
+		}
+		 header[data-device="mobile"] .pushdown .container .flex-container .btn.btn-primary {
+			 padding: 10px 8px;
+			 width: 135px;
+			 min-width: 135px;
+			 text-align: center;
+			 height: fit-content;
+		}
+		 header[data-device="mobile"] .pushdown.hidden {
+			 display: none;
+		}
+		 header[data-device="mobile"] > div.for-us-hcp {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 400;
+			 margin: 0;
+			 color: brand(primary);
+			 width: 100%;
+			 text-transform: uppercase;
+			 text-align: center;
+		}
+		 @else if {
+			 font-size: 13px;
+		}
+		 header[data-device="mobile"] > div.for-us-hcp p {
+			 margin-bottom: 0;
+			 width: 100%;
+		}
+		 header[data-device="mobile"] .logo {
+			 margin-left: page-gutter(mobile);
+			 width: 140px;
+			 display: block;
+		}
+		 header[data-device="mobile"] .logo img {
+			 width: 100%;
+		}
+		 header[data-device="mobile"] button[data-mobile-menu] {
+			 position: relative;
+			 margin-right: page-gutter(mobile);
+			 width: 45px;
+			 height: 45px;
+		}
+		 header[data-device="mobile"] button[data-mobile-menu] span {
+			 position: absolute;
+			 top: 50%;
+			 left: 50%;
+			 width: 25px;
+			 height: 3px;
+			 transform: translate(-50%, -50%);
+			 background: brand(primary);
+		}
+		 header[data-device="mobile"] button[data-mobile-menu] span:before, header[data-device="mobile"] button[data-mobile-menu] span:after {
+			 content: '';
+			 position: absolute;
+			 left: 0;
+			 width: 25px;
+			 height: 3px;
+			 transform-origin: 0 0;
+			 background: brand(primary);
+		}
+		 header[data-device="mobile"] button[data-mobile-menu] span:before {
+			 bottom: 7.5px;
+		}
+		 header[data-device="mobile"] button[data-mobile-menu] span:after {
+			 top: 7.5px;
+		}
+		 header[data-device="mobile"] .eyebrow {
+			 height: auto;
+		}
+		 header[data-device="mobile"] .eyebrow ul {
+			 list-style-type: none;
+			 margin: 0 10px 10px 10px;
+			 display: flex;
+			 justify-content: space-between;
+		}
+		 header[data-device="mobile"] .eyebrow li {
+			 position: relative;
+			 padding: 0 10px;
+			 text-align: center;
+		}
+		 header[data-device="mobile"] .eyebrow li:after {
+			 content: '';
+			 position: absolute;
+			 top: 50%;
+			 right: 0;
+			 transform: translateY(-50%);
+			 width: 1px;
+			 height: 25px;
+			 background: brand(primary);
+		}
+		 header[data-device="mobile"] .eyebrow li a {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 color: brand(primary);
+			 text-decoration: none;
+		}
+		 @else if {
+			 font-size: 11px;
+		}
+		 header[data-device="mobile"] .eyebrow li:last-child:after {
+			 content: none;
+		}
+		 html[data-mobile-menu-expanded="true"] {
+			 overflow: hidden;
+		}
+		 html.scroll-state-down header[data-device="mobile"] {
+			 top: -226px;
+			 box-shadow: 0 0 0 0 rgba(0, 0, 0, );
+		}
+	}
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) and screen and (min-width: 360px) and (max-width: 374px) {
+		 header[data-device="mobile"] .pushdown .container .flex-container .description {
+			 font-size: 13px;
+		}
+	}
+}
+/* only tablet */
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		/* layout */
+		 header[data-device="mobile"] {
+			 position: fixed;
+			 top: 0;
+			 left: 0;
+			 width: 100%;
+			 z-index: 5;
+			 box-shadow: 0 0 5px 2px rgba(0, 0, 0, );
+			 background: brand(light);
+			 transition: top 300ms ease-in;
+			 will-change: top;
+			/* For pushdown */
+			/* For U.S. Healthcare Professional type */
+			/* logo */
+			/* hamburger menu */
+		}
+		 header[data-device="mobile"] > div {
+			 display: flex;
+			 align-items: center;
+			 justify-content: space-between;
+			 height: 80px;
+		}
+		 header[data-device="mobile"] > div.for-us-hcp {
+			 height: 30px;
+			 background: brand(primary_light);
+		}
+		 header[data-device="mobile"] .pushdown {
+			 height: unset;
+		}
+		 header[data-device="mobile"] .pushdown .container {
+			 margin: 0 auto;
+			 width: 100%;
+		}
+		 header[data-device="mobile"] .pushdown .container .flex-container {
+			 display: flex;
+			 justify-content: space-around;
+			 align-items: center;
+			 padding: 10px;
+			 height: 70px;
+		}
+		 header[data-device="mobile"] .pushdown .container .flex-container .description {
+			 color: brand(primary);
+			 font-size: 14px;
+			 line-height: 18px;
+			 font-weight: bold;
+			 letter-spacing: -1px;
+			 padding-right: 10px;
+			 margin-bottom: 0;
+		}
+		 header[data-device="mobile"] .pushdown .container .flex-container .btn.btn-primary {
+			 padding: 10px 8px;
+			 width: 135px;
+			 min-width: 135px;
+			 text-align: center;
+			 height: fit-content;
+		}
+		 header[data-device="mobile"] .pushdown.hidden {
+			 display: none;
+		}
+		 header[data-device="mobile"] > div.for-us-hcp {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 400;
+			 margin: 0;
+			 color: brand(primary);
+			 width: 100%;
+			 text-transform: uppercase;
+			 text-align: center;
+		}
+		 @else if {
+			 font-size: 13px;
+		}
+		 header[data-device="mobile"] > div.for-us-hcp p {
+			 margin-bottom: 0;
+			 width: 100%;
+		}
+		 header[data-device="mobile"] .logo {
+			 margin-left: page-gutter(mobile);
+			 width: 140px;
+			 display: block;
+		}
+		 header[data-device="mobile"] .logo img {
+			 width: 100%;
+		}
+		 header[data-device="mobile"] button[data-mobile-menu] {
+			 position: relative;
+			 margin-right: page-gutter(mobile);
+			 width: 45px;
+			 height: 45px;
+		}
+		 header[data-device="mobile"] button[data-mobile-menu] span {
+			 position: absolute;
+			 top: 50%;
+			 left: 50%;
+			 width: 25px;
+			 height: 3px;
+			 transform: translate(-50%, -50%);
+			 background: brand(primary);
+		}
+		 header[data-device="mobile"] button[data-mobile-menu] span:before, header[data-device="mobile"] button[data-mobile-menu] span:after {
+			 content: '';
+			 position: absolute;
+			 left: 0;
+			 width: 25px;
+			 height: 3px;
+			 transform-origin: 0 0;
+			 background: brand(primary);
+		}
+		 header[data-device="mobile"] button[data-mobile-menu] span:before {
+			 bottom: 7.5px;
+		}
+		 header[data-device="mobile"] button[data-mobile-menu] span:after {
+			 top: 7.5px;
+		}
+		 header[data-device="mobile"] .eyebrow {
+			 height: auto;
+		}
+		 header[data-device="mobile"] .eyebrow ul {
+			 list-style-type: none;
+			 margin: 0 10px 10px 10px;
+			 display: flex;
+			 justify-content: space-between;
+		}
+		 header[data-device="mobile"] .eyebrow li {
+			 position: relative;
+			 padding: 0 10px;
+			 text-align: center;
+		}
+		 header[data-device="mobile"] .eyebrow li:after {
+			 content: '';
+			 position: absolute;
+			 top: 50%;
+			 right: 0;
+			 transform: translateY(-50%);
+			 width: 1px;
+			 height: 25px;
+			 background: brand(primary);
+		}
+		 header[data-device="mobile"] .eyebrow li a {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 color: brand(primary);
+			 text-decoration: none;
+		}
+		 @else if {
+			 font-size: 11px;
+		}
+		 header[data-device="mobile"] .eyebrow li:last-child:after {
+			 content: none;
+		}
+		 html[data-mobile-menu-expanded="true"] {
+			 overflow: hidden;
+		}
+		 html.scroll-state-down header[data-device="mobile"] {
+			 top: -226px;
+			 box-shadow: 0 0 0 0 rgba(0, 0, 0, );
+		}
+	}
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) and screen and (min-width: 360px) and (max-width: 374px) {
+		 header[data-device="mobile"] .pushdown .container .flex-container .description {
+			 font-size: 13px;
+		}
+	}
+}
+/* only mobile */
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		/* layout */
+		 header[data-device="mobile"] {
+			 position: fixed;
+			 top: 0;
+			 left: 0;
+			 width: 100%;
+			 z-index: 5;
+			 box-shadow: 0 0 5px 2px rgba(0, 0, 0, );
+			 background: brand(light);
+			 transition: top 300ms ease-in;
+			 will-change: top;
+			/* For pushdown */
+			/* For U.S. Healthcare Professional type */
+			/* logo */
+			/* hamburger menu */
+		}
+		 header[data-device="mobile"] > div {
+			 display: flex;
+			 align-items: center;
+			 justify-content: space-between;
+			 height: 80px;
+		}
+		 header[data-device="mobile"] > div.for-us-hcp {
+			 height: 30px;
+			 background: brand(primary_light);
+		}
+		 header[data-device="mobile"] .pushdown {
+			 height: unset;
+		}
+		 header[data-device="mobile"] .pushdown .container {
+			 margin: 0 auto;
+			 width: 100%;
+		}
+		 header[data-device="mobile"] .pushdown .container .flex-container {
+			 display: flex;
+			 justify-content: space-around;
+			 align-items: center;
+			 padding: 10px;
+			 height: 70px;
+		}
+		 header[data-device="mobile"] .pushdown .container .flex-container .description {
+			 color: brand(primary);
+			 font-size: 14px;
+			 line-height: 18px;
+			 font-weight: bold;
+			 letter-spacing: -1px;
+			 padding-right: 10px;
+			 margin-bottom: 0;
+		}
+		 header[data-device="mobile"] .pushdown .container .flex-container .btn.btn-primary {
+			 padding: 10px 8px;
+			 width: 135px;
+			 min-width: 135px;
+			 text-align: center;
+			 height: fit-content;
+		}
+		 header[data-device="mobile"] .pushdown.hidden {
+			 display: none;
+		}
+		 header[data-device="mobile"] > div.for-us-hcp {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 400;
+			 margin: 0;
+			 color: brand(primary);
+			 width: 100%;
+			 text-transform: uppercase;
+			 text-align: center;
+		}
+		 @else if {
+			 font-size: 13px;
+		}
+		 header[data-device="mobile"] > div.for-us-hcp p {
+			 margin-bottom: 0;
+			 width: 100%;
+		}
+		 header[data-device="mobile"] .logo {
+			 margin-left: page-gutter(mobile);
+			 width: 140px;
+			 display: block;
+		}
+		 header[data-device="mobile"] .logo img {
+			 width: 100%;
+		}
+		 header[data-device="mobile"] button[data-mobile-menu] {
+			 position: relative;
+			 margin-right: page-gutter(mobile);
+			 width: 45px;
+			 height: 45px;
+		}
+		 header[data-device="mobile"] button[data-mobile-menu] span {
+			 position: absolute;
+			 top: 50%;
+			 left: 50%;
+			 width: 25px;
+			 height: 3px;
+			 transform: translate(-50%, -50%);
+			 background: brand(primary);
+		}
+		 header[data-device="mobile"] button[data-mobile-menu] span:before, header[data-device="mobile"] button[data-mobile-menu] span:after {
+			 content: '';
+			 position: absolute;
+			 left: 0;
+			 width: 25px;
+			 height: 3px;
+			 transform-origin: 0 0;
+			 background: brand(primary);
+		}
+		 header[data-device="mobile"] button[data-mobile-menu] span:before {
+			 bottom: 7.5px;
+		}
+		 header[data-device="mobile"] button[data-mobile-menu] span:after {
+			 top: 7.5px;
+		}
+		 header[data-device="mobile"] .eyebrow {
+			 height: auto;
+		}
+		 header[data-device="mobile"] .eyebrow ul {
+			 list-style-type: none;
+			 margin: 0 10px 10px 10px;
+			 display: flex;
+			 justify-content: space-between;
+		}
+		 header[data-device="mobile"] .eyebrow li {
+			 position: relative;
+			 padding: 0 10px;
+			 text-align: center;
+		}
+		 header[data-device="mobile"] .eyebrow li:after {
+			 content: '';
+			 position: absolute;
+			 top: 50%;
+			 right: 0;
+			 transform: translateY(-50%);
+			 width: 1px;
+			 height: 25px;
+			 background: brand(primary);
+		}
+		 header[data-device="mobile"] .eyebrow li a {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 color: brand(primary);
+			 text-decoration: none;
+		}
+		 @else if {
+			 font-size: 11px;
+		}
+		 header[data-device="mobile"] .eyebrow li:last-child:after {
+			 content: none;
+		}
+		 html[data-mobile-menu-expanded="true"] {
+			 overflow: hidden;
+		}
+		 html.scroll-state-down header[data-device="mobile"] {
+			 top: -226px;
+			 box-shadow: 0 0 0 0 rgba(0, 0, 0, );
+		}
+	}
+	 @media screen and (max-width : mq(mobile)px) and screen and (min-width: 360px) and (max-width: 374px) {
+		 header[data-device="mobile"] .pushdown .container .flex-container .description {
+			 font-size: 13px;
+		}
+	}
+}
+/* only mobile small */
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		/* layout */
+		 header[data-device="mobile"] {
+			 position: fixed;
+			 top: 0;
+			 left: 0;
+			 width: 100%;
+			 z-index: 5;
+			 box-shadow: 0 0 5px 2px rgba(0, 0, 0, );
+			 background: brand(light);
+			 transition: top 300ms ease-in;
+			 will-change: top;
+			/* For pushdown */
+			/* For U.S. Healthcare Professional type */
+			/* logo */
+			/* hamburger menu */
+		}
+		 header[data-device="mobile"] > div {
+			 display: flex;
+			 align-items: center;
+			 justify-content: space-between;
+			 height: 80px;
+		}
+		 header[data-device="mobile"] > div.for-us-hcp {
+			 height: 30px;
+			 background: brand(primary_light);
+		}
+		 header[data-device="mobile"] .pushdown {
+			 height: unset;
+		}
+		 header[data-device="mobile"] .pushdown .container {
+			 margin: 0 auto;
+			 width: 100%;
+		}
+		 header[data-device="mobile"] .pushdown .container .flex-container {
+			 display: flex;
+			 justify-content: space-around;
+			 align-items: center;
+			 padding: 10px;
+			 height: 70px;
+		}
+		 header[data-device="mobile"] .pushdown .container .flex-container .description {
+			 color: brand(primary);
+			 font-size: 14px;
+			 line-height: 18px;
+			 font-weight: bold;
+			 letter-spacing: -1px;
+			 padding-right: 10px;
+			 margin-bottom: 0;
+		}
+		 header[data-device="mobile"] .pushdown .container .flex-container .btn.btn-primary {
+			 padding: 10px 8px;
+			 width: 135px;
+			 min-width: 135px;
+			 text-align: center;
+			 height: fit-content;
+		}
+		 header[data-device="mobile"] .pushdown.hidden {
+			 display: none;
+		}
+		 header[data-device="mobile"] > div.for-us-hcp {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 400;
+			 margin: 0;
+			 color: brand(primary);
+			 width: 100%;
+			 text-transform: uppercase;
+			 text-align: center;
+		}
+		 @else if {
+			 font-size: 13px;
+		}
+		 header[data-device="mobile"] > div.for-us-hcp p {
+			 margin-bottom: 0;
+			 width: 100%;
+		}
+		 header[data-device="mobile"] .logo {
+			 margin-left: page-gutter(mobile);
+			 width: 140px;
+			 display: block;
+		}
+		 header[data-device="mobile"] .logo img {
+			 width: 100%;
+		}
+		 header[data-device="mobile"] button[data-mobile-menu] {
+			 position: relative;
+			 margin-right: page-gutter(mobile);
+			 width: 45px;
+			 height: 45px;
+		}
+		 header[data-device="mobile"] button[data-mobile-menu] span {
+			 position: absolute;
+			 top: 50%;
+			 left: 50%;
+			 width: 25px;
+			 height: 3px;
+			 transform: translate(-50%, -50%);
+			 background: brand(primary);
+		}
+		 header[data-device="mobile"] button[data-mobile-menu] span:before, header[data-device="mobile"] button[data-mobile-menu] span:after {
+			 content: '';
+			 position: absolute;
+			 left: 0;
+			 width: 25px;
+			 height: 3px;
+			 transform-origin: 0 0;
+			 background: brand(primary);
+		}
+		 header[data-device="mobile"] button[data-mobile-menu] span:before {
+			 bottom: 7.5px;
+		}
+		 header[data-device="mobile"] button[data-mobile-menu] span:after {
+			 top: 7.5px;
+		}
+		 header[data-device="mobile"] .eyebrow {
+			 height: auto;
+		}
+		 header[data-device="mobile"] .eyebrow ul {
+			 list-style-type: none;
+			 margin: 0 10px 10px 10px;
+			 display: flex;
+			 justify-content: space-between;
+		}
+		 header[data-device="mobile"] .eyebrow li {
+			 position: relative;
+			 padding: 0 10px;
+			 text-align: center;
+		}
+		 header[data-device="mobile"] .eyebrow li:after {
+			 content: '';
+			 position: absolute;
+			 top: 50%;
+			 right: 0;
+			 transform: translateY(-50%);
+			 width: 1px;
+			 height: 25px;
+			 background: brand(primary);
+		}
+		 header[data-device="mobile"] .eyebrow li a {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 color: brand(primary);
+			 text-decoration: none;
+		}
+		 @else if {
+			 font-size: 11px;
+		}
+		 header[data-device="mobile"] .eyebrow li:last-child:after {
+			 content: none;
+		}
+		 html[data-mobile-menu-expanded="true"] {
+			 overflow: hidden;
+		}
+		 html.scroll-state-down header[data-device="mobile"] {
+			 top: -226px;
+			 box-shadow: 0 0 0 0 rgba(0, 0, 0, );
+		}
+	}
+	 @media screen and (max-width : mq(mobile-sm)px) and screen and (min-width: 360px) and (max-width: 374px) {
+		 header[data-device="mobile"] .pushdown .container .flex-container .description {
+			 font-size: 13px;
+		}
+	}
+}
+/**** **** DESKTOP : PUSHDOWN **** ***/
+/* from laptop to desktop */
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) {
+	 header[data-device="desktop"] .pushdown .flex-container {
+		 display: flex;
+		 justify-content: space-around;
+		 align-items: center;
+		 margin: 0 auto;
+		 max-width: 950px;
+		 padding: 11px 0;
+	}
+	 header[data-device="desktop"] .pushdown .flex-container .description {
+		 color: brand(primary);
+		 font-size: 16px;
+		 line-height: 18px;
+		 font-weight: bold;
+		 padding-right: 40px;
+		 margin-bottom: 0;
+	}
+	 header[data-device="desktop"] .pushdown .flex-container .btn.btn-primary {
+		 padding: 14px 35px;
+		 width: 190px;
+		 text-align: center;
+		 height: fit-content;
+	}
+}
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) and screen and (min-width: 960px) and (max-width: 985px) {
+	 header[data-device="desktop"] .pushdown .flex-container .description {
+		 font-size: 15px;
+	}
+}
+/* only desktop */
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 header[data-device="desktop"] .pushdown .flex-container {
+			 display: flex;
+			 justify-content: space-around;
+			 align-items: center;
+			 margin: 0 auto;
+			 max-width: 950px;
+			 padding: 11px 0;
+		}
+		 header[data-device="desktop"] .pushdown .flex-container .description {
+			 color: brand(primary);
+			 font-size: 16px;
+			 line-height: 18px;
+			 font-weight: bold;
+			 padding-right: 40px;
+			 margin-bottom: 0;
+		}
+		 header[data-device="desktop"] .pushdown .flex-container .btn.btn-primary {
+			 padding: 14px 35px;
+			 width: 190px;
+			 text-align: center;
+			 height: fit-content;
+		}
+	}
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) and screen and (min-width: 960px) and (max-width: 985px) {
+		 header[data-device="desktop"] .pushdown .flex-container .description {
+			 font-size: 15px;
+		}
+	}
+}
+/* only laptop */
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 header[data-device="desktop"] .pushdown .flex-container {
+			 display: flex;
+			 justify-content: space-around;
+			 align-items: center;
+			 margin: 0 auto;
+			 max-width: 950px;
+			 padding: 11px 0;
+		}
+		 header[data-device="desktop"] .pushdown .flex-container .description {
+			 color: brand(primary);
+			 font-size: 16px;
+			 line-height: 18px;
+			 font-weight: bold;
+			 padding-right: 40px;
+			 margin-bottom: 0;
+		}
+		 header[data-device="desktop"] .pushdown .flex-container .btn.btn-primary {
+			 padding: 14px 35px;
+			 width: 190px;
+			 text-align: center;
+			 height: fit-content;
+		}
+	}
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) and screen and (min-width: 960px) and (max-width: 985px) {
+		 header[data-device="desktop"] .pushdown .flex-container .description {
+			 font-size: 15px;
+		}
+	}
+}
+/* only tablet */
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 header[data-device="desktop"] .pushdown .flex-container {
+			 display: flex;
+			 justify-content: space-around;
+			 align-items: center;
+			 margin: 0 auto;
+			 max-width: 950px;
+			 padding: 11px 0;
+		}
+		 header[data-device="desktop"] .pushdown .flex-container .description {
+			 color: brand(primary);
+			 font-size: 16px;
+			 line-height: 18px;
+			 font-weight: bold;
+			 padding-right: 40px;
+			 margin-bottom: 0;
+		}
+		 header[data-device="desktop"] .pushdown .flex-container .btn.btn-primary {
+			 padding: 14px 35px;
+			 width: 190px;
+			 text-align: center;
+			 height: fit-content;
+		}
+	}
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) and screen and (min-width: 960px) and (max-width: 985px) {
+		 header[data-device="desktop"] .pushdown .flex-container .description {
+			 font-size: 15px;
+		}
+	}
+}
+/* only mobile */
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 header[data-device="desktop"] .pushdown .flex-container {
+			 display: flex;
+			 justify-content: space-around;
+			 align-items: center;
+			 margin: 0 auto;
+			 max-width: 950px;
+			 padding: 11px 0;
+		}
+		 header[data-device="desktop"] .pushdown .flex-container .description {
+			 color: brand(primary);
+			 font-size: 16px;
+			 line-height: 18px;
+			 font-weight: bold;
+			 padding-right: 40px;
+			 margin-bottom: 0;
+		}
+		 header[data-device="desktop"] .pushdown .flex-container .btn.btn-primary {
+			 padding: 14px 35px;
+			 width: 190px;
+			 text-align: center;
+			 height: fit-content;
+		}
+	}
+	 @media screen and (max-width : mq(mobile)px) and screen and (min-width: 960px) and (max-width: 985px) {
+		 header[data-device="desktop"] .pushdown .flex-container .description {
+			 font-size: 15px;
+		}
+	}
+}
+/* only mobile small */
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 header[data-device="desktop"] .pushdown .flex-container {
+			 display: flex;
+			 justify-content: space-around;
+			 align-items: center;
+			 margin: 0 auto;
+			 max-width: 950px;
+			 padding: 11px 0;
+		}
+		 header[data-device="desktop"] .pushdown .flex-container .description {
+			 color: brand(primary);
+			 font-size: 16px;
+			 line-height: 18px;
+			 font-weight: bold;
+			 padding-right: 40px;
+			 margin-bottom: 0;
+		}
+		 header[data-device="desktop"] .pushdown .flex-container .btn.btn-primary {
+			 padding: 14px 35px;
+			 width: 190px;
+			 text-align: center;
+			 height: fit-content;
+		}
+	}
+	 @media screen and (max-width : mq(mobile-sm)px) and screen and (min-width: 960px) and (max-width: 985px) {
+		 header[data-device="desktop"] .pushdown .flex-container .description {
+			 font-size: 15px;
+		}
+	}
+}
+/**** **** DESKTOP : EYEBROW **** ***/
+/* from laptop to desktop */
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) {
+	 header[data-device="desktop"] .eyebrow {
+		 position: relative;
+		 padding: 0 40px;
+		 min-height: 38px;
+		 overflow: hidden;
+	}
+	 header[data-device="desktop"] .eyebrow:before, header[data-device="desktop"] .eyebrow:after {
+		 content: '';
+		 position: absolute;
+		 top: 0;
+		 width: calc(50% + 2px);
+		 height: 100%;
+	}
+	 header[data-device="desktop"] .eyebrow:before {
+		 right: calc(50% - 1px);
+		 background: url(path(background)/purple-gradient.svg) top right no-repeat;
+		 background-size: cover;
+	}
+	 header[data-device="desktop"] .eyebrow:after {
+		 left: calc(50% - 1px);
+		 background: url(path(background)/gray-gradient.svg) top left no-repeat;
+		 background-size: cover;
+	}
+	 header[data-device="desktop"] .eyebrow nav {
+		 position: relative;
+		 margin-top: 14px;
+		 z-index: 2;
+	}
+	 header[data-device="desktop"] .eyebrow ul {
+		 margin: 0;
+		 list-style-type: none;
+		 display: flex;
+		 justify-content: space-between;
+	}
+	 header[data-device="desktop"] .eyebrow ul:nth-child(1) {
+		 padding-right: 23px;
+	}
+	 header[data-device="desktop"] .eyebrow ul:nth-child(2) {
+		 padding-left: 23px;
+	}
+	 header[data-device="desktop"] .eyebrow ul li {
+		 font-family: 'Gotham', sans-serif;
+		 font-weight: 700;
+		 padding: 0 0 8px 0;
+		 text-transform: uppercase;
+		 color: brand(darker);
+	}
+	 @else if {
+		 font-size: 12px;
+	}
+	 header[data-device="desktop"] .eyebrow ul li a {
+		 color: brand(light);
+		 text-decoration: none;
+	}
+	 header[data-device="desktop"] .eyebrow ul li a.hover, header[data-device="desktop"] .eyebrow ul li a:hover {
+		 text-decoration: underline;
+	}
+}
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) and screen and (min-width: 960px) and (max-width: 1250px) {
+	 header[data-device="desktop"] .eyebrow {
+		 padding: 0;
+	}
+}
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) and screen and (min-width: 960px) and (max-width: 1250px) {
+	 header[data-device="desktop"] .eyebrow ul {
+		 align-items: center;
+	}
+}
+/* only desktop */
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 header[data-device="desktop"] .eyebrow {
+			 position: relative;
+			 padding: 0 40px;
+			 min-height: 38px;
+			 overflow: hidden;
+		}
+		 header[data-device="desktop"] .eyebrow:before, header[data-device="desktop"] .eyebrow:after {
+			 content: '';
+			 position: absolute;
+			 top: 0;
+			 width: calc(50% + 2px);
+			 height: 100%;
+		}
+		 header[data-device="desktop"] .eyebrow:before {
+			 right: calc(50% - 1px);
+			 background: url(path(background)/purple-gradient.svg) top right no-repeat;
+			 background-size: cover;
+		}
+		 header[data-device="desktop"] .eyebrow:after {
+			 left: calc(50% - 1px);
+			 background: url(path(background)/gray-gradient.svg) top left no-repeat;
+			 background-size: cover;
+		}
+		 header[data-device="desktop"] .eyebrow nav {
+			 position: relative;
+			 margin-top: 14px;
+			 z-index: 2;
+		}
+		 header[data-device="desktop"] .eyebrow ul {
+			 margin: 0;
+			 list-style-type: none;
+			 display: flex;
+			 justify-content: space-between;
+		}
+		 header[data-device="desktop"] .eyebrow ul:nth-child(1) {
+			 padding-right: 23px;
+		}
+		 header[data-device="desktop"] .eyebrow ul:nth-child(2) {
+			 padding-left: 23px;
+		}
+		 header[data-device="desktop"] .eyebrow ul li {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 padding: 0 0 8px 0;
+			 text-transform: uppercase;
+			 color: brand(darker);
+		}
+		 @else if {
+			 font-size: 12px;
+		}
+		 header[data-device="desktop"] .eyebrow ul li a {
+			 color: brand(light);
+			 text-decoration: none;
+		}
+		 header[data-device="desktop"] .eyebrow ul li a.hover, header[data-device="desktop"] .eyebrow ul li a:hover {
+			 text-decoration: underline;
+		}
+	}
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) and screen and (min-width: 960px) and (max-width: 1250px) {
+		 header[data-device="desktop"] .eyebrow {
+			 padding: 0;
+		}
+	}
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) and screen and (min-width: 960px) and (max-width: 1250px) {
+		 header[data-device="desktop"] .eyebrow ul {
+			 align-items: center;
+		}
+	}
+}
+/* only laptop */
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 header[data-device="desktop"] .eyebrow {
+			 position: relative;
+			 padding: 0 40px;
+			 min-height: 38px;
+			 overflow: hidden;
+		}
+		 header[data-device="desktop"] .eyebrow:before, header[data-device="desktop"] .eyebrow:after {
+			 content: '';
+			 position: absolute;
+			 top: 0;
+			 width: calc(50% + 2px);
+			 height: 100%;
+		}
+		 header[data-device="desktop"] .eyebrow:before {
+			 right: calc(50% - 1px);
+			 background: url(path(background)/purple-gradient.svg) top right no-repeat;
+			 background-size: cover;
+		}
+		 header[data-device="desktop"] .eyebrow:after {
+			 left: calc(50% - 1px);
+			 background: url(path(background)/gray-gradient.svg) top left no-repeat;
+			 background-size: cover;
+		}
+		 header[data-device="desktop"] .eyebrow nav {
+			 position: relative;
+			 margin-top: 14px;
+			 z-index: 2;
+		}
+		 header[data-device="desktop"] .eyebrow ul {
+			 margin: 0;
+			 list-style-type: none;
+			 display: flex;
+			 justify-content: space-between;
+		}
+		 header[data-device="desktop"] .eyebrow ul:nth-child(1) {
+			 padding-right: 23px;
+		}
+		 header[data-device="desktop"] .eyebrow ul:nth-child(2) {
+			 padding-left: 23px;
+		}
+		 header[data-device="desktop"] .eyebrow ul li {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 padding: 0 0 8px 0;
+			 text-transform: uppercase;
+			 color: brand(darker);
+		}
+		 @else if {
+			 font-size: 12px;
+		}
+		 header[data-device="desktop"] .eyebrow ul li a {
+			 color: brand(light);
+			 text-decoration: none;
+		}
+		 header[data-device="desktop"] .eyebrow ul li a.hover, header[data-device="desktop"] .eyebrow ul li a:hover {
+			 text-decoration: underline;
+		}
+	}
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) and screen and (min-width: 960px) and (max-width: 1250px) {
+		 header[data-device="desktop"] .eyebrow {
+			 padding: 0;
+		}
+	}
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) and screen and (min-width: 960px) and (max-width: 1250px) {
+		 header[data-device="desktop"] .eyebrow ul {
+			 align-items: center;
+		}
+	}
+}
+/* only tablet */
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 header[data-device="desktop"] .eyebrow {
+			 position: relative;
+			 padding: 0 40px;
+			 min-height: 38px;
+			 overflow: hidden;
+		}
+		 header[data-device="desktop"] .eyebrow:before, header[data-device="desktop"] .eyebrow:after {
+			 content: '';
+			 position: absolute;
+			 top: 0;
+			 width: calc(50% + 2px);
+			 height: 100%;
+		}
+		 header[data-device="desktop"] .eyebrow:before {
+			 right: calc(50% - 1px);
+			 background: url(path(background)/purple-gradient.svg) top right no-repeat;
+			 background-size: cover;
+		}
+		 header[data-device="desktop"] .eyebrow:after {
+			 left: calc(50% - 1px);
+			 background: url(path(background)/gray-gradient.svg) top left no-repeat;
+			 background-size: cover;
+		}
+		 header[data-device="desktop"] .eyebrow nav {
+			 position: relative;
+			 margin-top: 14px;
+			 z-index: 2;
+		}
+		 header[data-device="desktop"] .eyebrow ul {
+			 margin: 0;
+			 list-style-type: none;
+			 display: flex;
+			 justify-content: space-between;
+		}
+		 header[data-device="desktop"] .eyebrow ul:nth-child(1) {
+			 padding-right: 23px;
+		}
+		 header[data-device="desktop"] .eyebrow ul:nth-child(2) {
+			 padding-left: 23px;
+		}
+		 header[data-device="desktop"] .eyebrow ul li {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 padding: 0 0 8px 0;
+			 text-transform: uppercase;
+			 color: brand(darker);
+		}
+		 @else if {
+			 font-size: 12px;
+		}
+		 header[data-device="desktop"] .eyebrow ul li a {
+			 color: brand(light);
+			 text-decoration: none;
+		}
+		 header[data-device="desktop"] .eyebrow ul li a.hover, header[data-device="desktop"] .eyebrow ul li a:hover {
+			 text-decoration: underline;
+		}
+	}
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) and screen and (min-width: 960px) and (max-width: 1250px) {
+		 header[data-device="desktop"] .eyebrow {
+			 padding: 0;
+		}
+	}
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) and screen and (min-width: 960px) and (max-width: 1250px) {
+		 header[data-device="desktop"] .eyebrow ul {
+			 align-items: center;
+		}
+	}
+}
+/* only mobile */
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 header[data-device="desktop"] .eyebrow {
+			 position: relative;
+			 padding: 0 40px;
+			 min-height: 38px;
+			 overflow: hidden;
+		}
+		 header[data-device="desktop"] .eyebrow:before, header[data-device="desktop"] .eyebrow:after {
+			 content: '';
+			 position: absolute;
+			 top: 0;
+			 width: calc(50% + 2px);
+			 height: 100%;
+		}
+		 header[data-device="desktop"] .eyebrow:before {
+			 right: calc(50% - 1px);
+			 background: url(path(background)/purple-gradient.svg) top right no-repeat;
+			 background-size: cover;
+		}
+		 header[data-device="desktop"] .eyebrow:after {
+			 left: calc(50% - 1px);
+			 background: url(path(background)/gray-gradient.svg) top left no-repeat;
+			 background-size: cover;
+		}
+		 header[data-device="desktop"] .eyebrow nav {
+			 position: relative;
+			 margin-top: 14px;
+			 z-index: 2;
+		}
+		 header[data-device="desktop"] .eyebrow ul {
+			 margin: 0;
+			 list-style-type: none;
+			 display: flex;
+			 justify-content: space-between;
+		}
+		 header[data-device="desktop"] .eyebrow ul:nth-child(1) {
+			 padding-right: 23px;
+		}
+		 header[data-device="desktop"] .eyebrow ul:nth-child(2) {
+			 padding-left: 23px;
+		}
+		 header[data-device="desktop"] .eyebrow ul li {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 padding: 0 0 8px 0;
+			 text-transform: uppercase;
+			 color: brand(darker);
+		}
+		 @else if {
+			 font-size: 12px;
+		}
+		 header[data-device="desktop"] .eyebrow ul li a {
+			 color: brand(light);
+			 text-decoration: none;
+		}
+		 header[data-device="desktop"] .eyebrow ul li a.hover, header[data-device="desktop"] .eyebrow ul li a:hover {
+			 text-decoration: underline;
+		}
+	}
+	 @media screen and (max-width : mq(mobile)px) and screen and (min-width: 960px) and (max-width: 1250px) {
+		 header[data-device="desktop"] .eyebrow {
+			 padding: 0;
+		}
+	}
+	 @media screen and (max-width : mq(mobile)px) and screen and (min-width: 960px) and (max-width: 1250px) {
+		 header[data-device="desktop"] .eyebrow ul {
+			 align-items: center;
+		}
+	}
+}
+/* only mobile small */
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 header[data-device="desktop"] .eyebrow {
+			 position: relative;
+			 padding: 0 40px;
+			 min-height: 38px;
+			 overflow: hidden;
+		}
+		 header[data-device="desktop"] .eyebrow:before, header[data-device="desktop"] .eyebrow:after {
+			 content: '';
+			 position: absolute;
+			 top: 0;
+			 width: calc(50% + 2px);
+			 height: 100%;
+		}
+		 header[data-device="desktop"] .eyebrow:before {
+			 right: calc(50% - 1px);
+			 background: url(path(background)/purple-gradient.svg) top right no-repeat;
+			 background-size: cover;
+		}
+		 header[data-device="desktop"] .eyebrow:after {
+			 left: calc(50% - 1px);
+			 background: url(path(background)/gray-gradient.svg) top left no-repeat;
+			 background-size: cover;
+		}
+		 header[data-device="desktop"] .eyebrow nav {
+			 position: relative;
+			 margin-top: 14px;
+			 z-index: 2;
+		}
+		 header[data-device="desktop"] .eyebrow ul {
+			 margin: 0;
+			 list-style-type: none;
+			 display: flex;
+			 justify-content: space-between;
+		}
+		 header[data-device="desktop"] .eyebrow ul:nth-child(1) {
+			 padding-right: 23px;
+		}
+		 header[data-device="desktop"] .eyebrow ul:nth-child(2) {
+			 padding-left: 23px;
+		}
+		 header[data-device="desktop"] .eyebrow ul li {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 padding: 0 0 8px 0;
+			 text-transform: uppercase;
+			 color: brand(darker);
+		}
+		 @else if {
+			 font-size: 12px;
+		}
+		 header[data-device="desktop"] .eyebrow ul li a {
+			 color: brand(light);
+			 text-decoration: none;
+		}
+		 header[data-device="desktop"] .eyebrow ul li a.hover, header[data-device="desktop"] .eyebrow ul li a:hover {
+			 text-decoration: underline;
+		}
+	}
+	 @media screen and (max-width : mq(mobile-sm)px) and screen and (min-width: 960px) and (max-width: 1250px) {
+		 header[data-device="desktop"] .eyebrow {
+			 padding: 0;
+		}
+	}
+	 @media screen and (max-width : mq(mobile-sm)px) and screen and (min-width: 960px) and (max-width: 1250px) {
+		 header[data-device="desktop"] .eyebrow ul {
+			 align-items: center;
+		}
+	}
+}
+/**** **** DESKTOP : HEADER **** ***/
+/* from laptop to desktop */
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) {
+	 header[data-device="desktop"] {
+		 position: fixed;
+		 top: 0;
+		 left: 0;
+		 width: 100%;
+		 box-shadow: 0 0 5px 2px rgba(0, 0, 0, );
+		 z-index: 11;
+		 transition: top 300ms ease-in;
+		 will-change: top;
+	}
+	 header[data-device="desktop"] > div {
+		 background: brand(light);
+	}
+	 header[data-device="desktop"] > div > div > .container {
+		 margin: auto;
+		 width: 100%;
+		/* from laptop to desktop */
+		/* only desktop */
+		/* only laptop */
+		/* only tablet */
+		/* only mobile */
+		/* only mobile small */
+		/* from laptop to desktop */
+		/* only desktop */
+		/* only laptop */
+		/* only tablet */
+		/* only mobile */
+		/* only mobile small */
+		/* from laptop to desktop */
+		/* only desktop */
+		/* only laptop */
+		/* only tablet */
+		/* only mobile */
+		/* only mobile small */
+	}
+	 @else if $breakpoint == desktop {
+		 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+			 header[data-device="desktop"] > div > div > .container {
+				 padding: 0 page-gutter(mobile);
+				 max-width: max-page-width(mobile);
+			}
+		}
+	}
+	 @else if $breakpoint == laptop {
+		 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+			 header[data-device="desktop"] > div > div > .container {
+				 padding: 0 page-gutter(mobile);
+				 max-width: max-page-width(mobile);
+			}
+		}
+	}
+	 @else if $breakpoint == tablet {
+		 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+			 header[data-device="desktop"] > div > div > .container {
+				 padding: 0 page-gutter(mobile);
+				 max-width: max-page-width(mobile);
+			}
+		}
+	}
+	 @else if $breakpoint == mobile {
+		 @media screen and (max-width : mq(mobile)px) {
+			 header[data-device="desktop"] > div > div > .container {
+				 padding: 0 page-gutter(mobile);
+				 max-width: max-page-width(mobile);
+			}
+		}
+	}
+	 @else if $breakpoint == mobile-sm {
+		 @media screen and (max-width : mq(mobile-sm)px) {
+			 header[data-device="desktop"] > div > div > .container {
+				 padding: 0 page-gutter(mobile);
+				 max-width: max-page-width(mobile);
+			}
+		}
+	}
+	 @else if $breakpoint == desktop {
+		 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+			 header[data-device="desktop"] > div > div > .container {
+				 padding: 0 page-gutter(laptop);
+				 max-width: max-page-width(laptop);
+			}
+		}
+	}
+	 @else if $breakpoint == laptop {
+		 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+			 header[data-device="desktop"] > div > div > .container {
+				 padding: 0 page-gutter(laptop);
+				 max-width: max-page-width(laptop);
+			}
+		}
+	}
+	 @else if $breakpoint == tablet {
+		 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+			 header[data-device="desktop"] > div > div > .container {
+				 padding: 0 page-gutter(laptop);
+				 max-width: max-page-width(laptop);
+			}
+		}
+	}
+	 @else if $breakpoint == mobile {
+		 @media screen and (max-width : mq(mobile)px) {
+			 header[data-device="desktop"] > div > div > .container {
+				 padding: 0 page-gutter(laptop);
+				 max-width: max-page-width(laptop);
+			}
+		}
+	}
+	 @else if $breakpoint == mobile-sm {
+		 @media screen and (max-width : mq(mobile-sm)px) {
+			 header[data-device="desktop"] > div > div > .container {
+				 padding: 0 page-gutter(laptop);
+				 max-width: max-page-width(laptop);
+			}
+		}
+	}
+	 @else if $breakpoint == desktop {
+		 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+			 header[data-device="desktop"] > div > div > .container {
+				 padding: 0 page-gutter(desktop);
+				 max-width: max-page-width(desktop);
+			}
+		}
+	}
+	 @else if $breakpoint == laptop {
+		 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+			 header[data-device="desktop"] > div > div > .container {
+				 padding: 0 page-gutter(desktop);
+				 max-width: max-page-width(desktop);
+			}
+		}
+	}
+	 @else if $breakpoint == tablet {
+		 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+			 header[data-device="desktop"] > div > div > .container {
+				 padding: 0 page-gutter(desktop);
+				 max-width: max-page-width(desktop);
+			}
+		}
+	}
+	 @else if $breakpoint == mobile {
+		 @media screen and (max-width : mq(mobile)px) {
+			 header[data-device="desktop"] > div > div > .container {
+				 padding: 0 page-gutter(desktop);
+				 max-width: max-page-width(desktop);
+			}
+		}
+	}
+	 @else if $breakpoint == mobile-sm {
+		 @media screen and (max-width : mq(mobile-sm)px) {
+			 header[data-device="desktop"] > div > div > .container {
+				 padding: 0 page-gutter(desktop);
+				 max-width: max-page-width(desktop);
+			}
+		}
+	}
+	 header[data-device="desktop"] .main-nav {
+		 padding: 0 32px;
+		/* layout */
+		/* logo */
+		/* hide hcp text and mobile close button */
+	}
+	 header[data-device="desktop"] .main-nav .container {
+		 display: flex;
+		 align-items: center;
+		 justify-content: space-between;
+	}
+	 header[data-device="desktop"] .main-nav .container .logo-container {
+		 flex: 0 0 176px;
+		 max-width: 176px;
+	}
+	 header[data-device="desktop"] .main-nav .logo {
+		 width: 100%;
+		 display: block;
+	}
+	 header[data-device="desktop"] .main-nav .logo img {
+		 width: 100%;
+	}
+	 header[data-device="desktop"] .main-nav .hcp-text, header[data-device="desktop"] .main-nav button[data-mobile-menu] {
+		 display: none;
+	}
+	 html.scroll-state-down header[data-device="desktop"] {
+		 top: -125px;
+		 box-shadow: 0 0 0 0 rgba(0, 0, 0, );
+	}
+	 html.scroll-state-down[data-page-id="Home"] header[data-device="desktop"] {
+		 top: -190px;
+	}
+}
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) and screen and (min-width: 960px) and (max-width: 1250px) {
+	 header[data-device="desktop"] .main-nav {
+		 padding: 0;
+	}
+}
+/* only desktop */
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 header[data-device="desktop"] {
+			 position: fixed;
+			 top: 0;
+			 left: 0;
+			 width: 100%;
+			 box-shadow: 0 0 5px 2px rgba(0, 0, 0, );
+			 z-index: 11;
+			 transition: top 300ms ease-in;
+			 will-change: top;
+		}
+		 header[data-device="desktop"] > div {
+			 background: brand(light);
+		}
+		 header[data-device="desktop"] > div > div > .container {
+			 margin: auto;
+			 width: 100%;
+			/* from laptop to desktop */
+			/* only desktop */
+			/* only laptop */
+			/* only tablet */
+			/* only mobile */
+			/* only mobile small */
+			/* from laptop to desktop */
+			/* only desktop */
+			/* only laptop */
+			/* only tablet */
+			/* only mobile */
+			/* only mobile small */
+			/* from laptop to desktop */
+			/* only desktop */
+			/* only laptop */
+			/* only tablet */
+			/* only mobile */
+			/* only mobile small */
+		}
+		 @else if $breakpoint == desktop {
+			 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+				 header[data-device="desktop"] > div > div > .container {
+					 padding: 0 page-gutter(mobile);
+					 max-width: max-page-width(mobile);
+				}
+			}
+		}
+		 @else if $breakpoint == laptop {
+			 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+				 header[data-device="desktop"] > div > div > .container {
+					 padding: 0 page-gutter(mobile);
+					 max-width: max-page-width(mobile);
+				}
+			}
+		}
+		 @else if $breakpoint == tablet {
+			 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+				 header[data-device="desktop"] > div > div > .container {
+					 padding: 0 page-gutter(mobile);
+					 max-width: max-page-width(mobile);
+				}
+			}
+		}
+		 @else if $breakpoint == mobile {
+			 @media screen and (max-width : mq(mobile)px) {
+				 header[data-device="desktop"] > div > div > .container {
+					 padding: 0 page-gutter(mobile);
+					 max-width: max-page-width(mobile);
+				}
+			}
+		}
+		 @else if $breakpoint == mobile-sm {
+			 @media screen and (max-width : mq(mobile-sm)px) {
+				 header[data-device="desktop"] > div > div > .container {
+					 padding: 0 page-gutter(mobile);
+					 max-width: max-page-width(mobile);
+				}
+			}
+		}
+		 @else if $breakpoint == desktop {
+			 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+				 header[data-device="desktop"] > div > div > .container {
+					 padding: 0 page-gutter(laptop);
+					 max-width: max-page-width(laptop);
+				}
+			}
+		}
+		 @else if $breakpoint == laptop {
+			 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+				 header[data-device="desktop"] > div > div > .container {
+					 padding: 0 page-gutter(laptop);
+					 max-width: max-page-width(laptop);
+				}
+			}
+		}
+		 @else if $breakpoint == tablet {
+			 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+				 header[data-device="desktop"] > div > div > .container {
+					 padding: 0 page-gutter(laptop);
+					 max-width: max-page-width(laptop);
+				}
+			}
+		}
+		 @else if $breakpoint == mobile {
+			 @media screen and (max-width : mq(mobile)px) {
+				 header[data-device="desktop"] > div > div > .container {
+					 padding: 0 page-gutter(laptop);
+					 max-width: max-page-width(laptop);
+				}
+			}
+		}
+		 @else if $breakpoint == mobile-sm {
+			 @media screen and (max-width : mq(mobile-sm)px) {
+				 header[data-device="desktop"] > div > div > .container {
+					 padding: 0 page-gutter(laptop);
+					 max-width: max-page-width(laptop);
+				}
+			}
+		}
+		 @else if $breakpoint == desktop {
+			 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+				 header[data-device="desktop"] > div > div > .container {
+					 padding: 0 page-gutter(desktop);
+					 max-width: max-page-width(desktop);
+				}
+			}
+		}
+		 @else if $breakpoint == laptop {
+			 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+				 header[data-device="desktop"] > div > div > .container {
+					 padding: 0 page-gutter(desktop);
+					 max-width: max-page-width(desktop);
+				}
+			}
+		}
+		 @else if $breakpoint == tablet {
+			 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+				 header[data-device="desktop"] > div > div > .container {
+					 padding: 0 page-gutter(desktop);
+					 max-width: max-page-width(desktop);
+				}
+			}
+		}
+		 @else if $breakpoint == mobile {
+			 @media screen and (max-width : mq(mobile)px) {
+				 header[data-device="desktop"] > div > div > .container {
+					 padding: 0 page-gutter(desktop);
+					 max-width: max-page-width(desktop);
+				}
+			}
+		}
+		 @else if $breakpoint == mobile-sm {
+			 @media screen and (max-width : mq(mobile-sm)px) {
+				 header[data-device="desktop"] > div > div > .container {
+					 padding: 0 page-gutter(desktop);
+					 max-width: max-page-width(desktop);
+				}
+			}
+		}
+		 header[data-device="desktop"] .main-nav {
+			 padding: 0 32px;
+			/* layout */
+			/* logo */
+			/* hide hcp text and mobile close button */
+		}
+		 header[data-device="desktop"] .main-nav .container {
+			 display: flex;
+			 align-items: center;
+			 justify-content: space-between;
+		}
+		 header[data-device="desktop"] .main-nav .container .logo-container {
+			 flex: 0 0 176px;
+			 max-width: 176px;
+		}
+		 header[data-device="desktop"] .main-nav .logo {
+			 width: 100%;
+			 display: block;
+		}
+		 header[data-device="desktop"] .main-nav .logo img {
+			 width: 100%;
+		}
+		 header[data-device="desktop"] .main-nav .hcp-text, header[data-device="desktop"] .main-nav button[data-mobile-menu] {
+			 display: none;
+		}
+		 html.scroll-state-down header[data-device="desktop"] {
+			 top: -125px;
+			 box-shadow: 0 0 0 0 rgba(0, 0, 0, );
+		}
+		 html.scroll-state-down[data-page-id="Home"] header[data-device="desktop"] {
+			 top: -190px;
+		}
+	}
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) and screen and (min-width: 960px) and (max-width: 1250px) {
+		 header[data-device="desktop"] .main-nav {
+			 padding: 0;
+		}
+	}
+}
+/* only laptop */
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 header[data-device="desktop"] {
+			 position: fixed;
+			 top: 0;
+			 left: 0;
+			 width: 100%;
+			 box-shadow: 0 0 5px 2px rgba(0, 0, 0, );
+			 z-index: 11;
+			 transition: top 300ms ease-in;
+			 will-change: top;
+		}
+		 header[data-device="desktop"] > div {
+			 background: brand(light);
+		}
+		 header[data-device="desktop"] > div > div > .container {
+			 margin: auto;
+			 width: 100%;
+			/* from laptop to desktop */
+			/* only desktop */
+			/* only laptop */
+			/* only tablet */
+			/* only mobile */
+			/* only mobile small */
+			/* from laptop to desktop */
+			/* only desktop */
+			/* only laptop */
+			/* only tablet */
+			/* only mobile */
+			/* only mobile small */
+			/* from laptop to desktop */
+			/* only desktop */
+			/* only laptop */
+			/* only tablet */
+			/* only mobile */
+			/* only mobile small */
+		}
+		 @else if $breakpoint == desktop {
+			 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+				 header[data-device="desktop"] > div > div > .container {
+					 padding: 0 page-gutter(mobile);
+					 max-width: max-page-width(mobile);
+				}
+			}
+		}
+		 @else if $breakpoint == laptop {
+			 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+				 header[data-device="desktop"] > div > div > .container {
+					 padding: 0 page-gutter(mobile);
+					 max-width: max-page-width(mobile);
+				}
+			}
+		}
+		 @else if $breakpoint == tablet {
+			 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+				 header[data-device="desktop"] > div > div > .container {
+					 padding: 0 page-gutter(mobile);
+					 max-width: max-page-width(mobile);
+				}
+			}
+		}
+		 @else if $breakpoint == mobile {
+			 @media screen and (max-width : mq(mobile)px) {
+				 header[data-device="desktop"] > div > div > .container {
+					 padding: 0 page-gutter(mobile);
+					 max-width: max-page-width(mobile);
+				}
+			}
+		}
+		 @else if $breakpoint == mobile-sm {
+			 @media screen and (max-width : mq(mobile-sm)px) {
+				 header[data-device="desktop"] > div > div > .container {
+					 padding: 0 page-gutter(mobile);
+					 max-width: max-page-width(mobile);
+				}
+			}
+		}
+		 @else if $breakpoint == desktop {
+			 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+				 header[data-device="desktop"] > div > div > .container {
+					 padding: 0 page-gutter(laptop);
+					 max-width: max-page-width(laptop);
+				}
+			}
+		}
+		 @else if $breakpoint == laptop {
+			 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+				 header[data-device="desktop"] > div > div > .container {
+					 padding: 0 page-gutter(laptop);
+					 max-width: max-page-width(laptop);
+				}
+			}
+		}
+		 @else if $breakpoint == tablet {
+			 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+				 header[data-device="desktop"] > div > div > .container {
+					 padding: 0 page-gutter(laptop);
+					 max-width: max-page-width(laptop);
+				}
+			}
+		}
+		 @else if $breakpoint == mobile {
+			 @media screen and (max-width : mq(mobile)px) {
+				 header[data-device="desktop"] > div > div > .container {
+					 padding: 0 page-gutter(laptop);
+					 max-width: max-page-width(laptop);
+				}
+			}
+		}
+		 @else if $breakpoint == mobile-sm {
+			 @media screen and (max-width : mq(mobile-sm)px) {
+				 header[data-device="desktop"] > div > div > .container {
+					 padding: 0 page-gutter(laptop);
+					 max-width: max-page-width(laptop);
+				}
+			}
+		}
+		 @else if $breakpoint == desktop {
+			 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+				 header[data-device="desktop"] > div > div > .container {
+					 padding: 0 page-gutter(desktop);
+					 max-width: max-page-width(desktop);
+				}
+			}
+		}
+		 @else if $breakpoint == laptop {
+			 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+				 header[data-device="desktop"] > div > div > .container {
+					 padding: 0 page-gutter(desktop);
+					 max-width: max-page-width(desktop);
+				}
+			}
+		}
+		 @else if $breakpoint == tablet {
+			 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+				 header[data-device="desktop"] > div > div > .container {
+					 padding: 0 page-gutter(desktop);
+					 max-width: max-page-width(desktop);
+				}
+			}
+		}
+		 @else if $breakpoint == mobile {
+			 @media screen and (max-width : mq(mobile)px) {
+				 header[data-device="desktop"] > div > div > .container {
+					 padding: 0 page-gutter(desktop);
+					 max-width: max-page-width(desktop);
+				}
+			}
+		}
+		 @else if $breakpoint == mobile-sm {
+			 @media screen and (max-width : mq(mobile-sm)px) {
+				 header[data-device="desktop"] > div > div > .container {
+					 padding: 0 page-gutter(desktop);
+					 max-width: max-page-width(desktop);
+				}
+			}
+		}
+		 header[data-device="desktop"] .main-nav {
+			 padding: 0 32px;
+			/* layout */
+			/* logo */
+			/* hide hcp text and mobile close button */
+		}
+		 header[data-device="desktop"] .main-nav .container {
+			 display: flex;
+			 align-items: center;
+			 justify-content: space-between;
+		}
+		 header[data-device="desktop"] .main-nav .container .logo-container {
+			 flex: 0 0 176px;
+			 max-width: 176px;
+		}
+		 header[data-device="desktop"] .main-nav .logo {
+			 width: 100%;
+			 display: block;
+		}
+		 header[data-device="desktop"] .main-nav .logo img {
+			 width: 100%;
+		}
+		 header[data-device="desktop"] .main-nav .hcp-text, header[data-device="desktop"] .main-nav button[data-mobile-menu] {
+			 display: none;
+		}
+		 html.scroll-state-down header[data-device="desktop"] {
+			 top: -125px;
+			 box-shadow: 0 0 0 0 rgba(0, 0, 0, );
+		}
+		 html.scroll-state-down[data-page-id="Home"] header[data-device="desktop"] {
+			 top: -190px;
+		}
+	}
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) and screen and (min-width: 960px) and (max-width: 1250px) {
+		 header[data-device="desktop"] .main-nav {
+			 padding: 0;
+		}
+	}
+}
+/* only tablet */
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 header[data-device="desktop"] {
+			 position: fixed;
+			 top: 0;
+			 left: 0;
+			 width: 100%;
+			 box-shadow: 0 0 5px 2px rgba(0, 0, 0, );
+			 z-index: 11;
+			 transition: top 300ms ease-in;
+			 will-change: top;
+		}
+		 header[data-device="desktop"] > div {
+			 background: brand(light);
+		}
+		 header[data-device="desktop"] > div > div > .container {
+			 margin: auto;
+			 width: 100%;
+			/* from laptop to desktop */
+			/* only desktop */
+			/* only laptop */
+			/* only tablet */
+			/* only mobile */
+			/* only mobile small */
+			/* from laptop to desktop */
+			/* only desktop */
+			/* only laptop */
+			/* only tablet */
+			/* only mobile */
+			/* only mobile small */
+			/* from laptop to desktop */
+			/* only desktop */
+			/* only laptop */
+			/* only tablet */
+			/* only mobile */
+			/* only mobile small */
+		}
+		 @else if $breakpoint == desktop {
+			 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+				 header[data-device="desktop"] > div > div > .container {
+					 padding: 0 page-gutter(mobile);
+					 max-width: max-page-width(mobile);
+				}
+			}
+		}
+		 @else if $breakpoint == laptop {
+			 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+				 header[data-device="desktop"] > div > div > .container {
+					 padding: 0 page-gutter(mobile);
+					 max-width: max-page-width(mobile);
+				}
+			}
+		}
+		 @else if $breakpoint == tablet {
+			 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+				 header[data-device="desktop"] > div > div > .container {
+					 padding: 0 page-gutter(mobile);
+					 max-width: max-page-width(mobile);
+				}
+			}
+		}
+		 @else if $breakpoint == mobile {
+			 @media screen and (max-width : mq(mobile)px) {
+				 header[data-device="desktop"] > div > div > .container {
+					 padding: 0 page-gutter(mobile);
+					 max-width: max-page-width(mobile);
+				}
+			}
+		}
+		 @else if $breakpoint == mobile-sm {
+			 @media screen and (max-width : mq(mobile-sm)px) {
+				 header[data-device="desktop"] > div > div > .container {
+					 padding: 0 page-gutter(mobile);
+					 max-width: max-page-width(mobile);
+				}
+			}
+		}
+		 @else if $breakpoint == desktop {
+			 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+				 header[data-device="desktop"] > div > div > .container {
+					 padding: 0 page-gutter(laptop);
+					 max-width: max-page-width(laptop);
+				}
+			}
+		}
+		 @else if $breakpoint == laptop {
+			 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+				 header[data-device="desktop"] > div > div > .container {
+					 padding: 0 page-gutter(laptop);
+					 max-width: max-page-width(laptop);
+				}
+			}
+		}
+		 @else if $breakpoint == tablet {
+			 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+				 header[data-device="desktop"] > div > div > .container {
+					 padding: 0 page-gutter(laptop);
+					 max-width: max-page-width(laptop);
+				}
+			}
+		}
+		 @else if $breakpoint == mobile {
+			 @media screen and (max-width : mq(mobile)px) {
+				 header[data-device="desktop"] > div > div > .container {
+					 padding: 0 page-gutter(laptop);
+					 max-width: max-page-width(laptop);
+				}
+			}
+		}
+		 @else if $breakpoint == mobile-sm {
+			 @media screen and (max-width : mq(mobile-sm)px) {
+				 header[data-device="desktop"] > div > div > .container {
+					 padding: 0 page-gutter(laptop);
+					 max-width: max-page-width(laptop);
+				}
+			}
+		}
+		 @else if $breakpoint == desktop {
+			 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+				 header[data-device="desktop"] > div > div > .container {
+					 padding: 0 page-gutter(desktop);
+					 max-width: max-page-width(desktop);
+				}
+			}
+		}
+		 @else if $breakpoint == laptop {
+			 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+				 header[data-device="desktop"] > div > div > .container {
+					 padding: 0 page-gutter(desktop);
+					 max-width: max-page-width(desktop);
+				}
+			}
+		}
+		 @else if $breakpoint == tablet {
+			 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+				 header[data-device="desktop"] > div > div > .container {
+					 padding: 0 page-gutter(desktop);
+					 max-width: max-page-width(desktop);
+				}
+			}
+		}
+		 @else if $breakpoint == mobile {
+			 @media screen and (max-width : mq(mobile)px) {
+				 header[data-device="desktop"] > div > div > .container {
+					 padding: 0 page-gutter(desktop);
+					 max-width: max-page-width(desktop);
+				}
+			}
+		}
+		 @else if $breakpoint == mobile-sm {
+			 @media screen and (max-width : mq(mobile-sm)px) {
+				 header[data-device="desktop"] > div > div > .container {
+					 padding: 0 page-gutter(desktop);
+					 max-width: max-page-width(desktop);
+				}
+			}
+		}
+		 header[data-device="desktop"] .main-nav {
+			 padding: 0 32px;
+			/* layout */
+			/* logo */
+			/* hide hcp text and mobile close button */
+		}
+		 header[data-device="desktop"] .main-nav .container {
+			 display: flex;
+			 align-items: center;
+			 justify-content: space-between;
+		}
+		 header[data-device="desktop"] .main-nav .container .logo-container {
+			 flex: 0 0 176px;
+			 max-width: 176px;
+		}
+		 header[data-device="desktop"] .main-nav .logo {
+			 width: 100%;
+			 display: block;
+		}
+		 header[data-device="desktop"] .main-nav .logo img {
+			 width: 100%;
+		}
+		 header[data-device="desktop"] .main-nav .hcp-text, header[data-device="desktop"] .main-nav button[data-mobile-menu] {
+			 display: none;
+		}
+		 html.scroll-state-down header[data-device="desktop"] {
+			 top: -125px;
+			 box-shadow: 0 0 0 0 rgba(0, 0, 0, );
+		}
+		 html.scroll-state-down[data-page-id="Home"] header[data-device="desktop"] {
+			 top: -190px;
+		}
+	}
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) and screen and (min-width: 960px) and (max-width: 1250px) {
+		 header[data-device="desktop"] .main-nav {
+			 padding: 0;
+		}
+	}
+}
+/* only mobile */
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 header[data-device="desktop"] {
+			 position: fixed;
+			 top: 0;
+			 left: 0;
+			 width: 100%;
+			 box-shadow: 0 0 5px 2px rgba(0, 0, 0, );
+			 z-index: 11;
+			 transition: top 300ms ease-in;
+			 will-change: top;
+		}
+		 header[data-device="desktop"] > div {
+			 background: brand(light);
+		}
+		 header[data-device="desktop"] > div > div > .container {
+			 margin: auto;
+			 width: 100%;
+			/* from laptop to desktop */
+			/* only desktop */
+			/* only laptop */
+			/* only tablet */
+			/* only mobile */
+			/* only mobile small */
+			/* from laptop to desktop */
+			/* only desktop */
+			/* only laptop */
+			/* only tablet */
+			/* only mobile */
+			/* only mobile small */
+			/* from laptop to desktop */
+			/* only desktop */
+			/* only laptop */
+			/* only tablet */
+			/* only mobile */
+			/* only mobile small */
+		}
+		 @else if $breakpoint == desktop {
+			 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+				 header[data-device="desktop"] > div > div > .container {
+					 padding: 0 page-gutter(mobile);
+					 max-width: max-page-width(mobile);
+				}
+			}
+		}
+		 @else if $breakpoint == laptop {
+			 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+				 header[data-device="desktop"] > div > div > .container {
+					 padding: 0 page-gutter(mobile);
+					 max-width: max-page-width(mobile);
+				}
+			}
+		}
+		 @else if $breakpoint == tablet {
+			 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+				 header[data-device="desktop"] > div > div > .container {
+					 padding: 0 page-gutter(mobile);
+					 max-width: max-page-width(mobile);
+				}
+			}
+		}
+		 @else if $breakpoint == mobile {
+			 @media screen and (max-width : mq(mobile)px) {
+				 header[data-device="desktop"] > div > div > .container {
+					 padding: 0 page-gutter(mobile);
+					 max-width: max-page-width(mobile);
+				}
+			}
+		}
+		 @else if $breakpoint == mobile-sm {
+			 @media screen and (max-width : mq(mobile-sm)px) {
+				 header[data-device="desktop"] > div > div > .container {
+					 padding: 0 page-gutter(mobile);
+					 max-width: max-page-width(mobile);
+				}
+			}
+		}
+		 @else if $breakpoint == desktop {
+			 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+				 header[data-device="desktop"] > div > div > .container {
+					 padding: 0 page-gutter(laptop);
+					 max-width: max-page-width(laptop);
+				}
+			}
+		}
+		 @else if $breakpoint == laptop {
+			 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+				 header[data-device="desktop"] > div > div > .container {
+					 padding: 0 page-gutter(laptop);
+					 max-width: max-page-width(laptop);
+				}
+			}
+		}
+		 @else if $breakpoint == tablet {
+			 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+				 header[data-device="desktop"] > div > div > .container {
+					 padding: 0 page-gutter(laptop);
+					 max-width: max-page-width(laptop);
+				}
+			}
+		}
+		 @else if $breakpoint == mobile {
+			 @media screen and (max-width : mq(mobile)px) {
+				 header[data-device="desktop"] > div > div > .container {
+					 padding: 0 page-gutter(laptop);
+					 max-width: max-page-width(laptop);
+				}
+			}
+		}
+		 @else if $breakpoint == mobile-sm {
+			 @media screen and (max-width : mq(mobile-sm)px) {
+				 header[data-device="desktop"] > div > div > .container {
+					 padding: 0 page-gutter(laptop);
+					 max-width: max-page-width(laptop);
+				}
+			}
+		}
+		 @else if $breakpoint == desktop {
+			 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+				 header[data-device="desktop"] > div > div > .container {
+					 padding: 0 page-gutter(desktop);
+					 max-width: max-page-width(desktop);
+				}
+			}
+		}
+		 @else if $breakpoint == laptop {
+			 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+				 header[data-device="desktop"] > div > div > .container {
+					 padding: 0 page-gutter(desktop);
+					 max-width: max-page-width(desktop);
+				}
+			}
+		}
+		 @else if $breakpoint == tablet {
+			 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+				 header[data-device="desktop"] > div > div > .container {
+					 padding: 0 page-gutter(desktop);
+					 max-width: max-page-width(desktop);
+				}
+			}
+		}
+		 @else if $breakpoint == mobile {
+			 @media screen and (max-width : mq(mobile)px) {
+				 header[data-device="desktop"] > div > div > .container {
+					 padding: 0 page-gutter(desktop);
+					 max-width: max-page-width(desktop);
+				}
+			}
+		}
+		 @else if $breakpoint == mobile-sm {
+			 @media screen and (max-width : mq(mobile-sm)px) {
+				 header[data-device="desktop"] > div > div > .container {
+					 padding: 0 page-gutter(desktop);
+					 max-width: max-page-width(desktop);
+				}
+			}
+		}
+		 header[data-device="desktop"] .main-nav {
+			 padding: 0 32px;
+			/* layout */
+			/* logo */
+			/* hide hcp text and mobile close button */
+		}
+		 header[data-device="desktop"] .main-nav .container {
+			 display: flex;
+			 align-items: center;
+			 justify-content: space-between;
+		}
+		 header[data-device="desktop"] .main-nav .container .logo-container {
+			 flex: 0 0 176px;
+			 max-width: 176px;
+		}
+		 header[data-device="desktop"] .main-nav .logo {
+			 width: 100%;
+			 display: block;
+		}
+		 header[data-device="desktop"] .main-nav .logo img {
+			 width: 100%;
+		}
+		 header[data-device="desktop"] .main-nav .hcp-text, header[data-device="desktop"] .main-nav button[data-mobile-menu] {
+			 display: none;
+		}
+		 html.scroll-state-down header[data-device="desktop"] {
+			 top: -125px;
+			 box-shadow: 0 0 0 0 rgba(0, 0, 0, );
+		}
+		 html.scroll-state-down[data-page-id="Home"] header[data-device="desktop"] {
+			 top: -190px;
+		}
+	}
+	 @media screen and (max-width : mq(mobile)px) and screen and (min-width: 960px) and (max-width: 1250px) {
+		 header[data-device="desktop"] .main-nav {
+			 padding: 0;
+		}
+	}
+}
+/* only mobile small */
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 header[data-device="desktop"] {
+			 position: fixed;
+			 top: 0;
+			 left: 0;
+			 width: 100%;
+			 box-shadow: 0 0 5px 2px rgba(0, 0, 0, );
+			 z-index: 11;
+			 transition: top 300ms ease-in;
+			 will-change: top;
+		}
+		 header[data-device="desktop"] > div {
+			 background: brand(light);
+		}
+		 header[data-device="desktop"] > div > div > .container {
+			 margin: auto;
+			 width: 100%;
+			/* from laptop to desktop */
+			/* only desktop */
+			/* only laptop */
+			/* only tablet */
+			/* only mobile */
+			/* only mobile small */
+			/* from laptop to desktop */
+			/* only desktop */
+			/* only laptop */
+			/* only tablet */
+			/* only mobile */
+			/* only mobile small */
+			/* from laptop to desktop */
+			/* only desktop */
+			/* only laptop */
+			/* only tablet */
+			/* only mobile */
+			/* only mobile small */
+		}
+		 @else if $breakpoint == desktop {
+			 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+				 header[data-device="desktop"] > div > div > .container {
+					 padding: 0 page-gutter(mobile);
+					 max-width: max-page-width(mobile);
+				}
+			}
+		}
+		 @else if $breakpoint == laptop {
+			 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+				 header[data-device="desktop"] > div > div > .container {
+					 padding: 0 page-gutter(mobile);
+					 max-width: max-page-width(mobile);
+				}
+			}
+		}
+		 @else if $breakpoint == tablet {
+			 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+				 header[data-device="desktop"] > div > div > .container {
+					 padding: 0 page-gutter(mobile);
+					 max-width: max-page-width(mobile);
+				}
+			}
+		}
+		 @else if $breakpoint == mobile {
+			 @media screen and (max-width : mq(mobile)px) {
+				 header[data-device="desktop"] > div > div > .container {
+					 padding: 0 page-gutter(mobile);
+					 max-width: max-page-width(mobile);
+				}
+			}
+		}
+		 @else if $breakpoint == mobile-sm {
+			 @media screen and (max-width : mq(mobile-sm)px) {
+				 header[data-device="desktop"] > div > div > .container {
+					 padding: 0 page-gutter(mobile);
+					 max-width: max-page-width(mobile);
+				}
+			}
+		}
+		 @else if $breakpoint == desktop {
+			 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+				 header[data-device="desktop"] > div > div > .container {
+					 padding: 0 page-gutter(laptop);
+					 max-width: max-page-width(laptop);
+				}
+			}
+		}
+		 @else if $breakpoint == laptop {
+			 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+				 header[data-device="desktop"] > div > div > .container {
+					 padding: 0 page-gutter(laptop);
+					 max-width: max-page-width(laptop);
+				}
+			}
+		}
+		 @else if $breakpoint == tablet {
+			 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+				 header[data-device="desktop"] > div > div > .container {
+					 padding: 0 page-gutter(laptop);
+					 max-width: max-page-width(laptop);
+				}
+			}
+		}
+		 @else if $breakpoint == mobile {
+			 @media screen and (max-width : mq(mobile)px) {
+				 header[data-device="desktop"] > div > div > .container {
+					 padding: 0 page-gutter(laptop);
+					 max-width: max-page-width(laptop);
+				}
+			}
+		}
+		 @else if $breakpoint == mobile-sm {
+			 @media screen and (max-width : mq(mobile-sm)px) {
+				 header[data-device="desktop"] > div > div > .container {
+					 padding: 0 page-gutter(laptop);
+					 max-width: max-page-width(laptop);
+				}
+			}
+		}
+		 @else if $breakpoint == desktop {
+			 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+				 header[data-device="desktop"] > div > div > .container {
+					 padding: 0 page-gutter(desktop);
+					 max-width: max-page-width(desktop);
+				}
+			}
+		}
+		 @else if $breakpoint == laptop {
+			 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+				 header[data-device="desktop"] > div > div > .container {
+					 padding: 0 page-gutter(desktop);
+					 max-width: max-page-width(desktop);
+				}
+			}
+		}
+		 @else if $breakpoint == tablet {
+			 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+				 header[data-device="desktop"] > div > div > .container {
+					 padding: 0 page-gutter(desktop);
+					 max-width: max-page-width(desktop);
+				}
+			}
+		}
+		 @else if $breakpoint == mobile {
+			 @media screen and (max-width : mq(mobile)px) {
+				 header[data-device="desktop"] > div > div > .container {
+					 padding: 0 page-gutter(desktop);
+					 max-width: max-page-width(desktop);
+				}
+			}
+		}
+		 @else if $breakpoint == mobile-sm {
+			 @media screen and (max-width : mq(mobile-sm)px) {
+				 header[data-device="desktop"] > div > div > .container {
+					 padding: 0 page-gutter(desktop);
+					 max-width: max-page-width(desktop);
+				}
+			}
+		}
+		 header[data-device="desktop"] .main-nav {
+			 padding: 0 32px;
+			/* layout */
+			/* logo */
+			/* hide hcp text and mobile close button */
+		}
+		 header[data-device="desktop"] .main-nav .container {
+			 display: flex;
+			 align-items: center;
+			 justify-content: space-between;
+		}
+		 header[data-device="desktop"] .main-nav .container .logo-container {
+			 flex: 0 0 176px;
+			 max-width: 176px;
+		}
+		 header[data-device="desktop"] .main-nav .logo {
+			 width: 100%;
+			 display: block;
+		}
+		 header[data-device="desktop"] .main-nav .logo img {
+			 width: 100%;
+		}
+		 header[data-device="desktop"] .main-nav .hcp-text, header[data-device="desktop"] .main-nav button[data-mobile-menu] {
+			 display: none;
+		}
+		 html.scroll-state-down header[data-device="desktop"] {
+			 top: -125px;
+			 box-shadow: 0 0 0 0 rgba(0, 0, 0, );
+		}
+		 html.scroll-state-down[data-page-id="Home"] header[data-device="desktop"] {
+			 top: -190px;
+		}
+	}
+	 @media screen and (max-width : mq(mobile-sm)px) and screen and (min-width: 960px) and (max-width: 1250px) {
+		 header[data-device="desktop"] .main-nav {
+			 padding: 0;
+		}
+	}
+}
+ 

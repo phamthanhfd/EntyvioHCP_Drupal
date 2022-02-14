@@ -1,0 +1,1312 @@
+/***********************************/
+/**** **** MATRIX SETTINGS **** ***/
+/*********************************/
+/* Usage: Update matrix gutter HTML: <nav data-matrix=""> <a> <a> SASS: @include matrix_setting([number of matrix], [gutter space], '[child element]');
+ Example: @include matrix_setting(2, 30px, 'div');
+ */
+/************************************************/
+/**** **** TYPEFACE SETTINGS (LOCAL) v2 **** ***/
+/**********************************************/
+/* Usage: $local-font-settings: ( (Gotham, Gotham-Light_Web, '200'), (Gotham, Gotham-Book_Web, '400'), (Gotham, Gotham-Medium_Web, '500') );
+ $font_path : '../_assets/core/fonts';
+ Usage: @include localFontSetup($local-font-settings, $font_path);
+ Usage: @mixin gotham($font) {
+	 font-family: 'Gotham', sans-serif;
+	 @if $font == light {
+		 font-weight: 200;
+	}
+	 @else if $font == book {
+		 font-weight: 400;
+	}
+	 @else if $font == medium {
+		 font-weight: 500;
+	}
+}
+ body {
+	 @include gotham(book);
+}
+ */
+/*****************************/
+/**** **** ANIMATION **** ***/
+/***************************/
+/* Usage: @include animationFrames(fade) {
+	 0% {
+		 opacity: 1;
+	}
+	 50% {
+		 opacity: 0;
+	}
+}
+ */
+/* Usage: @include animation(300ms fade ease-in-out forwards, 100);
+ */
+/**************************************/
+/**** *** PAGE WIDTH SETTINGS **** ***/
+/************************************/
+/**** **** GRID MIXIN **** ***/
+/****************************/
+/**** **** FLEX SET **** ***/
+/**************************/
+/******************************/
+/**** **** RESET LIST **** ***/
+/****************************/
+/*****************************/
+/**** **** FOR PRINT **** ***/
+/***************************/
+/**** **** SETTING UP TYPEFACE **** ***/
+/**** **** PREMADE VIEWPORT **** ***/
+/**** **** CUSTOM VIEWPORT **** ***/
+/* Usage: @include viewport-custom(200, 300) {
+	 h1 {
+		 font-size: 20px;
+	}
+}
+ */
+/**** **** SPECIFIC VIEWPORT **** ***/
+/* ipad specific */
+/* iphone 6/7/8 specific */
+/* ie11 specific */
+/**** **** PRIMARY TYPE **** ***/
+/**** **** TEXT TYPE **** ***/
+/**** **** CLOSE **** ***/
+/* Usage: @include close-icon([width of icon], [height of icon], [icon colour]);
+ Examples: @include close-icon(25px, 3px, brand(primary));
+ @include close-icon($width: 25px);
+ @include close-icon;
+ */
+/* init */
+ [data-icon="close"] span {
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 width: 100%;
+	 height: 100%;
+	 transform: translate(-50%, -50%);
+}
+ [data-icon="close"] span:before, [data-icon="close"] span:after {
+	 content: '';
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 width: 100%;
+	 height: 3px;
+	 transform-origin: 0 0;
+	 background: brand(primary);
+}
+ [data-icon="close"] span:before {
+	 transform: rotate(45deg) translate(-50%, -50%);
+}
+ [data-icon="close"] span:after {
+	 transform: rotate(-45deg) translate(-50%, -50%);
+}
+/**** **** HAMBURGER **** ***/
+/* Usage: @include hamburger([width of icon], [height of icon], [space between lines], [icon colour]);
+ Examples: @include hamburger(25px, 2px, 1, #fff);
+ @include hamburger($width: 25px, $bg: #f00);
+ @include hamburger;
+ */
+/* init */
+ [data-icon="hamburger"] span {
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 width: 100%;
+	 height: 3px;
+	 transform: translate(-50%, -50%);
+	 background: brand(primary);
+}
+ [data-icon="hamburger"] span:before, [data-icon="hamburger"] span:after {
+	 content: '';
+	 position: absolute;
+	 left: 0;
+	 width: 100%;
+	 height: 3px;
+	 transform-origin: 0 0;
+	 background: brand(primary);
+}
+ [data-icon="hamburger"] span:before {
+	 bottom: 7.5px;
+}
+ [data-icon="hamburger"] span:after {
+	 top: 7.5px;
+}
+/**** **** PLUS/MINUS **** ***/
+/* Usage: @plus-minus-icon([width of icon], [height of icon], [icon colour]);
+ Examples: @plus-minus-icon(25px, 2px, #fff);
+ @include plus-minus-icon($width: 13px);
+ @plus-minus-icon;
+ */
+/* init */
+ [data-icon="plus-minus"] span {
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 width: 100%;
+	 height: 100%;
+	 transform: translate(-50%, -50%);
+}
+ [data-icon="plus-minus"] span:before, [data-icon="plus-minus"] span:after {
+	 content: '';
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 width: 100%;
+	 height: 3px;
+	 transform-origin: 0 0;
+	 background: brand(primary);
+}
+ [data-icon="plus-minus"] span:before {
+	 transform: translate(-50%, -50%);
+}
+ [data-icon="plus-minus"] span:after {
+	 transform: rotate(90deg) translate(-50%, -50%);
+}
+/**** **** YELLOW CIRCLE WORD ICONS **** ***/
+/* Usage: <p data-dot>Vs</p> */
+/****************************/
+/**** **** LANGUAGE **** ***/
+/**************************/
+/* en or cn */
+/***********************************/
+/**** **** LAYOUT SETTINGS **** ***/
+/*********************************/
+/*********************************/
+/**** **** GRID SETTINGS **** ***/
+/*******************************/
+/**********************************/
+/**** **** BRAND SETTINGS **** ***/
+/********************************/
+/* form */
+/*********************************/
+/**** **** PATH SETTINGS **** ***/
+/*******************************/
+/*************************************/
+/**** **** TYPEFACE SETTINGS **** ***/
+/***********************************/
+/**********************************/
+/**** **** VIDEO PLAYER **** *****/
+/********************************/
+ .video-player {
+	 position: relative;
+}
+ .video-player button {
+	 position: absolute;
+	 top: 0;
+	 left: 0;
+	 width: 100%;
+	 height: 100%;
+	 z-index: 3;
+	 border: 0;
+	 appearance: none;
+	 -webkit-appearance: none;
+	 background: none;
+}
+ .video-js {
+	 background-color: transparent;
+	 width: 100%;
+	 height: auto;
+}
+ .video-js .vjs-tech {
+	 position: relative;
+}
+ .video-js .vjs-big-play-button {
+	 display: none;
+}
+ .video-js .vjs-dock-text {
+	 display: none;
+}
+ .video-js .vjs-picture-in-picture-control {
+	 display: none;
+}
+ .video-js .vjs-poster {
+	 background-color: transparent;
+	 background-size: cover;
+}
+ .video-js .vjs-endscreen-overlay-content {
+	 display: none !important;
+}
+ @media screen and (max-width: 9999px) and (min-width: 960px) {
+	 .carousel-video-controller .video-js {
+		 display: none;
+	}
+}
+ .video-js.not-hover.vjs-has-started.vjs-paused.vjs-user-active .vjs-control-bar:not(.vjs-focus-within):not(.vjs-control-bar-visible), .video-js.not-hover.vjs-has-started.vjs-paused.vjs-user-inactive .vjs-control-bar:not(.vjs-focus-within):not(.vjs-control-bar-visible), .video-js.vjs-has-started.vjs-paused.vjs-ad-playing.vjs-user-inactive .vjs-control-bar, .video-js.vjs-has-started.vjs-playing.vjs-user-inactive .vjs-control-bar:not(.vjs-focus-within):not(.vjs-control-bar-visible) {
+	 transform: none;
+	 -webkit-transform: none;
+	 -ms-transform: none;
+}
+ [data-page-id="MechanismOfAction"][data-page-category="MechanismOfAction"] .video-js, [data-page-id="DosingAdministration"][data-page-category="DosingAdministration"] .video-js {
+	 display: block;
+}
+ [data-page-id="MechanismOfAction"][data-page-category="MechanismOfAction"] .video-js .vjs-control-bar, [data-page-id="DosingAdministration"][data-page-category="DosingAdministration"] .video-js .vjs-control-bar {
+	 display: flex;
+}
+ [data-page-id="PeerPerspective"][data-page-category="Resources"] {
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+	/**** **** IE11 **** ***/
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ [data-page-id="PeerPerspective"][data-page-category="Resources"] .body-content > article .main-container {
+	 background: transparent;
+}
+ [data-page-id="PeerPerspective"][data-page-category="Resources"] .body-content > article .main-container *:focus {
+	 -webkit-box-shadow: none;
+	 -moz-box-shadow: none;
+	 box-shadow: none;
+}
+ [data-page-id="PeerPerspective"][data-page-category="Resources"] .video-js {
+	 display: none;
+}
+ [data-page-id="PeerPerspective"][data-page-category="Resources"] .video-js .vjs-poster {
+	 display: none;
+}
+ [data-page-id="PeerPerspective"][data-page-category="Resources"] .video-js .vjs-has-started.vjs-poster {
+	 display: none !important;
+}
+ [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery {
+	 display: flex;
+	 flex-direction: column;
+	 color: #fff;
+}
+ [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery h2 {
+	 margin-bottom: 24px;
+}
+ [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery .gallery-item {
+	 margin-bottom: 24px;
+}
+ [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery .gallery-item .top-content .poster-image {
+	 position: relative;
+}
+ [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery .gallery-item .top-content .poster-image:before {
+	 content: '';
+	 top: 0;
+	 left: 50%;
+	 width: 25%;
+	 height: 100%;
+	 max-width: 72px;
+	 position: absolute;
+	 -webkit-transform: translateX(-50%);
+	 transform: translateX(-50%);
+	 background-image: url(/Content/images/icons/icon-video-play.svg);
+	 background-repeat: no-repeat;
+	 background-position: center;
+	 background-size: contain;
+}
+ [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery .gallery-item .top-content .poster-image img {
+	 width: 100%;
+}
+ [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery .gallery-item .bottom-content .item-title {
+	 font-family: 'Gotham', sans-serif;
+	 font-weight: 700;
+	 margin: 12px 0;
+}
+ @else if {
+	 font-size: 18px;
+}
+ [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery .gallery-item .bottom-content .toggle-synopsis, [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery .gallery-item .bottom-content .toggle-transcript {
+	 margin-bottom: 10px;
+	 margin-top: 10px;
+	 font-family: 'Gotham', sans-serif;
+	 font-weight: 700;
+	 cursor: pointer;
+	 line-height: 18px;
+	 position: relative;
+	 padding-left: 28px;
+}
+ @else if {
+	 font-size: 16px;
+}
+ [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery .gallery-item .bottom-content .toggle-synopsis span, [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery .gallery-item .bottom-content .toggle-transcript span {
+	 left: 0;
+	 top: -2px;
+	 width: 22px;
+	 height: 22px;
+	 background: #fff;
+	 position: absolute;
+	 border-radius: 11px;
+}
+ [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery .gallery-item .bottom-content .toggle-synopsis span:before, [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery .gallery-item .bottom-content .toggle-transcript span:before {
+	 content: "";
+	 top: 10px;
+	 left: 6px;
+	 width: 10px;
+	 height: 2px;
+	 background: #9a258d;
+	 position: absolute;
+}
+ [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery .gallery-item .bottom-content .toggle-synopsis span:after, [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery .gallery-item .bottom-content .toggle-transcript span:after {
+	 content: "";
+	 top: 10px;
+	 left: 6px;
+	 width: 10px;
+	 height: 2px;
+	 background: #9a258d;
+	 position: absolute;
+	 -webkit-transform: rotate(90deg);
+	 transform: rotate(90deg);
+	 transition: all 0.3s ease-in-out;
+}
+ [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery .gallery-item .bottom-content .synopsis, [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery .gallery-item .bottom-content .transcript {
+	 max-height: 0;
+	 overflow: hidden;
+	 transition: all 0.3s ease-in-out;
+}
+ [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery .gallery-item .bottom-content .synopsis {
+	 font-family: 'Gotham', sans-serif;
+	 font-weight: 400;
+}
+ @else if {
+	 font-size: 16px;
+}
+ [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery .gallery-item .bottom-content .synopsis .doctors {
+	 display: flex;
+}
+ [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery .gallery-item .bottom-content .synopsis .doctors p {
+	 font-family: 'Gotham', sans-serif;
+	 font-weight: 700;
+}
+ @else if {
+	 font-size: 14px;
+}
+ [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery .gallery-item .bottom-content .synopsis .doctors p em {
+	 font-family: 'Gotham', sans-serif;
+	 font-weight: 400;
+}
+ @else if {
+	 font-size: 14px;
+}
+ [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery .gallery-item .bottom-content .transcript {
+	 flex-direction: column;
+	 background: #fff;
+}
+ [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery .gallery-item .bottom-content .transcript::-webkit-scrollbar {
+	 width: 4px;
+}
+ [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery .gallery-item .bottom-content .transcript::-webkit-scrollbar-track {
+	 background: #eee;
+}
+ [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery .gallery-item .bottom-content .transcript::-webkit-scrollbar-thumb {
+	 background: #9b288c;
+}
+ [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery .gallery-item .bottom-content .transcript .content {
+	 padding: 10px;
+}
+ [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery .gallery-item .bottom-content .transcript p {
+	 font-family: 'Gotham', sans-serif;
+	 font-weight: 400;
+	 color: #58595b;
+}
+ @else if {
+	 font-size: 16px;
+}
+ [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery .gallery-item .bottom-content .transcript p strong {
+	 font-family: 'Gotham', sans-serif;
+	 font-weight: 700;
+}
+ @else if {
+	 font-size: 16px;
+}
+ [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery .gallery-item .bottom-content.active-transcript .toggle-transcript span:after {
+	 -webkit-transform: rotate(0deg);
+	 transform: rotate(0deg);
+}
+ [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery .gallery-item .bottom-content.active-transcript .transcript {
+	 max-height: 250px;
+	 overflow: scroll;
+	 overflow-x: hidden;
+}
+ [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery .gallery-item .bottom-content.active-synopsis .toggle-synopsis span:after {
+	 -webkit-transform: rotate(0deg);
+	 transform: rotate(0deg);
+}
+ [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery .gallery-item .bottom-content.active-synopsis .synopsis {
+	 max-height: 250px;
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-desktop {
+			 display: none;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery .gallery-item {
+			 display: block;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery .gallery-item .synopsis .doctors {
+			 flex-direction: column;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery .gallery-item .synopsis .doctors p {
+			 margin-right: 0;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-desktop {
+			 display: none;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery .gallery-item {
+			 display: block;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery .gallery-item .synopsis .doctors {
+			 flex-direction: column;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery .gallery-item .synopsis .doctors p {
+			 margin-right: 0;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-desktop {
+			 display: none;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery .gallery-item {
+			 display: block;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery .gallery-item .synopsis .doctors {
+			 flex-direction: column;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery .gallery-item .synopsis .doctors p {
+			 margin-right: 0;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-desktop {
+			 display: none;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery .gallery-item {
+			 display: block;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery .gallery-item .synopsis .doctors {
+			 flex-direction: column;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery .gallery-item .synopsis .doctors p {
+			 margin-right: 0;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-desktop {
+			 display: none;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery .gallery-item {
+			 display: block;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery .gallery-item .synopsis .doctors {
+			 flex-direction: column;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery .gallery-item .synopsis .doctors p {
+			 margin-right: 0;
+		}
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery-desktop {
+			 min-width: 350px;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery-desktop .video-selector {
+			 flex-direction: column;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery-desktop .video-selector .content {
+			 margin-left: 0 !important;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery-desktop {
+			 min-width: 350px;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery-desktop .video-selector {
+			 flex-direction: column;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery-desktop .video-selector .content {
+			 margin-left: 0 !important;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery-desktop {
+			 min-width: 350px;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery-desktop .video-selector {
+			 flex-direction: column;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery-desktop .video-selector .content {
+			 margin-left: 0 !important;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery-desktop {
+			 min-width: 350px;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery-desktop .video-selector {
+			 flex-direction: column;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery-desktop .video-selector .content {
+			 margin-left: 0 !important;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery-desktop {
+			 min-width: 350px;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery-desktop .video-selector {
+			 flex-direction: column;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery-desktop .video-selector .content {
+			 margin-left: 0 !important;
+		}
+	}
+}
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) {
+	 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery {
+		 flex-direction: row;
+	}
+	 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-desktop {
+		 margin-bottom: 24px;
+		 width: 40%;
+		 min-width: 420px;
+	}
+	 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-desktop .desktop-video-selector {
+		 height: fit-content;
+		 min-height: 420px;
+		 background: white;
+		 padding: 24px 20px;
+		 display: flex;
+		 flex-direction: column;
+	}
+	 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-desktop .desktop-video-selector .video-selector {
+		 display: flex;
+		 margin-bottom: 16px;
+	}
+	 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-desktop .desktop-video-selector .video-selector.active {
+		 display: none;
+	}
+	 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-desktop .desktop-video-selector .video-selector .thumb {
+		 max-width: 170px;
+		 position: relative;
+	}
+	 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-desktop .desktop-video-selector .video-selector .thumb:before {
+		 content: '';
+		 top: 0;
+		 left: 50%;
+		 width: 25%;
+		 height: 100%;
+		 max-width: 72px;
+		 position: absolute;
+		 -webkit-transform: translateX(-50%);
+		 transform: translateX(-50%);
+		 background-image: url(/Content/images/icons/icon-video-play.svg);
+		 background-repeat: no-repeat;
+		 background-position: center;
+		 background-size: contain;
+	}
+	 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-desktop .desktop-video-selector .video-selector .thumb img {
+		 width: 168px;
+		 height: 96px;
+	}
+	 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-desktop .desktop-video-selector .video-selector .content {
+		 padding: 5px 0;
+		 margin-left: 20px;
+	}
+	 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-desktop .desktop-video-selector .video-selector .content p.item-title {
+		 font-family: 'Gotham', sans-serif;
+		 font-weight: 700;
+		 color: brand(primary);
+		 margin: 0;
+	}
+	 @else if {
+		 font-size: 18px;
+	}
+	 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-desktop .desktop-video-selector .video-selector .content p.item-synopsis {
+		 font-family: 'Gotham', sans-serif;
+		 font-weight: 400;
+		 color: brand(dark);
+		 margin-bottom: 0;
+		 overflow: hidden;
+		 display: -webkit-box;
+		 -webkit-line-clamp: 3;
+		 -webkit-box-orient: vertical;
+		 white-space: break-spaces;
+	}
+	 @else if {
+		 font-size: 14px;
+	}
+	 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-mobile {
+		 width: 60%;
+	}
+	 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-mobile .gallery-item {
+		 display: none;
+	}
+	 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-mobile .gallery-item.active {
+		 display: block;
+	}
+	 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-mobile .gallery-item .bottom-content .toggle-synopsis {
+		 display: none;
+	}
+	 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-mobile .gallery-item .bottom-content .toggle-transcript {
+		 margin-left: 20px;
+	}
+	 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-mobile .gallery-item .bottom-content .item-title, [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-mobile .gallery-item .bottom-content .synopsis {
+		 padding: 0 20px;
+	}
+	 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-mobile .gallery-item .bottom-content .synopsis {
+		 max-height: 250px;
+	}
+	 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-mobile .gallery-item .bottom-content .synopsis .doctors {
+		 flex-direction: row;
+	}
+	 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-mobile .gallery-item .bottom-content .synopsis .doctors p {
+		 margin-right: 24px;
+	}
+	 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-mobile .gallery-item .bottom-content .transcript {
+		 margin-right: 10px;
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery {
+			 flex-direction: row;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-desktop {
+			 margin-bottom: 24px;
+			 width: 40%;
+			 min-width: 420px;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-desktop .desktop-video-selector {
+			 height: fit-content;
+			 min-height: 420px;
+			 background: white;
+			 padding: 24px 20px;
+			 display: flex;
+			 flex-direction: column;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-desktop .desktop-video-selector .video-selector {
+			 display: flex;
+			 margin-bottom: 16px;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-desktop .desktop-video-selector .video-selector.active {
+			 display: none;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-desktop .desktop-video-selector .video-selector .thumb {
+			 max-width: 170px;
+			 position: relative;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-desktop .desktop-video-selector .video-selector .thumb:before {
+			 content: '';
+			 top: 0;
+			 left: 50%;
+			 width: 25%;
+			 height: 100%;
+			 max-width: 72px;
+			 position: absolute;
+			 -webkit-transform: translateX(-50%);
+			 transform: translateX(-50%);
+			 background-image: url(/Content/images/icons/icon-video-play.svg);
+			 background-repeat: no-repeat;
+			 background-position: center;
+			 background-size: contain;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-desktop .desktop-video-selector .video-selector .thumb img {
+			 width: 168px;
+			 height: 96px;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-desktop .desktop-video-selector .video-selector .content {
+			 padding: 5px 0;
+			 margin-left: 20px;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-desktop .desktop-video-selector .video-selector .content p.item-title {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 color: brand(primary);
+			 margin: 0;
+		}
+		 @else if {
+			 font-size: 18px;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-desktop .desktop-video-selector .video-selector .content p.item-synopsis {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 400;
+			 color: brand(dark);
+			 margin-bottom: 0;
+			 overflow: hidden;
+			 display: -webkit-box;
+			 -webkit-line-clamp: 3;
+			 -webkit-box-orient: vertical;
+			 white-space: break-spaces;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-mobile {
+			 width: 60%;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-mobile .gallery-item {
+			 display: none;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-mobile .gallery-item.active {
+			 display: block;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-mobile .gallery-item .bottom-content .toggle-synopsis {
+			 display: none;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-mobile .gallery-item .bottom-content .toggle-transcript {
+			 margin-left: 20px;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-mobile .gallery-item .bottom-content .item-title, [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-mobile .gallery-item .bottom-content .synopsis {
+			 padding: 0 20px;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-mobile .gallery-item .bottom-content .synopsis {
+			 max-height: 250px;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-mobile .gallery-item .bottom-content .synopsis .doctors {
+			 flex-direction: row;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-mobile .gallery-item .bottom-content .synopsis .doctors p {
+			 margin-right: 24px;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-mobile .gallery-item .bottom-content .transcript {
+			 margin-right: 10px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery {
+			 flex-direction: row;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-desktop {
+			 margin-bottom: 24px;
+			 width: 40%;
+			 min-width: 420px;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-desktop .desktop-video-selector {
+			 height: fit-content;
+			 min-height: 420px;
+			 background: white;
+			 padding: 24px 20px;
+			 display: flex;
+			 flex-direction: column;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-desktop .desktop-video-selector .video-selector {
+			 display: flex;
+			 margin-bottom: 16px;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-desktop .desktop-video-selector .video-selector.active {
+			 display: none;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-desktop .desktop-video-selector .video-selector .thumb {
+			 max-width: 170px;
+			 position: relative;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-desktop .desktop-video-selector .video-selector .thumb:before {
+			 content: '';
+			 top: 0;
+			 left: 50%;
+			 width: 25%;
+			 height: 100%;
+			 max-width: 72px;
+			 position: absolute;
+			 -webkit-transform: translateX(-50%);
+			 transform: translateX(-50%);
+			 background-image: url(/Content/images/icons/icon-video-play.svg);
+			 background-repeat: no-repeat;
+			 background-position: center;
+			 background-size: contain;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-desktop .desktop-video-selector .video-selector .thumb img {
+			 width: 168px;
+			 height: 96px;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-desktop .desktop-video-selector .video-selector .content {
+			 padding: 5px 0;
+			 margin-left: 20px;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-desktop .desktop-video-selector .video-selector .content p.item-title {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 color: brand(primary);
+			 margin: 0;
+		}
+		 @else if {
+			 font-size: 18px;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-desktop .desktop-video-selector .video-selector .content p.item-synopsis {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 400;
+			 color: brand(dark);
+			 margin-bottom: 0;
+			 overflow: hidden;
+			 display: -webkit-box;
+			 -webkit-line-clamp: 3;
+			 -webkit-box-orient: vertical;
+			 white-space: break-spaces;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-mobile {
+			 width: 60%;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-mobile .gallery-item {
+			 display: none;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-mobile .gallery-item.active {
+			 display: block;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-mobile .gallery-item .bottom-content .toggle-synopsis {
+			 display: none;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-mobile .gallery-item .bottom-content .toggle-transcript {
+			 margin-left: 20px;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-mobile .gallery-item .bottom-content .item-title, [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-mobile .gallery-item .bottom-content .synopsis {
+			 padding: 0 20px;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-mobile .gallery-item .bottom-content .synopsis {
+			 max-height: 250px;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-mobile .gallery-item .bottom-content .synopsis .doctors {
+			 flex-direction: row;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-mobile .gallery-item .bottom-content .synopsis .doctors p {
+			 margin-right: 24px;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-mobile .gallery-item .bottom-content .transcript {
+			 margin-right: 10px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery {
+			 flex-direction: row;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-desktop {
+			 margin-bottom: 24px;
+			 width: 40%;
+			 min-width: 420px;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-desktop .desktop-video-selector {
+			 height: fit-content;
+			 min-height: 420px;
+			 background: white;
+			 padding: 24px 20px;
+			 display: flex;
+			 flex-direction: column;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-desktop .desktop-video-selector .video-selector {
+			 display: flex;
+			 margin-bottom: 16px;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-desktop .desktop-video-selector .video-selector.active {
+			 display: none;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-desktop .desktop-video-selector .video-selector .thumb {
+			 max-width: 170px;
+			 position: relative;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-desktop .desktop-video-selector .video-selector .thumb:before {
+			 content: '';
+			 top: 0;
+			 left: 50%;
+			 width: 25%;
+			 height: 100%;
+			 max-width: 72px;
+			 position: absolute;
+			 -webkit-transform: translateX(-50%);
+			 transform: translateX(-50%);
+			 background-image: url(/Content/images/icons/icon-video-play.svg);
+			 background-repeat: no-repeat;
+			 background-position: center;
+			 background-size: contain;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-desktop .desktop-video-selector .video-selector .thumb img {
+			 width: 168px;
+			 height: 96px;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-desktop .desktop-video-selector .video-selector .content {
+			 padding: 5px 0;
+			 margin-left: 20px;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-desktop .desktop-video-selector .video-selector .content p.item-title {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 color: brand(primary);
+			 margin: 0;
+		}
+		 @else if {
+			 font-size: 18px;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-desktop .desktop-video-selector .video-selector .content p.item-synopsis {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 400;
+			 color: brand(dark);
+			 margin-bottom: 0;
+			 overflow: hidden;
+			 display: -webkit-box;
+			 -webkit-line-clamp: 3;
+			 -webkit-box-orient: vertical;
+			 white-space: break-spaces;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-mobile {
+			 width: 60%;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-mobile .gallery-item {
+			 display: none;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-mobile .gallery-item.active {
+			 display: block;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-mobile .gallery-item .bottom-content .toggle-synopsis {
+			 display: none;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-mobile .gallery-item .bottom-content .toggle-transcript {
+			 margin-left: 20px;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-mobile .gallery-item .bottom-content .item-title, [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-mobile .gallery-item .bottom-content .synopsis {
+			 padding: 0 20px;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-mobile .gallery-item .bottom-content .synopsis {
+			 max-height: 250px;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-mobile .gallery-item .bottom-content .synopsis .doctors {
+			 flex-direction: row;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-mobile .gallery-item .bottom-content .synopsis .doctors p {
+			 margin-right: 24px;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-mobile .gallery-item .bottom-content .transcript {
+			 margin-right: 10px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery {
+			 flex-direction: row;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-desktop {
+			 margin-bottom: 24px;
+			 width: 40%;
+			 min-width: 420px;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-desktop .desktop-video-selector {
+			 height: fit-content;
+			 min-height: 420px;
+			 background: white;
+			 padding: 24px 20px;
+			 display: flex;
+			 flex-direction: column;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-desktop .desktop-video-selector .video-selector {
+			 display: flex;
+			 margin-bottom: 16px;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-desktop .desktop-video-selector .video-selector.active {
+			 display: none;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-desktop .desktop-video-selector .video-selector .thumb {
+			 max-width: 170px;
+			 position: relative;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-desktop .desktop-video-selector .video-selector .thumb:before {
+			 content: '';
+			 top: 0;
+			 left: 50%;
+			 width: 25%;
+			 height: 100%;
+			 max-width: 72px;
+			 position: absolute;
+			 -webkit-transform: translateX(-50%);
+			 transform: translateX(-50%);
+			 background-image: url(/Content/images/icons/icon-video-play.svg);
+			 background-repeat: no-repeat;
+			 background-position: center;
+			 background-size: contain;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-desktop .desktop-video-selector .video-selector .thumb img {
+			 width: 168px;
+			 height: 96px;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-desktop .desktop-video-selector .video-selector .content {
+			 padding: 5px 0;
+			 margin-left: 20px;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-desktop .desktop-video-selector .video-selector .content p.item-title {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 color: brand(primary);
+			 margin: 0;
+		}
+		 @else if {
+			 font-size: 18px;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-desktop .desktop-video-selector .video-selector .content p.item-synopsis {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 400;
+			 color: brand(dark);
+			 margin-bottom: 0;
+			 overflow: hidden;
+			 display: -webkit-box;
+			 -webkit-line-clamp: 3;
+			 -webkit-box-orient: vertical;
+			 white-space: break-spaces;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-mobile {
+			 width: 60%;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-mobile .gallery-item {
+			 display: none;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-mobile .gallery-item.active {
+			 display: block;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-mobile .gallery-item .bottom-content .toggle-synopsis {
+			 display: none;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-mobile .gallery-item .bottom-content .toggle-transcript {
+			 margin-left: 20px;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-mobile .gallery-item .bottom-content .item-title, [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-mobile .gallery-item .bottom-content .synopsis {
+			 padding: 0 20px;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-mobile .gallery-item .bottom-content .synopsis {
+			 max-height: 250px;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-mobile .gallery-item .bottom-content .synopsis .doctors {
+			 flex-direction: row;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-mobile .gallery-item .bottom-content .synopsis .doctors p {
+			 margin-right: 24px;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-mobile .gallery-item .bottom-content .transcript {
+			 margin-right: 10px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery {
+			 flex-direction: row;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-desktop {
+			 margin-bottom: 24px;
+			 width: 40%;
+			 min-width: 420px;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-desktop .desktop-video-selector {
+			 height: fit-content;
+			 min-height: 420px;
+			 background: white;
+			 padding: 24px 20px;
+			 display: flex;
+			 flex-direction: column;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-desktop .desktop-video-selector .video-selector {
+			 display: flex;
+			 margin-bottom: 16px;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-desktop .desktop-video-selector .video-selector.active {
+			 display: none;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-desktop .desktop-video-selector .video-selector .thumb {
+			 max-width: 170px;
+			 position: relative;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-desktop .desktop-video-selector .video-selector .thumb:before {
+			 content: '';
+			 top: 0;
+			 left: 50%;
+			 width: 25%;
+			 height: 100%;
+			 max-width: 72px;
+			 position: absolute;
+			 -webkit-transform: translateX(-50%);
+			 transform: translateX(-50%);
+			 background-image: url(/Content/images/icons/icon-video-play.svg);
+			 background-repeat: no-repeat;
+			 background-position: center;
+			 background-size: contain;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-desktop .desktop-video-selector .video-selector .thumb img {
+			 width: 168px;
+			 height: 96px;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-desktop .desktop-video-selector .video-selector .content {
+			 padding: 5px 0;
+			 margin-left: 20px;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-desktop .desktop-video-selector .video-selector .content p.item-title {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 color: brand(primary);
+			 margin: 0;
+		}
+		 @else if {
+			 font-size: 18px;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-desktop .desktop-video-selector .video-selector .content p.item-synopsis {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 400;
+			 color: brand(dark);
+			 margin-bottom: 0;
+			 overflow: hidden;
+			 display: -webkit-box;
+			 -webkit-line-clamp: 3;
+			 -webkit-box-orient: vertical;
+			 white-space: break-spaces;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-mobile {
+			 width: 60%;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-mobile .gallery-item {
+			 display: none;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-mobile .gallery-item.active {
+			 display: block;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-mobile .gallery-item .bottom-content .toggle-synopsis {
+			 display: none;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-mobile .gallery-item .bottom-content .toggle-transcript {
+			 margin-left: 20px;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-mobile .gallery-item .bottom-content .item-title, [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-mobile .gallery-item .bottom-content .synopsis {
+			 padding: 0 20px;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-mobile .gallery-item .bottom-content .synopsis {
+			 max-height: 250px;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-mobile .gallery-item .bottom-content .synopsis .doctors {
+			 flex-direction: row;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-mobile .gallery-item .bottom-content .synopsis .doctors p {
+			 margin-right: 24px;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-mobile .gallery-item .bottom-content .transcript {
+			 margin-right: 10px;
+		}
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-mobile {
+			 box-shadow: none;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-mobile:focus {
+			 -webkit-box-shadow: none;
+			 -moz-box-shadow: none;
+			 box-shadow: none;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-desktop .desktop-video-selector .video-selector .thumb {
+			 max-width: 170px;
+			 width: auto;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-mobile {
+			 box-shadow: none;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-mobile:focus {
+			 -webkit-box-shadow: none;
+			 -moz-box-shadow: none;
+			 box-shadow: none;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-desktop .desktop-video-selector .video-selector .thumb {
+			 max-width: 170px;
+			 width: auto;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-mobile {
+			 box-shadow: none;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-mobile:focus {
+			 -webkit-box-shadow: none;
+			 -moz-box-shadow: none;
+			 box-shadow: none;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-desktop .desktop-video-selector .video-selector .thumb {
+			 max-width: 170px;
+			 width: auto;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-mobile {
+			 box-shadow: none;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-mobile:focus {
+			 -webkit-box-shadow: none;
+			 -moz-box-shadow: none;
+			 box-shadow: none;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-desktop .desktop-video-selector .video-selector .thumb {
+			 max-width: 170px;
+			 width: auto;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-mobile {
+			 box-shadow: none;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-mobile:focus {
+			 -webkit-box-shadow: none;
+			 -moz-box-shadow: none;
+			 box-shadow: none;
+		}
+		 [data-page-id="PeerPerspective"][data-page-category="Resources"] #video-gallery #video-gallery-desktop .desktop-video-selector .video-selector .thumb {
+			 max-width: 170px;
+			 width: auto;
+		}
+	}
+}
+ 

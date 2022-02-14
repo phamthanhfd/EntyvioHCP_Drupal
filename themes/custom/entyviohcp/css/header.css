@@ -21,7 +21,7 @@
 }
 @media(max-width: 960px){
   #block-entivyomainnavigation .field--name-field-link-in-main-navigation .field__items a{
-    padding: 15px 17px;
+    padding: 15px 17px !important;
   }
 }
 #block-topheaderpushdown .layout .layout__region.layout__region--content{
@@ -69,11 +69,13 @@
     text-align: center;
     height: fit-content;
     line-height: 16px;
+    text-decoration: none;
 }
 #block-topheaderpushdown .block-field-blockblock-contentpushdown-block-typefield-learn-more-link a:hover{
   box-shadow: 0 3px 8px 0 rgb(61 5 58 / 30%);
   color: #9b288c;
   background: #ffcb03;
+  text-decoration: underline;
 }
 #block-headerlinkslist{
   position: relative;

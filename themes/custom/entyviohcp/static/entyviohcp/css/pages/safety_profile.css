@@ -1,0 +1,3896 @@
+/***********************************/
+/**** **** MATRIX SETTINGS **** ***/
+/*********************************/
+/* Usage: Update matrix gutter HTML: <nav data-matrix=""> <a> <a> SASS: @include matrix_setting([number of matrix], [gutter space], '[child element]');
+ Example: @include matrix_setting(2, 30px, 'div');
+ */
+/************************************************/
+/**** **** TYPEFACE SETTINGS (LOCAL) v2 **** ***/
+/**********************************************/
+/* Usage: $local-font-settings: ( (Gotham, Gotham-Light_Web, '200'), (Gotham, Gotham-Book_Web, '400'), (Gotham, Gotham-Medium_Web, '500') );
+ $font_path : '../_assets/core/fonts';
+ Usage: @include localFontSetup($local-font-settings, $font_path);
+ Usage: @mixin gotham($font) {
+	 font-family: 'Gotham', sans-serif;
+	 @if $font == light {
+		 font-weight: 200;
+	}
+	 @else if $font == book {
+		 font-weight: 400;
+	}
+	 @else if $font == medium {
+		 font-weight: 500;
+	}
+}
+ body {
+	 @include gotham(book);
+}
+ */
+/*****************************/
+/**** **** ANIMATION **** ***/
+/***************************/
+/* Usage: @include animationFrames(fade) {
+	 0% {
+		 opacity: 1;
+	}
+	 50% {
+		 opacity: 0;
+	}
+}
+ */
+/* Usage: @include animation(300ms fade ease-in-out forwards, 100);
+ */
+/**************************************/
+/**** *** PAGE WIDTH SETTINGS **** ***/
+/************************************/
+/**** **** GRID MIXIN **** ***/
+/****************************/
+/**** **** FLEX SET **** ***/
+/**************************/
+/******************************/
+/**** **** RESET LIST **** ***/
+/****************************/
+/*****************************/
+/**** **** FOR PRINT **** ***/
+/***************************/
+/**** **** SETTING UP TYPEFACE **** ***/
+/**** **** PREMADE VIEWPORT **** ***/
+/**** **** CUSTOM VIEWPORT **** ***/
+/* Usage: @include viewport-custom(200, 300) {
+	 h1 {
+		 font-size: 20px;
+	}
+}
+ */
+/**** **** SPECIFIC VIEWPORT **** ***/
+/* ipad specific */
+/* iphone 6/7/8 specific */
+/* ie11 specific */
+/**** **** PRIMARY TYPE **** ***/
+/**** **** TEXT TYPE **** ***/
+/**** **** CLOSE **** ***/
+/* Usage: @include close-icon([width of icon], [height of icon], [icon colour]);
+ Examples: @include close-icon(25px, 3px, brand(primary));
+ @include close-icon($width: 25px);
+ @include close-icon;
+ */
+/* init */
+ [data-icon="close"] span {
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 width: 100%;
+	 height: 100%;
+	 transform: translate(-50%, -50%);
+}
+ [data-icon="close"] span:before, [data-icon="close"] span:after {
+	 content: '';
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 width: 100%;
+	 height: 3px;
+	 transform-origin: 0 0;
+	 background: brand(primary);
+}
+ [data-icon="close"] span:before {
+	 transform: rotate(45deg) translate(-50%, -50%);
+}
+ [data-icon="close"] span:after {
+	 transform: rotate(-45deg) translate(-50%, -50%);
+}
+/**** **** HAMBURGER **** ***/
+/* Usage: @include hamburger([width of icon], [height of icon], [space between lines], [icon colour]);
+ Examples: @include hamburger(25px, 2px, 1, #fff);
+ @include hamburger($width: 25px, $bg: #f00);
+ @include hamburger;
+ */
+/* init */
+ [data-icon="hamburger"] span {
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 width: 100%;
+	 height: 3px;
+	 transform: translate(-50%, -50%);
+	 background: brand(primary);
+}
+ [data-icon="hamburger"] span:before, [data-icon="hamburger"] span:after {
+	 content: '';
+	 position: absolute;
+	 left: 0;
+	 width: 100%;
+	 height: 3px;
+	 transform-origin: 0 0;
+	 background: brand(primary);
+}
+ [data-icon="hamburger"] span:before {
+	 bottom: 7.5px;
+}
+ [data-icon="hamburger"] span:after {
+	 top: 7.5px;
+}
+/**** **** PLUS/MINUS **** ***/
+/* Usage: @plus-minus-icon([width of icon], [height of icon], [icon colour]);
+ Examples: @plus-minus-icon(25px, 2px, #fff);
+ @include plus-minus-icon($width: 13px);
+ @plus-minus-icon;
+ */
+/* init */
+ [data-icon="plus-minus"] span {
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 width: 100%;
+	 height: 100%;
+	 transform: translate(-50%, -50%);
+}
+ [data-icon="plus-minus"] span:before, [data-icon="plus-minus"] span:after {
+	 content: '';
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 width: 100%;
+	 height: 3px;
+	 transform-origin: 0 0;
+	 background: brand(primary);
+}
+ [data-icon="plus-minus"] span:before {
+	 transform: translate(-50%, -50%);
+}
+ [data-icon="plus-minus"] span:after {
+	 transform: rotate(90deg) translate(-50%, -50%);
+}
+/**** **** YELLOW CIRCLE WORD ICONS **** ***/
+/* Usage: <p data-dot>Vs</p> */
+/****************************/
+/**** **** LANGUAGE **** ***/
+/**************************/
+/* en or cn */
+/***********************************/
+/**** **** LAYOUT SETTINGS **** ***/
+/*********************************/
+/*********************************/
+/**** **** GRID SETTINGS **** ***/
+/*******************************/
+/**********************************/
+/**** **** BRAND SETTINGS **** ***/
+/********************************/
+/* form */
+/*********************************/
+/**** **** PATH SETTINGS **** ***/
+/*******************************/
+/*************************************/
+/**** **** TYPEFACE SETTINGS **** ***/
+/***********************************/
+/***********************************/
+/**** ***** SAFETY PROFILE ***** ***/
+/***********************************/
+ [data-page-id="SafetyProfile"] {
+	/**** **** MOBILE **** ***/
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+	/**** **** DESKTOP **** ***/
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ [data-page-id="SafetyProfile"] #first_section {
+	 background-color: #502351;
+}
+ [data-page-id="SafetyProfile"] #first_section .long-safety-profile {
+	 color: brand(light);
+}
+ [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container {
+	 display: flex;
+}
+ [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .image-container .year {
+	 text-align: center;
+	 margin-bottom: 0;
+}
+ [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container .anchor-link {
+	 text-decoration: none;
+	 color: brand(light);
+}
+ [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container .anchor-link .relative {
+	 position: relative;
+}
+ [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container .anchor-link .relative:after {
+	 position: absolute;
+	 content: '';
+	 background-image: url(/Content/images/icons/chevron-right-yellow.svg);
+	 background-size: 100% 100%;
+	 background-repeat: no-repeat;
+}
+ [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container p.anchor-link {
+	 line-height: 34px;
+}
+ [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container p.anchor-link .relative:after {
+	 display: none;
+}
+ [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container p {
+	 margin-bottom: 0;
+}
+ [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container ul {
+	 list-style-type: none;
+}
+ [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container ul li {
+	 position: relative;
+}
+ [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container ul li:before {
+	 content: '\2013';
+	 position: absolute;
+}
+ [data-page-id="SafetyProfile"] #first_section .long-safety-profile .signals-list .sublist {
+	 margin-bottom: 0;
+}
+ [data-page-id="SafetyProfile"] #third_section {
+	 background: url(path(background)/common-page-bg.svg) 50% top;
+}
+ [data-page-id="SafetyProfile"] #third_section .container {
+	 background: brand(light);
+}
+ [data-page-id="SafetyProfile"] #third_section figure img {
+	 width: 100%;
+}
+ [data-page-id="SafetyProfile"] #third_section h3 {
+	 font-family: 'Knockout', sans-serif;
+	 font-weight: 400;
+	 color: brand(primary);
+	 padding-bottom: 15px;
+	 line-height: 36px;
+}
+ @else if {
+	 font-size: 30px;
+}
+ [data-page-id="SafetyProfile"] #third_section h3 sup {
+	 font-size: 16px;
+	 top: -12px;
+}
+ [data-page-id="SafetyProfile"] #third_section .footnote {
+	 display: flex;
+	 margin: 0;
+}
+ [data-page-id="SafetyProfile"] #third_section .footnote .ref {
+	 flex: 0 0 5px;
+}
+ [data-page-id="SafetyProfile"] #third_section .footnote .text {
+	 flex-grow: 1;
+}
+ [data-page-id="SafetyProfile"] #third_section .full-adverse-events ul li span {
+	 font-weight: 400;
+}
+ [data-page-id="SafetyProfile"] #third_section .full-adverse-events ul ul {
+	 list-style-image: none;
+	 list-style-type: none;
+}
+ [data-page-id="SafetyProfile"] #third_section .full-adverse-events ul ul li {
+	 position: relative;
+}
+ [data-page-id="SafetyProfile"] #third_section .full-adverse-events ul ul li:before {
+	 content: "-";
+	 position: absolute;
+	 left: -12px;
+}
+ [data-page-id="SafetyProfile"] #third_section .varsity-adverse-events .subheading {
+	 color: brand(light);
+}
+ [data-page-id="SafetyProfile"] #third_section .varsity-adverse-events ul li sup {
+	 font-size: 10px;
+	 top: -6px;
+}
+ [data-page-id="SafetyProfile"] #third_section .seven-year-data ul li sup {
+	 font-size: 10px;
+	 top: -6px;
+}
+ [data-page-id="SafetyProfile"] #third_section .seven-year-data ul.sublist {
+	 list-style-type: disc;
+}
+ [data-page-id="SafetyProfile"] #third_section .seven-year-data ul.sublist li span {
+	 position: relative;
+	 left: -5px;
+}
+ [data-page-id="SafetyProfile"] #third_section .seven-year-data .baseline-container figcaption {
+	 font-family: 'Gotham', sans-serif;
+	 font-weight: 700;
+	 text-align: center;
+}
+ @else if {
+	 font-size: 22px;
+}
+ [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .chart-heading p {
+	 text-align: center;
+	 width: 100%;
+	 margin-bottom: 0;
+}
+ [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area figcaption {
+	 font-family: 'Gotham', sans-serif;
+	 font-weight: 400;
+	 padding-bottom: 15px;
+	 text-align: center;
+}
+ @else if {
+	 font-size: 16px;
+}
+ [data-page-id="SafetyProfile"] #third_section .seven-year-data .associated-copy .subheading {
+	 margin-bottom: 5px;
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-id="SafetyProfile"] #third_section {
+			 background-size: cover;
+		}
+		 [data-page-id="SafetyProfile"] #body > div[id] > div > article {
+			 margin-top: -1px;
+		}
+		 [data-page-id="SafetyProfile"] ul[data-bullet="primary"] {
+			 margin-left: 0;
+		}
+		 [data-page-id="SafetyProfile"] #first_section h2 {
+			 margin-bottom: 20px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile {
+			 padding-top: 5px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container {
+			 align-items: flex-start;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .image-container {
+			 padding-right: 10px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .image-container img {
+			 width: 60px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .image-container .year {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container {
+			 padding-bottom: 20px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container:last-of-type {
+			 padding-bottom: 10px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container .anchor-link {
+			 font-family: 'Knockout', sans-serif;
+			 font-weight: 700;
+			 margin-bottom: 5px;
+			 display: inline-block;
+		}
+		 @else if {
+			 font-size: 30px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container .anchor-link .relative:after {
+			 width: 12px;
+			 height: 15px;
+			 bottom: 7px;
+			 right: -20px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container p {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 500;
+			 line-height: 20px;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container p sup {
+			 top: -5px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container ul {
+			 margin-left: 20px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container ul li {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 500;
+			 line-height: 20px;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container ul li:before {
+			 margin-left: -15px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .signals-list {
+			 text-align: left;
+			 padding-left: 70px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .signals-list .sublist {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 800;
+			 line-height: 20px;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .signals-list ul {
+			 margin-left: 20px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .signals-list ul li {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 500;
+			 line-height: 20px;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section h2 {
+			 margin: 0;
+			 padding: 40px 0 20px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .container {
+			 padding: 20px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .footnote {
+			 padding-bottom: 3px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .footnote.acronyms {
+			 padding-top: 5px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .uc-cd-trials .container {
+			 padding: 0;
+			 background: none;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .uc-cd-trials figure img {
+			 border: 1px solid #abadb3;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .uc-cd-trials .btn-text.btn-primary {
+			 padding: 20px 65px 20px 40px;
+			 position: relative;
+			 line-height: 20px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .uc-cd-trials .btn-text.btn-primary:after {
+			 position: absolute;
+			 top: 50%;
+			 transform: translateY(-50%);
+			 right: 40px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .full-adverse-events .adverse-event {
+			 padding-bottom: 5px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .full-adverse-events .adverse-event .image-container {
+			 padding: 20px 0 5px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .full-adverse-events .adverse-event .image-container img {
+			 width: 80px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .full-adverse-events .adverse-event ul li {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 line-height: 18px;
+			 padding-bottom: 10px;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .full-adverse-events .adverse-event ul li sup {
+			 top: -6px;
+			 font-size: 9px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .full-adverse-events .adverse-event ul ul {
+			 margin-left: 13px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .full-adverse-events .adverse-event ul ul li {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 400;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .varsity-adverse-events .subheading {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 line-height: 20px;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .varsity-adverse-events .subheading sup {
+			 font-size: 10px;
+			 top: -6px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .varsity-adverse-events .image-container {
+			 padding-bottom: 20px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .varsity-adverse-events ul {
+			 padding-bottom: 25px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .varsity-adverse-events ul li {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 400;
+			 line-height: 18px;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data ul li {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 400;
+			 line-height: 18px;
+			 margin-bottom: 5px;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data ul.sublist {
+			 margin-left: 35px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .baseline-container {
+			 margin: 30px 0 20px;
+			 border: 1px solid #abadb3;
+			 width: 100%;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .baseline-container h3 {
+			 padding: 10px 0 0 5px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .baseline-container .mobile-scroll-container {
+			 width: 100%;
+			 overflow-x: scroll;
+			 -webkit-overflow-scrolling: touch;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .baseline-container figure img {
+			 height: 176px;
+			 width: unset;
+			 padding: 20px 0;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .baseline-container figcaption {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 padding: 10px 0;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .baseline-container .scroll-instruction {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 margin: 0;
+			 padding: 20px 0 20px 60px;
+			 position: relative;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .baseline-container .scroll-instruction:before {
+			 content: '';
+			 position: absolute;
+			 top: 50%;
+			 left: 10px;
+			 transform: translateY(-50%);
+			 background-image: url(/Content/images/icons/scroll-hand.svg);
+			 background-size: 100% 100%;
+			 background-repeat: no-repeat;
+			 width: 38px;
+			 height: 100%;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .no-signals {
+			 margin-top: 20px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .no-signals p {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 margin: 0 0 10px 0;
+			 line-height: 20px;
+			 text-transform: none;
+		}
+		 @else if {
+			 font-size: 18px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .no-signals ul {
+			 margin: 8px 0 0 12px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .no-signals ul li {
+			 margin-right: 40px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .footnote.patient-study {
+			 padding: 0 0 3px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .footnote.acronyms {
+			 padding-top: 5px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .chart {
+			 padding-bottom: 20px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .chart-heading {
+			 margin-top: 20px;
+			 margin-bottom: 10px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .chart-heading p {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 line-height: 20px;
+			 margin-bottom: 5px;
+		}
+		 @else if {
+			 font-size: 18px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area figure figcaption {
+			 line-height: 20px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area figure figcaption sup {
+			 top: -6px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area figure img {
+			 max-width: 100%;
+			 width: unset;
+			 display: block;
+			 margin: 0 auto;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .footnote {
+			 padding-top: 20px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .associated-copy .subheading {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 line-height: 18px;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .associated-copy .footnote.acronyms {
+			 padding-top: 10px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .chart-wide {
+			 width: 100%;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .chart-wide .chart-heading {
+			 margin-top: 20px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .chart-wide figure img {
+			 height: 220px;
+			 width: unset;
+			 max-width: unset;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .chart-wide .footnote {
+			 padding: 20px 0 0;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .chart-wide .mobile-bordered-area {
+			 border: 1px solid #abadb3;
+			 padding: 20px 0 10px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .chart-wide .mobile-scroll-container {
+			 width: 100%;
+			 overflow-x: scroll;
+			 -webkit-overflow-scrolling: touch;
+			 padding: 0 5px 20px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .chart-wide .scroll-instruction {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 margin: 0;
+			 padding: 20px 0 20px 60px;
+			 position: relative;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .chart-wide .scroll-instruction:before {
+			 content: '';
+			 position: absolute;
+			 top: 50%;
+			 left: 10px;
+			 transform: translateY(-50%);
+			 background-image: url(/Content/images/icons/scroll-hand.svg);
+			 background-size: 100% 100%;
+			 background-repeat: no-repeat;
+			 width: 38px;
+			 height: 100%;
+		}
+	}
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) and screen and (min-width: 400px) and (max-width: 543px) {
+		 [data-page-id="SafetyProfile"] #third_section .uc-cd-trials .btn-text.btn-primary:after {
+			 right: 60px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-id="SafetyProfile"] #third_section {
+			 background-size: cover;
+		}
+		 [data-page-id="SafetyProfile"] #body > div[id] > div > article {
+			 margin-top: -1px;
+		}
+		 [data-page-id="SafetyProfile"] ul[data-bullet="primary"] {
+			 margin-left: 0;
+		}
+		 [data-page-id="SafetyProfile"] #first_section h2 {
+			 margin-bottom: 20px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile {
+			 padding-top: 5px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container {
+			 align-items: flex-start;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .image-container {
+			 padding-right: 10px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .image-container img {
+			 width: 60px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .image-container .year {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container {
+			 padding-bottom: 20px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container:last-of-type {
+			 padding-bottom: 10px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container .anchor-link {
+			 font-family: 'Knockout', sans-serif;
+			 font-weight: 700;
+			 margin-bottom: 5px;
+			 display: inline-block;
+		}
+		 @else if {
+			 font-size: 30px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container .anchor-link .relative:after {
+			 width: 12px;
+			 height: 15px;
+			 bottom: 7px;
+			 right: -20px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container p {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 500;
+			 line-height: 20px;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container p sup {
+			 top: -5px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container ul {
+			 margin-left: 20px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container ul li {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 500;
+			 line-height: 20px;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container ul li:before {
+			 margin-left: -15px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .signals-list {
+			 text-align: left;
+			 padding-left: 70px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .signals-list .sublist {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 800;
+			 line-height: 20px;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .signals-list ul {
+			 margin-left: 20px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .signals-list ul li {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 500;
+			 line-height: 20px;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section h2 {
+			 margin: 0;
+			 padding: 40px 0 20px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .container {
+			 padding: 20px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .footnote {
+			 padding-bottom: 3px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .footnote.acronyms {
+			 padding-top: 5px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .uc-cd-trials .container {
+			 padding: 0;
+			 background: none;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .uc-cd-trials figure img {
+			 border: 1px solid #abadb3;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .uc-cd-trials .btn-text.btn-primary {
+			 padding: 20px 65px 20px 40px;
+			 position: relative;
+			 line-height: 20px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .uc-cd-trials .btn-text.btn-primary:after {
+			 position: absolute;
+			 top: 50%;
+			 transform: translateY(-50%);
+			 right: 40px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .full-adverse-events .adverse-event {
+			 padding-bottom: 5px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .full-adverse-events .adverse-event .image-container {
+			 padding: 20px 0 5px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .full-adverse-events .adverse-event .image-container img {
+			 width: 80px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .full-adverse-events .adverse-event ul li {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 line-height: 18px;
+			 padding-bottom: 10px;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .full-adverse-events .adverse-event ul li sup {
+			 top: -6px;
+			 font-size: 9px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .full-adverse-events .adverse-event ul ul {
+			 margin-left: 13px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .full-adverse-events .adverse-event ul ul li {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 400;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .varsity-adverse-events .subheading {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 line-height: 20px;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .varsity-adverse-events .subheading sup {
+			 font-size: 10px;
+			 top: -6px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .varsity-adverse-events .image-container {
+			 padding-bottom: 20px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .varsity-adverse-events ul {
+			 padding-bottom: 25px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .varsity-adverse-events ul li {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 400;
+			 line-height: 18px;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data ul li {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 400;
+			 line-height: 18px;
+			 margin-bottom: 5px;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data ul.sublist {
+			 margin-left: 35px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .baseline-container {
+			 margin: 30px 0 20px;
+			 border: 1px solid #abadb3;
+			 width: 100%;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .baseline-container h3 {
+			 padding: 10px 0 0 5px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .baseline-container .mobile-scroll-container {
+			 width: 100%;
+			 overflow-x: scroll;
+			 -webkit-overflow-scrolling: touch;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .baseline-container figure img {
+			 height: 176px;
+			 width: unset;
+			 padding: 20px 0;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .baseline-container figcaption {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 padding: 10px 0;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .baseline-container .scroll-instruction {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 margin: 0;
+			 padding: 20px 0 20px 60px;
+			 position: relative;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .baseline-container .scroll-instruction:before {
+			 content: '';
+			 position: absolute;
+			 top: 50%;
+			 left: 10px;
+			 transform: translateY(-50%);
+			 background-image: url(/Content/images/icons/scroll-hand.svg);
+			 background-size: 100% 100%;
+			 background-repeat: no-repeat;
+			 width: 38px;
+			 height: 100%;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .no-signals {
+			 margin-top: 20px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .no-signals p {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 margin: 0 0 10px 0;
+			 line-height: 20px;
+			 text-transform: none;
+		}
+		 @else if {
+			 font-size: 18px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .no-signals ul {
+			 margin: 8px 0 0 12px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .no-signals ul li {
+			 margin-right: 40px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .footnote.patient-study {
+			 padding: 0 0 3px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .footnote.acronyms {
+			 padding-top: 5px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .chart {
+			 padding-bottom: 20px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .chart-heading {
+			 margin-top: 20px;
+			 margin-bottom: 10px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .chart-heading p {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 line-height: 20px;
+			 margin-bottom: 5px;
+		}
+		 @else if {
+			 font-size: 18px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area figure figcaption {
+			 line-height: 20px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area figure figcaption sup {
+			 top: -6px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area figure img {
+			 max-width: 100%;
+			 width: unset;
+			 display: block;
+			 margin: 0 auto;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .footnote {
+			 padding-top: 20px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .associated-copy .subheading {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 line-height: 18px;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .associated-copy .footnote.acronyms {
+			 padding-top: 10px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .chart-wide {
+			 width: 100%;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .chart-wide .chart-heading {
+			 margin-top: 20px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .chart-wide figure img {
+			 height: 220px;
+			 width: unset;
+			 max-width: unset;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .chart-wide .footnote {
+			 padding: 20px 0 0;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .chart-wide .mobile-bordered-area {
+			 border: 1px solid #abadb3;
+			 padding: 20px 0 10px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .chart-wide .mobile-scroll-container {
+			 width: 100%;
+			 overflow-x: scroll;
+			 -webkit-overflow-scrolling: touch;
+			 padding: 0 5px 20px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .chart-wide .scroll-instruction {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 margin: 0;
+			 padding: 20px 0 20px 60px;
+			 position: relative;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .chart-wide .scroll-instruction:before {
+			 content: '';
+			 position: absolute;
+			 top: 50%;
+			 left: 10px;
+			 transform: translateY(-50%);
+			 background-image: url(/Content/images/icons/scroll-hand.svg);
+			 background-size: 100% 100%;
+			 background-repeat: no-repeat;
+			 width: 38px;
+			 height: 100%;
+		}
+	}
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) and screen and (min-width: 400px) and (max-width: 543px) {
+		 [data-page-id="SafetyProfile"] #third_section .uc-cd-trials .btn-text.btn-primary:after {
+			 right: 60px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-id="SafetyProfile"] #third_section {
+			 background-size: cover;
+		}
+		 [data-page-id="SafetyProfile"] #body > div[id] > div > article {
+			 margin-top: -1px;
+		}
+		 [data-page-id="SafetyProfile"] ul[data-bullet="primary"] {
+			 margin-left: 0;
+		}
+		 [data-page-id="SafetyProfile"] #first_section h2 {
+			 margin-bottom: 20px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile {
+			 padding-top: 5px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container {
+			 align-items: flex-start;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .image-container {
+			 padding-right: 10px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .image-container img {
+			 width: 60px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .image-container .year {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container {
+			 padding-bottom: 20px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container:last-of-type {
+			 padding-bottom: 10px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container .anchor-link {
+			 font-family: 'Knockout', sans-serif;
+			 font-weight: 700;
+			 margin-bottom: 5px;
+			 display: inline-block;
+		}
+		 @else if {
+			 font-size: 30px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container .anchor-link .relative:after {
+			 width: 12px;
+			 height: 15px;
+			 bottom: 7px;
+			 right: -20px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container p {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 500;
+			 line-height: 20px;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container p sup {
+			 top: -5px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container ul {
+			 margin-left: 20px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container ul li {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 500;
+			 line-height: 20px;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container ul li:before {
+			 margin-left: -15px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .signals-list {
+			 text-align: left;
+			 padding-left: 70px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .signals-list .sublist {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 800;
+			 line-height: 20px;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .signals-list ul {
+			 margin-left: 20px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .signals-list ul li {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 500;
+			 line-height: 20px;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section h2 {
+			 margin: 0;
+			 padding: 40px 0 20px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .container {
+			 padding: 20px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .footnote {
+			 padding-bottom: 3px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .footnote.acronyms {
+			 padding-top: 5px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .uc-cd-trials .container {
+			 padding: 0;
+			 background: none;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .uc-cd-trials figure img {
+			 border: 1px solid #abadb3;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .uc-cd-trials .btn-text.btn-primary {
+			 padding: 20px 65px 20px 40px;
+			 position: relative;
+			 line-height: 20px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .uc-cd-trials .btn-text.btn-primary:after {
+			 position: absolute;
+			 top: 50%;
+			 transform: translateY(-50%);
+			 right: 40px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .full-adverse-events .adverse-event {
+			 padding-bottom: 5px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .full-adverse-events .adverse-event .image-container {
+			 padding: 20px 0 5px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .full-adverse-events .adverse-event .image-container img {
+			 width: 80px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .full-adverse-events .adverse-event ul li {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 line-height: 18px;
+			 padding-bottom: 10px;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .full-adverse-events .adverse-event ul li sup {
+			 top: -6px;
+			 font-size: 9px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .full-adverse-events .adverse-event ul ul {
+			 margin-left: 13px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .full-adverse-events .adverse-event ul ul li {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 400;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .varsity-adverse-events .subheading {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 line-height: 20px;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .varsity-adverse-events .subheading sup {
+			 font-size: 10px;
+			 top: -6px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .varsity-adverse-events .image-container {
+			 padding-bottom: 20px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .varsity-adverse-events ul {
+			 padding-bottom: 25px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .varsity-adverse-events ul li {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 400;
+			 line-height: 18px;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data ul li {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 400;
+			 line-height: 18px;
+			 margin-bottom: 5px;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data ul.sublist {
+			 margin-left: 35px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .baseline-container {
+			 margin: 30px 0 20px;
+			 border: 1px solid #abadb3;
+			 width: 100%;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .baseline-container h3 {
+			 padding: 10px 0 0 5px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .baseline-container .mobile-scroll-container {
+			 width: 100%;
+			 overflow-x: scroll;
+			 -webkit-overflow-scrolling: touch;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .baseline-container figure img {
+			 height: 176px;
+			 width: unset;
+			 padding: 20px 0;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .baseline-container figcaption {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 padding: 10px 0;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .baseline-container .scroll-instruction {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 margin: 0;
+			 padding: 20px 0 20px 60px;
+			 position: relative;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .baseline-container .scroll-instruction:before {
+			 content: '';
+			 position: absolute;
+			 top: 50%;
+			 left: 10px;
+			 transform: translateY(-50%);
+			 background-image: url(/Content/images/icons/scroll-hand.svg);
+			 background-size: 100% 100%;
+			 background-repeat: no-repeat;
+			 width: 38px;
+			 height: 100%;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .no-signals {
+			 margin-top: 20px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .no-signals p {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 margin: 0 0 10px 0;
+			 line-height: 20px;
+			 text-transform: none;
+		}
+		 @else if {
+			 font-size: 18px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .no-signals ul {
+			 margin: 8px 0 0 12px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .no-signals ul li {
+			 margin-right: 40px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .footnote.patient-study {
+			 padding: 0 0 3px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .footnote.acronyms {
+			 padding-top: 5px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .chart {
+			 padding-bottom: 20px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .chart-heading {
+			 margin-top: 20px;
+			 margin-bottom: 10px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .chart-heading p {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 line-height: 20px;
+			 margin-bottom: 5px;
+		}
+		 @else if {
+			 font-size: 18px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area figure figcaption {
+			 line-height: 20px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area figure figcaption sup {
+			 top: -6px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area figure img {
+			 max-width: 100%;
+			 width: unset;
+			 display: block;
+			 margin: 0 auto;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .footnote {
+			 padding-top: 20px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .associated-copy .subheading {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 line-height: 18px;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .associated-copy .footnote.acronyms {
+			 padding-top: 10px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .chart-wide {
+			 width: 100%;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .chart-wide .chart-heading {
+			 margin-top: 20px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .chart-wide figure img {
+			 height: 220px;
+			 width: unset;
+			 max-width: unset;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .chart-wide .footnote {
+			 padding: 20px 0 0;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .chart-wide .mobile-bordered-area {
+			 border: 1px solid #abadb3;
+			 padding: 20px 0 10px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .chart-wide .mobile-scroll-container {
+			 width: 100%;
+			 overflow-x: scroll;
+			 -webkit-overflow-scrolling: touch;
+			 padding: 0 5px 20px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .chart-wide .scroll-instruction {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 margin: 0;
+			 padding: 20px 0 20px 60px;
+			 position: relative;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .chart-wide .scroll-instruction:before {
+			 content: '';
+			 position: absolute;
+			 top: 50%;
+			 left: 10px;
+			 transform: translateY(-50%);
+			 background-image: url(/Content/images/icons/scroll-hand.svg);
+			 background-size: 100% 100%;
+			 background-repeat: no-repeat;
+			 width: 38px;
+			 height: 100%;
+		}
+	}
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) and screen and (min-width: 400px) and (max-width: 543px) {
+		 [data-page-id="SafetyProfile"] #third_section .uc-cd-trials .btn-text.btn-primary:after {
+			 right: 60px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-id="SafetyProfile"] #third_section {
+			 background-size: cover;
+		}
+		 [data-page-id="SafetyProfile"] #body > div[id] > div > article {
+			 margin-top: -1px;
+		}
+		 [data-page-id="SafetyProfile"] ul[data-bullet="primary"] {
+			 margin-left: 0;
+		}
+		 [data-page-id="SafetyProfile"] #first_section h2 {
+			 margin-bottom: 20px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile {
+			 padding-top: 5px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container {
+			 align-items: flex-start;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .image-container {
+			 padding-right: 10px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .image-container img {
+			 width: 60px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .image-container .year {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container {
+			 padding-bottom: 20px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container:last-of-type {
+			 padding-bottom: 10px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container .anchor-link {
+			 font-family: 'Knockout', sans-serif;
+			 font-weight: 700;
+			 margin-bottom: 5px;
+			 display: inline-block;
+		}
+		 @else if {
+			 font-size: 30px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container .anchor-link .relative:after {
+			 width: 12px;
+			 height: 15px;
+			 bottom: 7px;
+			 right: -20px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container p {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 500;
+			 line-height: 20px;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container p sup {
+			 top: -5px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container ul {
+			 margin-left: 20px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container ul li {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 500;
+			 line-height: 20px;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container ul li:before {
+			 margin-left: -15px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .signals-list {
+			 text-align: left;
+			 padding-left: 70px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .signals-list .sublist {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 800;
+			 line-height: 20px;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .signals-list ul {
+			 margin-left: 20px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .signals-list ul li {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 500;
+			 line-height: 20px;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section h2 {
+			 margin: 0;
+			 padding: 40px 0 20px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .container {
+			 padding: 20px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .footnote {
+			 padding-bottom: 3px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .footnote.acronyms {
+			 padding-top: 5px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .uc-cd-trials .container {
+			 padding: 0;
+			 background: none;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .uc-cd-trials figure img {
+			 border: 1px solid #abadb3;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .uc-cd-trials .btn-text.btn-primary {
+			 padding: 20px 65px 20px 40px;
+			 position: relative;
+			 line-height: 20px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .uc-cd-trials .btn-text.btn-primary:after {
+			 position: absolute;
+			 top: 50%;
+			 transform: translateY(-50%);
+			 right: 40px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .full-adverse-events .adverse-event {
+			 padding-bottom: 5px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .full-adverse-events .adverse-event .image-container {
+			 padding: 20px 0 5px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .full-adverse-events .adverse-event .image-container img {
+			 width: 80px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .full-adverse-events .adverse-event ul li {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 line-height: 18px;
+			 padding-bottom: 10px;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .full-adverse-events .adverse-event ul li sup {
+			 top: -6px;
+			 font-size: 9px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .full-adverse-events .adverse-event ul ul {
+			 margin-left: 13px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .full-adverse-events .adverse-event ul ul li {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 400;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .varsity-adverse-events .subheading {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 line-height: 20px;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .varsity-adverse-events .subheading sup {
+			 font-size: 10px;
+			 top: -6px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .varsity-adverse-events .image-container {
+			 padding-bottom: 20px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .varsity-adverse-events ul {
+			 padding-bottom: 25px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .varsity-adverse-events ul li {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 400;
+			 line-height: 18px;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data ul li {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 400;
+			 line-height: 18px;
+			 margin-bottom: 5px;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data ul.sublist {
+			 margin-left: 35px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .baseline-container {
+			 margin: 30px 0 20px;
+			 border: 1px solid #abadb3;
+			 width: 100%;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .baseline-container h3 {
+			 padding: 10px 0 0 5px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .baseline-container .mobile-scroll-container {
+			 width: 100%;
+			 overflow-x: scroll;
+			 -webkit-overflow-scrolling: touch;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .baseline-container figure img {
+			 height: 176px;
+			 width: unset;
+			 padding: 20px 0;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .baseline-container figcaption {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 padding: 10px 0;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .baseline-container .scroll-instruction {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 margin: 0;
+			 padding: 20px 0 20px 60px;
+			 position: relative;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .baseline-container .scroll-instruction:before {
+			 content: '';
+			 position: absolute;
+			 top: 50%;
+			 left: 10px;
+			 transform: translateY(-50%);
+			 background-image: url(/Content/images/icons/scroll-hand.svg);
+			 background-size: 100% 100%;
+			 background-repeat: no-repeat;
+			 width: 38px;
+			 height: 100%;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .no-signals {
+			 margin-top: 20px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .no-signals p {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 margin: 0 0 10px 0;
+			 line-height: 20px;
+			 text-transform: none;
+		}
+		 @else if {
+			 font-size: 18px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .no-signals ul {
+			 margin: 8px 0 0 12px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .no-signals ul li {
+			 margin-right: 40px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .footnote.patient-study {
+			 padding: 0 0 3px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .footnote.acronyms {
+			 padding-top: 5px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .chart {
+			 padding-bottom: 20px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .chart-heading {
+			 margin-top: 20px;
+			 margin-bottom: 10px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .chart-heading p {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 line-height: 20px;
+			 margin-bottom: 5px;
+		}
+		 @else if {
+			 font-size: 18px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area figure figcaption {
+			 line-height: 20px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area figure figcaption sup {
+			 top: -6px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area figure img {
+			 max-width: 100%;
+			 width: unset;
+			 display: block;
+			 margin: 0 auto;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .footnote {
+			 padding-top: 20px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .associated-copy .subheading {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 line-height: 18px;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .associated-copy .footnote.acronyms {
+			 padding-top: 10px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .chart-wide {
+			 width: 100%;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .chart-wide .chart-heading {
+			 margin-top: 20px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .chart-wide figure img {
+			 height: 220px;
+			 width: unset;
+			 max-width: unset;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .chart-wide .footnote {
+			 padding: 20px 0 0;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .chart-wide .mobile-bordered-area {
+			 border: 1px solid #abadb3;
+			 padding: 20px 0 10px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .chart-wide .mobile-scroll-container {
+			 width: 100%;
+			 overflow-x: scroll;
+			 -webkit-overflow-scrolling: touch;
+			 padding: 0 5px 20px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .chart-wide .scroll-instruction {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 margin: 0;
+			 padding: 20px 0 20px 60px;
+			 position: relative;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .chart-wide .scroll-instruction:before {
+			 content: '';
+			 position: absolute;
+			 top: 50%;
+			 left: 10px;
+			 transform: translateY(-50%);
+			 background-image: url(/Content/images/icons/scroll-hand.svg);
+			 background-size: 100% 100%;
+			 background-repeat: no-repeat;
+			 width: 38px;
+			 height: 100%;
+		}
+	}
+	 @media screen and (max-width : mq(mobile)px) and screen and (min-width: 400px) and (max-width: 543px) {
+		 [data-page-id="SafetyProfile"] #third_section .uc-cd-trials .btn-text.btn-primary:after {
+			 right: 60px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-id="SafetyProfile"] #third_section {
+			 background-size: cover;
+		}
+		 [data-page-id="SafetyProfile"] #body > div[id] > div > article {
+			 margin-top: -1px;
+		}
+		 [data-page-id="SafetyProfile"] ul[data-bullet="primary"] {
+			 margin-left: 0;
+		}
+		 [data-page-id="SafetyProfile"] #first_section h2 {
+			 margin-bottom: 20px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile {
+			 padding-top: 5px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container {
+			 align-items: flex-start;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .image-container {
+			 padding-right: 10px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .image-container img {
+			 width: 60px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .image-container .year {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container {
+			 padding-bottom: 20px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container:last-of-type {
+			 padding-bottom: 10px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container .anchor-link {
+			 font-family: 'Knockout', sans-serif;
+			 font-weight: 700;
+			 margin-bottom: 5px;
+			 display: inline-block;
+		}
+		 @else if {
+			 font-size: 30px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container .anchor-link .relative:after {
+			 width: 12px;
+			 height: 15px;
+			 bottom: 7px;
+			 right: -20px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container p {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 500;
+			 line-height: 20px;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container p sup {
+			 top: -5px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container ul {
+			 margin-left: 20px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container ul li {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 500;
+			 line-height: 20px;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container ul li:before {
+			 margin-left: -15px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .signals-list {
+			 text-align: left;
+			 padding-left: 70px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .signals-list .sublist {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 800;
+			 line-height: 20px;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .signals-list ul {
+			 margin-left: 20px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .signals-list ul li {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 500;
+			 line-height: 20px;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section h2 {
+			 margin: 0;
+			 padding: 40px 0 20px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .container {
+			 padding: 20px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .footnote {
+			 padding-bottom: 3px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .footnote.acronyms {
+			 padding-top: 5px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .uc-cd-trials .container {
+			 padding: 0;
+			 background: none;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .uc-cd-trials figure img {
+			 border: 1px solid #abadb3;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .uc-cd-trials .btn-text.btn-primary {
+			 padding: 20px 65px 20px 40px;
+			 position: relative;
+			 line-height: 20px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .uc-cd-trials .btn-text.btn-primary:after {
+			 position: absolute;
+			 top: 50%;
+			 transform: translateY(-50%);
+			 right: 40px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .full-adverse-events .adverse-event {
+			 padding-bottom: 5px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .full-adverse-events .adverse-event .image-container {
+			 padding: 20px 0 5px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .full-adverse-events .adverse-event .image-container img {
+			 width: 80px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .full-adverse-events .adverse-event ul li {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 line-height: 18px;
+			 padding-bottom: 10px;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .full-adverse-events .adverse-event ul li sup {
+			 top: -6px;
+			 font-size: 9px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .full-adverse-events .adverse-event ul ul {
+			 margin-left: 13px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .full-adverse-events .adverse-event ul ul li {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 400;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .varsity-adverse-events .subheading {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 line-height: 20px;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .varsity-adverse-events .subheading sup {
+			 font-size: 10px;
+			 top: -6px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .varsity-adverse-events .image-container {
+			 padding-bottom: 20px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .varsity-adverse-events ul {
+			 padding-bottom: 25px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .varsity-adverse-events ul li {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 400;
+			 line-height: 18px;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data ul li {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 400;
+			 line-height: 18px;
+			 margin-bottom: 5px;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data ul.sublist {
+			 margin-left: 35px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .baseline-container {
+			 margin: 30px 0 20px;
+			 border: 1px solid #abadb3;
+			 width: 100%;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .baseline-container h3 {
+			 padding: 10px 0 0 5px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .baseline-container .mobile-scroll-container {
+			 width: 100%;
+			 overflow-x: scroll;
+			 -webkit-overflow-scrolling: touch;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .baseline-container figure img {
+			 height: 176px;
+			 width: unset;
+			 padding: 20px 0;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .baseline-container figcaption {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 padding: 10px 0;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .baseline-container .scroll-instruction {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 margin: 0;
+			 padding: 20px 0 20px 60px;
+			 position: relative;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .baseline-container .scroll-instruction:before {
+			 content: '';
+			 position: absolute;
+			 top: 50%;
+			 left: 10px;
+			 transform: translateY(-50%);
+			 background-image: url(/Content/images/icons/scroll-hand.svg);
+			 background-size: 100% 100%;
+			 background-repeat: no-repeat;
+			 width: 38px;
+			 height: 100%;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .no-signals {
+			 margin-top: 20px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .no-signals p {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 margin: 0 0 10px 0;
+			 line-height: 20px;
+			 text-transform: none;
+		}
+		 @else if {
+			 font-size: 18px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .no-signals ul {
+			 margin: 8px 0 0 12px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .no-signals ul li {
+			 margin-right: 40px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .footnote.patient-study {
+			 padding: 0 0 3px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .footnote.acronyms {
+			 padding-top: 5px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .chart {
+			 padding-bottom: 20px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .chart-heading {
+			 margin-top: 20px;
+			 margin-bottom: 10px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .chart-heading p {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 line-height: 20px;
+			 margin-bottom: 5px;
+		}
+		 @else if {
+			 font-size: 18px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area figure figcaption {
+			 line-height: 20px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area figure figcaption sup {
+			 top: -6px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area figure img {
+			 max-width: 100%;
+			 width: unset;
+			 display: block;
+			 margin: 0 auto;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .footnote {
+			 padding-top: 20px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .associated-copy .subheading {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 line-height: 18px;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .associated-copy .footnote.acronyms {
+			 padding-top: 10px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .chart-wide {
+			 width: 100%;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .chart-wide .chart-heading {
+			 margin-top: 20px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .chart-wide figure img {
+			 height: 220px;
+			 width: unset;
+			 max-width: unset;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .chart-wide .footnote {
+			 padding: 20px 0 0;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .chart-wide .mobile-bordered-area {
+			 border: 1px solid #abadb3;
+			 padding: 20px 0 10px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .chart-wide .mobile-scroll-container {
+			 width: 100%;
+			 overflow-x: scroll;
+			 -webkit-overflow-scrolling: touch;
+			 padding: 0 5px 20px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .chart-wide .scroll-instruction {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 margin: 0;
+			 padding: 20px 0 20px 60px;
+			 position: relative;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .chart-wide .scroll-instruction:before {
+			 content: '';
+			 position: absolute;
+			 top: 50%;
+			 left: 10px;
+			 transform: translateY(-50%);
+			 background-image: url(/Content/images/icons/scroll-hand.svg);
+			 background-size: 100% 100%;
+			 background-repeat: no-repeat;
+			 width: 38px;
+			 height: 100%;
+		}
+	}
+	 @media screen and (max-width : mq(mobile-sm)px) and screen and (min-width: 400px) and (max-width: 543px) {
+		 [data-page-id="SafetyProfile"] #third_section .uc-cd-trials .btn-text.btn-primary:after {
+			 right: 60px;
+		}
+	}
+}
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) {
+	 [data-page-id="SafetyProfile"] #first_section, [data-page-id="SafetyProfile"] #third_section {
+		 background-size: 100% auto;
+	}
+	 [data-page-id="SafetyProfile"] ul[data-bullet="light"] > li:before {
+		 font-size: 16px;
+	}
+	 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container {
+		 align-items: center;
+		 padding-bottom: 30px;
+	}
+	 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .image-container {
+		 padding-right: 25px;
+		 padding-top: 10px;
+	}
+	 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .image-container img {
+		 width: 104px;
+	}
+	 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .image-container .year {
+		 font-family: 'Gotham', sans-serif;
+		 font-weight: 700;
+	}
+	 @else if {
+		 font-size: 16px;
+	}
+	 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container .anchor-link {
+		 font-family: 'Knockout', sans-serif;
+		 font-weight: 700;
+	}
+	 @else if {
+		 font-size: 36px;
+	}
+	 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container .anchor-link .relative:after {
+		 width: 15px;
+		 height: 20px;
+		 bottom: 9px;
+		 right: -30px;
+	}
+	 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container p.anchor-link {
+		 line-height: 40px;
+	}
+	 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container p.anchor-link .relative:after {
+		 display: none;
+	}
+	 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container p {
+		 font-family: 'Gotham', sans-serif;
+		 font-weight: 500;
+		 line-height: 24px;
+	}
+	 @else if {
+		 font-size: 16px;
+	}
+	 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container p sup {
+		 top: -6px;
+	}
+	 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container ul {
+		 margin-left: 40px;
+	}
+	 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container ul li {
+		 font-family: 'Gotham', sans-serif;
+		 font-weight: 500;
+		 line-height: 24px;
+	}
+	 @else if {
+		 font-size: 16px;
+	}
+	 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container ul li:before {
+		 margin-left: -20px;
+	}
+	 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .signals-list {
+		 text-align: center;
+		 max-width: 770px;
+		 margin: 0 auto;
+		 padding-top: 20px;
+	}
+	 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .signals-list .sublist {
+		 font-family: 'Gotham', sans-serif;
+		 font-weight: 800;
+		 line-height: 26px;
+	}
+	 @else if {
+		 font-size: 16px;
+	}
+	 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .signals-list ul {
+		 display: flex;
+		 justify-content: space-around;
+	}
+	 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .signals-list ul li {
+		 font-family: 'Gotham', sans-serif;
+		 font-weight: 500;
+	}
+	 @else if {
+		 font-size: 16px;
+	}
+	 [data-page-id="SafetyProfile"] #third_section .container {
+		 padding: 40px;
+	}
+	 [data-page-id="SafetyProfile"] #third_section .uc-cd-trials .btn-text.btn-primary {
+		 display: block;
+		 text-align: right;
+		 padding-right: 0;
+		 padding-top: 30px;
+	}
+	 [data-page-id="SafetyProfile"] #third_section .full-adverse-events .adverse-event {
+		 padding-bottom: 10px;
+		 display: flex;
+	}
+	 [data-page-id="SafetyProfile"] #third_section .full-adverse-events .adverse-event .image-container img {
+		 width: 85px;
+	}
+	 [data-page-id="SafetyProfile"] #third_section .full-adverse-events .adverse-event .copy-container {
+		 width: calc(100% - 100px);
+		 padding-right: 80px;
+		 padding-left: 40px;
+	}
+	 [data-page-id="SafetyProfile"] #third_section .full-adverse-events .adverse-event .copy-container ul li {
+		 font-family: 'Gotham', sans-serif;
+		 font-weight: 700;
+		 padding-bottom: 10px;
+		 line-height: 20px;
+	}
+	 @else if {
+		 font-size: 16px;
+	}
+	 [data-page-id="SafetyProfile"] #third_section .full-adverse-events .adverse-event .copy-container ul li sup {
+		 top: -7px;
+		 font-size: 10px;
+	}
+	 [data-page-id="SafetyProfile"] #third_section .full-adverse-events .adverse-event .copy-container ul ul {
+		 margin-left: 20px;
+	}
+	 [data-page-id="SafetyProfile"] #third_section .full-adverse-events .adverse-event .copy-container ul ul li {
+		 font-family: 'Gotham', sans-serif;
+		 font-weight: 400;
+	}
+	 @else if {
+		 font-size: 16px;
+	}
+	 [data-page-id="SafetyProfile"] #third_section .full-adverse-events .adverse-event .copy-container ul ul li:before {
+		 left: -12px;
+	}
+	 [data-page-id="SafetyProfile"] #third_section .varsity-adverse-events .subheading {
+		 font-family: 'Gotham', sans-serif;
+		 font-weight: 700;
+	}
+	 @else if {
+		 font-size: 22px;
+	}
+	 [data-page-id="SafetyProfile"] #third_section .varsity-adverse-events .subheading sup {
+		 font-size: 16px;
+		 top: -8px;
+	}
+	 [data-page-id="SafetyProfile"] #third_section .varsity-adverse-events .image-container {
+		 padding-bottom: 30px;
+	}
+	 [data-page-id="SafetyProfile"] #third_section .varsity-adverse-events ul {
+		 padding-bottom: 30px;
+	}
+	 [data-page-id="SafetyProfile"] #third_section .varsity-adverse-events ul li {
+		 font-family: 'Gotham', sans-serif;
+		 font-weight: 400;
+		 line-height: 20px;
+	}
+	 @else if {
+		 font-size: 16px;
+	}
+	 [data-page-id="SafetyProfile"] #third_section .varsity-adverse-events .footnote.acronyms {
+		 padding-top: 10px;
+	}
+	 [data-page-id="SafetyProfile"] #third_section .seven-year-data ul li {
+		 font-family: 'Gotham', sans-serif;
+		 font-weight: 400;
+		 line-height: 20px;
+		 padding-bottom: 7px;
+	}
+	 @else if {
+		 font-size: 16px;
+	}
+	 [data-page-id="SafetyProfile"] #third_section .seven-year-data ul.sublist {
+		 margin-left: 40px;
+	}
+	 [data-page-id="SafetyProfile"] #third_section .seven-year-data .baseline-container {
+		 padding: 30px 0 20px;
+	}
+	 [data-page-id="SafetyProfile"] #third_section .seven-year-data .baseline-container img {
+		 width: 100%;
+	}
+	 [data-page-id="SafetyProfile"] #third_section .seven-year-data .baseline-container figcaption {
+		 padding: 20px 0 0;
+	}
+	 [data-page-id="SafetyProfile"] #third_section .seven-year-data .no-signals {
+		 margin-top: 40px;
+		 width: 100%;
+		 text-align: center;
+	}
+	 [data-page-id="SafetyProfile"] #third_section .seven-year-data .no-signals p {
+		 font-family: 'Gotham', sans-serif;
+		 font-weight: 700;
+		 margin: 0 0 10px 0;
+		 line-height: 26px;
+		 text-align: center;
+		 text-transform: none;
+	}
+	 @else if {
+		 font-size: 22px;
+	}
+	 [data-page-id="SafetyProfile"] #third_section .seven-year-data .no-signals ul {
+		 padding-left: 50px;
+		 display: flex;
+		 justify-content: center;
+	}
+	 [data-page-id="SafetyProfile"] #third_section .seven-year-data .no-signals ul li {
+		 margin-right: 40px;
+	}
+	 [data-page-id="SafetyProfile"] #third_section .seven-year-data .footnote.patient-study {
+		 padding-top: 20px;
+	}
+	 [data-page-id="SafetyProfile"] #third_section .seven-year-data .footnote.acronyms {
+		 padding: 10px 0 30px;
+	}
+	 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area {
+		 align-items: center;
+	}
+	 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .chart-heading {
+		 margin-bottom: 10px;
+	}
+	 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .chart-heading p {
+		 font-family: 'Gotham', sans-serif;
+		 font-weight: 700;
+		 line-height: 26px;
+	}
+	 @else if {
+		 font-size: 22px;
+	}
+	 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area figure {
+		 text-align: center;
+	}
+	 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area figure figcaption {
+		 padding-bottom: 30px;
+	}
+	 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area figure figcaption sup {
+		 top: -7px;
+	}
+	 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area figure img {
+		 max-width: 500px;
+		 width: unset;
+	}
+	 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .footnote {
+		 padding-top: 30px;
+	}
+	 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .associated-copy .subheading {
+		 font-family: 'Gotham', sans-serif;
+		 font-weight: 700;
+		 line-height: 20px;
+	}
+	 @else if {
+		 font-size: 16px;
+	}
+	 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .associated-copy .footnote.acronyms {
+		 padding-bottom: 0;
+	}
+	 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .chart-wide {
+		 width: 100%;
+		 margin-top: 40px;
+		 margin-bottom: 30px;
+	}
+	 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .chart-wide figure img {
+		 width: 100%;
+		 max-width: unset;
+	}
+}
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) and screen and (min-width: 1060px) and (max-width: 1159px) {
+	 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area figure img {
+		 max-height: 390px;
+	}
+}
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) and screen and (min-width: 960px) and (max-width: 1059px) {
+	 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area figure img {
+		 max-height: 340px;
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-id="SafetyProfile"] #first_section, [data-page-id="SafetyProfile"] #third_section {
+			 background-size: 100% auto;
+		}
+		 [data-page-id="SafetyProfile"] ul[data-bullet="light"] > li:before {
+			 font-size: 16px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container {
+			 align-items: center;
+			 padding-bottom: 30px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .image-container {
+			 padding-right: 25px;
+			 padding-top: 10px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .image-container img {
+			 width: 104px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .image-container .year {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container .anchor-link {
+			 font-family: 'Knockout', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 36px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container .anchor-link .relative:after {
+			 width: 15px;
+			 height: 20px;
+			 bottom: 9px;
+			 right: -30px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container p.anchor-link {
+			 line-height: 40px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container p.anchor-link .relative:after {
+			 display: none;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container p {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 500;
+			 line-height: 24px;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container p sup {
+			 top: -6px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container ul {
+			 margin-left: 40px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container ul li {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 500;
+			 line-height: 24px;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container ul li:before {
+			 margin-left: -20px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .signals-list {
+			 text-align: center;
+			 max-width: 770px;
+			 margin: 0 auto;
+			 padding-top: 20px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .signals-list .sublist {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 800;
+			 line-height: 26px;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .signals-list ul {
+			 display: flex;
+			 justify-content: space-around;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .signals-list ul li {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 500;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .container {
+			 padding: 40px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .uc-cd-trials .btn-text.btn-primary {
+			 display: block;
+			 text-align: right;
+			 padding-right: 0;
+			 padding-top: 30px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .full-adverse-events .adverse-event {
+			 padding-bottom: 10px;
+			 display: flex;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .full-adverse-events .adverse-event .image-container img {
+			 width: 85px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .full-adverse-events .adverse-event .copy-container {
+			 width: calc(100% - 100px);
+			 padding-right: 80px;
+			 padding-left: 40px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .full-adverse-events .adverse-event .copy-container ul li {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 padding-bottom: 10px;
+			 line-height: 20px;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .full-adverse-events .adverse-event .copy-container ul li sup {
+			 top: -7px;
+			 font-size: 10px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .full-adverse-events .adverse-event .copy-container ul ul {
+			 margin-left: 20px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .full-adverse-events .adverse-event .copy-container ul ul li {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 400;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .full-adverse-events .adverse-event .copy-container ul ul li:before {
+			 left: -12px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .varsity-adverse-events .subheading {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 22px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .varsity-adverse-events .subheading sup {
+			 font-size: 16px;
+			 top: -8px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .varsity-adverse-events .image-container {
+			 padding-bottom: 30px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .varsity-adverse-events ul {
+			 padding-bottom: 30px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .varsity-adverse-events ul li {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 400;
+			 line-height: 20px;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .varsity-adverse-events .footnote.acronyms {
+			 padding-top: 10px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data ul li {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 400;
+			 line-height: 20px;
+			 padding-bottom: 7px;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data ul.sublist {
+			 margin-left: 40px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .baseline-container {
+			 padding: 30px 0 20px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .baseline-container img {
+			 width: 100%;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .baseline-container figcaption {
+			 padding: 20px 0 0;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .no-signals {
+			 margin-top: 40px;
+			 width: 100%;
+			 text-align: center;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .no-signals p {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 margin: 0 0 10px 0;
+			 line-height: 26px;
+			 text-align: center;
+			 text-transform: none;
+		}
+		 @else if {
+			 font-size: 22px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .no-signals ul {
+			 padding-left: 50px;
+			 display: flex;
+			 justify-content: center;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .no-signals ul li {
+			 margin-right: 40px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .footnote.patient-study {
+			 padding-top: 20px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .footnote.acronyms {
+			 padding: 10px 0 30px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area {
+			 align-items: center;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .chart-heading {
+			 margin-bottom: 10px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .chart-heading p {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 line-height: 26px;
+		}
+		 @else if {
+			 font-size: 22px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area figure {
+			 text-align: center;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area figure figcaption {
+			 padding-bottom: 30px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area figure figcaption sup {
+			 top: -7px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area figure img {
+			 max-width: 500px;
+			 width: unset;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .footnote {
+			 padding-top: 30px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .associated-copy .subheading {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 line-height: 20px;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .associated-copy .footnote.acronyms {
+			 padding-bottom: 0;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .chart-wide {
+			 width: 100%;
+			 margin-top: 40px;
+			 margin-bottom: 30px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .chart-wide figure img {
+			 width: 100%;
+			 max-width: unset;
+		}
+	}
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) and screen and (min-width: 1060px) and (max-width: 1159px) {
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area figure img {
+			 max-height: 390px;
+		}
+	}
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) and screen and (min-width: 960px) and (max-width: 1059px) {
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area figure img {
+			 max-height: 340px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-id="SafetyProfile"] #first_section, [data-page-id="SafetyProfile"] #third_section {
+			 background-size: 100% auto;
+		}
+		 [data-page-id="SafetyProfile"] ul[data-bullet="light"] > li:before {
+			 font-size: 16px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container {
+			 align-items: center;
+			 padding-bottom: 30px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .image-container {
+			 padding-right: 25px;
+			 padding-top: 10px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .image-container img {
+			 width: 104px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .image-container .year {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container .anchor-link {
+			 font-family: 'Knockout', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 36px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container .anchor-link .relative:after {
+			 width: 15px;
+			 height: 20px;
+			 bottom: 9px;
+			 right: -30px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container p.anchor-link {
+			 line-height: 40px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container p.anchor-link .relative:after {
+			 display: none;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container p {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 500;
+			 line-height: 24px;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container p sup {
+			 top: -6px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container ul {
+			 margin-left: 40px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container ul li {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 500;
+			 line-height: 24px;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container ul li:before {
+			 margin-left: -20px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .signals-list {
+			 text-align: center;
+			 max-width: 770px;
+			 margin: 0 auto;
+			 padding-top: 20px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .signals-list .sublist {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 800;
+			 line-height: 26px;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .signals-list ul {
+			 display: flex;
+			 justify-content: space-around;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .signals-list ul li {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 500;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .container {
+			 padding: 40px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .uc-cd-trials .btn-text.btn-primary {
+			 display: block;
+			 text-align: right;
+			 padding-right: 0;
+			 padding-top: 30px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .full-adverse-events .adverse-event {
+			 padding-bottom: 10px;
+			 display: flex;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .full-adverse-events .adverse-event .image-container img {
+			 width: 85px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .full-adverse-events .adverse-event .copy-container {
+			 width: calc(100% - 100px);
+			 padding-right: 80px;
+			 padding-left: 40px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .full-adverse-events .adverse-event .copy-container ul li {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 padding-bottom: 10px;
+			 line-height: 20px;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .full-adverse-events .adverse-event .copy-container ul li sup {
+			 top: -7px;
+			 font-size: 10px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .full-adverse-events .adverse-event .copy-container ul ul {
+			 margin-left: 20px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .full-adverse-events .adverse-event .copy-container ul ul li {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 400;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .full-adverse-events .adverse-event .copy-container ul ul li:before {
+			 left: -12px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .varsity-adverse-events .subheading {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 22px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .varsity-adverse-events .subheading sup {
+			 font-size: 16px;
+			 top: -8px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .varsity-adverse-events .image-container {
+			 padding-bottom: 30px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .varsity-adverse-events ul {
+			 padding-bottom: 30px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .varsity-adverse-events ul li {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 400;
+			 line-height: 20px;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .varsity-adverse-events .footnote.acronyms {
+			 padding-top: 10px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data ul li {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 400;
+			 line-height: 20px;
+			 padding-bottom: 7px;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data ul.sublist {
+			 margin-left: 40px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .baseline-container {
+			 padding: 30px 0 20px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .baseline-container img {
+			 width: 100%;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .baseline-container figcaption {
+			 padding: 20px 0 0;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .no-signals {
+			 margin-top: 40px;
+			 width: 100%;
+			 text-align: center;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .no-signals p {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 margin: 0 0 10px 0;
+			 line-height: 26px;
+			 text-align: center;
+			 text-transform: none;
+		}
+		 @else if {
+			 font-size: 22px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .no-signals ul {
+			 padding-left: 50px;
+			 display: flex;
+			 justify-content: center;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .no-signals ul li {
+			 margin-right: 40px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .footnote.patient-study {
+			 padding-top: 20px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .footnote.acronyms {
+			 padding: 10px 0 30px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area {
+			 align-items: center;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .chart-heading {
+			 margin-bottom: 10px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .chart-heading p {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 line-height: 26px;
+		}
+		 @else if {
+			 font-size: 22px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area figure {
+			 text-align: center;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area figure figcaption {
+			 padding-bottom: 30px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area figure figcaption sup {
+			 top: -7px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area figure img {
+			 max-width: 500px;
+			 width: unset;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .footnote {
+			 padding-top: 30px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .associated-copy .subheading {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 line-height: 20px;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .associated-copy .footnote.acronyms {
+			 padding-bottom: 0;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .chart-wide {
+			 width: 100%;
+			 margin-top: 40px;
+			 margin-bottom: 30px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .chart-wide figure img {
+			 width: 100%;
+			 max-width: unset;
+		}
+	}
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) and screen and (min-width: 1060px) and (max-width: 1159px) {
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area figure img {
+			 max-height: 390px;
+		}
+	}
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) and screen and (min-width: 960px) and (max-width: 1059px) {
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area figure img {
+			 max-height: 340px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-id="SafetyProfile"] #first_section, [data-page-id="SafetyProfile"] #third_section {
+			 background-size: 100% auto;
+		}
+		 [data-page-id="SafetyProfile"] ul[data-bullet="light"] > li:before {
+			 font-size: 16px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container {
+			 align-items: center;
+			 padding-bottom: 30px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .image-container {
+			 padding-right: 25px;
+			 padding-top: 10px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .image-container img {
+			 width: 104px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .image-container .year {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container .anchor-link {
+			 font-family: 'Knockout', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 36px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container .anchor-link .relative:after {
+			 width: 15px;
+			 height: 20px;
+			 bottom: 9px;
+			 right: -30px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container p.anchor-link {
+			 line-height: 40px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container p.anchor-link .relative:after {
+			 display: none;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container p {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 500;
+			 line-height: 24px;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container p sup {
+			 top: -6px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container ul {
+			 margin-left: 40px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container ul li {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 500;
+			 line-height: 24px;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container ul li:before {
+			 margin-left: -20px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .signals-list {
+			 text-align: center;
+			 max-width: 770px;
+			 margin: 0 auto;
+			 padding-top: 20px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .signals-list .sublist {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 800;
+			 line-height: 26px;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .signals-list ul {
+			 display: flex;
+			 justify-content: space-around;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .signals-list ul li {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 500;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .container {
+			 padding: 40px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .uc-cd-trials .btn-text.btn-primary {
+			 display: block;
+			 text-align: right;
+			 padding-right: 0;
+			 padding-top: 30px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .full-adverse-events .adverse-event {
+			 padding-bottom: 10px;
+			 display: flex;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .full-adverse-events .adverse-event .image-container img {
+			 width: 85px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .full-adverse-events .adverse-event .copy-container {
+			 width: calc(100% - 100px);
+			 padding-right: 80px;
+			 padding-left: 40px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .full-adverse-events .adverse-event .copy-container ul li {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 padding-bottom: 10px;
+			 line-height: 20px;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .full-adverse-events .adverse-event .copy-container ul li sup {
+			 top: -7px;
+			 font-size: 10px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .full-adverse-events .adverse-event .copy-container ul ul {
+			 margin-left: 20px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .full-adverse-events .adverse-event .copy-container ul ul li {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 400;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .full-adverse-events .adverse-event .copy-container ul ul li:before {
+			 left: -12px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .varsity-adverse-events .subheading {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 22px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .varsity-adverse-events .subheading sup {
+			 font-size: 16px;
+			 top: -8px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .varsity-adverse-events .image-container {
+			 padding-bottom: 30px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .varsity-adverse-events ul {
+			 padding-bottom: 30px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .varsity-adverse-events ul li {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 400;
+			 line-height: 20px;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .varsity-adverse-events .footnote.acronyms {
+			 padding-top: 10px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data ul li {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 400;
+			 line-height: 20px;
+			 padding-bottom: 7px;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data ul.sublist {
+			 margin-left: 40px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .baseline-container {
+			 padding: 30px 0 20px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .baseline-container img {
+			 width: 100%;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .baseline-container figcaption {
+			 padding: 20px 0 0;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .no-signals {
+			 margin-top: 40px;
+			 width: 100%;
+			 text-align: center;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .no-signals p {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 margin: 0 0 10px 0;
+			 line-height: 26px;
+			 text-align: center;
+			 text-transform: none;
+		}
+		 @else if {
+			 font-size: 22px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .no-signals ul {
+			 padding-left: 50px;
+			 display: flex;
+			 justify-content: center;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .no-signals ul li {
+			 margin-right: 40px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .footnote.patient-study {
+			 padding-top: 20px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .footnote.acronyms {
+			 padding: 10px 0 30px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area {
+			 align-items: center;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .chart-heading {
+			 margin-bottom: 10px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .chart-heading p {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 line-height: 26px;
+		}
+		 @else if {
+			 font-size: 22px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area figure {
+			 text-align: center;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area figure figcaption {
+			 padding-bottom: 30px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area figure figcaption sup {
+			 top: -7px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area figure img {
+			 max-width: 500px;
+			 width: unset;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .footnote {
+			 padding-top: 30px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .associated-copy .subheading {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 line-height: 20px;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .associated-copy .footnote.acronyms {
+			 padding-bottom: 0;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .chart-wide {
+			 width: 100%;
+			 margin-top: 40px;
+			 margin-bottom: 30px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .chart-wide figure img {
+			 width: 100%;
+			 max-width: unset;
+		}
+	}
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) and screen and (min-width: 1060px) and (max-width: 1159px) {
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area figure img {
+			 max-height: 390px;
+		}
+	}
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) and screen and (min-width: 960px) and (max-width: 1059px) {
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area figure img {
+			 max-height: 340px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-id="SafetyProfile"] #first_section, [data-page-id="SafetyProfile"] #third_section {
+			 background-size: 100% auto;
+		}
+		 [data-page-id="SafetyProfile"] ul[data-bullet="light"] > li:before {
+			 font-size: 16px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container {
+			 align-items: center;
+			 padding-bottom: 30px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .image-container {
+			 padding-right: 25px;
+			 padding-top: 10px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .image-container img {
+			 width: 104px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .image-container .year {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container .anchor-link {
+			 font-family: 'Knockout', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 36px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container .anchor-link .relative:after {
+			 width: 15px;
+			 height: 20px;
+			 bottom: 9px;
+			 right: -30px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container p.anchor-link {
+			 line-height: 40px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container p.anchor-link .relative:after {
+			 display: none;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container p {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 500;
+			 line-height: 24px;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container p sup {
+			 top: -6px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container ul {
+			 margin-left: 40px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container ul li {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 500;
+			 line-height: 24px;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container ul li:before {
+			 margin-left: -20px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .signals-list {
+			 text-align: center;
+			 max-width: 770px;
+			 margin: 0 auto;
+			 padding-top: 20px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .signals-list .sublist {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 800;
+			 line-height: 26px;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .signals-list ul {
+			 display: flex;
+			 justify-content: space-around;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .signals-list ul li {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 500;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .container {
+			 padding: 40px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .uc-cd-trials .btn-text.btn-primary {
+			 display: block;
+			 text-align: right;
+			 padding-right: 0;
+			 padding-top: 30px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .full-adverse-events .adverse-event {
+			 padding-bottom: 10px;
+			 display: flex;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .full-adverse-events .adverse-event .image-container img {
+			 width: 85px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .full-adverse-events .adverse-event .copy-container {
+			 width: calc(100% - 100px);
+			 padding-right: 80px;
+			 padding-left: 40px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .full-adverse-events .adverse-event .copy-container ul li {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 padding-bottom: 10px;
+			 line-height: 20px;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .full-adverse-events .adverse-event .copy-container ul li sup {
+			 top: -7px;
+			 font-size: 10px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .full-adverse-events .adverse-event .copy-container ul ul {
+			 margin-left: 20px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .full-adverse-events .adverse-event .copy-container ul ul li {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 400;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .full-adverse-events .adverse-event .copy-container ul ul li:before {
+			 left: -12px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .varsity-adverse-events .subheading {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 22px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .varsity-adverse-events .subheading sup {
+			 font-size: 16px;
+			 top: -8px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .varsity-adverse-events .image-container {
+			 padding-bottom: 30px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .varsity-adverse-events ul {
+			 padding-bottom: 30px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .varsity-adverse-events ul li {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 400;
+			 line-height: 20px;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .varsity-adverse-events .footnote.acronyms {
+			 padding-top: 10px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data ul li {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 400;
+			 line-height: 20px;
+			 padding-bottom: 7px;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data ul.sublist {
+			 margin-left: 40px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .baseline-container {
+			 padding: 30px 0 20px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .baseline-container img {
+			 width: 100%;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .baseline-container figcaption {
+			 padding: 20px 0 0;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .no-signals {
+			 margin-top: 40px;
+			 width: 100%;
+			 text-align: center;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .no-signals p {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 margin: 0 0 10px 0;
+			 line-height: 26px;
+			 text-align: center;
+			 text-transform: none;
+		}
+		 @else if {
+			 font-size: 22px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .no-signals ul {
+			 padding-left: 50px;
+			 display: flex;
+			 justify-content: center;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .no-signals ul li {
+			 margin-right: 40px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .footnote.patient-study {
+			 padding-top: 20px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .footnote.acronyms {
+			 padding: 10px 0 30px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area {
+			 align-items: center;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .chart-heading {
+			 margin-bottom: 10px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .chart-heading p {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 line-height: 26px;
+		}
+		 @else if {
+			 font-size: 22px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area figure {
+			 text-align: center;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area figure figcaption {
+			 padding-bottom: 30px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area figure figcaption sup {
+			 top: -7px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area figure img {
+			 max-width: 500px;
+			 width: unset;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .footnote {
+			 padding-top: 30px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .associated-copy .subheading {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 line-height: 20px;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .associated-copy .footnote.acronyms {
+			 padding-bottom: 0;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .chart-wide {
+			 width: 100%;
+			 margin-top: 40px;
+			 margin-bottom: 30px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .chart-wide figure img {
+			 width: 100%;
+			 max-width: unset;
+		}
+	}
+	 @media screen and (max-width : mq(mobile)px) and screen and (min-width: 1060px) and (max-width: 1159px) {
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area figure img {
+			 max-height: 390px;
+		}
+	}
+	 @media screen and (max-width : mq(mobile)px) and screen and (min-width: 960px) and (max-width: 1059px) {
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area figure img {
+			 max-height: 340px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-id="SafetyProfile"] #first_section, [data-page-id="SafetyProfile"] #third_section {
+			 background-size: 100% auto;
+		}
+		 [data-page-id="SafetyProfile"] ul[data-bullet="light"] > li:before {
+			 font-size: 16px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container {
+			 align-items: center;
+			 padding-bottom: 30px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .image-container {
+			 padding-right: 25px;
+			 padding-top: 10px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .image-container img {
+			 width: 104px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .image-container .year {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container .anchor-link {
+			 font-family: 'Knockout', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 36px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container .anchor-link .relative:after {
+			 width: 15px;
+			 height: 20px;
+			 bottom: 9px;
+			 right: -30px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container p.anchor-link {
+			 line-height: 40px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container p.anchor-link .relative:after {
+			 display: none;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container p {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 500;
+			 line-height: 24px;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container p sup {
+			 top: -6px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container ul {
+			 margin-left: 40px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container ul li {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 500;
+			 line-height: 24px;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .flex-container .copy-container ul li:before {
+			 margin-left: -20px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .signals-list {
+			 text-align: center;
+			 max-width: 770px;
+			 margin: 0 auto;
+			 padding-top: 20px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .signals-list .sublist {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 800;
+			 line-height: 26px;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .signals-list ul {
+			 display: flex;
+			 justify-content: space-around;
+		}
+		 [data-page-id="SafetyProfile"] #first_section .long-safety-profile .signals-list ul li {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 500;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .container {
+			 padding: 40px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .uc-cd-trials .btn-text.btn-primary {
+			 display: block;
+			 text-align: right;
+			 padding-right: 0;
+			 padding-top: 30px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .full-adverse-events .adverse-event {
+			 padding-bottom: 10px;
+			 display: flex;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .full-adverse-events .adverse-event .image-container img {
+			 width: 85px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .full-adverse-events .adverse-event .copy-container {
+			 width: calc(100% - 100px);
+			 padding-right: 80px;
+			 padding-left: 40px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .full-adverse-events .adverse-event .copy-container ul li {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 padding-bottom: 10px;
+			 line-height: 20px;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .full-adverse-events .adverse-event .copy-container ul li sup {
+			 top: -7px;
+			 font-size: 10px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .full-adverse-events .adverse-event .copy-container ul ul {
+			 margin-left: 20px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .full-adverse-events .adverse-event .copy-container ul ul li {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 400;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .full-adverse-events .adverse-event .copy-container ul ul li:before {
+			 left: -12px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .varsity-adverse-events .subheading {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 22px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .varsity-adverse-events .subheading sup {
+			 font-size: 16px;
+			 top: -8px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .varsity-adverse-events .image-container {
+			 padding-bottom: 30px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .varsity-adverse-events ul {
+			 padding-bottom: 30px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .varsity-adverse-events ul li {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 400;
+			 line-height: 20px;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .varsity-adverse-events .footnote.acronyms {
+			 padding-top: 10px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data ul li {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 400;
+			 line-height: 20px;
+			 padding-bottom: 7px;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data ul.sublist {
+			 margin-left: 40px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .baseline-container {
+			 padding: 30px 0 20px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .baseline-container img {
+			 width: 100%;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .baseline-container figcaption {
+			 padding: 20px 0 0;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .no-signals {
+			 margin-top: 40px;
+			 width: 100%;
+			 text-align: center;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .no-signals p {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 margin: 0 0 10px 0;
+			 line-height: 26px;
+			 text-align: center;
+			 text-transform: none;
+		}
+		 @else if {
+			 font-size: 22px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .no-signals ul {
+			 padding-left: 50px;
+			 display: flex;
+			 justify-content: center;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .no-signals ul li {
+			 margin-right: 40px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .footnote.patient-study {
+			 padding-top: 20px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .footnote.acronyms {
+			 padding: 10px 0 30px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area {
+			 align-items: center;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .chart-heading {
+			 margin-bottom: 10px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .chart-heading p {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 line-height: 26px;
+		}
+		 @else if {
+			 font-size: 22px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area figure {
+			 text-align: center;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area figure figcaption {
+			 padding-bottom: 30px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area figure figcaption sup {
+			 top: -7px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area figure img {
+			 max-width: 500px;
+			 width: unset;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .footnote {
+			 padding-top: 30px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .associated-copy .subheading {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 line-height: 20px;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .associated-copy .footnote.acronyms {
+			 padding-bottom: 0;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .chart-wide {
+			 width: 100%;
+			 margin-top: 40px;
+			 margin-bottom: 30px;
+		}
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area .chart-wide figure img {
+			 width: 100%;
+			 max-width: unset;
+		}
+	}
+	 @media screen and (max-width : mq(mobile-sm)px) and screen and (min-width: 1060px) and (max-width: 1159px) {
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area figure img {
+			 max-height: 390px;
+		}
+	}
+	 @media screen and (max-width : mq(mobile-sm)px) and screen and (min-width: 960px) and (max-width: 1059px) {
+		 [data-page-id="SafetyProfile"] #third_section .seven-year-data .chart-area figure img {
+			 max-height: 340px;
+		}
+	}
+}
+ 

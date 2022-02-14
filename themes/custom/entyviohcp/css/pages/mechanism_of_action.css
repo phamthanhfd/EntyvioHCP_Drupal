@@ -1,0 +1,841 @@
+/***********************************/
+/**** **** MATRIX SETTINGS **** ***/
+/*********************************/
+/* Usage: Update matrix gutter HTML: <nav data-matrix=""> <a> <a> SASS: @include matrix_setting([number of matrix], [gutter space], '[child element]');
+ Example: @include matrix_setting(2, 30px, 'div');
+ */
+/************************************************/
+/**** **** TYPEFACE SETTINGS (LOCAL) v2 **** ***/
+/**********************************************/
+/* Usage: $local-font-settings: ( (Gotham, Gotham-Light_Web, '200'), (Gotham, Gotham-Book_Web, '400'), (Gotham, Gotham-Medium_Web, '500') );
+ $font_path : '../_assets/core/fonts';
+ Usage: @include localFontSetup($local-font-settings, $font_path);
+ Usage: @mixin gotham($font) {
+	 font-family: 'Gotham', sans-serif;
+	 @if $font == light {
+		 font-weight: 200;
+	}
+	 @else if $font == book {
+		 font-weight: 400;
+	}
+	 @else if $font == medium {
+		 font-weight: 500;
+	}
+}
+ body {
+	 @include gotham(book);
+}
+ */
+/*****************************/
+/**** **** ANIMATION **** ***/
+/***************************/
+/* Usage: @include animationFrames(fade) {
+	 0% {
+		 opacity: 1;
+	}
+	 50% {
+		 opacity: 0;
+	}
+}
+ */
+/* Usage: @include animation(300ms fade ease-in-out forwards, 100);
+ */
+/**************************************/
+/**** *** PAGE WIDTH SETTINGS **** ***/
+/************************************/
+/**** **** GRID MIXIN **** ***/
+/****************************/
+/**** **** FLEX SET **** ***/
+/**************************/
+/******************************/
+/**** **** RESET LIST **** ***/
+/****************************/
+/*****************************/
+/**** **** FOR PRINT **** ***/
+/***************************/
+/**** **** SETTING UP TYPEFACE **** ***/
+/**** **** PREMADE VIEWPORT **** ***/
+/**** **** CUSTOM VIEWPORT **** ***/
+/* Usage: @include viewport-custom(200, 300) {
+	 h1 {
+		 font-size: 20px;
+	}
+}
+ */
+/**** **** SPECIFIC VIEWPORT **** ***/
+/* ipad specific */
+/* iphone 6/7/8 specific */
+/* ie11 specific */
+/**** **** PRIMARY TYPE **** ***/
+/**** **** TEXT TYPE **** ***/
+/**** **** CLOSE **** ***/
+/* Usage: @include close-icon([width of icon], [height of icon], [icon colour]);
+ Examples: @include close-icon(25px, 3px, brand(primary));
+ @include close-icon($width: 25px);
+ @include close-icon;
+ */
+/* init */
+ [data-icon="close"] span {
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 width: 100%;
+	 height: 100%;
+	 transform: translate(-50%, -50%);
+}
+ [data-icon="close"] span:before, [data-icon="close"] span:after {
+	 content: '';
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 width: 100%;
+	 height: 3px;
+	 transform-origin: 0 0;
+	 background: brand(primary);
+}
+ [data-icon="close"] span:before {
+	 transform: rotate(45deg) translate(-50%, -50%);
+}
+ [data-icon="close"] span:after {
+	 transform: rotate(-45deg) translate(-50%, -50%);
+}
+/**** **** HAMBURGER **** ***/
+/* Usage: @include hamburger([width of icon], [height of icon], [space between lines], [icon colour]);
+ Examples: @include hamburger(25px, 2px, 1, #fff);
+ @include hamburger($width: 25px, $bg: #f00);
+ @include hamburger;
+ */
+/* init */
+ [data-icon="hamburger"] span {
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 width: 100%;
+	 height: 3px;
+	 transform: translate(-50%, -50%);
+	 background: brand(primary);
+}
+ [data-icon="hamburger"] span:before, [data-icon="hamburger"] span:after {
+	 content: '';
+	 position: absolute;
+	 left: 0;
+	 width: 100%;
+	 height: 3px;
+	 transform-origin: 0 0;
+	 background: brand(primary);
+}
+ [data-icon="hamburger"] span:before {
+	 bottom: 7.5px;
+}
+ [data-icon="hamburger"] span:after {
+	 top: 7.5px;
+}
+/**** **** PLUS/MINUS **** ***/
+/* Usage: @plus-minus-icon([width of icon], [height of icon], [icon colour]);
+ Examples: @plus-minus-icon(25px, 2px, #fff);
+ @include plus-minus-icon($width: 13px);
+ @plus-minus-icon;
+ */
+/* init */
+ [data-icon="plus-minus"] span {
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 width: 100%;
+	 height: 100%;
+	 transform: translate(-50%, -50%);
+}
+ [data-icon="plus-minus"] span:before, [data-icon="plus-minus"] span:after {
+	 content: '';
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 width: 100%;
+	 height: 3px;
+	 transform-origin: 0 0;
+	 background: brand(primary);
+}
+ [data-icon="plus-minus"] span:before {
+	 transform: translate(-50%, -50%);
+}
+ [data-icon="plus-minus"] span:after {
+	 transform: rotate(90deg) translate(-50%, -50%);
+}
+/**** **** YELLOW CIRCLE WORD ICONS **** ***/
+/* Usage: <p data-dot>Vs</p> */
+/****************************/
+/**** **** LANGUAGE **** ***/
+/**************************/
+/* en or cn */
+/***********************************/
+/**** **** LAYOUT SETTINGS **** ***/
+/*********************************/
+/*********************************/
+/**** **** GRID SETTINGS **** ***/
+/*******************************/
+/**********************************/
+/**** **** BRAND SETTINGS **** ***/
+/********************************/
+/* form */
+/*********************************/
+/**** **** PATH SETTINGS **** ***/
+/*******************************/
+/*************************************/
+/**** **** TYPEFACE SETTINGS **** ***/
+/***********************************/
+/***********************************/
+/**** ** MECHANISM OF ACTION ** ****/
+/***********************************/
+ [data-page-id="MechanismOfAction"] {
+	/**** **** MOBILE **** ***/
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+	/**** **** DESKTOP **** ***/
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ [data-page-id="MechanismOfAction"] #hero h1 {
+	 position: absolute;
+	 top: 44%;
+	 left: 50%;
+	 color: brand(light);
+	 transform: translate(-50%, -50%);
+	 z-index: 1;
+}
+ [data-page-id="MechanismOfAction"] #first_section {
+	 background: url(path(background)/common-page-bg.svg) 50% 0 repeat-y;
+}
+ [data-page-id="MechanismOfAction"] #first_section .moa-intro p {
+	 color: brand(light);
+}
+ [data-page-id="MechanismOfAction"] #first_section .moa-intro .brand-secondary {
+	 color: brand(secondary);
+	 font-weight: bold;
+}
+ [data-page-id="MechanismOfAction"] #first_section .video-container {
+	 background: brand(light);
+}
+ [data-page-id="MechanismOfAction"] #first_section .video-container video {
+	 max-width: 100%;
+}
+ [data-page-id="MechanismOfAction"] #first_section .accordion-container {
+	 background: brand(light);
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-id="MechanismOfAction"] #first_section {
+			 background-size: cover;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .moa-intro h2.border {
+			 margin-bottom: 5px;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .moa-intro .key-point p {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 line-height: 20px;
+			 margin-bottom: 10px;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .moa-intro .key-point p sup {
+			 font-size: 11px;
+			 top: -7px;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .moa-intro .body-copy p {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 400;
+			 line-height: 18px;
+			 margin-bottom: 15px;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .moa-intro .body-copy p sup {
+			 top: -5px;
+			 font-size: 8px;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .video-container, [data-page-id="MechanismOfAction"] #first_section .accordion-container {
+			 padding: 10px;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .video-container .figure-content figcaption, [data-page-id="MechanismOfAction"] #first_section .accordion-container .figure-content figcaption {
+			 padding-bottom: 10px;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .video-container .to_footnote p, [data-page-id="MechanismOfAction"] #first_section .accordion-container .to_footnote p {
+			 line-height: normal;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .accordion[data-accordion-type="list"] button[aria-expanded] {
+			 padding-left: 30px;
+			 padding-right: 45px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-id="MechanismOfAction"] #first_section {
+			 background-size: cover;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .moa-intro h2.border {
+			 margin-bottom: 5px;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .moa-intro .key-point p {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 line-height: 20px;
+			 margin-bottom: 10px;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .moa-intro .key-point p sup {
+			 font-size: 11px;
+			 top: -7px;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .moa-intro .body-copy p {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 400;
+			 line-height: 18px;
+			 margin-bottom: 15px;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .moa-intro .body-copy p sup {
+			 top: -5px;
+			 font-size: 8px;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .video-container, [data-page-id="MechanismOfAction"] #first_section .accordion-container {
+			 padding: 10px;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .video-container .figure-content figcaption, [data-page-id="MechanismOfAction"] #first_section .accordion-container .figure-content figcaption {
+			 padding-bottom: 10px;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .video-container .to_footnote p, [data-page-id="MechanismOfAction"] #first_section .accordion-container .to_footnote p {
+			 line-height: normal;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .accordion[data-accordion-type="list"] button[aria-expanded] {
+			 padding-left: 30px;
+			 padding-right: 45px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-id="MechanismOfAction"] #first_section {
+			 background-size: cover;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .moa-intro h2.border {
+			 margin-bottom: 5px;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .moa-intro .key-point p {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 line-height: 20px;
+			 margin-bottom: 10px;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .moa-intro .key-point p sup {
+			 font-size: 11px;
+			 top: -7px;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .moa-intro .body-copy p {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 400;
+			 line-height: 18px;
+			 margin-bottom: 15px;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .moa-intro .body-copy p sup {
+			 top: -5px;
+			 font-size: 8px;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .video-container, [data-page-id="MechanismOfAction"] #first_section .accordion-container {
+			 padding: 10px;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .video-container .figure-content figcaption, [data-page-id="MechanismOfAction"] #first_section .accordion-container .figure-content figcaption {
+			 padding-bottom: 10px;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .video-container .to_footnote p, [data-page-id="MechanismOfAction"] #first_section .accordion-container .to_footnote p {
+			 line-height: normal;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .accordion[data-accordion-type="list"] button[aria-expanded] {
+			 padding-left: 30px;
+			 padding-right: 45px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-id="MechanismOfAction"] #first_section {
+			 background-size: cover;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .moa-intro h2.border {
+			 margin-bottom: 5px;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .moa-intro .key-point p {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 line-height: 20px;
+			 margin-bottom: 10px;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .moa-intro .key-point p sup {
+			 font-size: 11px;
+			 top: -7px;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .moa-intro .body-copy p {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 400;
+			 line-height: 18px;
+			 margin-bottom: 15px;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .moa-intro .body-copy p sup {
+			 top: -5px;
+			 font-size: 8px;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .video-container, [data-page-id="MechanismOfAction"] #first_section .accordion-container {
+			 padding: 10px;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .video-container .figure-content figcaption, [data-page-id="MechanismOfAction"] #first_section .accordion-container .figure-content figcaption {
+			 padding-bottom: 10px;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .video-container .to_footnote p, [data-page-id="MechanismOfAction"] #first_section .accordion-container .to_footnote p {
+			 line-height: normal;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .accordion[data-accordion-type="list"] button[aria-expanded] {
+			 padding-left: 30px;
+			 padding-right: 45px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-id="MechanismOfAction"] #first_section {
+			 background-size: cover;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .moa-intro h2.border {
+			 margin-bottom: 5px;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .moa-intro .key-point p {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 line-height: 20px;
+			 margin-bottom: 10px;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .moa-intro .key-point p sup {
+			 font-size: 11px;
+			 top: -7px;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .moa-intro .body-copy p {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 400;
+			 line-height: 18px;
+			 margin-bottom: 15px;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .moa-intro .body-copy p sup {
+			 top: -5px;
+			 font-size: 8px;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .video-container, [data-page-id="MechanismOfAction"] #first_section .accordion-container {
+			 padding: 10px;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .video-container .figure-content figcaption, [data-page-id="MechanismOfAction"] #first_section .accordion-container .figure-content figcaption {
+			 padding-bottom: 10px;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .video-container .to_footnote p, [data-page-id="MechanismOfAction"] #first_section .accordion-container .to_footnote p {
+			 line-height: normal;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .accordion[data-accordion-type="list"] button[aria-expanded] {
+			 padding-left: 30px;
+			 padding-right: 45px;
+		}
+	}
+}
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) {
+	 [data-page-id="MechanismOfAction"] #first_section {
+		 background-size: 100% auto;
+	}
+	 [data-page-id="MechanismOfAction"] #first_section .moa-intro .key-point p {
+		 font-family: 'Gotham', sans-serif;
+		 font-weight: 700;
+		 line-height: 26px;
+		 max-width: 85%;
+	}
+	 @else if {
+		 font-size: 22px;
+	}
+	 [data-page-id="MechanismOfAction"] #first_section .moa-intro .key-point p sup {
+		 font-size: 16px;
+		 top: -9px;
+	}
+	 [data-page-id="MechanismOfAction"] #first_section .moa-intro .body-copy p {
+		 font-family: 'Gotham', sans-serif;
+		 font-weight: 400;
+		 line-height: 22px;
+	}
+	 @else if {
+		 font-size: 16px;
+	}
+	 [data-page-id="MechanismOfAction"] #first_section .moa-intro .body-copy p sup {
+		 font-size: 12px;
+		 top: -7px;
+	}
+	 [data-page-id="MechanismOfAction"] #first_section .video-container, [data-page-id="MechanismOfAction"] #first_section .accordion-container {
+		 padding: 40px;
+	}
+	 [data-page-id="MechanismOfAction"] #first_section .accordion .accordion-list {
+		 position: relative;
+		 padding-bottom: 20px;
+		 flex: 0 0 40%;
+		 max-width: 40%;
+	}
+	 [data-page-id="MechanismOfAction"] #first_section .accordion .accordion-list .content p {
+		 margin-bottom: 10px;
+	}
+	 [data-page-id="MechanismOfAction"] #first_section .accordion .accordion-list .content p sup {
+		 top: -5px;
+		 font-size: 12px;
+	}
+	 [data-page-id="MechanismOfAction"] #first_section .accordion > div {
+		 flex: 0 0 60%;
+		 max-width: 60%;
+	}
+	 [data-page-id="MechanismOfAction"] #first_section .accordion .footnote {
+		 position: absolute;
+		 bottom: 0;
+		 left: 0;
+		 width: 500px;
+	}
+	 [data-page-id="MechanismOfAction"] #first_section .accordion .footnote p {
+		 margin-bottom: 0;
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-id="MechanismOfAction"] #first_section {
+			 background-size: 100% auto;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .moa-intro .key-point p {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 line-height: 26px;
+			 max-width: 85%;
+		}
+		 @else if {
+			 font-size: 22px;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .moa-intro .key-point p sup {
+			 font-size: 16px;
+			 top: -9px;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .moa-intro .body-copy p {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 400;
+			 line-height: 22px;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .moa-intro .body-copy p sup {
+			 font-size: 12px;
+			 top: -7px;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .video-container, [data-page-id="MechanismOfAction"] #first_section .accordion-container {
+			 padding: 40px;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .accordion .accordion-list {
+			 position: relative;
+			 padding-bottom: 20px;
+			 flex: 0 0 40%;
+			 max-width: 40%;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .accordion .accordion-list .content p {
+			 margin-bottom: 10px;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .accordion .accordion-list .content p sup {
+			 top: -5px;
+			 font-size: 12px;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .accordion > div {
+			 flex: 0 0 60%;
+			 max-width: 60%;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .accordion .footnote {
+			 position: absolute;
+			 bottom: 0;
+			 left: 0;
+			 width: 500px;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .accordion .footnote p {
+			 margin-bottom: 0;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-id="MechanismOfAction"] #first_section {
+			 background-size: 100% auto;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .moa-intro .key-point p {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 line-height: 26px;
+			 max-width: 85%;
+		}
+		 @else if {
+			 font-size: 22px;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .moa-intro .key-point p sup {
+			 font-size: 16px;
+			 top: -9px;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .moa-intro .body-copy p {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 400;
+			 line-height: 22px;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .moa-intro .body-copy p sup {
+			 font-size: 12px;
+			 top: -7px;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .video-container, [data-page-id="MechanismOfAction"] #first_section .accordion-container {
+			 padding: 40px;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .accordion .accordion-list {
+			 position: relative;
+			 padding-bottom: 20px;
+			 flex: 0 0 40%;
+			 max-width: 40%;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .accordion .accordion-list .content p {
+			 margin-bottom: 10px;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .accordion .accordion-list .content p sup {
+			 top: -5px;
+			 font-size: 12px;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .accordion > div {
+			 flex: 0 0 60%;
+			 max-width: 60%;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .accordion .footnote {
+			 position: absolute;
+			 bottom: 0;
+			 left: 0;
+			 width: 500px;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .accordion .footnote p {
+			 margin-bottom: 0;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-id="MechanismOfAction"] #first_section {
+			 background-size: 100% auto;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .moa-intro .key-point p {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 line-height: 26px;
+			 max-width: 85%;
+		}
+		 @else if {
+			 font-size: 22px;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .moa-intro .key-point p sup {
+			 font-size: 16px;
+			 top: -9px;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .moa-intro .body-copy p {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 400;
+			 line-height: 22px;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .moa-intro .body-copy p sup {
+			 font-size: 12px;
+			 top: -7px;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .video-container, [data-page-id="MechanismOfAction"] #first_section .accordion-container {
+			 padding: 40px;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .accordion .accordion-list {
+			 position: relative;
+			 padding-bottom: 20px;
+			 flex: 0 0 40%;
+			 max-width: 40%;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .accordion .accordion-list .content p {
+			 margin-bottom: 10px;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .accordion .accordion-list .content p sup {
+			 top: -5px;
+			 font-size: 12px;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .accordion > div {
+			 flex: 0 0 60%;
+			 max-width: 60%;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .accordion .footnote {
+			 position: absolute;
+			 bottom: 0;
+			 left: 0;
+			 width: 500px;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .accordion .footnote p {
+			 margin-bottom: 0;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-id="MechanismOfAction"] #first_section {
+			 background-size: 100% auto;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .moa-intro .key-point p {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 line-height: 26px;
+			 max-width: 85%;
+		}
+		 @else if {
+			 font-size: 22px;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .moa-intro .key-point p sup {
+			 font-size: 16px;
+			 top: -9px;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .moa-intro .body-copy p {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 400;
+			 line-height: 22px;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .moa-intro .body-copy p sup {
+			 font-size: 12px;
+			 top: -7px;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .video-container, [data-page-id="MechanismOfAction"] #first_section .accordion-container {
+			 padding: 40px;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .accordion .accordion-list {
+			 position: relative;
+			 padding-bottom: 20px;
+			 flex: 0 0 40%;
+			 max-width: 40%;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .accordion .accordion-list .content p {
+			 margin-bottom: 10px;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .accordion .accordion-list .content p sup {
+			 top: -5px;
+			 font-size: 12px;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .accordion > div {
+			 flex: 0 0 60%;
+			 max-width: 60%;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .accordion .footnote {
+			 position: absolute;
+			 bottom: 0;
+			 left: 0;
+			 width: 500px;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .accordion .footnote p {
+			 margin-bottom: 0;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-id="MechanismOfAction"] #first_section {
+			 background-size: 100% auto;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .moa-intro .key-point p {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 line-height: 26px;
+			 max-width: 85%;
+		}
+		 @else if {
+			 font-size: 22px;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .moa-intro .key-point p sup {
+			 font-size: 16px;
+			 top: -9px;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .moa-intro .body-copy p {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 400;
+			 line-height: 22px;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .moa-intro .body-copy p sup {
+			 font-size: 12px;
+			 top: -7px;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .video-container, [data-page-id="MechanismOfAction"] #first_section .accordion-container {
+			 padding: 40px;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .accordion .accordion-list {
+			 position: relative;
+			 padding-bottom: 20px;
+			 flex: 0 0 40%;
+			 max-width: 40%;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .accordion .accordion-list .content p {
+			 margin-bottom: 10px;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .accordion .accordion-list .content p sup {
+			 top: -5px;
+			 font-size: 12px;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .accordion > div {
+			 flex: 0 0 60%;
+			 max-width: 60%;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .accordion .footnote {
+			 position: absolute;
+			 bottom: 0;
+			 left: 0;
+			 width: 500px;
+		}
+		 [data-page-id="MechanismOfAction"] #first_section .accordion .footnote p {
+			 margin-bottom: 0;
+		}
+	}
+}
+ 

@@ -1,0 +1,391 @@
+/***********************************/
+/**** **** MATRIX SETTINGS **** ***/
+/*********************************/
+/* Usage: Update matrix gutter HTML: <nav data-matrix=""> <a> <a> SASS: @include matrix_setting([number of matrix], [gutter space], '[child element]');
+ Example: @include matrix_setting(2, 30px, 'div');
+ */
+/************************************************/
+/**** **** TYPEFACE SETTINGS (LOCAL) v2 **** ***/
+/**********************************************/
+/* Usage: $local-font-settings: ( (Gotham, Gotham-Light_Web, '200'), (Gotham, Gotham-Book_Web, '400'), (Gotham, Gotham-Medium_Web, '500') );
+ $font_path : '../_assets/core/fonts';
+ Usage: @include localFontSetup($local-font-settings, $font_path);
+ Usage: @mixin gotham($font) {
+	 font-family: 'Gotham', sans-serif;
+	 @if $font == light {
+		 font-weight: 200;
+	}
+	 @else if $font == book {
+		 font-weight: 400;
+	}
+	 @else if $font == medium {
+		 font-weight: 500;
+	}
+}
+ body {
+	 @include gotham(book);
+}
+ */
+/*****************************/
+/**** **** ANIMATION **** ***/
+/***************************/
+/* Usage: @include animationFrames(fade) {
+	 0% {
+		 opacity: 1;
+	}
+	 50% {
+		 opacity: 0;
+	}
+}
+ */
+/* Usage: @include animation(300ms fade ease-in-out forwards, 100);
+ */
+/**************************************/
+/**** *** PAGE WIDTH SETTINGS **** ***/
+/************************************/
+/**** **** GRID MIXIN **** ***/
+/****************************/
+/**** **** FLEX SET **** ***/
+/**************************/
+/******************************/
+/**** **** RESET LIST **** ***/
+/****************************/
+/*****************************/
+/**** **** FOR PRINT **** ***/
+/***************************/
+/**** **** SETTING UP TYPEFACE **** ***/
+/**** **** PREMADE VIEWPORT **** ***/
+/**** **** CUSTOM VIEWPORT **** ***/
+/* Usage: @include viewport-custom(200, 300) {
+	 h1 {
+		 font-size: 20px;
+	}
+}
+ */
+/**** **** SPECIFIC VIEWPORT **** ***/
+/* ipad specific */
+/* iphone 6/7/8 specific */
+/* ie11 specific */
+/**** **** PRIMARY TYPE **** ***/
+/**** **** TEXT TYPE **** ***/
+/**** **** CLOSE **** ***/
+/* Usage: @include close-icon([width of icon], [height of icon], [icon colour]);
+ Examples: @include close-icon(25px, 3px, brand(primary));
+ @include close-icon($width: 25px);
+ @include close-icon;
+ */
+/* init */
+ [data-icon="close"] span {
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 width: 100%;
+	 height: 100%;
+	 transform: translate(-50%, -50%);
+}
+ [data-icon="close"] span:before, [data-icon="close"] span:after {
+	 content: '';
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 width: 100%;
+	 height: 3px;
+	 transform-origin: 0 0;
+	 background: brand(primary);
+}
+ [data-icon="close"] span:before {
+	 transform: rotate(45deg) translate(-50%, -50%);
+}
+ [data-icon="close"] span:after {
+	 transform: rotate(-45deg) translate(-50%, -50%);
+}
+/**** **** HAMBURGER **** ***/
+/* Usage: @include hamburger([width of icon], [height of icon], [space between lines], [icon colour]);
+ Examples: @include hamburger(25px, 2px, 1, #fff);
+ @include hamburger($width: 25px, $bg: #f00);
+ @include hamburger;
+ */
+/* init */
+ [data-icon="hamburger"] span {
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 width: 100%;
+	 height: 3px;
+	 transform: translate(-50%, -50%);
+	 background: brand(primary);
+}
+ [data-icon="hamburger"] span:before, [data-icon="hamburger"] span:after {
+	 content: '';
+	 position: absolute;
+	 left: 0;
+	 width: 100%;
+	 height: 3px;
+	 transform-origin: 0 0;
+	 background: brand(primary);
+}
+ [data-icon="hamburger"] span:before {
+	 bottom: 7.5px;
+}
+ [data-icon="hamburger"] span:after {
+	 top: 7.5px;
+}
+/**** **** PLUS/MINUS **** ***/
+/* Usage: @plus-minus-icon([width of icon], [height of icon], [icon colour]);
+ Examples: @plus-minus-icon(25px, 2px, #fff);
+ @include plus-minus-icon($width: 13px);
+ @plus-minus-icon;
+ */
+/* init */
+ [data-icon="plus-minus"] span {
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 width: 100%;
+	 height: 100%;
+	 transform: translate(-50%, -50%);
+}
+ [data-icon="plus-minus"] span:before, [data-icon="plus-minus"] span:after {
+	 content: '';
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 width: 100%;
+	 height: 3px;
+	 transform-origin: 0 0;
+	 background: brand(primary);
+}
+ [data-icon="plus-minus"] span:before {
+	 transform: translate(-50%, -50%);
+}
+ [data-icon="plus-minus"] span:after {
+	 transform: rotate(90deg) translate(-50%, -50%);
+}
+/**** **** YELLOW CIRCLE WORD ICONS **** ***/
+/* Usage: <p data-dot>Vs</p> */
+/****************************/
+/**** **** LANGUAGE **** ***/
+/**************************/
+/* en or cn */
+/***********************************/
+/**** **** LAYOUT SETTINGS **** ***/
+/*********************************/
+/*********************************/
+/**** **** GRID SETTINGS **** ***/
+/*******************************/
+/**********************************/
+/**** **** BRAND SETTINGS **** ***/
+/********************************/
+/* form */
+/*********************************/
+/**** **** PATH SETTINGS **** ***/
+/*******************************/
+/*************************************/
+/**** **** TYPEFACE SETTINGS **** ***/
+/***********************************/
+/**************************/
+/**** **** TABS **** *****/
+/************************/
+ .tabs {
+	/**** **** COMMON **** ***/
+	/**** **** PRIMARY **** ***/
+	/**** **** SECONDARY **** ***/
+}
+ .tabs [role="tablist"] {
+	 display: flex;
+	 align-items: center;
+}
+ .tabs [role="tablist"] a, .tabs [role="tablist"] button {
+	 flex: 1 1 0;
+}
+ .tabs [role="tabpanel"][aria-hidden="true"] {
+	 display: none;
+}
+ .tabs[data-tab-type="primary"] [role="tablist"] {
+	 border: 1px solid #c1bfc6;
+	 border-bottom: 2px solid brand(primary);
+}
+ .tabs[data-tab-type="primary"] [role="tablist"] a[role="tab"], .tabs[data-tab-type="primary"] [role="tablist"] button {
+	 color: brand(primary);
+	 text-transform: uppercase;
+	 text-decoration: none;
+	 text-align: center;
+	 transition: all 300ms ease-in-out;
+	 will-change: background transform;
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 .tabs[data-tab-type="primary"] [role="tablist"] a[role="tab"], .tabs[data-tab-type="primary"] [role="tablist"] button {
+			 padding: 15px;
+			 font-family: 'Knockout', sans-serif;
+			 font-weight: 800;
+		}
+		 @else if {
+			 font-size: 25px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 .tabs[data-tab-type="primary"] [role="tablist"] a[role="tab"], .tabs[data-tab-type="primary"] [role="tablist"] button {
+			 padding: 15px;
+			 font-family: 'Knockout', sans-serif;
+			 font-weight: 800;
+		}
+		 @else if {
+			 font-size: 25px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 .tabs[data-tab-type="primary"] [role="tablist"] a[role="tab"], .tabs[data-tab-type="primary"] [role="tablist"] button {
+			 padding: 15px;
+			 font-family: 'Knockout', sans-serif;
+			 font-weight: 800;
+		}
+		 @else if {
+			 font-size: 25px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 .tabs[data-tab-type="primary"] [role="tablist"] a[role="tab"], .tabs[data-tab-type="primary"] [role="tablist"] button {
+			 padding: 15px;
+			 font-family: 'Knockout', sans-serif;
+			 font-weight: 800;
+		}
+		 @else if {
+			 font-size: 25px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 .tabs[data-tab-type="primary"] [role="tablist"] a[role="tab"], .tabs[data-tab-type="primary"] [role="tablist"] button {
+			 padding: 15px;
+			 font-family: 'Knockout', sans-serif;
+			 font-weight: 800;
+		}
+		 @else if {
+			 font-size: 25px;
+		}
+	}
+}
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) {
+	 .tabs[data-tab-type="primary"] [role="tablist"] a[role="tab"], .tabs[data-tab-type="primary"] [role="tablist"] button {
+		 padding: 20px;
+		 font-family: 'Knockout', sans-serif;
+		 font-weight: 800;
+	}
+	 @else if {
+		 font-size: 30px;
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 .tabs[data-tab-type="primary"] [role="tablist"] a[role="tab"], .tabs[data-tab-type="primary"] [role="tablist"] button {
+			 padding: 20px;
+			 font-family: 'Knockout', sans-serif;
+			 font-weight: 800;
+		}
+		 @else if {
+			 font-size: 30px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 .tabs[data-tab-type="primary"] [role="tablist"] a[role="tab"], .tabs[data-tab-type="primary"] [role="tablist"] button {
+			 padding: 20px;
+			 font-family: 'Knockout', sans-serif;
+			 font-weight: 800;
+		}
+		 @else if {
+			 font-size: 30px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 .tabs[data-tab-type="primary"] [role="tablist"] a[role="tab"], .tabs[data-tab-type="primary"] [role="tablist"] button {
+			 padding: 20px;
+			 font-family: 'Knockout', sans-serif;
+			 font-weight: 800;
+		}
+		 @else if {
+			 font-size: 30px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 .tabs[data-tab-type="primary"] [role="tablist"] a[role="tab"], .tabs[data-tab-type="primary"] [role="tablist"] button {
+			 padding: 20px;
+			 font-family: 'Knockout', sans-serif;
+			 font-weight: 800;
+		}
+		 @else if {
+			 font-size: 30px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 .tabs[data-tab-type="primary"] [role="tablist"] a[role="tab"], .tabs[data-tab-type="primary"] [role="tablist"] button {
+			 padding: 20px;
+			 font-family: 'Knockout', sans-serif;
+			 font-weight: 800;
+		}
+		 @else if {
+			 font-size: 30px;
+		}
+	}
+}
+ @media screen and (min-width: 375px) and (max-width: 665px) {
+	 .tabs[data-tab-type="primary"] [role="tablist"] a[role="tab"]:first-child, .tabs[data-tab-type="primary"] [role="tablist"] button:first-child {
+		 padding: 30px 15px;
+	}
+}
+ .tabs[data-tab-type="primary"] [role="tablist"] a[role="tab"][aria-selected="true"], .tabs[data-tab-type="primary"] [role="tablist"] button[aria-selected="true"] {
+	 background: brand(primary_light);
+}
+ .tabs[data-tab-type="secondary"] [role="tablist"] {
+	 display: flex;
+}
+ .tabs[data-tab-type="secondary"] [role="tablist"] [aria-selected] {
+	 font-family: 'Gotham', sans-serif;
+	 font-weight: 700;
+	 min-height: 60px;
+	 text-transform: uppercase;
+}
+ @else if {
+	 font-size: 16px;
+}
+ .tabs[data-tab-type="secondary"] [role="tablist"] [aria-selected]:nth-child(1) {
+	 border-radius: 30px 0 0 30px;
+}
+ .tabs[data-tab-type="secondary"] [role="tablist"] [aria-selected]:nth-last-child(1) {
+	 border-radius: 0 30px 30px 0;
+}
+ .tabs[data-tab-type="secondary"] [role="tablist"] [aria-selected="true"] {
+	 color: brand(light);
+	 background: brand(primary);
+}
+ .tabs[data-tab-type="secondary"] [role="tablist"] [aria-selected="false"] {
+	 color: brand(primary);
+}
+ 

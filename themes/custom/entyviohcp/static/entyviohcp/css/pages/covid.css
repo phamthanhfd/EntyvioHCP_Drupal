@@ -1,0 +1,1210 @@
+/***********************************/
+/**** **** MATRIX SETTINGS **** ***/
+/*********************************/
+/* Usage: Update matrix gutter HTML: <nav data-matrix=""> <a> <a> SASS: @include matrix_setting([number of matrix], [gutter space], '[child element]');
+ Example: @include matrix_setting(2, 30px, 'div');
+ */
+/************************************************/
+/**** **** TYPEFACE SETTINGS (LOCAL) v2 **** ***/
+/**********************************************/
+/* Usage: $local-font-settings: ( (Gotham, Gotham-Light_Web, '200'), (Gotham, Gotham-Book_Web, '400'), (Gotham, Gotham-Medium_Web, '500') );
+ $font_path : '../_assets/core/fonts';
+ Usage: @include localFontSetup($local-font-settings, $font_path);
+ Usage: @mixin gotham($font) {
+	 font-family: 'Gotham', sans-serif;
+	 @if $font == light {
+		 font-weight: 200;
+	}
+	 @else if $font == book {
+		 font-weight: 400;
+	}
+	 @else if $font == medium {
+		 font-weight: 500;
+	}
+}
+ body {
+	 @include gotham(book);
+}
+ */
+/*****************************/
+/**** **** ANIMATION **** ***/
+/***************************/
+/* Usage: @include animationFrames(fade) {
+	 0% {
+		 opacity: 1;
+	}
+	 50% {
+		 opacity: 0;
+	}
+}
+ */
+/* Usage: @include animation(300ms fade ease-in-out forwards, 100);
+ */
+/**************************************/
+/**** *** PAGE WIDTH SETTINGS **** ***/
+/************************************/
+/**** **** GRID MIXIN **** ***/
+/****************************/
+/**** **** FLEX SET **** ***/
+/**************************/
+/******************************/
+/**** **** RESET LIST **** ***/
+/****************************/
+/*****************************/
+/**** **** FOR PRINT **** ***/
+/***************************/
+/**** **** SETTING UP TYPEFACE **** ***/
+/**** **** PREMADE VIEWPORT **** ***/
+/**** **** CUSTOM VIEWPORT **** ***/
+/* Usage: @include viewport-custom(200, 300) {
+	 h1 {
+		 font-size: 20px;
+	}
+}
+ */
+/**** **** SPECIFIC VIEWPORT **** ***/
+/* ipad specific */
+/* iphone 6/7/8 specific */
+/* ie11 specific */
+/**** **** PRIMARY TYPE **** ***/
+/**** **** TEXT TYPE **** ***/
+/**** **** CLOSE **** ***/
+/* Usage: @include close-icon([width of icon], [height of icon], [icon colour]);
+ Examples: @include close-icon(25px, 3px, brand(primary));
+ @include close-icon($width: 25px);
+ @include close-icon;
+ */
+/* init */
+ [data-icon="close"] span {
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 width: 100%;
+	 height: 100%;
+	 transform: translate(-50%, -50%);
+}
+ [data-icon="close"] span:before, [data-icon="close"] span:after {
+	 content: '';
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 width: 100%;
+	 height: 3px;
+	 transform-origin: 0 0;
+	 background: brand(primary);
+}
+ [data-icon="close"] span:before {
+	 transform: rotate(45deg) translate(-50%, -50%);
+}
+ [data-icon="close"] span:after {
+	 transform: rotate(-45deg) translate(-50%, -50%);
+}
+/**** **** HAMBURGER **** ***/
+/* Usage: @include hamburger([width of icon], [height of icon], [space between lines], [icon colour]);
+ Examples: @include hamburger(25px, 2px, 1, #fff);
+ @include hamburger($width: 25px, $bg: #f00);
+ @include hamburger;
+ */
+/* init */
+ [data-icon="hamburger"] span {
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 width: 100%;
+	 height: 3px;
+	 transform: translate(-50%, -50%);
+	 background: brand(primary);
+}
+ [data-icon="hamburger"] span:before, [data-icon="hamburger"] span:after {
+	 content: '';
+	 position: absolute;
+	 left: 0;
+	 width: 100%;
+	 height: 3px;
+	 transform-origin: 0 0;
+	 background: brand(primary);
+}
+ [data-icon="hamburger"] span:before {
+	 bottom: 7.5px;
+}
+ [data-icon="hamburger"] span:after {
+	 top: 7.5px;
+}
+/**** **** PLUS/MINUS **** ***/
+/* Usage: @plus-minus-icon([width of icon], [height of icon], [icon colour]);
+ Examples: @plus-minus-icon(25px, 2px, #fff);
+ @include plus-minus-icon($width: 13px);
+ @plus-minus-icon;
+ */
+/* init */
+ [data-icon="plus-minus"] span {
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 width: 100%;
+	 height: 100%;
+	 transform: translate(-50%, -50%);
+}
+ [data-icon="plus-minus"] span:before, [data-icon="plus-minus"] span:after {
+	 content: '';
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 width: 100%;
+	 height: 3px;
+	 transform-origin: 0 0;
+	 background: brand(primary);
+}
+ [data-icon="plus-minus"] span:before {
+	 transform: translate(-50%, -50%);
+}
+ [data-icon="plus-minus"] span:after {
+	 transform: rotate(90deg) translate(-50%, -50%);
+}
+/**** **** YELLOW CIRCLE WORD ICONS **** ***/
+/* Usage: <p data-dot>Vs</p> */
+/****************************/
+/**** **** LANGUAGE **** ***/
+/**************************/
+/* en or cn */
+/***********************************/
+/**** **** LAYOUT SETTINGS **** ***/
+/*********************************/
+/*********************************/
+/**** **** GRID SETTINGS **** ***/
+/*******************************/
+/**********************************/
+/**** **** BRAND SETTINGS **** ***/
+/********************************/
+/* form */
+/*********************************/
+/**** **** PATH SETTINGS **** ***/
+/*******************************/
+/*************************************/
+/**** **** TYPEFACE SETTINGS **** ***/
+/***********************************/
+/***************************/
+/**** **** COVID **** *****/
+/*************************/
+ [data-page-id="Covid"] {
+	/* main navigation */
+	/* footer links */
+	/**** **** MOBILE **** ***/
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+	/**** **** DESKTOP **** ***/
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ [data-page-id="Covid"] #hero h1 {
+	 position: relative;
+	 color: brand(light);
+	 text-align: center;
+	 z-index: 1;
+}
+ [data-page-id="Covid"] .top-container ul {
+	 margin: 0;
+	 padding: 0;
+	 list-style-type: none;
+}
+ [data-page-id="Covid"] .top-container ul > li {
+	 margin: 0;
+	 padding: 0;
+}
+ [data-page-id="Covid"] .top-container ul > li > a {
+	 color: brand(primary);
+	 display: inline-block;
+	 text-decoration: none;
+	 text-transform: uppercase;
+}
+ [data-page-id="Covid"] .top-container ul > li > a.hover, [data-page-id="Covid"] .top-container ul > li > a:hover {
+	 color: brand(dark);
+}
+ [data-page-id="Covid"] .top-container ul > li > ul a {
+	 display: inline-block;
+	 text-decoration: underline;
+	 text-transform: uppercase;
+}
+ [data-page-id="Covid"] .main-container h2, [data-page-id="Covid"] .main-container p, [data-page-id="Covid"] .main-container p a {
+	 color: brand(light);
+}
+ [data-page-id="Covid"] .main-container a {
+	 font-weight: 700;
+}
+ [data-page-id="Covid"] .bottom-container ul {
+	 margin: 0;
+	 padding: 0;
+	 list-style-type: none;
+}
+ [data-page-id="Covid"] .bottom-container ul > li {
+	 margin: 0;
+	 padding: 0;
+}
+ [data-page-id="Covid"] .bottom-container ul li {
+	 margin-bottom: 15px;
+}
+ [data-page-id="Covid"] .bottom-container ul a {
+	 color: brand(dark);
+}
+ [data-page-id="Covid"] .bottom-container ul a.hover, [data-page-id="Covid"] .bottom-container ul a:hover {
+	 color: brand(primary);
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-id="Covid"] {
+			/* main navigation */
+			/* footer links */
+		}
+		 [data-page-id="Covid"] #hero {
+			 margin-top: 110px;
+			 height: 180px;
+		}
+		 [data-page-id="Covid"] #hero:before, [data-page-id="Covid"] #hero:after {
+			 content: none;
+		}
+		 [data-page-id="Covid"] #hero h1 {
+			 font-family: 'Knockout', sans-serif;
+			 font-weight: 700;
+			 padding-top: 64px;
+			 line-height: 34px;
+			 text-align: left;
+		}
+		 @else if {
+			 font-size: 34px;
+		}
+		 [data-page-id="Covid"] #body {
+			 background: url(path(background)/sitemap_bg.svg) 0 -390px repeat-y;
+			 background-size: 100% auto;
+		}
+		 [data-page-id="Covid"] .body-content {
+			 margin: 30px auto;
+		}
+		 [data-page-id="Covid"] .main-container h2 {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 margin-bottom: 30px;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+		 [data-page-id="Covid"] .main-container p {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 400;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+		 [data-page-id="Covid"] .top-container ul > li > a {
+			 font-family: 'Knockout', sans-serif;
+			 font-weight: 400;
+			 margin-bottom: 30px;
+		}
+		 @else if {
+			 font-size: 25px;
+		}
+		 [data-page-id="Covid"] .top-container ul > li > ul a {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 500;
+			 margin-bottom: 10px;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+		 [data-page-id="Covid"] .top-container ul > li.has-submenu a {
+			 margin-bottom: 30px;
+		}
+		 [data-page-id="Covid"] .top-container ul > li.has-submenu ul > li > a {
+			 margin-bottom: 30px;
+		}
+		 [data-page-id="Covid"] .bottom-container {
+			 padding-top: 30px;
+			 border-top: 2px solid brand(secondary);
+		}
+		 [data-page-id="Covid"] .bottom-container ul a {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 500;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-id="Covid"] {
+			/* main navigation */
+			/* footer links */
+		}
+		 [data-page-id="Covid"] #hero {
+			 margin-top: 110px;
+			 height: 180px;
+		}
+		 [data-page-id="Covid"] #hero:before, [data-page-id="Covid"] #hero:after {
+			 content: none;
+		}
+		 [data-page-id="Covid"] #hero h1 {
+			 font-family: 'Knockout', sans-serif;
+			 font-weight: 700;
+			 padding-top: 64px;
+			 line-height: 34px;
+			 text-align: left;
+		}
+		 @else if {
+			 font-size: 34px;
+		}
+		 [data-page-id="Covid"] #body {
+			 background: url(path(background)/sitemap_bg.svg) 0 -390px repeat-y;
+			 background-size: 100% auto;
+		}
+		 [data-page-id="Covid"] .body-content {
+			 margin: 30px auto;
+		}
+		 [data-page-id="Covid"] .main-container h2 {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 margin-bottom: 30px;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+		 [data-page-id="Covid"] .main-container p {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 400;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+		 [data-page-id="Covid"] .top-container ul > li > a {
+			 font-family: 'Knockout', sans-serif;
+			 font-weight: 400;
+			 margin-bottom: 30px;
+		}
+		 @else if {
+			 font-size: 25px;
+		}
+		 [data-page-id="Covid"] .top-container ul > li > ul a {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 500;
+			 margin-bottom: 10px;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+		 [data-page-id="Covid"] .top-container ul > li.has-submenu a {
+			 margin-bottom: 30px;
+		}
+		 [data-page-id="Covid"] .top-container ul > li.has-submenu ul > li > a {
+			 margin-bottom: 30px;
+		}
+		 [data-page-id="Covid"] .bottom-container {
+			 padding-top: 30px;
+			 border-top: 2px solid brand(secondary);
+		}
+		 [data-page-id="Covid"] .bottom-container ul a {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 500;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-id="Covid"] {
+			/* main navigation */
+			/* footer links */
+		}
+		 [data-page-id="Covid"] #hero {
+			 margin-top: 110px;
+			 height: 180px;
+		}
+		 [data-page-id="Covid"] #hero:before, [data-page-id="Covid"] #hero:after {
+			 content: none;
+		}
+		 [data-page-id="Covid"] #hero h1 {
+			 font-family: 'Knockout', sans-serif;
+			 font-weight: 700;
+			 padding-top: 64px;
+			 line-height: 34px;
+			 text-align: left;
+		}
+		 @else if {
+			 font-size: 34px;
+		}
+		 [data-page-id="Covid"] #body {
+			 background: url(path(background)/sitemap_bg.svg) 0 -390px repeat-y;
+			 background-size: 100% auto;
+		}
+		 [data-page-id="Covid"] .body-content {
+			 margin: 30px auto;
+		}
+		 [data-page-id="Covid"] .main-container h2 {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 margin-bottom: 30px;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+		 [data-page-id="Covid"] .main-container p {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 400;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+		 [data-page-id="Covid"] .top-container ul > li > a {
+			 font-family: 'Knockout', sans-serif;
+			 font-weight: 400;
+			 margin-bottom: 30px;
+		}
+		 @else if {
+			 font-size: 25px;
+		}
+		 [data-page-id="Covid"] .top-container ul > li > ul a {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 500;
+			 margin-bottom: 10px;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+		 [data-page-id="Covid"] .top-container ul > li.has-submenu a {
+			 margin-bottom: 30px;
+		}
+		 [data-page-id="Covid"] .top-container ul > li.has-submenu ul > li > a {
+			 margin-bottom: 30px;
+		}
+		 [data-page-id="Covid"] .bottom-container {
+			 padding-top: 30px;
+			 border-top: 2px solid brand(secondary);
+		}
+		 [data-page-id="Covid"] .bottom-container ul a {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 500;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-id="Covid"] {
+			/* main navigation */
+			/* footer links */
+		}
+		 [data-page-id="Covid"] #hero {
+			 margin-top: 110px;
+			 height: 180px;
+		}
+		 [data-page-id="Covid"] #hero:before, [data-page-id="Covid"] #hero:after {
+			 content: none;
+		}
+		 [data-page-id="Covid"] #hero h1 {
+			 font-family: 'Knockout', sans-serif;
+			 font-weight: 700;
+			 padding-top: 64px;
+			 line-height: 34px;
+			 text-align: left;
+		}
+		 @else if {
+			 font-size: 34px;
+		}
+		 [data-page-id="Covid"] #body {
+			 background: url(path(background)/sitemap_bg.svg) 0 -390px repeat-y;
+			 background-size: 100% auto;
+		}
+		 [data-page-id="Covid"] .body-content {
+			 margin: 30px auto;
+		}
+		 [data-page-id="Covid"] .main-container h2 {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 margin-bottom: 30px;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+		 [data-page-id="Covid"] .main-container p {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 400;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+		 [data-page-id="Covid"] .top-container ul > li > a {
+			 font-family: 'Knockout', sans-serif;
+			 font-weight: 400;
+			 margin-bottom: 30px;
+		}
+		 @else if {
+			 font-size: 25px;
+		}
+		 [data-page-id="Covid"] .top-container ul > li > ul a {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 500;
+			 margin-bottom: 10px;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+		 [data-page-id="Covid"] .top-container ul > li.has-submenu a {
+			 margin-bottom: 30px;
+		}
+		 [data-page-id="Covid"] .top-container ul > li.has-submenu ul > li > a {
+			 margin-bottom: 30px;
+		}
+		 [data-page-id="Covid"] .bottom-container {
+			 padding-top: 30px;
+			 border-top: 2px solid brand(secondary);
+		}
+		 [data-page-id="Covid"] .bottom-container ul a {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 500;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-id="Covid"] {
+			/* main navigation */
+			/* footer links */
+		}
+		 [data-page-id="Covid"] #hero {
+			 margin-top: 110px;
+			 height: 180px;
+		}
+		 [data-page-id="Covid"] #hero:before, [data-page-id="Covid"] #hero:after {
+			 content: none;
+		}
+		 [data-page-id="Covid"] #hero h1 {
+			 font-family: 'Knockout', sans-serif;
+			 font-weight: 700;
+			 padding-top: 64px;
+			 line-height: 34px;
+			 text-align: left;
+		}
+		 @else if {
+			 font-size: 34px;
+		}
+		 [data-page-id="Covid"] #body {
+			 background: url(path(background)/sitemap_bg.svg) 0 -390px repeat-y;
+			 background-size: 100% auto;
+		}
+		 [data-page-id="Covid"] .body-content {
+			 margin: 30px auto;
+		}
+		 [data-page-id="Covid"] .main-container h2 {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 margin-bottom: 30px;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+		 [data-page-id="Covid"] .main-container p {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 400;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+		 [data-page-id="Covid"] .top-container ul > li > a {
+			 font-family: 'Knockout', sans-serif;
+			 font-weight: 400;
+			 margin-bottom: 30px;
+		}
+		 @else if {
+			 font-size: 25px;
+		}
+		 [data-page-id="Covid"] .top-container ul > li > ul a {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 500;
+			 margin-bottom: 10px;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+		 [data-page-id="Covid"] .top-container ul > li.has-submenu a {
+			 margin-bottom: 30px;
+		}
+		 [data-page-id="Covid"] .top-container ul > li.has-submenu ul > li > a {
+			 margin-bottom: 30px;
+		}
+		 [data-page-id="Covid"] .bottom-container {
+			 padding-top: 30px;
+			 border-top: 2px solid brand(secondary);
+		}
+		 [data-page-id="Covid"] .bottom-container ul a {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 500;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+	}
+}
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) {
+	 [data-page-id="Covid"] {
+		/* main navigation */
+		/* footer links */
+	}
+	 [data-page-id="Covid"] header[data-device="desktop"] .eyebrow:before {
+		 content: none;
+	}
+	 [data-page-id="Covid"] header[data-device="desktop"] .eyebrow:after {
+		 width: 100%;
+		 left: 0;
+		 background: url(path(background)/sitemap_bg.svg) 0 -390px no-repeat;
+		 background-size: 100% auto;
+	}
+	 [data-page-id="Covid"] #hero {
+		 min-height: 280px;
+		 margin-top: 118px;
+		 padding-top: 60px;
+	}
+	 [data-page-id="Covid"] #hero:before {
+		 content: none;
+	}
+	 [data-page-id="Covid"] #hero:after {
+		 left: 0;
+		 width: 100%;
+		 background: url(path(background)/sitemap_bg.svg) 0 calc(100% + 200px) no-repeat;
+		 background-size: 100% auto;
+	}
+	 [data-page-id="Covid"] #hero h1 {
+		 font-family: 'Knockout', sans-serif;
+		 font-weight: 700;
+	}
+	 @else if {
+		 font-size: 80px;
+	}
+	 [data-page-id="Covid"] #first_section {
+		 background: url(path(background)/sitemap_bg.svg) 50% top no-repeat;
+		 background-size: 100% auto;
+	}
+	 [data-page-id="Covid"] .body-content {
+		 margin: 60px 0;
+		 width: 100%;
+	}
+	 [data-page-id="Covid"] .main-container {
+		 margin: 0 50px;
+	}
+	 [data-page-id="Covid"] .main-container h2 {
+		 font-family: 'Gotham', sans-serif;
+		 font-weight: 700;
+		 margin-bottom: 35px;
+	}
+	 @else if {
+		 font-size: 22px;
+	}
+	 [data-page-id="Covid"] .main-container p {
+		 font-family: 'Gotham', sans-serif;
+		 font-weight: 400;
+	}
+	 @else if {
+		 font-size: 22px;
+	}
+	 [data-page-id="Covid"] .bottom-container {
+		 margin-top: 25px;
+		 padding-top: 30px;
+		 border-top: 2px solid brand(secondary);
+	}
+	 [data-page-id="Covid"] .top-container ul > li > a {
+		 font-family: 'Knockout', sans-serif;
+		 font-weight: 400;
+		 margin-bottom: 30px;
+	}
+	 @else if {
+		 font-size: 30px;
+	}
+	 [data-page-id="Covid"] .top-container ul > li > ul a {
+		 font-family: 'Gotham', sans-serif;
+		 font-weight: 500;
+		 margin-bottom: 10px;
+	}
+	 @else if {
+		 font-size: 16px;
+	}
+	 [data-page-id="Covid"] .bottom-container ul a {
+		 font-family: 'Gotham', sans-serif;
+		 font-weight: 500;
+	}
+	 @else if {
+		 font-size: 16px;
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-id="Covid"] {
+			/* main navigation */
+			/* footer links */
+		}
+		 [data-page-id="Covid"] header[data-device="desktop"] .eyebrow:before {
+			 content: none;
+		}
+		 [data-page-id="Covid"] header[data-device="desktop"] .eyebrow:after {
+			 width: 100%;
+			 left: 0;
+			 background: url(path(background)/sitemap_bg.svg) 0 -390px no-repeat;
+			 background-size: 100% auto;
+		}
+		 [data-page-id="Covid"] #hero {
+			 min-height: 280px;
+			 margin-top: 118px;
+			 padding-top: 60px;
+		}
+		 [data-page-id="Covid"] #hero:before {
+			 content: none;
+		}
+		 [data-page-id="Covid"] #hero:after {
+			 left: 0;
+			 width: 100%;
+			 background: url(path(background)/sitemap_bg.svg) 0 calc(100% + 200px) no-repeat;
+			 background-size: 100% auto;
+		}
+		 [data-page-id="Covid"] #hero h1 {
+			 font-family: 'Knockout', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 80px;
+		}
+		 [data-page-id="Covid"] #first_section {
+			 background: url(path(background)/sitemap_bg.svg) 50% top no-repeat;
+			 background-size: 100% auto;
+		}
+		 [data-page-id="Covid"] .body-content {
+			 margin: 60px 0;
+			 width: 100%;
+		}
+		 [data-page-id="Covid"] .main-container {
+			 margin: 0 50px;
+		}
+		 [data-page-id="Covid"] .main-container h2 {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 margin-bottom: 35px;
+		}
+		 @else if {
+			 font-size: 22px;
+		}
+		 [data-page-id="Covid"] .main-container p {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 400;
+		}
+		 @else if {
+			 font-size: 22px;
+		}
+		 [data-page-id="Covid"] .bottom-container {
+			 margin-top: 25px;
+			 padding-top: 30px;
+			 border-top: 2px solid brand(secondary);
+		}
+		 [data-page-id="Covid"] .top-container ul > li > a {
+			 font-family: 'Knockout', sans-serif;
+			 font-weight: 400;
+			 margin-bottom: 30px;
+		}
+		 @else if {
+			 font-size: 30px;
+		}
+		 [data-page-id="Covid"] .top-container ul > li > ul a {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 500;
+			 margin-bottom: 10px;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+		 [data-page-id="Covid"] .bottom-container ul a {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 500;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-id="Covid"] {
+			/* main navigation */
+			/* footer links */
+		}
+		 [data-page-id="Covid"] header[data-device="desktop"] .eyebrow:before {
+			 content: none;
+		}
+		 [data-page-id="Covid"] header[data-device="desktop"] .eyebrow:after {
+			 width: 100%;
+			 left: 0;
+			 background: url(path(background)/sitemap_bg.svg) 0 -390px no-repeat;
+			 background-size: 100% auto;
+		}
+		 [data-page-id="Covid"] #hero {
+			 min-height: 280px;
+			 margin-top: 118px;
+			 padding-top: 60px;
+		}
+		 [data-page-id="Covid"] #hero:before {
+			 content: none;
+		}
+		 [data-page-id="Covid"] #hero:after {
+			 left: 0;
+			 width: 100%;
+			 background: url(path(background)/sitemap_bg.svg) 0 calc(100% + 200px) no-repeat;
+			 background-size: 100% auto;
+		}
+		 [data-page-id="Covid"] #hero h1 {
+			 font-family: 'Knockout', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 80px;
+		}
+		 [data-page-id="Covid"] #first_section {
+			 background: url(path(background)/sitemap_bg.svg) 50% top no-repeat;
+			 background-size: 100% auto;
+		}
+		 [data-page-id="Covid"] .body-content {
+			 margin: 60px 0;
+			 width: 100%;
+		}
+		 [data-page-id="Covid"] .main-container {
+			 margin: 0 50px;
+		}
+		 [data-page-id="Covid"] .main-container h2 {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 margin-bottom: 35px;
+		}
+		 @else if {
+			 font-size: 22px;
+		}
+		 [data-page-id="Covid"] .main-container p {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 400;
+		}
+		 @else if {
+			 font-size: 22px;
+		}
+		 [data-page-id="Covid"] .bottom-container {
+			 margin-top: 25px;
+			 padding-top: 30px;
+			 border-top: 2px solid brand(secondary);
+		}
+		 [data-page-id="Covid"] .top-container ul > li > a {
+			 font-family: 'Knockout', sans-serif;
+			 font-weight: 400;
+			 margin-bottom: 30px;
+		}
+		 @else if {
+			 font-size: 30px;
+		}
+		 [data-page-id="Covid"] .top-container ul > li > ul a {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 500;
+			 margin-bottom: 10px;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+		 [data-page-id="Covid"] .bottom-container ul a {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 500;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-id="Covid"] {
+			/* main navigation */
+			/* footer links */
+		}
+		 [data-page-id="Covid"] header[data-device="desktop"] .eyebrow:before {
+			 content: none;
+		}
+		 [data-page-id="Covid"] header[data-device="desktop"] .eyebrow:after {
+			 width: 100%;
+			 left: 0;
+			 background: url(path(background)/sitemap_bg.svg) 0 -390px no-repeat;
+			 background-size: 100% auto;
+		}
+		 [data-page-id="Covid"] #hero {
+			 min-height: 280px;
+			 margin-top: 118px;
+			 padding-top: 60px;
+		}
+		 [data-page-id="Covid"] #hero:before {
+			 content: none;
+		}
+		 [data-page-id="Covid"] #hero:after {
+			 left: 0;
+			 width: 100%;
+			 background: url(path(background)/sitemap_bg.svg) 0 calc(100% + 200px) no-repeat;
+			 background-size: 100% auto;
+		}
+		 [data-page-id="Covid"] #hero h1 {
+			 font-family: 'Knockout', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 80px;
+		}
+		 [data-page-id="Covid"] #first_section {
+			 background: url(path(background)/sitemap_bg.svg) 50% top no-repeat;
+			 background-size: 100% auto;
+		}
+		 [data-page-id="Covid"] .body-content {
+			 margin: 60px 0;
+			 width: 100%;
+		}
+		 [data-page-id="Covid"] .main-container {
+			 margin: 0 50px;
+		}
+		 [data-page-id="Covid"] .main-container h2 {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 margin-bottom: 35px;
+		}
+		 @else if {
+			 font-size: 22px;
+		}
+		 [data-page-id="Covid"] .main-container p {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 400;
+		}
+		 @else if {
+			 font-size: 22px;
+		}
+		 [data-page-id="Covid"] .bottom-container {
+			 margin-top: 25px;
+			 padding-top: 30px;
+			 border-top: 2px solid brand(secondary);
+		}
+		 [data-page-id="Covid"] .top-container ul > li > a {
+			 font-family: 'Knockout', sans-serif;
+			 font-weight: 400;
+			 margin-bottom: 30px;
+		}
+		 @else if {
+			 font-size: 30px;
+		}
+		 [data-page-id="Covid"] .top-container ul > li > ul a {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 500;
+			 margin-bottom: 10px;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+		 [data-page-id="Covid"] .bottom-container ul a {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 500;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-id="Covid"] {
+			/* main navigation */
+			/* footer links */
+		}
+		 [data-page-id="Covid"] header[data-device="desktop"] .eyebrow:before {
+			 content: none;
+		}
+		 [data-page-id="Covid"] header[data-device="desktop"] .eyebrow:after {
+			 width: 100%;
+			 left: 0;
+			 background: url(path(background)/sitemap_bg.svg) 0 -390px no-repeat;
+			 background-size: 100% auto;
+		}
+		 [data-page-id="Covid"] #hero {
+			 min-height: 280px;
+			 margin-top: 118px;
+			 padding-top: 60px;
+		}
+		 [data-page-id="Covid"] #hero:before {
+			 content: none;
+		}
+		 [data-page-id="Covid"] #hero:after {
+			 left: 0;
+			 width: 100%;
+			 background: url(path(background)/sitemap_bg.svg) 0 calc(100% + 200px) no-repeat;
+			 background-size: 100% auto;
+		}
+		 [data-page-id="Covid"] #hero h1 {
+			 font-family: 'Knockout', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 80px;
+		}
+		 [data-page-id="Covid"] #first_section {
+			 background: url(path(background)/sitemap_bg.svg) 50% top no-repeat;
+			 background-size: 100% auto;
+		}
+		 [data-page-id="Covid"] .body-content {
+			 margin: 60px 0;
+			 width: 100%;
+		}
+		 [data-page-id="Covid"] .main-container {
+			 margin: 0 50px;
+		}
+		 [data-page-id="Covid"] .main-container h2 {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 margin-bottom: 35px;
+		}
+		 @else if {
+			 font-size: 22px;
+		}
+		 [data-page-id="Covid"] .main-container p {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 400;
+		}
+		 @else if {
+			 font-size: 22px;
+		}
+		 [data-page-id="Covid"] .bottom-container {
+			 margin-top: 25px;
+			 padding-top: 30px;
+			 border-top: 2px solid brand(secondary);
+		}
+		 [data-page-id="Covid"] .top-container ul > li > a {
+			 font-family: 'Knockout', sans-serif;
+			 font-weight: 400;
+			 margin-bottom: 30px;
+		}
+		 @else if {
+			 font-size: 30px;
+		}
+		 [data-page-id="Covid"] .top-container ul > li > ul a {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 500;
+			 margin-bottom: 10px;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+		 [data-page-id="Covid"] .bottom-container ul a {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 500;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-id="Covid"] {
+			/* main navigation */
+			/* footer links */
+		}
+		 [data-page-id="Covid"] header[data-device="desktop"] .eyebrow:before {
+			 content: none;
+		}
+		 [data-page-id="Covid"] header[data-device="desktop"] .eyebrow:after {
+			 width: 100%;
+			 left: 0;
+			 background: url(path(background)/sitemap_bg.svg) 0 -390px no-repeat;
+			 background-size: 100% auto;
+		}
+		 [data-page-id="Covid"] #hero {
+			 min-height: 280px;
+			 margin-top: 118px;
+			 padding-top: 60px;
+		}
+		 [data-page-id="Covid"] #hero:before {
+			 content: none;
+		}
+		 [data-page-id="Covid"] #hero:after {
+			 left: 0;
+			 width: 100%;
+			 background: url(path(background)/sitemap_bg.svg) 0 calc(100% + 200px) no-repeat;
+			 background-size: 100% auto;
+		}
+		 [data-page-id="Covid"] #hero h1 {
+			 font-family: 'Knockout', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 80px;
+		}
+		 [data-page-id="Covid"] #first_section {
+			 background: url(path(background)/sitemap_bg.svg) 50% top no-repeat;
+			 background-size: 100% auto;
+		}
+		 [data-page-id="Covid"] .body-content {
+			 margin: 60px 0;
+			 width: 100%;
+		}
+		 [data-page-id="Covid"] .main-container {
+			 margin: 0 50px;
+		}
+		 [data-page-id="Covid"] .main-container h2 {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 margin-bottom: 35px;
+		}
+		 @else if {
+			 font-size: 22px;
+		}
+		 [data-page-id="Covid"] .main-container p {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 400;
+		}
+		 @else if {
+			 font-size: 22px;
+		}
+		 [data-page-id="Covid"] .bottom-container {
+			 margin-top: 25px;
+			 padding-top: 30px;
+			 border-top: 2px solid brand(secondary);
+		}
+		 [data-page-id="Covid"] .top-container ul > li > a {
+			 font-family: 'Knockout', sans-serif;
+			 font-weight: 400;
+			 margin-bottom: 30px;
+		}
+		 @else if {
+			 font-size: 30px;
+		}
+		 [data-page-id="Covid"] .top-container ul > li > ul a {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 500;
+			 margin-bottom: 10px;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+		 [data-page-id="Covid"] .bottom-container ul a {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 500;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+	}
+}
+ 

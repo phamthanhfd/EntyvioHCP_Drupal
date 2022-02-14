@@ -1,0 +1,59 @@
+<header aria-label="Site header" class="header" id="header" role="banner">
+    {% if page.top_header %}
+      <div class="top-header">
+        {{ page.top_header }}
+      </div>
+    {% endif %}
+    {% if page.header %}
+      <div class="main-header">
+        {{ page.header }}
+      </div>
+    {% endif %}
+</header>
+<section class="main" id="main">
+  {% if page.highlight %}
+  <div class="highlight_container">
+    {{ page.highlight }}
+  </div>
+  {% endif %}
+
+  {% if page.about %}
+  <div class="highlight_about">
+    {{ page.about }}
+  </div>
+  {% endif %}
+
+  {% if page.services %}
+  <div class="highlight_services">
+    {{ page.services }}
+  </div>
+  {% endif %}
+
+  {% if page.content %}
+   <main aria-label="Site main content" class="content main-content_container" id="content" role="main">
+     {{ page.content }}
+   </main>
+   {% endif %}
+</section>
+<footer aria-label="Site footer" class="footer" id="footer" role="contentinfo">
+   <div class="footer_container">
+    <div class="footer-logo">
+       {{ page.footer_logo }}
+    </div>
+    <div>
+      <div>
+       {{ page.footer_menu }}
+      </div>
+      <div>
+       {{ page.footer_content }}
+       </div>
+    </div>
+   </div>
+</footer>
+{% if page.sticky-bar %}
+<section class="sticky-bar" style="position: fixed; top: 100%;">
+    <div class="sticky-bar_container">
+      {{ page.sticky_bar }}
+    </div>
+</section>
+{% endif %}

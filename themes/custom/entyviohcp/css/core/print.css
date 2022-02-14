@@ -1,0 +1,530 @@
+/***********************************/
+/**** **** MATRIX SETTINGS **** ***/
+/*********************************/
+/* Usage: Update matrix gutter HTML: <nav data-matrix=""> <a> <a> SASS: @include matrix_setting([number of matrix], [gutter space], '[child element]');
+ Example: @include matrix_setting(2, 30px, 'div');
+ */
+/************************************************/
+/**** **** TYPEFACE SETTINGS (LOCAL) v2 **** ***/
+/**********************************************/
+/* Usage: $local-font-settings: ( (Gotham, Gotham-Light_Web, '200'), (Gotham, Gotham-Book_Web, '400'), (Gotham, Gotham-Medium_Web, '500') );
+ $font_path : '../_assets/core/fonts';
+ Usage: @include localFontSetup($local-font-settings, $font_path);
+ Usage: @mixin gotham($font) {
+	 font-family: 'Gotham', sans-serif;
+	 @if $font == light {
+		 font-weight: 200;
+	}
+	 @else if $font == book {
+		 font-weight: 400;
+	}
+	 @else if $font == medium {
+		 font-weight: 500;
+	}
+}
+ body {
+	 @include gotham(book);
+}
+ */
+/*****************************/
+/**** **** ANIMATION **** ***/
+/***************************/
+/* Usage: @include animationFrames(fade) {
+	 0% {
+		 opacity: 1;
+	}
+	 50% {
+		 opacity: 0;
+	}
+}
+ */
+/* Usage: @include animation(300ms fade ease-in-out forwards, 100);
+ */
+/**************************************/
+/**** *** PAGE WIDTH SETTINGS **** ***/
+/************************************/
+/**** **** GRID MIXIN **** ***/
+/****************************/
+/**** **** FLEX SET **** ***/
+/**************************/
+/******************************/
+/**** **** RESET LIST **** ***/
+/****************************/
+/*****************************/
+/**** **** FOR PRINT **** ***/
+/***************************/
+/**** **** SETTING UP TYPEFACE **** ***/
+/**** **** PREMADE VIEWPORT **** ***/
+/**** **** CUSTOM VIEWPORT **** ***/
+/* Usage: @include viewport-custom(200, 300) {
+	 h1 {
+		 font-size: 20px;
+	}
+}
+ */
+/**** **** SPECIFIC VIEWPORT **** ***/
+/* ipad specific */
+/* iphone 6/7/8 specific */
+/* ie11 specific */
+/**** **** PRIMARY TYPE **** ***/
+/**** **** TEXT TYPE **** ***/
+/**** **** CLOSE **** ***/
+/* Usage: @include close-icon([width of icon], [height of icon], [icon colour]);
+ Examples: @include close-icon(25px, 3px, brand(primary));
+ @include close-icon($width: 25px);
+ @include close-icon;
+ */
+/* init */
+ [data-icon="close"] span {
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 width: 100%;
+	 height: 100%;
+	 transform: translate(-50%, -50%);
+}
+ [data-icon="close"] span:before, [data-icon="close"] span:after {
+	 content: '';
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 width: 100%;
+	 height: 3px;
+	 transform-origin: 0 0;
+	 background: brand(primary);
+}
+ [data-icon="close"] span:before {
+	 transform: rotate(45deg) translate(-50%, -50%);
+}
+ [data-icon="close"] span:after {
+	 transform: rotate(-45deg) translate(-50%, -50%);
+}
+/**** **** HAMBURGER **** ***/
+/* Usage: @include hamburger([width of icon], [height of icon], [space between lines], [icon colour]);
+ Examples: @include hamburger(25px, 2px, 1, #fff);
+ @include hamburger($width: 25px, $bg: #f00);
+ @include hamburger;
+ */
+/* init */
+ [data-icon="hamburger"] span {
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 width: 100%;
+	 height: 3px;
+	 transform: translate(-50%, -50%);
+	 background: brand(primary);
+}
+ [data-icon="hamburger"] span:before, [data-icon="hamburger"] span:after {
+	 content: '';
+	 position: absolute;
+	 left: 0;
+	 width: 100%;
+	 height: 3px;
+	 transform-origin: 0 0;
+	 background: brand(primary);
+}
+ [data-icon="hamburger"] span:before {
+	 bottom: 7.5px;
+}
+ [data-icon="hamburger"] span:after {
+	 top: 7.5px;
+}
+/**** **** PLUS/MINUS **** ***/
+/* Usage: @plus-minus-icon([width of icon], [height of icon], [icon colour]);
+ Examples: @plus-minus-icon(25px, 2px, #fff);
+ @include plus-minus-icon($width: 13px);
+ @plus-minus-icon;
+ */
+/* init */
+ [data-icon="plus-minus"] span {
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 width: 100%;
+	 height: 100%;
+	 transform: translate(-50%, -50%);
+}
+ [data-icon="plus-minus"] span:before, [data-icon="plus-minus"] span:after {
+	 content: '';
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 width: 100%;
+	 height: 3px;
+	 transform-origin: 0 0;
+	 background: brand(primary);
+}
+ [data-icon="plus-minus"] span:before {
+	 transform: translate(-50%, -50%);
+}
+ [data-icon="plus-minus"] span:after {
+	 transform: rotate(90deg) translate(-50%, -50%);
+}
+/**** **** YELLOW CIRCLE WORD ICONS **** ***/
+/* Usage: <p data-dot>Vs</p> */
+ @media print {
+	/**** **** GLOBAL **** ***/
+	/**** **** HOMEPAGE **** ***/
+	/**** **** CLINICA EFFICACY **** ***/
+	/**** **** SAFETY PROFILE **** ***/
+	/**** **** DOSING **** ***/
+	/**** **** MOA **** ***/
+	/**** **** ENTYVIOCONNECT **** ***/
+	/**** **** RESOURCES **** ***/
+	 html, body {
+		 padding: 10pt;
+	}
+	 html *, body * {
+		 position: relative !important;
+		 color: brand(dark) !important;
+		 font-size: 14pt !important;
+		 line-height: 16pt !important;
+		 text-align: left !important;
+		 background: none !important;
+	}
+	 html ul, body ul {
+		 list-style-type: disc !important;
+		 margin: 0 0 25pt 0 !important;
+	}
+	 html ul li, body ul li {
+		 margin-left: 20pt !important;
+		 padding: 0 !important;
+	}
+	 html h1, body h1, html h2, body h2, html h3, body h3, html p, body p {
+		 margin: 0 0 20pt 0 !important;
+		 padding: 0 !important;
+	}
+	 html h1, body h1 {
+		 font-size: 22pt !important;
+		 line-height: 24pt !important;
+	}
+	 html h2, body h2, html h3, body h3 {
+		 font-size: 18pt !important;
+		 line-height: 20pt !important;
+	}
+	 html img, body img {
+		 margin: 0 !important;
+		 width: 300pt;
+	}
+	 html #references ol, body #references ol {
+		 margin-left: 25pt;
+	}
+	 [data-row], .accordion {
+		 margin: 0;
+		 display: block;
+	}
+	 .accordion ul {
+		 list-style-type: none !important;
+	}
+	 .accordion ul li {
+		 margin: 0 !important;
+		 padding: 0;
+		 border: 0;
+	}
+	 .accordion > div {
+		 max-width: none;
+	}
+	 .btn.btn-primary, .btn.btn-secondary {
+		 border: 2px solid brand(dark);
+	}
+	 .btn-container {
+		 margin: 0 0 20pt 0;
+	}
+	 header[data-device="desktop"], .eyebrow, footer nav, video, #hero > div > picture img, #fixed_isi, .skip-navigation, #isi ul li:before, #fixed_isi ul li:before, .back-to-top, #hero:before, #hero:after, #indication_bar > div > div:before, h2.border:after, .move-ahead-header, ul[data-bullet] > li:before, .interior-bottom-cta {
+		 display: none;
+		 opacity: 0;
+		 visibility: hidden;
+	}
+	 header[data-device="mobile"] {
+		 padding: 10pt;
+		 margin-bottom: 40pt;
+		 border-bottom: 8pt solid brand(primary);
+		 font-weight: 700;
+	}
+	 header[data-device="mobile"] img {
+		 width: 200pt;
+	}
+	 footer .takeda-logo img {
+		 width: 10%;
+	}
+	 #body {
+		 width: 100%;
+		 max-width: 100%;
+	}
+	 footer, #references, #indication_bar, #isi {
+		 margin: 10pt 0;
+		 padding: 10pt;
+		 border: 1px solid brand(dark);
+	}
+	 #body #indication_bar {
+		 top: 0;
+	}
+	 #body #indication_bar h3 {
+		 margin: 0 !important;
+	}
+	 [data-page-id="Home"] #body #pillars > article, [data-page-id="Home"] #body #cta > article, [data-page-id="Home"] .milestones .info {
+		 display: block;
+	}
+	 [data-page-id="Home"] #hero > div > article {
+		 top: 0;
+	}
+	 [data-page-id="Home"] #hero > div > article .btn.btn-secondary, [data-page-id="Home"] #hero > div > article > div + div {
+		 left: 0;
+	}
+	 [data-page-id="Home"] #hero > div > article > div + div {
+		 width: auto;
+	}
+	 [data-page-id="Home"] .head-to-head h2, [data-page-id="Home"] .head-to-head .legal {
+		 border: 0;
+	}
+	 [data-page-id="Home"] #body #pillars .selectivity img, [data-page-id="Home"] #body #pillars .remission img, [data-page-id="Home"] #body #pillars .safety img {
+		 display: none;
+		 opacity: 0;
+		 visibility: hidden;
+	}
+	 [data-page-id="Home"] #pillars, [data-page-id="Home"] .head-to-head, [data-page-id="Home"] .first-line-biologic, [data-page-id="Home"] .milestones {
+		 margin: 10pt 0;
+		 padding: 10pt;
+		 border: 1px solid brand(dark);
+	}
+	 [data-page-category="ClinicalEfficacy"] #overview-trial-data .flex-container .half.graph-1, [data-page-category="ClinicalEfficacy"] #overview-trial-data .flex-container .half.graph-2, [data-page-category="ClinicalEfficacy"] #overview-trial-data .flex-container .half.graph-3 {
+		 margin: 10pt 0;
+		 padding: 10pt;
+		 border: 1px solid brand(dark);
+	}
+	 [data-page-category="ClinicalEfficacy"] #overview-trial-data .flex-container .half.graph-1 .end-point-heading, [data-page-category="ClinicalEfficacy"] #overview-trial-data .flex-container .half.graph-2 .end-point-heading, [data-page-category="ClinicalEfficacy"] #overview-trial-data .flex-container .half.graph-3 .end-point-heading {
+		 font-weight: 700;
+	}
+	 [data-page-category="ClinicalEfficacy"] #clinical_response_rates_content_id_2, [data-page-category="ClinicalEfficacy"] #long_term_data_content_id_2, [data-page-category="ClinicalEfficacy"] #double_rate_content_1, [data-page-category="ClinicalEfficacy"] #study-design, [data-page-category="ClinicalEfficacy"] #third_section .clinical-response-rates .figure-container {
+		 margin: 10pt 0;
+		 padding: 10pt;
+		 border: 1px solid brand(dark);
+	}
+	 [data-page-category="ClinicalEfficacy"] .accordion [aria-hidden] > .content {
+		 padding: 10pt 0;
+	}
+	 [data-page-category="ClinicalEfficacy"] #study-design img {
+		 width: 90%;
+	}
+	 [data-page-category="ClinicalEfficacy"] #first_section .overview-trial-data .tile {
+		 border: 0;
+	}
+	 [data-page-category="ClinicalEfficacy"] #first_section .overview-trial-data .tile br {
+		 display: none;
+	}
+	 [data-page-category="ClinicalEfficacy"] .accordion .desktop-image {
+		 display: none;
+		 opacity: 0;
+		 visibility: hidden;
+	}
+	 [data-page-id="VarsityTrial"] .clinical-response-rates img {
+		 width: 80%;
+	}
+	 [data-page-id="VarsityTrial"] #humira_content_id_1, [data-page-id="VarsityTrial"] #humira_content_id_2, [data-page-id="VarsityTrial"] #long_term_remission_content_id_1, [data-page-id="VarsityTrial"] #third_section #endoscopic-improvments .tile, [data-page-id="VarsityTrial"] #long-term-remission .container .inner-container, [data-page-id="VarsityTrial"] #third_section .pivotal-trial-data figure {
+		 margin: 10pt 0 !important;
+		 padding: 10pt !important;
+		 border: 1px solid brand(dark);
+	}
+	 [data-page-id="VarsityTrial"] #humira_content_id_1 img, [data-page-id="VarsityTrial"] #humira_content_id_2 img, [data-page-id="VarsityTrial"] #long_term_remission_content_id_1 img, [data-page-id="VarsityTrial"] #third_section #endoscopic-improvments .tile img, [data-page-id="VarsityTrial"] #long-term-remission .container .inner-container img, [data-page-id="VarsityTrial"] #third_section .pivotal-trial-data figure img {
+		 width: 300pt;
+	}
+	 [data-page-id="VarsityTrial"] .accordion button[aria-expanded] {
+		 margin: 0;
+		 padding: 10pt 0;
+		 font-weight: 700;
+	}
+	 [data-page-id="VarsityTrial"] .accordion button[aria-expanded] span {
+		 display: none;
+		 opacity: 0;
+		 visibility: hidden;
+	}
+	 [data-page-id="VarsityTrial"] .accordion [aria-hidden="true"] {
+		 display: block;
+	}
+	 [data-page-id="VarsityTrial"] #third_section .pivotal-trial-data figure img {
+		 padding: 0;
+	}
+	 [data-page-id="VarsityTrial"] #third_section .pivotal-trial-data figure figcaption {
+		 font-weight: 700;
+	}
+	 [data-page-id="CrohnsDisease"] #third_section .cd-trials .figure-container img, [data-page-id="CrohnsDisease"] #third_section .clinical-response-rates .figure-container img {
+		 width: 300pt;
+	}
+	 [data-page-id="CrohnsDisease"] #third_section .cd-trials .figure-container figcaption {
+		 margin-bottom: 15pt;
+		 font-weight: 700;
+		 border: 0;
+	}
+	 [data-page-id="CrohnsDisease"] #third_section .cd-trials .figure-container {
+		 margin: 10pt 0;
+		 padding: 10pt;
+		 border: 1px solid brand(dark);
+	}
+	 [data-page-id="SafetyProfile"] #third_section figure img, [data-page-id="SafetyProfile"] #third_section #uc-cd-trials img {
+		 width: 90%;
+	}
+	 [data-page-id="SafetyProfile"] #full-adverse-events img {
+		 width: 5%;
+	}
+	 [data-page-id="SafetyProfile"] #third_section #seven-year-data img, [data-page-id="SafetyProfile"] #third_section #varsity-adverse-events img, [data-page-id="SafetyProfile"] #third_section #uc-cd-trials img {
+		 width: 50%;
+	}
+	 [data-page-id="SafetyProfile"] #third_section .full-adverse-events ul ul {
+		 list-style-type: none !important;
+	}
+	 [data-page-id="SafetyProfile"] #uc-cd-trials, [data-page-id="SafetyProfile"] #full-adverse-events, [data-page-id="SafetyProfile"] #seven-year-data, [data-page-id="SafetyProfile"] #varsity-adverse-events {
+		 margin: 10pt 0;
+		 padding: 10pt;
+		 border: 1px solid brand(dark);
+	}
+	 [data-page-id="DosingAdministration"] #third_section .starting-maintaining .flex-container .tile {
+		 border: 0;
+	}
+	 [data-page-id="DosingAdministration"] #third_section .starting-maintaining .flex-container .tile h3 {
+		 padding: 0;
+	}
+	 [data-page-id="DosingAdministration"] #starting-maintaining, [data-page-id="DosingAdministration"] #dosing-administration, [data-page-id="DosingAdministration"] #dosing-video {
+		 margin: 10pt 0;
+		 padding: 10pt;
+		 border: 1px solid brand(dark);
+	}
+	 [data-page-id="DosingAdministration"] #starting-maintaining img {
+		 width: 10%;
+	}
+	 [data-page-id="DosingAdministration"] #dosing-administration img {
+		 width: 5%;
+	}
+	 [data-page-id="MechanismOfAction"] .accordion[data-accordion-type="list"] button[aria-expanded], [data-page-id="MechanismOfAction"] .accordion[data-accordion-type="list"] [aria-hidden] > .content {
+		 padding: 4pt 0;
+	}
+	 [data-page-id="MechanismOfAction"] .accordion[data-accordion-type="list"] button[aria-expanded]:before {
+		 position: relative;
+	}
+	 [data-page-id="MechanismOfAction"] .accordion [aria-hidden] {
+		 display: block;
+	}
+	 [data-page-id="MechanismOfAction"] .accordion div[data-empty-button] span, [data-page-id="MechanismOfAction"] .accordion button[aria-expanded] span, [data-page-id="MechanismOfAction"] .accordion .footnote, [data-page-id="MechanismOfAction"] .accordion .desktop-image {
+		 display: none;
+		 opacity: 0;
+		 visibility: hidden;
+	}
+	 [data-page-id="MechanismOfAction"] .accordion[data-accordion-type="list"] li {
+		 margin: 10pt 0 !important;
+		 padding: 10pt !important;
+		 border: 1px solid brand(dark);
+	}
+	 [data-page-category="AccessSupport"] #body #hero .entyvioconnect-logo {
+		 width: 200pt;
+	}
+	 [data-page-category="AccessSupport"] #body #hero > div > article > div {
+		 flex: auto;
+		 max-width: none;
+	}
+	 [data-page-category="AccessSupport"] #hero > div > article, [data-page-category="AccessSupport"] #first_section #affordability_download > div, [data-page-category="AccessSupport"] #first_section [data-icon], [data-page-category="AccessSupport"] #first_section #FormsResources .content {
+		 display: block;
+		 box-shadow: none;
+	}
+	 [data-page-category="AccessSupport"] #first_section [data-icon] {
+		 min-height: 0;
+	}
+	 [data-page-category="AccessSupport"] .navigation-wrapper {
+		 margin-bottom: 0;
+	}
+	 [data-page-category="AccessSupport"] #first_section #insurance-support .image.insurance-support, [data-page-category="AccessSupport"] .navigation-temp, [data-page-category="AccessSupport"] #first_section #affordability .image .affordability, [data-page-category="AccessSupport"] #first_section #affordability .image {
+		 display: none;
+		 opacity: 0;
+		 visibility: hidden;
+	}
+	 [data-page-category="AccessSupport"] #first_section .contact-purple-bg {
+		 margin-bottom: 25pt;
+		 padding: 0;
+		 border: 0;
+	}
+	 [data-page-category="AccessSupport"] #first_section #entyvioconnect_contact, [data-page-category="AccessSupport"] #first_section [data-icon] a {
+		 padding: 0;
+	}
+	 [data-page-category="AccessSupport"] #first_section [data-icon]:before {
+		 content: '- ';
+		 position: static;
+		 background: none;
+	}
+	 [data-page-category="AccessSupport"] #first_section #insurance-denied, [data-page-category="AccessSupport"] #first_section #affordability_download, [data-page-category="AccessSupport"] #first_section #downloads, [data-page-category="AccessSupport"] #affordability, [data-page-category="AccessSupport"] #insurance-support, [data-page-category="AccessSupport"] #at-a-glance, [data-page-category="AccessSupport"] #FormsResources {
+		 margin: 10pt 0;
+		 padding: 10pt;
+		 border: 1px solid brand(dark);
+	}
+	 [data-page-category="AccessSupport"] #first_section #insurance-denied > section {
+		 border: 0;
+	}
+	 [data-page-category="AccessSupport"] #first_section #at-a-glance img {
+		 width: 90%;
+	}
+	 [data-page-category="Resources"] .table .heading-container {
+		 border: 0;
+	}
+	 [data-page-category="Resources"] .table .heading-container p {
+		 font-weight: 700;
+	}
+	 [data-page-category="Resources"] .table .heading-container a {
+		 display: none;
+		 opacity: 0;
+		 visibility: hidden;
+	}
+	 [data-page-category="Resources"] .go-back {
+		 display: none;
+		 opacity: 0;
+		 visibility: hidden;
+	}
+	 [data-page-id="ProfessionalResources"] .table .content-container .for-you-content, [data-page-id="PatientResources"] .table .content-container .for-your-patient-content {
+		 display: block;
+	}
+	 [data-page-id="RequestARepresentative"] .main-container {
+		 margin: 10pt 0;
+		 padding: 10pt;
+		 border: 1px solid brand(dark);
+	}
+	 [data-page-id="ClinicalReprints"] .cta {
+		 display: block;
+	}
+	 [data-page-id="ClinicalReprints"] .cta h2 {
+		 border: 0;
+	}
+	 [data-page-id="ClinicalReprints"] .cta section {
+		 margin: 10pt 0;
+		 padding: 10pt;
+		 border: 1px solid brand(dark);
+	}
+	 [data-page-id="ClinicalReprints"] .cta section .top {
+		 padding: 10pt 0;
+		 font-weight: 700;
+	}
+	 [data-page-id="ClinicalReprints"] .cta .isi-link a:before {
+		 display: none;
+		 opacity: 0;
+		 visibility: hidden;
+	}
+	 [data-page-id="PeerPerspective"] .slick-track .slick-slide, [data-page-id="PeerPerspective"] .slick-track {
+		 display: block !important;
+		 width: 100% !important;
+		 transform: none !important;
+	}
+	 [data-page-id="PeerPerspective"] .slick-track .slick-slide {
+		 margin: 10pt 0;
+		 padding: 10pt;
+		 border: 1px solid brand(dark);
+	}
+	 [data-page-id="PeerPerspective"] .carousel .carousel-video-controller figcaption {
+		 margin-top: 25pt;
+	}
+	 [data-page-id="PeerPerspective"] .carousel .carousel-video-controller .slick-track .slick-slide > div > div {
+		 padding-bottom: 25pt;
+	}
+	 [data-page-id="PeerPerspective"] .poster, [data-page-id="PeerPerspective"] [data-only="desktop"] .slick-list, [data-page-id="PeerPerspective"] .slick-track .slick-slide.slick-cloned, [data-page-id="PeerPerspective"] .carousel .carousel-video-controller button.previous, [data-page-id="PeerPerspective"] .carousel .carousel-video-controller button.next {
+		 display: none !important;
+	}
+	 [data-page-id="PeerPerspective"] .carousel .carousel-video-controller figure img {
+		 width: 400pt;
+	}
+}
+ 

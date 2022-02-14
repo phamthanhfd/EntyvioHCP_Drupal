@@ -1,0 +1,877 @@
+/***********************************/
+/**** **** MATRIX SETTINGS **** ***/
+/*********************************/
+/* Usage: Update matrix gutter HTML: <nav data-matrix=""> <a> <a> SASS: @include matrix_setting([number of matrix], [gutter space], '[child element]');
+ Example: @include matrix_setting(2, 30px, 'div');
+ */
+/************************************************/
+/**** **** TYPEFACE SETTINGS (LOCAL) v2 **** ***/
+/**********************************************/
+/* Usage: $local-font-settings: ( (Gotham, Gotham-Light_Web, '200'), (Gotham, Gotham-Book_Web, '400'), (Gotham, Gotham-Medium_Web, '500') );
+ $font_path : '../_assets/core/fonts';
+ Usage: @include localFontSetup($local-font-settings, $font_path);
+ Usage: @mixin gotham($font) {
+	 font-family: 'Gotham', sans-serif;
+	 @if $font == light {
+		 font-weight: 200;
+	}
+	 @else if $font == book {
+		 font-weight: 400;
+	}
+	 @else if $font == medium {
+		 font-weight: 500;
+	}
+}
+ body {
+	 @include gotham(book);
+}
+ */
+/*****************************/
+/**** **** ANIMATION **** ***/
+/***************************/
+/* Usage: @include animationFrames(fade) {
+	 0% {
+		 opacity: 1;
+	}
+	 50% {
+		 opacity: 0;
+	}
+}
+ */
+/* Usage: @include animation(300ms fade ease-in-out forwards, 100);
+ */
+/**************************************/
+/**** *** PAGE WIDTH SETTINGS **** ***/
+/************************************/
+/**** **** GRID MIXIN **** ***/
+/****************************/
+/**** **** FLEX SET **** ***/
+/**************************/
+/******************************/
+/**** **** RESET LIST **** ***/
+/****************************/
+/*****************************/
+/**** **** FOR PRINT **** ***/
+/***************************/
+/**** **** SETTING UP TYPEFACE **** ***/
+/**** **** PREMADE VIEWPORT **** ***/
+/**** **** CUSTOM VIEWPORT **** ***/
+/* Usage: @include viewport-custom(200, 300) {
+	 h1 {
+		 font-size: 20px;
+	}
+}
+ */
+/**** **** SPECIFIC VIEWPORT **** ***/
+/* ipad specific */
+/* iphone 6/7/8 specific */
+/* ie11 specific */
+/**** **** PRIMARY TYPE **** ***/
+/**** **** TEXT TYPE **** ***/
+/**** **** CLOSE **** ***/
+/* Usage: @include close-icon([width of icon], [height of icon], [icon colour]);
+ Examples: @include close-icon(25px, 3px, brand(primary));
+ @include close-icon($width: 25px);
+ @include close-icon;
+ */
+/* init */
+ [data-icon="close"] span {
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 width: 100%;
+	 height: 100%;
+	 transform: translate(-50%, -50%);
+}
+ [data-icon="close"] span:before, [data-icon="close"] span:after {
+	 content: '';
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 width: 100%;
+	 height: 3px;
+	 transform-origin: 0 0;
+	 background: brand(primary);
+}
+ [data-icon="close"] span:before {
+	 transform: rotate(45deg) translate(-50%, -50%);
+}
+ [data-icon="close"] span:after {
+	 transform: rotate(-45deg) translate(-50%, -50%);
+}
+/**** **** HAMBURGER **** ***/
+/* Usage: @include hamburger([width of icon], [height of icon], [space between lines], [icon colour]);
+ Examples: @include hamburger(25px, 2px, 1, #fff);
+ @include hamburger($width: 25px, $bg: #f00);
+ @include hamburger;
+ */
+/* init */
+ [data-icon="hamburger"] span {
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 width: 100%;
+	 height: 3px;
+	 transform: translate(-50%, -50%);
+	 background: brand(primary);
+}
+ [data-icon="hamburger"] span:before, [data-icon="hamburger"] span:after {
+	 content: '';
+	 position: absolute;
+	 left: 0;
+	 width: 100%;
+	 height: 3px;
+	 transform-origin: 0 0;
+	 background: brand(primary);
+}
+ [data-icon="hamburger"] span:before {
+	 bottom: 7.5px;
+}
+ [data-icon="hamburger"] span:after {
+	 top: 7.5px;
+}
+/**** **** PLUS/MINUS **** ***/
+/* Usage: @plus-minus-icon([width of icon], [height of icon], [icon colour]);
+ Examples: @plus-minus-icon(25px, 2px, #fff);
+ @include plus-minus-icon($width: 13px);
+ @plus-minus-icon;
+ */
+/* init */
+ [data-icon="plus-minus"] span {
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 width: 100%;
+	 height: 100%;
+	 transform: translate(-50%, -50%);
+}
+ [data-icon="plus-minus"] span:before, [data-icon="plus-minus"] span:after {
+	 content: '';
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 width: 100%;
+	 height: 3px;
+	 transform-origin: 0 0;
+	 background: brand(primary);
+}
+ [data-icon="plus-minus"] span:before {
+	 transform: translate(-50%, -50%);
+}
+ [data-icon="plus-minus"] span:after {
+	 transform: rotate(90deg) translate(-50%, -50%);
+}
+/**** **** YELLOW CIRCLE WORD ICONS **** ***/
+/* Usage: <p data-dot>Vs</p> */
+/****************************/
+/**** **** LANGUAGE **** ***/
+/**************************/
+/* en or cn */
+/***********************************/
+/**** **** LAYOUT SETTINGS **** ***/
+/*********************************/
+/*********************************/
+/**** **** GRID SETTINGS **** ***/
+/*******************************/
+/**********************************/
+/**** **** BRAND SETTINGS **** ***/
+/********************************/
+/* form */
+/*********************************/
+/**** **** PATH SETTINGS **** ***/
+/*******************************/
+/*************************************/
+/**** **** TYPEFACE SETTINGS **** ***/
+/***********************************/
+/****************************/
+/**** **** CAROUSEL **** ***/
+/**************************/
+/**** **** SLICK SCRIPT STARTS **** ***/
+ .slick-slider {
+	 position: relative;
+	 display: block;
+	 box-sizing: border-box;
+	 -webkit-touch-callout: none;
+	 -webkit-user-select: none;
+	 -khtml-user-select: none;
+	 -moz-user-select: none;
+	 -ms-user-select: none;
+	 user-select: none;
+	 -ms-touch-action: pan-y;
+	 touch-action: pan-y;
+	 -webkit-tap-highlight-color: transparent;
+}
+ .slick-list {
+	 position: relative;
+	 overflow: hidden;
+	 display: block;
+	 margin: 0;
+	 padding: 0;
+}
+ .slick-list:focus {
+	 outline: none;
+}
+ .slick-list.dragging {
+	 cursor: pointer;
+	 cursor: hand;
+}
+ .slick-slider .slick-track, .slick-slider .slick-list {
+	 -webkit-transform: translate3d(0, 0, 0);
+	 -moz-transform: translate3d(0, 0, 0);
+	 -ms-transform: translate3d(0, 0, 0);
+	 -o-transform: translate3d(0, 0, 0);
+	 transform: translate3d(0, 0, 0);
+}
+ .slick-track {
+	 position: relative;
+	 left: 0;
+	 top: 0;
+	 display: block;
+	 margin-left: auto;
+	 margin-right: auto;
+}
+ .slick-track:before, .slick-track:after {
+	 content: "";
+	 display: table;
+}
+ .slick-track:after {
+	 clear: both;
+}
+ .slick-loading .slick-track {
+	 visibility: hidden;
+}
+ .slick-slide {
+	 float: left;
+	 height: 100%;
+	 min-height: 1px;
+	 display: none;
+}
+ [dir="rtl"] .slick-slide {
+	 float: right;
+}
+ .slick-slide img {
+	 display: block;
+}
+ .slick-slide.slick-loading img {
+	 display: none;
+}
+ .slick-slide.dragging img {
+	 pointer-events: none;
+}
+ .slick-initialized .slick-slide {
+	 display: block;
+}
+ .slick-loading .slick-slide {
+	 visibility: hidden;
+}
+ .slick-vertical .slick-slide {
+	 display: block;
+	 height: auto;
+	 border: 1px solid transparent;
+}
+ .slick-arrow.slick-hidden {
+	 display: none;
+}
+/**** **** SLICK SCRIPT ENDS **** ***/
+/**** **** CAROUSEL **** ***/
+ .carousel {
+	/* controller starts */
+	/* controller ends */
+}
+ .carousel .carousel-video-container .video-player {
+	/* typography */
+}
+ .carousel .carousel-video-container .video-player .poster {
+	 position: absolute;
+	 top: 0;
+	 left: 0;
+	 width: 100%;
+	 height: 100%;
+	 display: flex;
+	 align-items: center;
+	 z-index: 2;
+}
+ .carousel .carousel-video-container .video-player .poster-image {
+	 position: absolute;
+	 top: 0;
+	 width: 100%;
+	 z-index: 1;
+}
+ .carousel .carousel-video-container .video-player .play-button {
+	 z-index: 1;
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 transform: translate(-50%, -50%);
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 .carousel .carousel-video-container .video-player .play-button {
+			 left: 60%;
+			 opacity: 0.75;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 .carousel .carousel-video-container .video-player .play-button {
+			 left: 60%;
+			 opacity: 0.75;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 .carousel .carousel-video-container .video-player .play-button {
+			 left: 60%;
+			 opacity: 0.75;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 .carousel .carousel-video-container .video-player .play-button {
+			 left: 60%;
+			 opacity: 0.75;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 .carousel .carousel-video-container .video-player .play-button {
+			 left: 60%;
+			 opacity: 0.75;
+		}
+	}
+}
+ .carousel .carousel-video-container .video-player .content {
+	 position: relative;
+	 margin-left: 65px;
+	 width: 400px;
+	 z-index: 2;
+}
+ @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+	 .carousel .carousel-video-container .video-player .content {
+		 width: 310px;
+	}
+}
+ .carousel .carousel-video-container .video-player video {
+	 width: 100%;
+	 background: brand(darker);
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) {
+	 .carousel .carousel-video-container .video-player video {
+		 height: 520px;
+	}
+}
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) and screen and (min-width: 960px) and (max-width: 1250px) {
+	 .carousel .carousel-video-container .video-player video {
+		 height: 360px;
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 .carousel .carousel-video-container .video-player video {
+			 height: 520px;
+		}
+	}
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) and screen and (min-width: 960px) and (max-width: 1250px) {
+		 .carousel .carousel-video-container .video-player video {
+			 height: 360px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 .carousel .carousel-video-container .video-player video {
+			 height: 520px;
+		}
+	}
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) and screen and (min-width: 960px) and (max-width: 1250px) {
+		 .carousel .carousel-video-container .video-player video {
+			 height: 360px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 .carousel .carousel-video-container .video-player video {
+			 height: 520px;
+		}
+	}
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) and screen and (min-width: 960px) and (max-width: 1250px) {
+		 .carousel .carousel-video-container .video-player video {
+			 height: 360px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 .carousel .carousel-video-container .video-player video {
+			 height: 520px;
+		}
+	}
+	 @media screen and (max-width : mq(mobile)px) and screen and (min-width: 960px) and (max-width: 1250px) {
+		 .carousel .carousel-video-container .video-player video {
+			 height: 360px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 .carousel .carousel-video-container .video-player video {
+			 height: 520px;
+		}
+	}
+	 @media screen and (max-width : mq(mobile-sm)px) and screen and (min-width: 960px) and (max-width: 1250px) {
+		 .carousel .carousel-video-container .video-player video {
+			 height: 360px;
+		}
+	}
+}
+ .carousel .carousel-video-container .video-player .content {
+	 color: brand(light);
+}
+ .carousel .carousel-video-container .video-player .content h3 {
+	 font-family: 'Gotham', sans-serif;
+	 font-weight: 400;
+	 margin-bottom: 15px;
+}
+ @else if {
+	 font-size: 16px;
+}
+ .carousel .carousel-video-container .video-player .content h3 strong {
+	 font-family: 'Gotham', sans-serif;
+	 font-weight: 700;
+	 font-style: italic;
+	 display: block;
+}
+ @else if {
+	 font-size: 16px;
+}
+ .carousel .carousel-video-container .video-player .content h2 {
+	 font-family: 'Gotham', sans-serif;
+	 font-weight: 700;
+	 margin-bottom: 15px;
+}
+ @else if {
+	 font-size: 22px;
+}
+ .carousel .carousel-video-container .video-player .content p {
+	 font-family: 'Gotham', sans-serif;
+	 font-weight: 400;
+	 margin: 0;
+}
+ @else if {
+	 font-size: 16px;
+}
+ .carousel .carousel-video-controller {
+	 position: relative;
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+	/* arrows */
+	/* typography */
+}
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) {
+	 .carousel .carousel-video-controller {
+		 margin: 0 18px;
+		 padding: 30px 50px 0 50px;
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 .carousel .carousel-video-controller {
+			 margin: 0 18px;
+			 padding: 30px 50px 0 50px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 .carousel .carousel-video-controller {
+			 margin: 0 18px;
+			 padding: 30px 50px 0 50px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 .carousel .carousel-video-controller {
+			 margin: 0 18px;
+			 padding: 30px 50px 0 50px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 .carousel .carousel-video-controller {
+			 margin: 0 18px;
+			 padding: 30px 50px 0 50px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 .carousel .carousel-video-controller {
+			 margin: 0 18px;
+			 padding: 30px 50px 0 50px;
+		}
+	}
+}
+ .carousel .carousel-video-controller > div {
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 .carousel .carousel-video-controller > div {
+			 margin-bottom: 30px;
+			 padding-bottom: 30px;
+			 background: brand(light);
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 .carousel .carousel-video-controller > div {
+			 margin-bottom: 30px;
+			 padding-bottom: 30px;
+			 background: brand(light);
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 .carousel .carousel-video-controller > div {
+			 margin-bottom: 30px;
+			 padding-bottom: 30px;
+			 background: brand(light);
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 .carousel .carousel-video-controller > div {
+			 margin-bottom: 30px;
+			 padding-bottom: 30px;
+			 background: brand(light);
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 .carousel .carousel-video-controller > div {
+			 margin-bottom: 30px;
+			 padding-bottom: 30px;
+			 background: brand(light);
+		}
+	}
+}
+ .carousel .carousel-video-controller .slick-track {
+	 display: flex;
+}
+ .carousel .carousel-video-controller .slick-track .slick-slide {
+	 padding: 0 15px;
+	 display: flex;
+	 height: auto;
+	 flex-direction: column;
+}
+ .carousel .carousel-video-controller .slick-track .slick-slide > div, .carousel .carousel-video-controller .slick-track .slick-slide > div > div {
+	 height: 100%;
+}
+ .carousel .carousel-video-controller .slick-track .slick-slide > div > div {
+	 position: relative;
+	 padding-bottom: 80px;
+}
+ .carousel .carousel-video-controller .slick-track .slick-slide > div > div button {
+	 position: absolute;
+	 bottom: 0;
+	 left: 0;
+}
+ .carousel .carousel-video-controller .content {
+	 flex-grow: 1;
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 .carousel .carousel-video-controller .content {
+			 padding: 0 20px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 .carousel .carousel-video-controller .content {
+			 padding: 0 20px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 .carousel .carousel-video-controller .content {
+			 padding: 0 20px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 .carousel .carousel-video-controller .content {
+			 padding: 0 20px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 .carousel .carousel-video-controller .content {
+			 padding: 0 20px;
+		}
+	}
+}
+ .carousel .carousel-video-controller video {
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 .carousel .carousel-video-controller video {
+			 width: 100%;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 .carousel .carousel-video-controller video {
+			 width: 100%;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 .carousel .carousel-video-controller video {
+			 width: 100%;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 .carousel .carousel-video-controller video {
+			 width: 100%;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 .carousel .carousel-video-controller video {
+			 width: 100%;
+		}
+	}
+}
+ .carousel .carousel-video-controller figure {
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 .carousel .carousel-video-controller figure {
+			 padding: 25px 20px 0 20px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 .carousel .carousel-video-controller figure {
+			 padding: 25px 20px 0 20px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 .carousel .carousel-video-controller figure {
+			 padding: 25px 20px 0 20px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 .carousel .carousel-video-controller figure {
+			 padding: 25px 20px 0 20px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 .carousel .carousel-video-controller figure {
+			 padding: 25px 20px 0 20px;
+		}
+	}
+}
+ .carousel .carousel-video-controller figure img {
+	 width: 100%;
+}
+ .carousel .carousel-video-controller button.previous, .carousel .carousel-video-controller button.next {
+	 position: absolute;
+	 top: 50%;
+	 transform: translateY(-50%);
+	 width: 20px;
+	 height: 35px;
+	 background: url(path(icon)/carousel-brand-arrow.svg) top right no-repeat;
+	 background-size: 100% auto;
+}
+ .carousel .carousel-video-controller button.previous {
+	 left: 0;
+}
+ .carousel .carousel-video-controller button.next {
+	 right: 0;
+	 transform: scaleX(-1) translateY(-50%);
+}
+ .carousel .carousel-video-controller .btn.btn-secondary {
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 .carousel .carousel-video-controller .btn.btn-secondary {
+			 margin-left: 20px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 .carousel .carousel-video-controller .btn.btn-secondary {
+			 margin-left: 20px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 .carousel .carousel-video-controller .btn.btn-secondary {
+			 margin-left: 20px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 .carousel .carousel-video-controller .btn.btn-secondary {
+			 margin-left: 20px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 .carousel .carousel-video-controller .btn.btn-secondary {
+			 margin-left: 20px;
+		}
+	}
+}
+ .carousel .carousel-video-controller figcaption {
+	 font-family: 'Gotham', sans-serif;
+	 font-weight: 400;
+	 margin-bottom: 15px;
+	 font-style: oblique;
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ @else if {
+	 font-size: 14px;
+}
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) {
+	 .carousel .carousel-video-controller figcaption {
+		 padding-top: 30px;
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 .carousel .carousel-video-controller figcaption {
+			 padding-top: 30px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 .carousel .carousel-video-controller figcaption {
+			 padding-top: 30px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 .carousel .carousel-video-controller figcaption {
+			 padding-top: 30px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 .carousel .carousel-video-controller figcaption {
+			 padding-top: 30px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 .carousel .carousel-video-controller figcaption {
+			 padding-top: 30px;
+		}
+	}
+}
+ .carousel .carousel-video-controller h3 {
+	 font-family: 'Gotham', sans-serif;
+	 font-weight: 700;
+	 margin-bottom: 15px;
+}
+ @else if {
+	 font-size: 16px;
+}
+ .carousel .carousel-video-controller p {
+	 font-family: 'Gotham', sans-serif;
+	 font-weight: 400;
+	 margin-bottom: 15px;
+}
+ @else if {
+	 font-size: 16px;
+}
+ .carousel .carousel-video-controller p:nth-child(1) {
+	 flex-grow: 1;
+}
+ 

@@ -1,0 +1,620 @@
+/***********************************/
+/**** **** MATRIX SETTINGS **** ***/
+/*********************************/
+/* Usage: Update matrix gutter HTML: <nav data-matrix=""> <a> <a> SASS: @include matrix_setting([number of matrix], [gutter space], '[child element]');
+ Example: @include matrix_setting(2, 30px, 'div');
+ */
+/************************************************/
+/**** **** TYPEFACE SETTINGS (LOCAL) v2 **** ***/
+/**********************************************/
+/* Usage: $local-font-settings: ( (Gotham, Gotham-Light_Web, '200'), (Gotham, Gotham-Book_Web, '400'), (Gotham, Gotham-Medium_Web, '500') );
+ $font_path : '../_assets/core/fonts';
+ Usage: @include localFontSetup($local-font-settings, $font_path);
+ Usage: @mixin gotham($font) {
+	 font-family: 'Gotham', sans-serif;
+	 @if $font == light {
+		 font-weight: 200;
+	}
+	 @else if $font == book {
+		 font-weight: 400;
+	}
+	 @else if $font == medium {
+		 font-weight: 500;
+	}
+}
+ body {
+	 @include gotham(book);
+}
+ */
+/*****************************/
+/**** **** ANIMATION **** ***/
+/***************************/
+/* Usage: @include animationFrames(fade) {
+	 0% {
+		 opacity: 1;
+	}
+	 50% {
+		 opacity: 0;
+	}
+}
+ */
+/* Usage: @include animation(300ms fade ease-in-out forwards, 100);
+ */
+/**************************************/
+/**** *** PAGE WIDTH SETTINGS **** ***/
+/************************************/
+/**** **** GRID MIXIN **** ***/
+/****************************/
+/**** **** FLEX SET **** ***/
+/**************************/
+/******************************/
+/**** **** RESET LIST **** ***/
+/****************************/
+/*****************************/
+/**** **** FOR PRINT **** ***/
+/***************************/
+/**** **** SETTING UP TYPEFACE **** ***/
+/**** **** PREMADE VIEWPORT **** ***/
+/**** **** CUSTOM VIEWPORT **** ***/
+/* Usage: @include viewport-custom(200, 300) {
+	 h1 {
+		 font-size: 20px;
+	}
+}
+ */
+/**** **** SPECIFIC VIEWPORT **** ***/
+/* ipad specific */
+/* iphone 6/7/8 specific */
+/* ie11 specific */
+/**** **** PRIMARY TYPE **** ***/
+/**** **** TEXT TYPE **** ***/
+/**** **** CLOSE **** ***/
+/* Usage: @include close-icon([width of icon], [height of icon], [icon colour]);
+ Examples: @include close-icon(25px, 3px, brand(primary));
+ @include close-icon($width: 25px);
+ @include close-icon;
+ */
+/* init */
+ [data-icon="close"] span {
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 width: 100%;
+	 height: 100%;
+	 transform: translate(-50%, -50%);
+}
+ [data-icon="close"] span:before, [data-icon="close"] span:after {
+	 content: '';
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 width: 100%;
+	 height: 3px;
+	 transform-origin: 0 0;
+	 background: brand(primary);
+}
+ [data-icon="close"] span:before {
+	 transform: rotate(45deg) translate(-50%, -50%);
+}
+ [data-icon="close"] span:after {
+	 transform: rotate(-45deg) translate(-50%, -50%);
+}
+/**** **** HAMBURGER **** ***/
+/* Usage: @include hamburger([width of icon], [height of icon], [space between lines], [icon colour]);
+ Examples: @include hamburger(25px, 2px, 1, #fff);
+ @include hamburger($width: 25px, $bg: #f00);
+ @include hamburger;
+ */
+/* init */
+ [data-icon="hamburger"] span {
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 width: 100%;
+	 height: 3px;
+	 transform: translate(-50%, -50%);
+	 background: brand(primary);
+}
+ [data-icon="hamburger"] span:before, [data-icon="hamburger"] span:after {
+	 content: '';
+	 position: absolute;
+	 left: 0;
+	 width: 100%;
+	 height: 3px;
+	 transform-origin: 0 0;
+	 background: brand(primary);
+}
+ [data-icon="hamburger"] span:before {
+	 bottom: 7.5px;
+}
+ [data-icon="hamburger"] span:after {
+	 top: 7.5px;
+}
+/**** **** PLUS/MINUS **** ***/
+/* Usage: @plus-minus-icon([width of icon], [height of icon], [icon colour]);
+ Examples: @plus-minus-icon(25px, 2px, #fff);
+ @include plus-minus-icon($width: 13px);
+ @plus-minus-icon;
+ */
+/* init */
+ [data-icon="plus-minus"] span {
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 width: 100%;
+	 height: 100%;
+	 transform: translate(-50%, -50%);
+}
+ [data-icon="plus-minus"] span:before, [data-icon="plus-minus"] span:after {
+	 content: '';
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 width: 100%;
+	 height: 3px;
+	 transform-origin: 0 0;
+	 background: brand(primary);
+}
+ [data-icon="plus-minus"] span:before {
+	 transform: translate(-50%, -50%);
+}
+ [data-icon="plus-minus"] span:after {
+	 transform: rotate(90deg) translate(-50%, -50%);
+}
+/**** **** YELLOW CIRCLE WORD ICONS **** ***/
+/* Usage: <p data-dot>Vs</p> */
+/****************************/
+/**** **** LANGUAGE **** ***/
+/**************************/
+/* en or cn */
+/***********************************/
+/**** **** LAYOUT SETTINGS **** ***/
+/*********************************/
+/*********************************/
+/**** **** GRID SETTINGS **** ***/
+/*******************************/
+/**********************************/
+/**** **** BRAND SETTINGS **** ***/
+/********************************/
+/* form */
+/*********************************/
+/**** **** PATH SETTINGS **** ***/
+/*******************************/
+/*************************************/
+/**** **** TYPEFACE SETTINGS **** ***/
+/***********************************/
+/**********************************/
+/*** *** MOVE AHEAD NAV BAR *** ***/
+/**********************************/
+ .move-ahead {
+	/**** **** MOBILE **** ***/
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+	/**** **** DESKTOP **** ***/
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ .move-ahead h2 {
+	 color: brand(primary);
+	 text-align: center;
+	 padding-top: 25px;
+}
+ .move-ahead .anchor-link-container {
+	 display: flex;
+	 justify-content: center;
+	 align-items: flex-end;
+}
+ .move-ahead .anchor-link-container a {
+	 color: brand(primary);
+	 text-align: center;
+	 position: relative;
+	 display: block;
+	 text-decoration: none;
+	 overflow: hidden;
+	 font-weight: 700;
+}
+ .move-ahead .anchor-link-container a:after {
+	 font-family: 'Gotham', sans-serif;
+	 font-weight: 400;
+	 font-size: 28px;
+	 position: absolute;
+	 left: 50%;
+	 content: '\00BB';
+	 opacity: 1;
+	 transform: translateX(-50%) rotate(90deg);
+	 transition: margin 200ms ease-in;
+	 will-change: margin;
+}
+ .move-ahead .anchor-link-container a.hover:after, .move-ahead .anchor-link-container a:hover:after {
+	 margin-bottom: -5px;
+}
+ .move-ahead .link-container {
+	 padding: 0;
+	 transition: padding 300ms ease-in-out;
+	 will-change: padding;
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 .move-ahead .container {
+			 padding: 0 25px;
+		}
+		 .move-ahead a {
+			 margin-bottom: 20px;
+			 padding-bottom: 30px;
+			 font-size: 16px;
+			 line-height: 20px;
+		}
+		 .move-ahead a:after {
+			 bottom: 5px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 .move-ahead .container {
+			 padding: 0 25px;
+		}
+		 .move-ahead a {
+			 margin-bottom: 20px;
+			 padding-bottom: 30px;
+			 font-size: 16px;
+			 line-height: 20px;
+		}
+		 .move-ahead a:after {
+			 bottom: 5px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 .move-ahead .container {
+			 padding: 0 25px;
+		}
+		 .move-ahead a {
+			 margin-bottom: 20px;
+			 padding-bottom: 30px;
+			 font-size: 16px;
+			 line-height: 20px;
+		}
+		 .move-ahead a:after {
+			 bottom: 5px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 .move-ahead .container {
+			 padding: 0 25px;
+		}
+		 .move-ahead a {
+			 margin-bottom: 20px;
+			 padding-bottom: 30px;
+			 font-size: 16px;
+			 line-height: 20px;
+		}
+		 .move-ahead a:after {
+			 bottom: 5px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 .move-ahead .container {
+			 padding: 0 25px;
+		}
+		 .move-ahead a {
+			 margin-bottom: 20px;
+			 padding-bottom: 30px;
+			 font-size: 16px;
+			 line-height: 20px;
+		}
+		 .move-ahead a:after {
+			 bottom: 5px;
+		}
+	}
+}
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) {
+	 .move-ahead h2 {
+		 margin: 0;
+	}
+	 .move-ahead a {
+		 font-size: 20px;
+		 padding-bottom: 60px;
+		 margin-bottom: 0;
+		 transition: padding 300ms ease-in-out;
+		 will-change: padding;
+	}
+	 .move-ahead a:after {
+		 bottom: 30px;
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 .move-ahead h2 {
+			 margin: 0;
+		}
+		 .move-ahead a {
+			 font-size: 20px;
+			 padding-bottom: 60px;
+			 margin-bottom: 0;
+			 transition: padding 300ms ease-in-out;
+			 will-change: padding;
+		}
+		 .move-ahead a:after {
+			 bottom: 30px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 .move-ahead h2 {
+			 margin: 0;
+		}
+		 .move-ahead a {
+			 font-size: 20px;
+			 padding-bottom: 60px;
+			 margin-bottom: 0;
+			 transition: padding 300ms ease-in-out;
+			 will-change: padding;
+		}
+		 .move-ahead a:after {
+			 bottom: 30px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 .move-ahead h2 {
+			 margin: 0;
+		}
+		 .move-ahead a {
+			 font-size: 20px;
+			 padding-bottom: 60px;
+			 margin-bottom: 0;
+			 transition: padding 300ms ease-in-out;
+			 will-change: padding;
+		}
+		 .move-ahead a:after {
+			 bottom: 30px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 .move-ahead h2 {
+			 margin: 0;
+		}
+		 .move-ahead a {
+			 font-size: 20px;
+			 padding-bottom: 60px;
+			 margin-bottom: 0;
+			 transition: padding 300ms ease-in-out;
+			 will-change: padding;
+		}
+		 .move-ahead a:after {
+			 bottom: 30px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 .move-ahead h2 {
+			 margin: 0;
+		}
+		 .move-ahead a {
+			 font-size: 20px;
+			 padding-bottom: 60px;
+			 margin-bottom: 0;
+			 transition: padding 300ms ease-in-out;
+			 will-change: padding;
+		}
+		 .move-ahead a:after {
+			 bottom: 30px;
+		}
+	}
+}
+/* from laptop to desktop */
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) {
+	 html.move-ahead-sticky .move-ahead-header > div {
+		 position: fixed;
+		 top: 0;
+		 left: 0;
+		 width: 100%;
+		 z-index: 10;
+		 box-shadow: 0 0 5px 2px rgba(0, 0, 0, );
+		 background: brand(light);
+		 transition: top 400ms ease-in-out;
+		 will-change: top;
+	}
+	 html.move-ahead-sticky.scroll-state-up .move-ahead-header > div {
+		 top: 115px;
+	}
+	 html.move-ahead-sticky .move-ahead .border-center {
+		 padding: 0;
+		 height: 0;
+		 overflow: hidden;
+	}
+	 html.move-ahead-sticky .move-ahead .container {
+		 align-items: center;
+	}
+	 html.move-ahead-sticky .move-ahead a {
+		 padding: 16px 0;
+	}
+	 html.move-ahead-sticky .move-ahead a:after {
+		 opacity: 0;
+	}
+}
+/* only desktop */
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 html.move-ahead-sticky .move-ahead-header > div {
+			 position: fixed;
+			 top: 0;
+			 left: 0;
+			 width: 100%;
+			 z-index: 10;
+			 box-shadow: 0 0 5px 2px rgba(0, 0, 0, );
+			 background: brand(light);
+			 transition: top 400ms ease-in-out;
+			 will-change: top;
+		}
+		 html.move-ahead-sticky.scroll-state-up .move-ahead-header > div {
+			 top: 115px;
+		}
+		 html.move-ahead-sticky .move-ahead .border-center {
+			 padding: 0;
+			 height: 0;
+			 overflow: hidden;
+		}
+		 html.move-ahead-sticky .move-ahead .container {
+			 align-items: center;
+		}
+		 html.move-ahead-sticky .move-ahead a {
+			 padding: 16px 0;
+		}
+		 html.move-ahead-sticky .move-ahead a:after {
+			 opacity: 0;
+		}
+	}
+}
+/* only laptop */
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 html.move-ahead-sticky .move-ahead-header > div {
+			 position: fixed;
+			 top: 0;
+			 left: 0;
+			 width: 100%;
+			 z-index: 10;
+			 box-shadow: 0 0 5px 2px rgba(0, 0, 0, );
+			 background: brand(light);
+			 transition: top 400ms ease-in-out;
+			 will-change: top;
+		}
+		 html.move-ahead-sticky.scroll-state-up .move-ahead-header > div {
+			 top: 115px;
+		}
+		 html.move-ahead-sticky .move-ahead .border-center {
+			 padding: 0;
+			 height: 0;
+			 overflow: hidden;
+		}
+		 html.move-ahead-sticky .move-ahead .container {
+			 align-items: center;
+		}
+		 html.move-ahead-sticky .move-ahead a {
+			 padding: 16px 0;
+		}
+		 html.move-ahead-sticky .move-ahead a:after {
+			 opacity: 0;
+		}
+	}
+}
+/* only tablet */
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 html.move-ahead-sticky .move-ahead-header > div {
+			 position: fixed;
+			 top: 0;
+			 left: 0;
+			 width: 100%;
+			 z-index: 10;
+			 box-shadow: 0 0 5px 2px rgba(0, 0, 0, );
+			 background: brand(light);
+			 transition: top 400ms ease-in-out;
+			 will-change: top;
+		}
+		 html.move-ahead-sticky.scroll-state-up .move-ahead-header > div {
+			 top: 115px;
+		}
+		 html.move-ahead-sticky .move-ahead .border-center {
+			 padding: 0;
+			 height: 0;
+			 overflow: hidden;
+		}
+		 html.move-ahead-sticky .move-ahead .container {
+			 align-items: center;
+		}
+		 html.move-ahead-sticky .move-ahead a {
+			 padding: 16px 0;
+		}
+		 html.move-ahead-sticky .move-ahead a:after {
+			 opacity: 0;
+		}
+	}
+}
+/* only mobile */
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 html.move-ahead-sticky .move-ahead-header > div {
+			 position: fixed;
+			 top: 0;
+			 left: 0;
+			 width: 100%;
+			 z-index: 10;
+			 box-shadow: 0 0 5px 2px rgba(0, 0, 0, );
+			 background: brand(light);
+			 transition: top 400ms ease-in-out;
+			 will-change: top;
+		}
+		 html.move-ahead-sticky.scroll-state-up .move-ahead-header > div {
+			 top: 115px;
+		}
+		 html.move-ahead-sticky .move-ahead .border-center {
+			 padding: 0;
+			 height: 0;
+			 overflow: hidden;
+		}
+		 html.move-ahead-sticky .move-ahead .container {
+			 align-items: center;
+		}
+		 html.move-ahead-sticky .move-ahead a {
+			 padding: 16px 0;
+		}
+		 html.move-ahead-sticky .move-ahead a:after {
+			 opacity: 0;
+		}
+	}
+}
+/* only mobile small */
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 html.move-ahead-sticky .move-ahead-header > div {
+			 position: fixed;
+			 top: 0;
+			 left: 0;
+			 width: 100%;
+			 z-index: 10;
+			 box-shadow: 0 0 5px 2px rgba(0, 0, 0, );
+			 background: brand(light);
+			 transition: top 400ms ease-in-out;
+			 will-change: top;
+		}
+		 html.move-ahead-sticky.scroll-state-up .move-ahead-header > div {
+			 top: 115px;
+		}
+		 html.move-ahead-sticky .move-ahead .border-center {
+			 padding: 0;
+			 height: 0;
+			 overflow: hidden;
+		}
+		 html.move-ahead-sticky .move-ahead .container {
+			 align-items: center;
+		}
+		 html.move-ahead-sticky .move-ahead a {
+			 padding: 16px 0;
+		}
+		 html.move-ahead-sticky .move-ahead a:after {
+			 opacity: 0;
+		}
+	}
+}
+ 

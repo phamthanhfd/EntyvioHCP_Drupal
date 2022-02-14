@@ -1,0 +1,24 @@
+HTTrack3.49-2+htsswf+htsjava launched on Mon, 14 Feb 2022 10:29:40 at https://www.entyviohcp.com/ +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" https://www.entyviohcp.com/ -O1 "C:\entyviohcp\entyviohcp" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+10:30:00	Error: 	"Bad Request" (400) at link https://www.googletagmanager.com/gtm.js?id= (from https://www.entyviohcp.com/)
+10:31:12	Warning: 	Moved Permanently for https://www.entyviohcp.com/Trident/
+10:31:12	Warning: 	File has moved from https://www.entyviohcp.com/Trident/ to https://www.entyviohcp.com/Trident
+10:31:13	Error: 	"Not Found" (404) at link https://www.entyviohcp.com/get (from assets.adobedtm.com/8fee56b0a165/6889643c630d/launch-bb8830cef805.min.js)
+10:31:13	Error: 	"Not Found" (404) at link https://www.entyviohcp.com/helpers/getObjectProperty.js (from assets.adobedtm.com/8fee56b0a165/6889643c630d/launch-bb8830cef805.min.js)
+10:31:24	Warning: 	Retry after error -4 (Connect Error) at link https://cdn.pullthrough.tools/CommercialSite/js/PFV.js?rev=1.0.5 (from https://www.entyviohcp.com/local-coverage/)
+10:31:24	Error: 	"Error when decompressing" (-1) at link https://www.entyviohcp.com/Trident (from https://www.entyviohcp.com/Trident/)
+10:31:46	Warning: 	Moved Permanently for https://www.entyviohcp.com/local-coverage/Trident/
+10:31:46	Warning: 	File has moved from https://www.entyviohcp.com/local-coverage/Trident/ to https://www.entyviohcp.com/local-coverage/Trident
+10:31:47	Error: 	"Not Found" (404) at link https://www.entyviohcp.com/local-coverage/get (from assets.adobedtm.com/8fee56b0a165/6889643c630d/launch-77f46a9f3347-development.min.js)
+10:31:47	Warning: 	Retry after error -4 (Connect Error) at link https://cdn.pullthrough.tools/CommercialSite/js/PFV.js?rev=1.0.5 (from https://www.entyviohcp.com/local-coverage/)
+10:31:47	Error: 	"Not Found" (404) at link https://www.entyviohcp.com/local-coverage/Trident (from https://www.entyviohcp.com/local-coverage/Trident/)
+10:32:08	Error: 	"Connect Error" (-4) after 2 retries at link https://cdn.pullthrough.tools/CommercialSite/js/PFV.js?rev=1.0.5 (from https://www.entyviohcp.com/local-coverage/)
+
+HTTrack Website Copier/3.49-2 mirror complete in 2 minutes 28 seconds : 199 links scanned, 187 files written (46558578 bytes overall) [41498992 bytes received at 280398 bytes/sec], 7093913 bytes transferred using HTTP compression in 79 files, ratio 24%, 11.5 requests per connection
+(7 errors, 6 warnings, 0 messages)

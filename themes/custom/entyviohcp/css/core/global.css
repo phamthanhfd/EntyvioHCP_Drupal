@@ -1,0 +1,254 @@
+/*================ Color Variables ================*/
+	:root {
+		--mq-desktop: 1800;
+		--mq-laptop: 960;
+		--mq-tablet: 1024;
+		--mq-mobile: 959;
+		--mq-mobile-sm: 374;
+
+    /* Gutter */
+    --gt-desktop: 30px;
+		--gt-laptop: 15px;
+		--gt-mobile:	25px;
+
+    /* Max page width */
+    --pw-site: 1920px;
+    --pw-desktop: 1366px;
+    --pw-laptop:	1366px;
+    --pw-tablet:	1024px;
+    --pw-mobile: 100%;
+
+    /* Header height  */
+    -hh-desktop: 	60px;
+		-hh-mobile: 48px;
+
+    /* Grid */
+    --gr-column: 12;
+    --gr-mobile-column: 12;
+    --gr-desktop-column:	12;
+    --gr-gutter:	10px;
+    --gr-half-gutter: calc(var(--gr-gutter) / 2);
+
+    /* Common */
+    --cm-light:				#fff;		/* white */
+    --cm-darker: 			#000;		/* black */
+
+    /* General brand */
+    --gb-primary:			#9b288c; 	/* purple */
+    --gb-primary_light:		#f4e8f3; 	/* light purple */
+    --gb-primary_dark: 		#3d053a;	/* dark purple */
+    --gb-secondary:			#ffcb03; 	 /* yellow */
+    --gb-teritary:			#e63c2d;	/* red */
+    --gb-dark: 				#58595b;	/* dark gray */
+    --gb-light-dark:			#e6e7e8;	/* light gray */
+    --gb-link-color:			#58595b;	/* dark gray (same as dark) */
+    --gb-link-color-hover:	#9b288c;	/* purple (same as primary) */
+
+    /* Button */
+    --bt-button_border: 		#cc91c6;	/* dark pink */
+
+    /* Table */
+    --tb-table-header: 		#9b288c;	/* same as primary brand colour */
+    --tb-table-td-odd: 		#e6e6e6;	/* gray */
+    --tb-table-td-even: 		#eee; 		/* gray */
+
+    /* Download list */
+    --dl-list_border:		#898a8c;
+
+    /* Form */
+    --fm-error: 				#d93747;		/* error */
+    --fm-success: 			#98d937;			/* success */
+	  }
+
+/********************************/
+/**** **** GLOBAL STYLE **** ***/
+/******************************/
+/**** **** PREMADE VIEWPORT **** ***/
+/**** **** CUSTOM VIEWPORT **** ***/
+/* Usage: @include viewport-custom(200, 300) {
+	 h1 {
+		 font-size: 20px;
+	}
+}
+
+ */
+/**** **** SPECIFIC VIEWPORT **** ***/
+/* ipad specific */
+/* iphone 6/7/8 specific */
+/* ie11 specific */
+/**** **** FOCUS **** ***/
+ *:focus {
+	 -webkit-box-shadow: 0px 0px 11px 2px var(--gb-primary);
+	 -moz-box-shadow: 0px 0px 11px 2px var(--gb-primary);
+	 box-shadow: 0px 0px 11px 2px var(--gb-primary);
+	 outline: none;
+}
+/**** *** PLACEHOLDER COLOUR **** ***/
+ ::-webkit-input-placeholder {
+	 color: var(--cm-light);
+}
+ :-ms-input-placeholder {
+	 color: var(--cm-light);
+}
+ ::placeholder {
+	 color: var(--cm-light);
+}
+/**** **** SKIP NAVIGATION **** ***/
+ .skip-navigation {
+	 font-family: 'Gotham', sans-serif;
+	 position: fixed;
+	 top: -55px;
+	 left: 8px;
+	 padding: 0 20px;
+	 min-height: 48px;
+	 line-height: 48px;
+	 color: var(--gb-primary);
+	 border: 2px solid var(--gb-primary);
+	 border-radius: 0 0 8px 8px;
+	 z-index: 10;
+	 text-decoration: none;
+	 background: var(--cm-light);
+	 transition: top 300ms ease-in-out;
+	 will-change: top;
+}
+ .skip-navigation.active, .skip-navigation:focus {
+	 top: -2px;
+}
+/**** **** HIDDEN **** ***/
+ [hidden], .hidden {
+	 display: none !important;
+}
+/**** **** VISUALLY HIDDEN **** ***/
+ .visuallyhidden {
+	 border: 0;
+	 clip: rect(0 0 0 0);
+	 height: 1px;
+	 margin: -1px;
+	 overflow: hidden;
+	 padding: 0;
+	 position: absolute;
+	 width: 1px;
+}
+
+/**** **** MOBILE/DESKTOP ONLY **** ***/
+/* from laptop to desktop */
+/* only desktop */
+
+	 @media screen and (min-width: 1800px) and (max-width: 9999px) {
+		 [data-only*="desktop"] {
+			 display: none;
+		}
+	}
+
+/* only laptop */
+
+	 @media screen and (min-width: 960px) and (max-width: 1800px) {
+		 [data-only*="desktop"] {
+			 display: none;
+		}
+	}
+
+/* only tablet */
+
+	 @media screen and (min-width: 959px) and (max-width: 1024px) {
+		 [data-only*="desktop"] {
+			 display: none;
+		}
+	}
+
+/* only mobile */
+
+	 @media screen and (max-width : 959px) {
+		 [data-only*="desktop"] {
+			 display: none;
+		}
+	}
+
+/* only mobile small */
+
+	 @media screen and (max-width : 374px) {
+		 [data-only*="desktop"] {
+			 display: none;
+		}
+	}
+
+/* from laptop to desktop */
+ @media screen and (min-width: 960px) and (max-width: 9999px) {
+	 [data-only*="mobile"] {
+		 display: none;
+	}
+}
+/* only desktop */
+
+	 @media screen and (min-width: 1800px) and (max-width: 9999px) {
+		 [data-only*="mobile"] {
+			 display: none;
+		}
+	}
+
+
+	 @media screen and (min-width: 960px) and (max-width: 1800px) {
+		 [data-only*="mobile"] {
+			 display: none;
+		}
+	}
+
+/* only tablet */
+
+	 @media screen and (min-width: 959px) and (max-width: 1024px) {
+		 [data-only*="mobile"] {
+			 display: none;
+		}
+	}
+
+
+	 @media screen and (max-width : 959px) {
+		 [data-only*="mobile"] {
+			 display: none;
+		}
+	}
+
+/* only mobile small */
+
+	 @media screen and (max-width : 374px) {
+		 [data-only*="mobile"] {
+			 display: none;
+		}
+	}
+
+/**** **** NO LINE BREAK **** ***/
+ nobr, .nobr {
+	 white-space: nowrap;
+}
+/**** **** ENTYVIOCONNECT STYLING **** ***/
+/**** **** FLOAT SETS **** ***/
+ [data-float="right"] {
+	 float: right;
+}
+ [data-float="left"] {
+	 float: left;
+}
+ [data-float="none"] {
+	 float: none;
+}
+/**** **** TEXT ALIGN SETS **** ***/
+ [data-text-align="right"] {
+	 text-align: right;
+}
+ [data-text-align="left"] {
+	 text-align: left;
+}
+ [data-text-align="center"] {
+	 text-align: center;
+}
+/**** **** FORMS **** ***/
+ button[disabled] {
+	 cursor: wait;
+}
+/**** **** MARGINS **** ***/
+ .no-margin {
+	 margin: 0;
+}
+ .no-margin-bottom {
+	 margin-bottom: 0;
+}

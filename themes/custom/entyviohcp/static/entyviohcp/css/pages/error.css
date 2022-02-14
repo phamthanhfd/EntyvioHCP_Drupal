@@ -1,0 +1,670 @@
+/***********************************/
+/**** **** MATRIX SETTINGS **** ***/
+/*********************************/
+/* Usage: Update matrix gutter HTML: <nav data-matrix=""> <a> <a> SASS: @include matrix_setting([number of matrix], [gutter space], '[child element]');
+ Example: @include matrix_setting(2, 30px, 'div');
+ */
+/************************************************/
+/**** **** TYPEFACE SETTINGS (LOCAL) v2 **** ***/
+/**********************************************/
+/* Usage: $local-font-settings: ( (Gotham, Gotham-Light_Web, '200'), (Gotham, Gotham-Book_Web, '400'), (Gotham, Gotham-Medium_Web, '500') );
+ $font_path : '../_assets/core/fonts';
+ Usage: @include localFontSetup($local-font-settings, $font_path);
+ Usage: @mixin gotham($font) {
+	 font-family: 'Gotham', sans-serif;
+	 @if $font == light {
+		 font-weight: 200;
+	}
+	 @else if $font == book {
+		 font-weight: 400;
+	}
+	 @else if $font == medium {
+		 font-weight: 500;
+	}
+}
+ body {
+	 @include gotham(book);
+}
+ */
+/*****************************/
+/**** **** ANIMATION **** ***/
+/***************************/
+/* Usage: @include animationFrames(fade) {
+	 0% {
+		 opacity: 1;
+	}
+	 50% {
+		 opacity: 0;
+	}
+}
+ */
+/* Usage: @include animation(300ms fade ease-in-out forwards, 100);
+ */
+/**************************************/
+/**** *** PAGE WIDTH SETTINGS **** ***/
+/************************************/
+/**** **** GRID MIXIN **** ***/
+/****************************/
+/**** **** FLEX SET **** ***/
+/**************************/
+/******************************/
+/**** **** RESET LIST **** ***/
+/****************************/
+/*****************************/
+/**** **** FOR PRINT **** ***/
+/***************************/
+/**** **** SETTING UP TYPEFACE **** ***/
+/**** **** PREMADE VIEWPORT **** ***/
+/**** **** CUSTOM VIEWPORT **** ***/
+/* Usage: @include viewport-custom(200, 300) {
+	 h1 {
+		 font-size: 20px;
+	}
+}
+ */
+/**** **** SPECIFIC VIEWPORT **** ***/
+/* ipad specific */
+/* iphone 6/7/8 specific */
+/* ie11 specific */
+/**** **** PRIMARY TYPE **** ***/
+/**** **** TEXT TYPE **** ***/
+/**** **** CLOSE **** ***/
+/* Usage: @include close-icon([width of icon], [height of icon], [icon colour]);
+ Examples: @include close-icon(25px, 3px, brand(primary));
+ @include close-icon($width: 25px);
+ @include close-icon;
+ */
+/* init */
+ [data-icon="close"] span {
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 width: 100%;
+	 height: 100%;
+	 transform: translate(-50%, -50%);
+}
+ [data-icon="close"] span:before, [data-icon="close"] span:after {
+	 content: '';
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 width: 100%;
+	 height: 3px;
+	 transform-origin: 0 0;
+	 background: brand(primary);
+}
+ [data-icon="close"] span:before {
+	 transform: rotate(45deg) translate(-50%, -50%);
+}
+ [data-icon="close"] span:after {
+	 transform: rotate(-45deg) translate(-50%, -50%);
+}
+/**** **** HAMBURGER **** ***/
+/* Usage: @include hamburger([width of icon], [height of icon], [space between lines], [icon colour]);
+ Examples: @include hamburger(25px, 2px, 1, #fff);
+ @include hamburger($width: 25px, $bg: #f00);
+ @include hamburger;
+ */
+/* init */
+ [data-icon="hamburger"] span {
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 width: 100%;
+	 height: 3px;
+	 transform: translate(-50%, -50%);
+	 background: brand(primary);
+}
+ [data-icon="hamburger"] span:before, [data-icon="hamburger"] span:after {
+	 content: '';
+	 position: absolute;
+	 left: 0;
+	 width: 100%;
+	 height: 3px;
+	 transform-origin: 0 0;
+	 background: brand(primary);
+}
+ [data-icon="hamburger"] span:before {
+	 bottom: 7.5px;
+}
+ [data-icon="hamburger"] span:after {
+	 top: 7.5px;
+}
+/**** **** PLUS/MINUS **** ***/
+/* Usage: @plus-minus-icon([width of icon], [height of icon], [icon colour]);
+ Examples: @plus-minus-icon(25px, 2px, #fff);
+ @include plus-minus-icon($width: 13px);
+ @plus-minus-icon;
+ */
+/* init */
+ [data-icon="plus-minus"] span {
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 width: 100%;
+	 height: 100%;
+	 transform: translate(-50%, -50%);
+}
+ [data-icon="plus-minus"] span:before, [data-icon="plus-minus"] span:after {
+	 content: '';
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 width: 100%;
+	 height: 3px;
+	 transform-origin: 0 0;
+	 background: brand(primary);
+}
+ [data-icon="plus-minus"] span:before {
+	 transform: translate(-50%, -50%);
+}
+ [data-icon="plus-minus"] span:after {
+	 transform: rotate(90deg) translate(-50%, -50%);
+}
+/**** **** YELLOW CIRCLE WORD ICONS **** ***/
+/* Usage: <p data-dot>Vs</p> */
+/****************************/
+/**** **** LANGUAGE **** ***/
+/**************************/
+/* en or cn */
+/***********************************/
+/**** **** LAYOUT SETTINGS **** ***/
+/*********************************/
+/*********************************/
+/**** **** GRID SETTINGS **** ***/
+/*******************************/
+/**********************************/
+/**** **** BRAND SETTINGS **** ***/
+/********************************/
+/* form */
+/*********************************/
+/**** **** PATH SETTINGS **** ***/
+/*******************************/
+/*************************************/
+/**** **** TYPEFACE SETTINGS **** ***/
+/***********************************/
+/***************************/
+/**** **** ERROR **** *****/
+/*************************/
+ [data-page-id="Error_404"], [data-page-id="Error_500"] {
+	/**** **** MOBILE **** ***/
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+	/**** **** DESKTOP **** ***/
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ [data-page-id="Error_404"] #hero:before, [data-page-id="Error_500"] #hero:before {
+	 content: none;
+}
+ [data-page-id="Error_404"] #hero:after, [data-page-id="Error_500"] #hero:after {
+	 left: 0;
+	 width: 100%;
+	 background: url(path(background)/sitemap_bg.svg) 0 calc(100% + 200px) no-repeat;
+	 background-size: 100% auto;
+}
+ [data-page-id="Error_404"] #hero h1, [data-page-id="Error_500"] #hero h1 {
+	 position: relative;
+	 color: brand(light);
+	 text-transform: uppercase;
+	 text-align: center;
+	 z-index: 1;
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-id="Error_404"] #hero h1, [data-page-id="Error_500"] #hero h1 {
+			 padding-top: 75px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-id="Error_404"] #hero h1, [data-page-id="Error_500"] #hero h1 {
+			 padding-top: 75px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-id="Error_404"] #hero h1, [data-page-id="Error_500"] #hero h1 {
+			 padding-top: 75px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-id="Error_404"] #hero h1, [data-page-id="Error_500"] #hero h1 {
+			 padding-top: 75px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-id="Error_404"] #hero h1, [data-page-id="Error_500"] #hero h1 {
+			 padding-top: 75px;
+		}
+	}
+}
+ @else if $breakpoint == desktop {
+}
+ @else if $breakpoint == laptop {
+}
+ @else if $breakpoint == tablet {
+}
+ @else if $breakpoint == mobile {
+}
+ @else if $breakpoint == mobile-sm {
+}
+ [data-page-id="Error_404"] #hero h2, [data-page-id="Error_500"] #hero h2 {
+	 position: relative;
+	 color: brand(light);
+	 text-align: center;
+	 font-style: italic;
+	 z-index: 1;
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-id="Error_404"] #hero h2, [data-page-id="Error_500"] #hero h2 {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 500;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-id="Error_404"] #hero h2, [data-page-id="Error_500"] #hero h2 {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 500;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-id="Error_404"] #hero h2, [data-page-id="Error_500"] #hero h2 {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 500;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-id="Error_404"] #hero h2, [data-page-id="Error_500"] #hero h2 {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 500;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-id="Error_404"] #hero h2, [data-page-id="Error_500"] #hero h2 {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 500;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+	}
+}
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) {
+	 [data-page-id="Error_404"] #hero h2, [data-page-id="Error_500"] #hero h2 {
+		 font-family: 'Gotham', sans-serif;
+		 font-weight: 500;
+	}
+	 @else if {
+		 font-size: 22px;
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-id="Error_404"] #hero h2, [data-page-id="Error_500"] #hero h2 {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 500;
+		}
+		 @else if {
+			 font-size: 22px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-id="Error_404"] #hero h2, [data-page-id="Error_500"] #hero h2 {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 500;
+		}
+		 @else if {
+			 font-size: 22px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-id="Error_404"] #hero h2, [data-page-id="Error_500"] #hero h2 {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 500;
+		}
+		 @else if {
+			 font-size: 22px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-id="Error_404"] #hero h2, [data-page-id="Error_500"] #hero h2 {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 500;
+		}
+		 @else if {
+			 font-size: 22px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-id="Error_404"] #hero h2, [data-page-id="Error_500"] #hero h2 {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 500;
+		}
+		 @else if {
+			 font-size: 22px;
+		}
+	}
+}
+ [data-page-id="Error_404"] #first_section, [data-page-id="Error_500"] #first_section {
+	 background: brand(light);
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-id="Error_404"] #hero, [data-page-id="Error_500"] #hero {
+			 height: 180px;
+			 margin-top: 110px;
+		}
+		 [data-page-id="Error_404"] .body-content, [data-page-id="Error_500"] .body-content {
+			 margin: 30px auto;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-id="Error_404"] #hero, [data-page-id="Error_500"] #hero {
+			 height: 180px;
+			 margin-top: 110px;
+		}
+		 [data-page-id="Error_404"] .body-content, [data-page-id="Error_500"] .body-content {
+			 margin: 30px auto;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-id="Error_404"] #hero, [data-page-id="Error_500"] #hero {
+			 height: 180px;
+			 margin-top: 110px;
+		}
+		 [data-page-id="Error_404"] .body-content, [data-page-id="Error_500"] .body-content {
+			 margin: 30px auto;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-id="Error_404"] #hero, [data-page-id="Error_500"] #hero {
+			 height: 180px;
+			 margin-top: 110px;
+		}
+		 [data-page-id="Error_404"] .body-content, [data-page-id="Error_500"] .body-content {
+			 margin: 30px auto;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-id="Error_404"] #hero, [data-page-id="Error_500"] #hero {
+			 height: 180px;
+			 margin-top: 110px;
+		}
+		 [data-page-id="Error_404"] .body-content, [data-page-id="Error_500"] .body-content {
+			 margin: 30px auto;
+		}
+	}
+}
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) {
+	 [data-page-id="Error_404"] header[data-device="desktop"] .eyebrow:before, [data-page-id="Error_500"] header[data-device="desktop"] .eyebrow:before {
+		 content: none;
+	}
+	 [data-page-id="Error_404"] header[data-device="desktop"] .eyebrow:after, [data-page-id="Error_500"] header[data-device="desktop"] .eyebrow:after {
+		 width: 100%;
+		 left: 0;
+		 background: url(path(background)/sitemap_bg.svg) 0 -390px no-repeat;
+		 background-size: 100% auto;
+	}
+	 [data-page-id="Error_404"] #hero, [data-page-id="Error_500"] #hero {
+		 min-height: 490px;
+		 margin-top: 118px;
+		 padding-top: 130px;
+	}
+	 [data-page-id="Error_404"] .body-content, [data-page-id="Error_500"] .body-content {
+		 margin-top: 88px;
+		 margin-bottom: 100px;
+		 width: 100%;
+	}
+	 [data-page-id="Error_404"] .main-container, [data-page-id="Error_500"] .main-container {
+		 margin: 0 50px;
+		 padding: 50px;
+		 background: brand(light);
+	}
+	 [data-page-id="Error_404"] .bottom-container, [data-page-id="Error_500"] .bottom-container {
+		 margin-top: 25px;
+		 padding-top: 30px;
+		 border-top: 2px solid brand(secondary);
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 [data-page-id="Error_404"] header[data-device="desktop"] .eyebrow:before, [data-page-id="Error_500"] header[data-device="desktop"] .eyebrow:before {
+			 content: none;
+		}
+		 [data-page-id="Error_404"] header[data-device="desktop"] .eyebrow:after, [data-page-id="Error_500"] header[data-device="desktop"] .eyebrow:after {
+			 width: 100%;
+			 left: 0;
+			 background: url(path(background)/sitemap_bg.svg) 0 -390px no-repeat;
+			 background-size: 100% auto;
+		}
+		 [data-page-id="Error_404"] #hero, [data-page-id="Error_500"] #hero {
+			 min-height: 490px;
+			 margin-top: 118px;
+			 padding-top: 130px;
+		}
+		 [data-page-id="Error_404"] .body-content, [data-page-id="Error_500"] .body-content {
+			 margin-top: 88px;
+			 margin-bottom: 100px;
+			 width: 100%;
+		}
+		 [data-page-id="Error_404"] .main-container, [data-page-id="Error_500"] .main-container {
+			 margin: 0 50px;
+			 padding: 50px;
+			 background: brand(light);
+		}
+		 [data-page-id="Error_404"] .bottom-container, [data-page-id="Error_500"] .bottom-container {
+			 margin-top: 25px;
+			 padding-top: 30px;
+			 border-top: 2px solid brand(secondary);
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 [data-page-id="Error_404"] header[data-device="desktop"] .eyebrow:before, [data-page-id="Error_500"] header[data-device="desktop"] .eyebrow:before {
+			 content: none;
+		}
+		 [data-page-id="Error_404"] header[data-device="desktop"] .eyebrow:after, [data-page-id="Error_500"] header[data-device="desktop"] .eyebrow:after {
+			 width: 100%;
+			 left: 0;
+			 background: url(path(background)/sitemap_bg.svg) 0 -390px no-repeat;
+			 background-size: 100% auto;
+		}
+		 [data-page-id="Error_404"] #hero, [data-page-id="Error_500"] #hero {
+			 min-height: 490px;
+			 margin-top: 118px;
+			 padding-top: 130px;
+		}
+		 [data-page-id="Error_404"] .body-content, [data-page-id="Error_500"] .body-content {
+			 margin-top: 88px;
+			 margin-bottom: 100px;
+			 width: 100%;
+		}
+		 [data-page-id="Error_404"] .main-container, [data-page-id="Error_500"] .main-container {
+			 margin: 0 50px;
+			 padding: 50px;
+			 background: brand(light);
+		}
+		 [data-page-id="Error_404"] .bottom-container, [data-page-id="Error_500"] .bottom-container {
+			 margin-top: 25px;
+			 padding-top: 30px;
+			 border-top: 2px solid brand(secondary);
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 [data-page-id="Error_404"] header[data-device="desktop"] .eyebrow:before, [data-page-id="Error_500"] header[data-device="desktop"] .eyebrow:before {
+			 content: none;
+		}
+		 [data-page-id="Error_404"] header[data-device="desktop"] .eyebrow:after, [data-page-id="Error_500"] header[data-device="desktop"] .eyebrow:after {
+			 width: 100%;
+			 left: 0;
+			 background: url(path(background)/sitemap_bg.svg) 0 -390px no-repeat;
+			 background-size: 100% auto;
+		}
+		 [data-page-id="Error_404"] #hero, [data-page-id="Error_500"] #hero {
+			 min-height: 490px;
+			 margin-top: 118px;
+			 padding-top: 130px;
+		}
+		 [data-page-id="Error_404"] .body-content, [data-page-id="Error_500"] .body-content {
+			 margin-top: 88px;
+			 margin-bottom: 100px;
+			 width: 100%;
+		}
+		 [data-page-id="Error_404"] .main-container, [data-page-id="Error_500"] .main-container {
+			 margin: 0 50px;
+			 padding: 50px;
+			 background: brand(light);
+		}
+		 [data-page-id="Error_404"] .bottom-container, [data-page-id="Error_500"] .bottom-container {
+			 margin-top: 25px;
+			 padding-top: 30px;
+			 border-top: 2px solid brand(secondary);
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 [data-page-id="Error_404"] header[data-device="desktop"] .eyebrow:before, [data-page-id="Error_500"] header[data-device="desktop"] .eyebrow:before {
+			 content: none;
+		}
+		 [data-page-id="Error_404"] header[data-device="desktop"] .eyebrow:after, [data-page-id="Error_500"] header[data-device="desktop"] .eyebrow:after {
+			 width: 100%;
+			 left: 0;
+			 background: url(path(background)/sitemap_bg.svg) 0 -390px no-repeat;
+			 background-size: 100% auto;
+		}
+		 [data-page-id="Error_404"] #hero, [data-page-id="Error_500"] #hero {
+			 min-height: 490px;
+			 margin-top: 118px;
+			 padding-top: 130px;
+		}
+		 [data-page-id="Error_404"] .body-content, [data-page-id="Error_500"] .body-content {
+			 margin-top: 88px;
+			 margin-bottom: 100px;
+			 width: 100%;
+		}
+		 [data-page-id="Error_404"] .main-container, [data-page-id="Error_500"] .main-container {
+			 margin: 0 50px;
+			 padding: 50px;
+			 background: brand(light);
+		}
+		 [data-page-id="Error_404"] .bottom-container, [data-page-id="Error_500"] .bottom-container {
+			 margin-top: 25px;
+			 padding-top: 30px;
+			 border-top: 2px solid brand(secondary);
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 [data-page-id="Error_404"] header[data-device="desktop"] .eyebrow:before, [data-page-id="Error_500"] header[data-device="desktop"] .eyebrow:before {
+			 content: none;
+		}
+		 [data-page-id="Error_404"] header[data-device="desktop"] .eyebrow:after, [data-page-id="Error_500"] header[data-device="desktop"] .eyebrow:after {
+			 width: 100%;
+			 left: 0;
+			 background: url(path(background)/sitemap_bg.svg) 0 -390px no-repeat;
+			 background-size: 100% auto;
+		}
+		 [data-page-id="Error_404"] #hero, [data-page-id="Error_500"] #hero {
+			 min-height: 490px;
+			 margin-top: 118px;
+			 padding-top: 130px;
+		}
+		 [data-page-id="Error_404"] .body-content, [data-page-id="Error_500"] .body-content {
+			 margin-top: 88px;
+			 margin-bottom: 100px;
+			 width: 100%;
+		}
+		 [data-page-id="Error_404"] .main-container, [data-page-id="Error_500"] .main-container {
+			 margin: 0 50px;
+			 padding: 50px;
+			 background: brand(light);
+		}
+		 [data-page-id="Error_404"] .bottom-container, [data-page-id="Error_500"] .bottom-container {
+			 margin-top: 25px;
+			 padding-top: 30px;
+			 border-top: 2px solid brand(secondary);
+		}
+	}
+}
+ 

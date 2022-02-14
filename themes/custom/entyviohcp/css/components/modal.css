@@ -1,0 +1,1377 @@
+/***********************************/
+/**** **** MATRIX SETTINGS **** ***/
+/*********************************/
+/* Usage: Update matrix gutter HTML: <nav data-matrix=""> <a> <a> SASS: @include matrix_setting([number of matrix], [gutter space], '[child element]');
+ Example: @include matrix_setting(2, 30px, 'div');
+ */
+/************************************************/
+/**** **** TYPEFACE SETTINGS (LOCAL) v2 **** ***/
+/**********************************************/
+/* Usage: $local-font-settings: ( (Gotham, Gotham-Light_Web, '200'), (Gotham, Gotham-Book_Web, '400'), (Gotham, Gotham-Medium_Web, '500') );
+ $font_path : '../_assets/core/fonts';
+ Usage: @include localFontSetup($local-font-settings, $font_path);
+ Usage: @mixin gotham($font) {
+	 font-family: 'Gotham', sans-serif;
+	 @if $font == light {
+		 font-weight: 200;
+	}
+	 @else if $font == book {
+		 font-weight: 400;
+	}
+	 @else if $font == medium {
+		 font-weight: 500;
+	}
+}
+ body {
+	 @include gotham(book);
+}
+ */
+/*****************************/
+/**** **** ANIMATION **** ***/
+/***************************/
+/* Usage: @include animationFrames(fade) {
+	 0% {
+		 opacity: 1;
+	}
+	 50% {
+		 opacity: 0;
+	}
+}
+ */
+/* Usage: @include animation(300ms fade ease-in-out forwards, 100);
+ */
+/**************************************/
+/**** *** PAGE WIDTH SETTINGS **** ***/
+/************************************/
+/**** **** GRID MIXIN **** ***/
+/****************************/
+/**** **** FLEX SET **** ***/
+/**************************/
+/******************************/
+/**** **** RESET LIST **** ***/
+/****************************/
+/*****************************/
+/**** **** FOR PRINT **** ***/
+/***************************/
+/**** **** SETTING UP TYPEFACE **** ***/
+/**** **** PREMADE VIEWPORT **** ***/
+/**** **** CUSTOM VIEWPORT **** ***/
+/* Usage: @include viewport-custom(200, 300) {
+	 h1 {
+		 font-size: 20px;
+	}
+}
+ */
+/**** **** SPECIFIC VIEWPORT **** ***/
+/* ipad specific */
+/* iphone 6/7/8 specific */
+/* ie11 specific */
+/**** **** PRIMARY TYPE **** ***/
+/**** **** TEXT TYPE **** ***/
+/**** **** CLOSE **** ***/
+/* Usage: @include close-icon([width of icon], [height of icon], [icon colour]);
+ Examples: @include close-icon(25px, 3px, brand(primary));
+ @include close-icon($width: 25px);
+ @include close-icon;
+ */
+/* init */
+ [data-icon="close"] span {
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 width: 100%;
+	 height: 100%;
+	 transform: translate(-50%, -50%);
+}
+ [data-icon="close"] span:before, [data-icon="close"] span:after {
+	 content: '';
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 width: 100%;
+	 height: 3px;
+	 transform-origin: 0 0;
+	 background: brand(primary);
+}
+ [data-icon="close"] span:before {
+	 transform: rotate(45deg) translate(-50%, -50%);
+}
+ [data-icon="close"] span:after {
+	 transform: rotate(-45deg) translate(-50%, -50%);
+}
+/**** **** HAMBURGER **** ***/
+/* Usage: @include hamburger([width of icon], [height of icon], [space between lines], [icon colour]);
+ Examples: @include hamburger(25px, 2px, 1, #fff);
+ @include hamburger($width: 25px, $bg: #f00);
+ @include hamburger;
+ */
+/* init */
+ [data-icon="hamburger"] span {
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 width: 100%;
+	 height: 3px;
+	 transform: translate(-50%, -50%);
+	 background: brand(primary);
+}
+ [data-icon="hamburger"] span:before, [data-icon="hamburger"] span:after {
+	 content: '';
+	 position: absolute;
+	 left: 0;
+	 width: 100%;
+	 height: 3px;
+	 transform-origin: 0 0;
+	 background: brand(primary);
+}
+ [data-icon="hamburger"] span:before {
+	 bottom: 7.5px;
+}
+ [data-icon="hamburger"] span:after {
+	 top: 7.5px;
+}
+/**** **** PLUS/MINUS **** ***/
+/* Usage: @plus-minus-icon([width of icon], [height of icon], [icon colour]);
+ Examples: @plus-minus-icon(25px, 2px, #fff);
+ @include plus-minus-icon($width: 13px);
+ @plus-minus-icon;
+ */
+/* init */
+ [data-icon="plus-minus"] span {
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 width: 100%;
+	 height: 100%;
+	 transform: translate(-50%, -50%);
+}
+ [data-icon="plus-minus"] span:before, [data-icon="plus-minus"] span:after {
+	 content: '';
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 width: 100%;
+	 height: 3px;
+	 transform-origin: 0 0;
+	 background: brand(primary);
+}
+ [data-icon="plus-minus"] span:before {
+	 transform: translate(-50%, -50%);
+}
+ [data-icon="plus-minus"] span:after {
+	 transform: rotate(90deg) translate(-50%, -50%);
+}
+/**** **** YELLOW CIRCLE WORD ICONS **** ***/
+/* Usage: <p data-dot>Vs</p> */
+/****************************/
+/**** **** LANGUAGE **** ***/
+/**************************/
+/* en or cn */
+/***********************************/
+/**** **** LAYOUT SETTINGS **** ***/
+/*********************************/
+/*********************************/
+/**** **** GRID SETTINGS **** ***/
+/*******************************/
+/**********************************/
+/**** **** BRAND SETTINGS **** ***/
+/********************************/
+/* form */
+/*********************************/
+/**** **** PATH SETTINGS **** ***/
+/*******************************/
+/*************************************/
+/**** **** TYPEFACE SETTINGS **** ***/
+/***********************************/
+/*************************/
+/**** **** MODAL **** ***/
+/***********************/
+/**** **** VARIABLES **** ***/
+/**** **** LAYOUT **** ***/
+ #modal {
+	 position: fixed;
+	 top: 0;
+	 right: 0;
+	 bottom: 0;
+	 left: 0;
+	 width: 100vw;
+	 height: 100%;
+	 display: none;
+	 align-items: center;
+	 z-index: 15;
+	/* typography */
+}
+ #modal > strong {
+	 position: absolute;
+	 top: 0;
+	 left: 0;
+	 width: 100vw;
+	 height: 100%;
+	 cursor: pointer;
+	 background: rgba(0, 1, 0, );
+}
+ #modal > div {
+	 position: relative;
+	 margin: auto;
+	 width: 100%;
+	 height: auto;
+	 display: block;
+	 z-index: 2;
+	 overflow: hidden;
+	 background: brand(light);
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 #modal > div {
+			 max-width: calc(100% - page-gutter(mobile) * 2);
+			 max-height: calc(100% - page-gutter(mobile) * 2);
+			 overflow-y: scroll;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 #modal > div {
+			 max-width: calc(100% - page-gutter(mobile) * 2);
+			 max-height: calc(100% - page-gutter(mobile) * 2);
+			 overflow-y: scroll;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 #modal > div {
+			 max-width: calc(100% - page-gutter(mobile) * 2);
+			 max-height: calc(100% - page-gutter(mobile) * 2);
+			 overflow-y: scroll;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 #modal > div {
+			 max-width: calc(100% - page-gutter(mobile) * 2);
+			 max-height: calc(100% - page-gutter(mobile) * 2);
+			 overflow-y: scroll;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 #modal > div {
+			 max-width: calc(100% - page-gutter(mobile) * 2);
+			 max-height: calc(100% - page-gutter(mobile) * 2);
+			 overflow-y: scroll;
+		}
+	}
+}
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) {
+	 #modal > div {
+		 max-width: 752px;
+		 min-height: 200px;
+		 max-height: 400px;
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 #modal > div {
+			 max-width: 752px;
+			 min-height: 200px;
+			 max-height: 400px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 #modal > div {
+			 max-width: 752px;
+			 min-height: 200px;
+			 max-height: 400px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 #modal > div {
+			 max-width: 752px;
+			 min-height: 200px;
+			 max-height: 400px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 #modal > div {
+			 max-width: 752px;
+			 min-height: 200px;
+			 max-height: 400px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 #modal > div {
+			 max-width: 752px;
+			 min-height: 200px;
+			 max-height: 400px;
+		}
+	}
+}
+ #modal > div > .close {
+	 position: absolute;
+	 z-index: 2;
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 #modal > div > .close {
+			 top: 5px;
+			 right: 5px;
+			 width: 30px;
+			 height: 30px;
+		}
+		 #modal > div > .close span {
+			 position: absolute;
+			 top: 50%;
+			 left: 50%;
+			 width: 12px;
+			 height: 12px;
+			 transform: translate(-50%, -50%);
+		}
+		 #modal > div > .close span:before, #modal > div > .close span:after {
+			 content: '';
+			 position: absolute;
+			 top: 50%;
+			 left: 50%;
+			 width: 12px;
+			 height: 1px;
+			 transform-origin: 0 0;
+			 background: brand(primary);
+		}
+		 #modal > div > .close span:before {
+			 transform: rotate(45deg) translate(-50%, -50%);
+		}
+		 #modal > div > .close span:after {
+			 transform: rotate(-45deg) translate(-50%, -50%);
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 #modal > div > .close {
+			 top: 5px;
+			 right: 5px;
+			 width: 30px;
+			 height: 30px;
+		}
+		 #modal > div > .close span {
+			 position: absolute;
+			 top: 50%;
+			 left: 50%;
+			 width: 12px;
+			 height: 12px;
+			 transform: translate(-50%, -50%);
+		}
+		 #modal > div > .close span:before, #modal > div > .close span:after {
+			 content: '';
+			 position: absolute;
+			 top: 50%;
+			 left: 50%;
+			 width: 12px;
+			 height: 1px;
+			 transform-origin: 0 0;
+			 background: brand(primary);
+		}
+		 #modal > div > .close span:before {
+			 transform: rotate(45deg) translate(-50%, -50%);
+		}
+		 #modal > div > .close span:after {
+			 transform: rotate(-45deg) translate(-50%, -50%);
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 #modal > div > .close {
+			 top: 5px;
+			 right: 5px;
+			 width: 30px;
+			 height: 30px;
+		}
+		 #modal > div > .close span {
+			 position: absolute;
+			 top: 50%;
+			 left: 50%;
+			 width: 12px;
+			 height: 12px;
+			 transform: translate(-50%, -50%);
+		}
+		 #modal > div > .close span:before, #modal > div > .close span:after {
+			 content: '';
+			 position: absolute;
+			 top: 50%;
+			 left: 50%;
+			 width: 12px;
+			 height: 1px;
+			 transform-origin: 0 0;
+			 background: brand(primary);
+		}
+		 #modal > div > .close span:before {
+			 transform: rotate(45deg) translate(-50%, -50%);
+		}
+		 #modal > div > .close span:after {
+			 transform: rotate(-45deg) translate(-50%, -50%);
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 #modal > div > .close {
+			 top: 5px;
+			 right: 5px;
+			 width: 30px;
+			 height: 30px;
+		}
+		 #modal > div > .close span {
+			 position: absolute;
+			 top: 50%;
+			 left: 50%;
+			 width: 12px;
+			 height: 12px;
+			 transform: translate(-50%, -50%);
+		}
+		 #modal > div > .close span:before, #modal > div > .close span:after {
+			 content: '';
+			 position: absolute;
+			 top: 50%;
+			 left: 50%;
+			 width: 12px;
+			 height: 1px;
+			 transform-origin: 0 0;
+			 background: brand(primary);
+		}
+		 #modal > div > .close span:before {
+			 transform: rotate(45deg) translate(-50%, -50%);
+		}
+		 #modal > div > .close span:after {
+			 transform: rotate(-45deg) translate(-50%, -50%);
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 #modal > div > .close {
+			 top: 5px;
+			 right: 5px;
+			 width: 30px;
+			 height: 30px;
+		}
+		 #modal > div > .close span {
+			 position: absolute;
+			 top: 50%;
+			 left: 50%;
+			 width: 12px;
+			 height: 12px;
+			 transform: translate(-50%, -50%);
+		}
+		 #modal > div > .close span:before, #modal > div > .close span:after {
+			 content: '';
+			 position: absolute;
+			 top: 50%;
+			 left: 50%;
+			 width: 12px;
+			 height: 1px;
+			 transform-origin: 0 0;
+			 background: brand(primary);
+		}
+		 #modal > div > .close span:before {
+			 transform: rotate(45deg) translate(-50%, -50%);
+		}
+		 #modal > div > .close span:after {
+			 transform: rotate(-45deg) translate(-50%, -50%);
+		}
+	}
+}
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) {
+	 #modal > div > .close {
+		 top: 15px;
+		 right: 15px;
+		 width: 48px;
+		 height: 48px;
+	}
+	 #modal > div > .close span {
+		 position: absolute;
+		 top: 50%;
+		 left: 50%;
+		 width: 25px;
+		 height: 25px;
+		 transform: translate(-50%, -50%);
+	}
+	 #modal > div > .close span:before, #modal > div > .close span:after {
+		 content: '';
+		 position: absolute;
+		 top: 50%;
+		 left: 50%;
+		 width: 25px;
+		 height: 3px;
+		 transform-origin: 0 0;
+		 background: brand(primary);
+	}
+	 #modal > div > .close span:before {
+		 transform: rotate(45deg) translate(-50%, -50%);
+	}
+	 #modal > div > .close span:after {
+		 transform: rotate(-45deg) translate(-50%, -50%);
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 #modal > div > .close {
+			 top: 15px;
+			 right: 15px;
+			 width: 48px;
+			 height: 48px;
+		}
+		 #modal > div > .close span {
+			 position: absolute;
+			 top: 50%;
+			 left: 50%;
+			 width: 25px;
+			 height: 25px;
+			 transform: translate(-50%, -50%);
+		}
+		 #modal > div > .close span:before, #modal > div > .close span:after {
+			 content: '';
+			 position: absolute;
+			 top: 50%;
+			 left: 50%;
+			 width: 25px;
+			 height: 3px;
+			 transform-origin: 0 0;
+			 background: brand(primary);
+		}
+		 #modal > div > .close span:before {
+			 transform: rotate(45deg) translate(-50%, -50%);
+		}
+		 #modal > div > .close span:after {
+			 transform: rotate(-45deg) translate(-50%, -50%);
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 #modal > div > .close {
+			 top: 15px;
+			 right: 15px;
+			 width: 48px;
+			 height: 48px;
+		}
+		 #modal > div > .close span {
+			 position: absolute;
+			 top: 50%;
+			 left: 50%;
+			 width: 25px;
+			 height: 25px;
+			 transform: translate(-50%, -50%);
+		}
+		 #modal > div > .close span:before, #modal > div > .close span:after {
+			 content: '';
+			 position: absolute;
+			 top: 50%;
+			 left: 50%;
+			 width: 25px;
+			 height: 3px;
+			 transform-origin: 0 0;
+			 background: brand(primary);
+		}
+		 #modal > div > .close span:before {
+			 transform: rotate(45deg) translate(-50%, -50%);
+		}
+		 #modal > div > .close span:after {
+			 transform: rotate(-45deg) translate(-50%, -50%);
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 #modal > div > .close {
+			 top: 15px;
+			 right: 15px;
+			 width: 48px;
+			 height: 48px;
+		}
+		 #modal > div > .close span {
+			 position: absolute;
+			 top: 50%;
+			 left: 50%;
+			 width: 25px;
+			 height: 25px;
+			 transform: translate(-50%, -50%);
+		}
+		 #modal > div > .close span:before, #modal > div > .close span:after {
+			 content: '';
+			 position: absolute;
+			 top: 50%;
+			 left: 50%;
+			 width: 25px;
+			 height: 3px;
+			 transform-origin: 0 0;
+			 background: brand(primary);
+		}
+		 #modal > div > .close span:before {
+			 transform: rotate(45deg) translate(-50%, -50%);
+		}
+		 #modal > div > .close span:after {
+			 transform: rotate(-45deg) translate(-50%, -50%);
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 #modal > div > .close {
+			 top: 15px;
+			 right: 15px;
+			 width: 48px;
+			 height: 48px;
+		}
+		 #modal > div > .close span {
+			 position: absolute;
+			 top: 50%;
+			 left: 50%;
+			 width: 25px;
+			 height: 25px;
+			 transform: translate(-50%, -50%);
+		}
+		 #modal > div > .close span:before, #modal > div > .close span:after {
+			 content: '';
+			 position: absolute;
+			 top: 50%;
+			 left: 50%;
+			 width: 25px;
+			 height: 3px;
+			 transform-origin: 0 0;
+			 background: brand(primary);
+		}
+		 #modal > div > .close span:before {
+			 transform: rotate(45deg) translate(-50%, -50%);
+		}
+		 #modal > div > .close span:after {
+			 transform: rotate(-45deg) translate(-50%, -50%);
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 #modal > div > .close {
+			 top: 15px;
+			 right: 15px;
+			 width: 48px;
+			 height: 48px;
+		}
+		 #modal > div > .close span {
+			 position: absolute;
+			 top: 50%;
+			 left: 50%;
+			 width: 25px;
+			 height: 25px;
+			 transform: translate(-50%, -50%);
+		}
+		 #modal > div > .close span:before, #modal > div > .close span:after {
+			 content: '';
+			 position: absolute;
+			 top: 50%;
+			 left: 50%;
+			 width: 25px;
+			 height: 3px;
+			 transform-origin: 0 0;
+			 background: brand(primary);
+		}
+		 #modal > div > .close span:before {
+			 transform: rotate(45deg) translate(-50%, -50%);
+		}
+		 #modal > div > .close span:after {
+			 transform: rotate(-45deg) translate(-50%, -50%);
+		}
+	}
+}
+ #modal > div > .close:before {
+	 content: 'Close';
+	 position: absolute;
+	 top: 50%;
+	 transform: translateY(-50%);
+	 color: brand(primary);
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 #modal > div > .close:before {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 500;
+			 left: -34px;
+		}
+		 @else if {
+			 font-size: 12px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 #modal > div > .close:before {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 500;
+			 left: -34px;
+		}
+		 @else if {
+			 font-size: 12px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 #modal > div > .close:before {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 500;
+			 left: -34px;
+		}
+		 @else if {
+			 font-size: 12px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 #modal > div > .close:before {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 500;
+			 left: -34px;
+		}
+		 @else if {
+			 font-size: 12px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 #modal > div > .close:before {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 500;
+			 left: -34px;
+		}
+		 @else if {
+			 font-size: 12px;
+		}
+	}
+}
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) {
+	 #modal > div > .close:before {
+		 font-family: 'Gotham', sans-serif;
+		 font-weight: 500;
+		 left: -44px;
+	}
+	 @else if {
+		 font-size: 15px;
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 #modal > div > .close:before {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 500;
+			 left: -44px;
+		}
+		 @else if {
+			 font-size: 15px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 #modal > div > .close:before {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 500;
+			 left: -44px;
+		}
+		 @else if {
+			 font-size: 15px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 #modal > div > .close:before {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 500;
+			 left: -44px;
+		}
+		 @else if {
+			 font-size: 15px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 #modal > div > .close:before {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 500;
+			 left: -44px;
+		}
+		 @else if {
+			 font-size: 15px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 #modal > div > .close:before {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 500;
+			 left: -44px;
+		}
+		 @else if {
+			 font-size: 15px;
+		}
+	}
+}
+ #modal .content {
+	 display: none;
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) {
+	 #modal .content {
+		 padding: 60px 40px 32px 40px;
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 #modal .content {
+			 padding: 60px 40px 32px 40px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 #modal .content {
+			 padding: 60px 40px 32px 40px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 #modal .content {
+			 padding: 60px 40px 32px 40px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 #modal .content {
+			 padding: 60px 40px 32px 40px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 #modal .content {
+			 padding: 60px 40px 32px 40px;
+		}
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 #modal .content {
+			 padding: 50px 20px 10px 20px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 #modal .content {
+			 padding: 50px 20px 10px 20px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 #modal .content {
+			 padding: 50px 20px 10px 20px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 #modal .content {
+			 padding: 50px 20px 10px 20px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 #modal .content {
+			 padding: 50px 20px 10px 20px;
+		}
+	}
+}
+ #modal .content.active {
+	 display: block;
+}
+ #modal .content .modal-footer {
+	 display: flex;
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) {
+	 #modal .content .modal-footer {
+		 justify-content: center;
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 #modal .content .modal-footer {
+			 justify-content: center;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 #modal .content .modal-footer {
+			 justify-content: center;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 #modal .content .modal-footer {
+			 justify-content: center;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 #modal .content .modal-footer {
+			 justify-content: center;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 #modal .content .modal-footer {
+			 justify-content: center;
+		}
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 #modal .content .modal-footer {
+			 flex-direction: column;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 #modal .content .modal-footer {
+			 flex-direction: column;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 #modal .content .modal-footer {
+			 flex-direction: column;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 #modal .content .modal-footer {
+			 flex-direction: column;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 #modal .content .modal-footer {
+			 flex-direction: column;
+		}
+	}
+}
+ #modal h2 {
+	 font-family: 'Gotham', sans-serif;
+	 font-weight: 400;
+	 margin-bottom: 25px;
+	 color: brand(primary);
+	 text-align: center;
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ @else if {
+	 font-size: 25px;
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 #modal h2 {
+			 letter-spacing: -1px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 #modal h2 {
+			 letter-spacing: -1px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 #modal h2 {
+			 letter-spacing: -1px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 #modal h2 {
+			 letter-spacing: -1px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 #modal h2 {
+			 letter-spacing: -1px;
+		}
+	}
+}
+ #modal p {
+	 font-family: 'Gotham', sans-serif;
+	 font-weight: 400;
+	 margin-bottom: 20px;
+	 line-height: 16px;
+	 text-align: center;
+}
+ @else if {
+	 font-size: 13px;
+}
+ #modal .btn {
+	 margin: 0 10px;
+	 padding: 20px 0;
+	 text-align: center;
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 #modal .btn {
+			 flex: 0 0 100%;
+			 max-width: 100%;
+			 margin-bottom: 20px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 #modal .btn {
+			 flex: 0 0 100%;
+			 max-width: 100%;
+			 margin-bottom: 20px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 #modal .btn {
+			 flex: 0 0 100%;
+			 max-width: 100%;
+			 margin-bottom: 20px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 #modal .btn {
+			 flex: 0 0 100%;
+			 max-width: 100%;
+			 margin-bottom: 20px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 #modal .btn {
+			 flex: 0 0 100%;
+			 max-width: 100%;
+			 margin-bottom: 20px;
+		}
+	}
+}
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) {
+	 #modal .btn {
+		 flex: 0 0 142px;
+		 max-width: 142px;
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 #modal .btn {
+			 flex: 0 0 142px;
+			 max-width: 142px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 #modal .btn {
+			 flex: 0 0 142px;
+			 max-width: 142px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 #modal .btn {
+			 flex: 0 0 142px;
+			 max-width: 142px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 #modal .btn {
+			 flex: 0 0 142px;
+			 max-width: 142px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 #modal .btn {
+			 flex: 0 0 142px;
+			 max-width: 142px;
+		}
+	}
+}
+/**** **** ACTIVE STATE **** ***/
+ #modal.active {
+	 display: flex;
+}
+/**** **** ANIMATION : SLIDE **** ***/
+ [data-modal-animation="slide"]#modal.active > strong {
+	 top: 50%;
+	 width: 0%;
+	 height: 0%;
+	 transform: translateY(-50%);
+	 -webkit-animation: modal-slide-bg 400ms ease-in forwards;
+	 -moz-animation: modal-slide-bg 400ms ease-in forwards;
+	 animation: modal-slide-bg 400ms ease-in forwards;
+	 -webkit-animation-delay: 0ms;
+	 -moz-animation-delay: 0ms;
+	 animation-delay: 0ms;
+}
+ [data-modal-animation="slide"]#modal.active > div {
+	 opacity: 0;
+	 transform: scale(0.7);
+	 -webkit-animation: modal-slide-dialog 400ms ease-in forwards;
+	 -moz-animation: modal-slide-dialog 400ms ease-in forwards;
+	 animation: modal-slide-dialog 400ms ease-in forwards;
+	 -webkit-animation-delay: 400ms;
+	 -moz-animation-delay: 400ms;
+	 animation-delay: 400ms;
+}
+ [data-modal-animation="slide"]#modal.active .content.active {
+	 opacity: 0;
+	 -webkit-animation: modal-slide-content-fade 300ms ease-in-out forwards;
+	 -moz-animation: modal-slide-content-fade 300ms ease-in-out forwards;
+	 animation: modal-slide-content-fade 300ms ease-in-out forwards;
+	 -webkit-animation-delay: 600ms;
+	 -moz-animation-delay: 600ms;
+	 animation-delay: 600ms;
+}
+ @-webkit-keyframes modal-slide-bg {
+	 0% {
+		 width: 0%;
+		 height: 1px;
+	}
+	 60% {
+		 width: 100%;
+		 height: 1px;
+	}
+	 80% {
+		 width: 100%;
+		 height: 1px;
+	}
+	 100% {
+		 width: 100%;
+		 height: 100%;
+	}
+}
+ @-moz-keyframes modal-slide-bg {
+	 0% {
+		 width: 0%;
+		 height: 1px;
+	}
+	 60% {
+		 width: 100%;
+		 height: 1px;
+	}
+	 80% {
+		 width: 100%;
+		 height: 1px;
+	}
+	 100% {
+		 width: 100%;
+		 height: 100%;
+	}
+}
+ @keyframes modal-slide-bg {
+	 0% {
+		 width: 0%;
+		 height: 1px;
+	}
+	 60% {
+		 width: 100%;
+		 height: 1px;
+	}
+	 80% {
+		 width: 100%;
+		 height: 1px;
+	}
+	 100% {
+		 width: 100%;
+		 height: 100%;
+	}
+}
+ @-webkit-keyframes modal-slide-dialog {
+	 0% {
+		 opacity: 0;
+		 transform: scale(0.7);
+	}
+	 50% {
+		 opacity: 1;
+		 transform: scale(1.2);
+	}
+	 100% {
+		 opacity: 1;
+		 transform: scale(1);
+	}
+}
+ @-moz-keyframes modal-slide-dialog {
+	 0% {
+		 opacity: 0;
+		 transform: scale(0.7);
+	}
+	 50% {
+		 opacity: 1;
+		 transform: scale(1.2);
+	}
+	 100% {
+		 opacity: 1;
+		 transform: scale(1);
+	}
+}
+ @keyframes modal-slide-dialog {
+	 0% {
+		 opacity: 0;
+		 transform: scale(0.7);
+	}
+	 50% {
+		 opacity: 1;
+		 transform: scale(1.2);
+	}
+	 100% {
+		 opacity: 1;
+		 transform: scale(1);
+	}
+}
+ @-webkit-keyframes modal-slide-content-fade {
+	 0% {
+		 opacity: 0;
+	}
+	 100% {
+		 opacity: 1;
+	}
+}
+ @-moz-keyframes modal-slide-content-fade {
+	 0% {
+		 opacity: 0;
+	}
+	 100% {
+		 opacity: 1;
+	}
+}
+ @keyframes modal-slide-content-fade {
+	 0% {
+		 opacity: 0;
+	}
+	 100% {
+		 opacity: 1;
+	}
+}
+ 

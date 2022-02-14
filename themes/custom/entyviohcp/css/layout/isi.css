@@ -1,0 +1,2877 @@
+/***********************************/
+/**** **** MATRIX SETTINGS **** ***/
+/*********************************/
+/* Usage: Update matrix gutter HTML: <nav data-matrix=""> <a> <a> SASS: @include matrix_setting([number of matrix], [gutter space], '[child element]');
+ Example: @include matrix_setting(2, 30px, 'div');
+ */
+/************************************************/
+/**** **** TYPEFACE SETTINGS (LOCAL) v2 **** ***/
+/**********************************************/
+/* Usage: $local-font-settings: ( (Gotham, Gotham-Light_Web, '200'), (Gotham, Gotham-Book_Web, '400'), (Gotham, Gotham-Medium_Web, '500') );
+ $font_path : '../_assets/core/fonts';
+ Usage: @include localFontSetup($local-font-settings, $font_path);
+ Usage: @mixin gotham($font) {
+	 font-family: 'Gotham', sans-serif;
+	 @if $font == light {
+		 font-weight: 200;
+	}
+	 @else if $font == book {
+		 font-weight: 400;
+	}
+	 @else if $font == medium {
+		 font-weight: 500;
+	}
+}
+ body {
+	 @include gotham(book);
+}
+ */
+/*****************************/
+/**** **** ANIMATION **** ***/
+/***************************/
+/* Usage: @include animationFrames(fade) {
+	 0% {
+		 opacity: 1;
+	}
+	 50% {
+		 opacity: 0;
+	}
+}
+ */
+/* Usage: @include animation(300ms fade ease-in-out forwards, 100);
+ */
+/**************************************/
+/**** *** PAGE WIDTH SETTINGS **** ***/
+/************************************/
+/**** **** GRID MIXIN **** ***/
+/****************************/
+/**** **** FLEX SET **** ***/
+/**************************/
+/******************************/
+/**** **** RESET LIST **** ***/
+/****************************/
+/*****************************/
+/**** **** FOR PRINT **** ***/
+/***************************/
+/**** **** SETTING UP TYPEFACE **** ***/
+/**** **** PREMADE VIEWPORT **** ***/
+/**** **** CUSTOM VIEWPORT **** ***/
+/* Usage: @include viewport-custom(200, 300) {
+	 h1 {
+		 font-size: 20px;
+	}
+}
+ */
+/**** **** SPECIFIC VIEWPORT **** ***/
+/* ipad specific */
+/* iphone 6/7/8 specific */
+/* ie11 specific */
+/**** **** PRIMARY TYPE **** ***/
+/**** **** TEXT TYPE **** ***/
+/**** **** CLOSE **** ***/
+/* Usage: @include close-icon([width of icon], [height of icon], [icon colour]);
+ Examples: @include close-icon(25px, 3px, brand(primary));
+ @include close-icon($width: 25px);
+ @include close-icon;
+ */
+/* init */
+ [data-icon="close"] span {
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 width: 100%;
+	 height: 100%;
+	 transform: translate(-50%, -50%);
+}
+ [data-icon="close"] span:before, [data-icon="close"] span:after {
+	 content: '';
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 width: 100%;
+	 height: 3px;
+	 transform-origin: 0 0;
+	 background: brand(primary);
+}
+ [data-icon="close"] span:before {
+	 transform: rotate(45deg) translate(-50%, -50%);
+}
+ [data-icon="close"] span:after {
+	 transform: rotate(-45deg) translate(-50%, -50%);
+}
+/**** **** HAMBURGER **** ***/
+/* Usage: @include hamburger([width of icon], [height of icon], [space between lines], [icon colour]);
+ Examples: @include hamburger(25px, 2px, 1, #fff);
+ @include hamburger($width: 25px, $bg: #f00);
+ @include hamburger;
+ */
+/* init */
+ [data-icon="hamburger"] span {
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 width: 100%;
+	 height: 3px;
+	 transform: translate(-50%, -50%);
+	 background: brand(primary);
+}
+ [data-icon="hamburger"] span:before, [data-icon="hamburger"] span:after {
+	 content: '';
+	 position: absolute;
+	 left: 0;
+	 width: 100%;
+	 height: 3px;
+	 transform-origin: 0 0;
+	 background: brand(primary);
+}
+ [data-icon="hamburger"] span:before {
+	 bottom: 7.5px;
+}
+ [data-icon="hamburger"] span:after {
+	 top: 7.5px;
+}
+/**** **** PLUS/MINUS **** ***/
+/* Usage: @plus-minus-icon([width of icon], [height of icon], [icon colour]);
+ Examples: @plus-minus-icon(25px, 2px, #fff);
+ @include plus-minus-icon($width: 13px);
+ @plus-minus-icon;
+ */
+/* init */
+ [data-icon="plus-minus"] span {
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 width: 100%;
+	 height: 100%;
+	 transform: translate(-50%, -50%);
+}
+ [data-icon="plus-minus"] span:before, [data-icon="plus-minus"] span:after {
+	 content: '';
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 width: 100%;
+	 height: 3px;
+	 transform-origin: 0 0;
+	 background: brand(primary);
+}
+ [data-icon="plus-minus"] span:before {
+	 transform: translate(-50%, -50%);
+}
+ [data-icon="plus-minus"] span:after {
+	 transform: rotate(90deg) translate(-50%, -50%);
+}
+/**** **** YELLOW CIRCLE WORD ICONS **** ***/
+/* Usage: <p data-dot>Vs</p> */
+/****************************/
+/**** **** LANGUAGE **** ***/
+/**************************/
+/* en or cn */
+/***********************************/
+/**** **** LAYOUT SETTINGS **** ***/
+/*********************************/
+/*********************************/
+/**** **** GRID SETTINGS **** ***/
+/*******************************/
+/**********************************/
+/**** **** BRAND SETTINGS **** ***/
+/********************************/
+/* form */
+/*********************************/
+/**** **** PATH SETTINGS **** ***/
+/*******************************/
+/*************************************/
+/**** **** TYPEFACE SETTINGS **** ***/
+/***********************************/
+/***********************/
+/**** **** ISI **** ***/
+/*********************/
+ #isi, #fixed_isi {
+	/* fonts attributes */
+	/* list */
+}
+ #isi h2, #fixed_isi h2 {
+	 margin-bottom: 12px;
+	 color: brand(primary);
+	 text-transform: uppercase;
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 #isi h2, #fixed_isi h2 {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 22px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 #isi h2, #fixed_isi h2 {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 22px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 #isi h2, #fixed_isi h2 {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 22px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 #isi h2, #fixed_isi h2 {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 22px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 #isi h2, #fixed_isi h2 {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 22px;
+		}
+	}
+}
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) {
+	 #isi h2, #fixed_isi h2 {
+		 font-family: 'Gotham', sans-serif;
+		 font-weight: 700;
+	}
+	 @else if {
+		 font-size: 26px;
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 #isi h2, #fixed_isi h2 {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 26px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 #isi h2, #fixed_isi h2 {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 26px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 #isi h2, #fixed_isi h2 {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 26px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 #isi h2, #fixed_isi h2 {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 26px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 #isi h2, #fixed_isi h2 {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 26px;
+		}
+	}
+}
+ #isi h3, #fixed_isi h3 {
+	 line-height: 20px;
+	 margin-bottom: 4px;
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 #isi h3, #fixed_isi h3 {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 #isi h3, #fixed_isi h3 {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 #isi h3, #fixed_isi h3 {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 #isi h3, #fixed_isi h3 {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 #isi h3, #fixed_isi h3 {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+	}
+}
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) {
+	 #isi h3, #fixed_isi h3 {
+		 font-family: 'Gotham', sans-serif;
+		 font-weight: 700;
+	}
+	 @else if {
+		 font-size: 16px;
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 #isi h3, #fixed_isi h3 {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 #isi h3, #fixed_isi h3 {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 #isi h3, #fixed_isi h3 {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 #isi h3, #fixed_isi h3 {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 #isi h3, #fixed_isi h3 {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+	}
+}
+ #isi p, #fixed_isi p {
+	 line-height: 20px;
+	 margin-bottom: 20px;
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 #isi p, #fixed_isi p {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 400;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 #isi p, #fixed_isi p {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 400;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 #isi p, #fixed_isi p {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 400;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 #isi p, #fixed_isi p {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 400;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 #isi p, #fixed_isi p {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 400;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+	}
+}
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) {
+	 #isi p, #fixed_isi p {
+		 font-family: 'Gotham', sans-serif;
+		 font-weight: 400;
+	}
+	 @else if {
+		 font-size: 16px;
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 #isi p, #fixed_isi p {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 400;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 #isi p, #fixed_isi p {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 400;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 #isi p, #fixed_isi p {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 400;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 #isi p, #fixed_isi p {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 400;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 #isi p, #fixed_isi p {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 400;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+	}
+}
+ #isi sup, #fixed_isi sup {
+	 top: -7px;
+	 line-height: 0;
+}
+ #isi a, #fixed_isi a {
+	 color: brand(primary);
+	 text-decoration: none;
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 #isi a, #fixed_isi a {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 #isi a, #fixed_isi a {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 #isi a, #fixed_isi a {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 #isi a, #fixed_isi a {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 #isi a, #fixed_isi a {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+	}
+}
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) {
+	 #isi a, #fixed_isi a {
+		 font-family: 'Gotham', sans-serif;
+		 font-weight: 700;
+	}
+	 @else if {
+		 font-size: 16px;
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 #isi a, #fixed_isi a {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 #isi a, #fixed_isi a {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 #isi a, #fixed_isi a {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 #isi a, #fixed_isi a {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 #isi a, #fixed_isi a {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+	}
+}
+ #isi a.hover, #fixed_isi a.hover, #isi a:hover, #fixed_isi a:hover {
+	 text-decoration: underline;
+}
+ #isi ul, #fixed_isi ul {
+	 list-style-type: none;
+}
+ #isi ul li, #fixed_isi ul li {
+	 position: relative;
+	 padding-left: 10px;
+	 line-height: 20px;
+	 margin-bottom: 0;
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ #isi ul li:before, #fixed_isi ul li:before {
+	 content: '';
+	 position: absolute;
+	 left: 0;
+	 width: 4px;
+	 height: 4px;
+	 border-radius: 100%;
+	 background: brand(dark);
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 #isi ul li:before, #fixed_isi ul li:before {
+			 top: 7px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 #isi ul li:before, #fixed_isi ul li:before {
+			 top: 7px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 #isi ul li:before, #fixed_isi ul li:before {
+			 top: 7px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 #isi ul li:before, #fixed_isi ul li:before {
+			 top: 7px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 #isi ul li:before, #fixed_isi ul li:before {
+			 top: 7px;
+		}
+	}
+}
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) {
+	 #isi ul li:before, #fixed_isi ul li:before {
+		 top: 11px;
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 #isi ul li:before, #fixed_isi ul li:before {
+			 top: 11px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 #isi ul li:before, #fixed_isi ul li:before {
+			 top: 11px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 #isi ul li:before, #fixed_isi ul li:before {
+			 top: 11px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 #isi ul li:before, #fixed_isi ul li:before {
+			 top: 11px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 #isi ul li:before, #fixed_isi ul li:before {
+			 top: 11px;
+		}
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 #isi ul li, #fixed_isi ul li {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 400;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 #isi ul li, #fixed_isi ul li {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 400;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 #isi ul li, #fixed_isi ul li {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 400;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 #isi ul li, #fixed_isi ul li {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 400;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 #isi ul li, #fixed_isi ul li {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 400;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+	}
+}
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) {
+	 #isi ul li, #fixed_isi ul li {
+		 font-family: 'Gotham', sans-serif;
+		 font-weight: 400;
+		 line-height: 26px;
+	}
+	 @else if {
+		 font-size: 16px;
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 #isi ul li, #fixed_isi ul li {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 400;
+			 line-height: 26px;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 #isi ul li, #fixed_isi ul li {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 400;
+			 line-height: 26px;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 #isi ul li, #fixed_isi ul li {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 400;
+			 line-height: 26px;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 #isi ul li, #fixed_isi ul li {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 400;
+			 line-height: 26px;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 #isi ul li, #fixed_isi ul li {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 400;
+			 line-height: 26px;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+	}
+}
+ #isi ul li:last-of-type, #fixed_isi ul li:last-of-type {
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 #isi ul li:last-of-type, #fixed_isi ul li:last-of-type {
+			 margin-bottom: 15px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 #isi ul li:last-of-type, #fixed_isi ul li:last-of-type {
+			 margin-bottom: 15px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 #isi ul li:last-of-type, #fixed_isi ul li:last-of-type {
+			 margin-bottom: 15px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 #isi ul li:last-of-type, #fixed_isi ul li:last-of-type {
+			 margin-bottom: 15px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 #isi ul li:last-of-type, #fixed_isi ul li:last-of-type {
+			 margin-bottom: 15px;
+		}
+	}
+}
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) {
+	 #isi ul li:last-of-type, #fixed_isi ul li:last-of-type {
+		 margin-bottom: 20px;
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 #isi ul li:last-of-type, #fixed_isi ul li:last-of-type {
+			 margin-bottom: 20px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 #isi ul li:last-of-type, #fixed_isi ul li:last-of-type {
+			 margin-bottom: 20px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 #isi ul li:last-of-type, #fixed_isi ul li:last-of-type {
+			 margin-bottom: 20px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 #isi ul li:last-of-type, #fixed_isi ul li:last-of-type {
+			 margin-bottom: 20px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 #isi ul li:last-of-type, #fixed_isi ul li:last-of-type {
+			 margin-bottom: 20px;
+		}
+	}
+}
+ #isi .section article .isi-header, #fixed_isi .section article .isi-header {
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) {
+	 #isi .section article .isi-header, #fixed_isi .section article .isi-header {
+		 padding: 0;
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 #isi .section article .isi-header, #fixed_isi .section article .isi-header {
+			 padding: 0;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 #isi .section article .isi-header, #fixed_isi .section article .isi-header {
+			 padding: 0;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 #isi .section article .isi-header, #fixed_isi .section article .isi-header {
+			 padding: 0;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 #isi .section article .isi-header, #fixed_isi .section article .isi-header {
+			 padding: 0;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 #isi .section article .isi-header, #fixed_isi .section article .isi-header {
+			 padding: 0;
+		}
+	}
+}
+/**** **** INLINE ISI **** ***/
+ #isi {
+	 margin: auto;
+	 width: 100%;
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+	/* layout */
+	/* hiding isi trigger in inline layout */
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 #isi {
+			 padding: 0 page-gutter(mobile);
+			 max-width: max-page-width(mobile);
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 #isi {
+			 padding: 0 page-gutter(mobile);
+			 max-width: max-page-width(mobile);
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 #isi {
+			 padding: 0 page-gutter(mobile);
+			 max-width: max-page-width(mobile);
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 #isi {
+			 padding: 0 page-gutter(mobile);
+			 max-width: max-page-width(mobile);
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 #isi {
+			 padding: 0 page-gutter(mobile);
+			 max-width: max-page-width(mobile);
+		}
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 #isi {
+			 padding: 0 page-gutter(laptop);
+			 max-width: max-page-width(laptop);
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 #isi {
+			 padding: 0 page-gutter(laptop);
+			 max-width: max-page-width(laptop);
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 #isi {
+			 padding: 0 page-gutter(laptop);
+			 max-width: max-page-width(laptop);
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 #isi {
+			 padding: 0 page-gutter(laptop);
+			 max-width: max-page-width(laptop);
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 #isi {
+			 padding: 0 page-gutter(laptop);
+			 max-width: max-page-width(laptop);
+		}
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 #isi {
+			 padding: 0 page-gutter(desktop);
+			 max-width: max-page-width(desktop);
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 #isi {
+			 padding: 0 page-gutter(desktop);
+			 max-width: max-page-width(desktop);
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 #isi {
+			 padding: 0 page-gutter(desktop);
+			 max-width: max-page-width(desktop);
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 #isi {
+			 padding: 0 page-gutter(desktop);
+			 max-width: max-page-width(desktop);
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 #isi {
+			 padding: 0 page-gutter(desktop);
+			 max-width: max-page-width(desktop);
+		}
+	}
+}
+ #isi article {
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 #isi article {
+			 padding: 30px 0 0 0;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 #isi article {
+			 padding: 30px 0 0 0;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 #isi article {
+			 padding: 30px 0 0 0;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 #isi article {
+			 padding: 30px 0 0 0;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 #isi article {
+			 padding: 30px 0 0 0;
+		}
+	}
+}
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) {
+	 #isi article {
+		 padding: 75px 200px 0 75px;
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 #isi article {
+			 padding: 75px 200px 0 75px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 #isi article {
+			 padding: 75px 200px 0 75px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 #isi article {
+			 padding: 75px 200px 0 75px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 #isi article {
+			 padding: 75px 200px 0 75px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 #isi article {
+			 padding: 75px 200px 0 75px;
+		}
+	}
+}
+ #isi button.fixed_isi_trigger {
+	 display: none;
+}
+/**** **** FIXED ISI **** ***/
+ #fixed_isi {
+	 width: 100%;
+	 position: fixed;
+	 bottom: -25vh;
+	 background: brand(light);
+	 z-index: 3;
+	 padding: 0;
+	 max-width: 100%;
+	 transition: bottom 300ms ease-in;
+	/**** **** DESKTOP **** ***/
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+	/**** **** MOBILE **** ***/
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ #fixed_isi.active {
+	 bottom: -1px;
+}
+ #fixed_isi button.fixed_isi_trigger {
+	 position: absolute;
+	 top: 6px;
+	 border-radius: 100%;
+	 cursor: pointer;
+	 z-index: 3;
+	 will-change: border;
+	 transition: all 300ms ease-in-out;
+	 background: #fff;
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 #fixed_isi button.fixed_isi_trigger {
+			 width: 19px;
+			 height: 19px;
+			 right: 40px;
+			 border: 2px solid #e7cae3;
+		}
+		 #fixed_isi button.fixed_isi_trigger span {
+			 position: absolute;
+			 top: 50%;
+			 left: 50%;
+			 width: 7px;
+			 height: 7px;
+			 transform: translate(-50%, -50%);
+		}
+		 #fixed_isi button.fixed_isi_trigger span:before, #fixed_isi button.fixed_isi_trigger span:after {
+			 content: '';
+			 position: absolute;
+			 top: 50%;
+			 left: 50%;
+			 width: 7px;
+			 height: 2px;
+			 transform-origin: 0 0;
+			 background: brand(primary);
+		}
+		 #fixed_isi button.fixed_isi_trigger span:before {
+			 transform: translate(-50%, -50%);
+		}
+		 #fixed_isi button.fixed_isi_trigger span:after {
+			 transform: rotate(90deg) translate(-50%, -50%);
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 #fixed_isi button.fixed_isi_trigger {
+			 width: 19px;
+			 height: 19px;
+			 right: 40px;
+			 border: 2px solid #e7cae3;
+		}
+		 #fixed_isi button.fixed_isi_trigger span {
+			 position: absolute;
+			 top: 50%;
+			 left: 50%;
+			 width: 7px;
+			 height: 7px;
+			 transform: translate(-50%, -50%);
+		}
+		 #fixed_isi button.fixed_isi_trigger span:before, #fixed_isi button.fixed_isi_trigger span:after {
+			 content: '';
+			 position: absolute;
+			 top: 50%;
+			 left: 50%;
+			 width: 7px;
+			 height: 2px;
+			 transform-origin: 0 0;
+			 background: brand(primary);
+		}
+		 #fixed_isi button.fixed_isi_trigger span:before {
+			 transform: translate(-50%, -50%);
+		}
+		 #fixed_isi button.fixed_isi_trigger span:after {
+			 transform: rotate(90deg) translate(-50%, -50%);
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 #fixed_isi button.fixed_isi_trigger {
+			 width: 19px;
+			 height: 19px;
+			 right: 40px;
+			 border: 2px solid #e7cae3;
+		}
+		 #fixed_isi button.fixed_isi_trigger span {
+			 position: absolute;
+			 top: 50%;
+			 left: 50%;
+			 width: 7px;
+			 height: 7px;
+			 transform: translate(-50%, -50%);
+		}
+		 #fixed_isi button.fixed_isi_trigger span:before, #fixed_isi button.fixed_isi_trigger span:after {
+			 content: '';
+			 position: absolute;
+			 top: 50%;
+			 left: 50%;
+			 width: 7px;
+			 height: 2px;
+			 transform-origin: 0 0;
+			 background: brand(primary);
+		}
+		 #fixed_isi button.fixed_isi_trigger span:before {
+			 transform: translate(-50%, -50%);
+		}
+		 #fixed_isi button.fixed_isi_trigger span:after {
+			 transform: rotate(90deg) translate(-50%, -50%);
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 #fixed_isi button.fixed_isi_trigger {
+			 width: 19px;
+			 height: 19px;
+			 right: 40px;
+			 border: 2px solid #e7cae3;
+		}
+		 #fixed_isi button.fixed_isi_trigger span {
+			 position: absolute;
+			 top: 50%;
+			 left: 50%;
+			 width: 7px;
+			 height: 7px;
+			 transform: translate(-50%, -50%);
+		}
+		 #fixed_isi button.fixed_isi_trigger span:before, #fixed_isi button.fixed_isi_trigger span:after {
+			 content: '';
+			 position: absolute;
+			 top: 50%;
+			 left: 50%;
+			 width: 7px;
+			 height: 2px;
+			 transform-origin: 0 0;
+			 background: brand(primary);
+		}
+		 #fixed_isi button.fixed_isi_trigger span:before {
+			 transform: translate(-50%, -50%);
+		}
+		 #fixed_isi button.fixed_isi_trigger span:after {
+			 transform: rotate(90deg) translate(-50%, -50%);
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 #fixed_isi button.fixed_isi_trigger {
+			 width: 19px;
+			 height: 19px;
+			 right: 40px;
+			 border: 2px solid #e7cae3;
+		}
+		 #fixed_isi button.fixed_isi_trigger span {
+			 position: absolute;
+			 top: 50%;
+			 left: 50%;
+			 width: 7px;
+			 height: 7px;
+			 transform: translate(-50%, -50%);
+		}
+		 #fixed_isi button.fixed_isi_trigger span:before, #fixed_isi button.fixed_isi_trigger span:after {
+			 content: '';
+			 position: absolute;
+			 top: 50%;
+			 left: 50%;
+			 width: 7px;
+			 height: 2px;
+			 transform-origin: 0 0;
+			 background: brand(primary);
+		}
+		 #fixed_isi button.fixed_isi_trigger span:before {
+			 transform: translate(-50%, -50%);
+		}
+		 #fixed_isi button.fixed_isi_trigger span:after {
+			 transform: rotate(90deg) translate(-50%, -50%);
+		}
+	}
+}
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) {
+	 #fixed_isi button.fixed_isi_trigger {
+		 width: 34px;
+		 height: 34px;
+		 right: 40px;
+		 border: 3px solid #e7cae3;
+	}
+	 #fixed_isi button.fixed_isi_trigger span {
+		 position: absolute;
+		 top: 50%;
+		 left: 50%;
+		 width: 13px;
+		 height: 13px;
+		 transform: translate(-50%, -50%);
+	}
+	 #fixed_isi button.fixed_isi_trigger span:before, #fixed_isi button.fixed_isi_trigger span:after {
+		 content: '';
+		 position: absolute;
+		 top: 50%;
+		 left: 50%;
+		 width: 13px;
+		 height: 3px;
+		 transform-origin: 0 0;
+		 background: brand(primary);
+	}
+	 #fixed_isi button.fixed_isi_trigger span:before {
+		 transform: translate(-50%, -50%);
+	}
+	 #fixed_isi button.fixed_isi_trigger span:after {
+		 transform: rotate(90deg) translate(-50%, -50%);
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 #fixed_isi button.fixed_isi_trigger {
+			 width: 34px;
+			 height: 34px;
+			 right: 40px;
+			 border: 3px solid #e7cae3;
+		}
+		 #fixed_isi button.fixed_isi_trigger span {
+			 position: absolute;
+			 top: 50%;
+			 left: 50%;
+			 width: 13px;
+			 height: 13px;
+			 transform: translate(-50%, -50%);
+		}
+		 #fixed_isi button.fixed_isi_trigger span:before, #fixed_isi button.fixed_isi_trigger span:after {
+			 content: '';
+			 position: absolute;
+			 top: 50%;
+			 left: 50%;
+			 width: 13px;
+			 height: 3px;
+			 transform-origin: 0 0;
+			 background: brand(primary);
+		}
+		 #fixed_isi button.fixed_isi_trigger span:before {
+			 transform: translate(-50%, -50%);
+		}
+		 #fixed_isi button.fixed_isi_trigger span:after {
+			 transform: rotate(90deg) translate(-50%, -50%);
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 #fixed_isi button.fixed_isi_trigger {
+			 width: 34px;
+			 height: 34px;
+			 right: 40px;
+			 border: 3px solid #e7cae3;
+		}
+		 #fixed_isi button.fixed_isi_trigger span {
+			 position: absolute;
+			 top: 50%;
+			 left: 50%;
+			 width: 13px;
+			 height: 13px;
+			 transform: translate(-50%, -50%);
+		}
+		 #fixed_isi button.fixed_isi_trigger span:before, #fixed_isi button.fixed_isi_trigger span:after {
+			 content: '';
+			 position: absolute;
+			 top: 50%;
+			 left: 50%;
+			 width: 13px;
+			 height: 3px;
+			 transform-origin: 0 0;
+			 background: brand(primary);
+		}
+		 #fixed_isi button.fixed_isi_trigger span:before {
+			 transform: translate(-50%, -50%);
+		}
+		 #fixed_isi button.fixed_isi_trigger span:after {
+			 transform: rotate(90deg) translate(-50%, -50%);
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 #fixed_isi button.fixed_isi_trigger {
+			 width: 34px;
+			 height: 34px;
+			 right: 40px;
+			 border: 3px solid #e7cae3;
+		}
+		 #fixed_isi button.fixed_isi_trigger span {
+			 position: absolute;
+			 top: 50%;
+			 left: 50%;
+			 width: 13px;
+			 height: 13px;
+			 transform: translate(-50%, -50%);
+		}
+		 #fixed_isi button.fixed_isi_trigger span:before, #fixed_isi button.fixed_isi_trigger span:after {
+			 content: '';
+			 position: absolute;
+			 top: 50%;
+			 left: 50%;
+			 width: 13px;
+			 height: 3px;
+			 transform-origin: 0 0;
+			 background: brand(primary);
+		}
+		 #fixed_isi button.fixed_isi_trigger span:before {
+			 transform: translate(-50%, -50%);
+		}
+		 #fixed_isi button.fixed_isi_trigger span:after {
+			 transform: rotate(90deg) translate(-50%, -50%);
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 #fixed_isi button.fixed_isi_trigger {
+			 width: 34px;
+			 height: 34px;
+			 right: 40px;
+			 border: 3px solid #e7cae3;
+		}
+		 #fixed_isi button.fixed_isi_trigger span {
+			 position: absolute;
+			 top: 50%;
+			 left: 50%;
+			 width: 13px;
+			 height: 13px;
+			 transform: translate(-50%, -50%);
+		}
+		 #fixed_isi button.fixed_isi_trigger span:before, #fixed_isi button.fixed_isi_trigger span:after {
+			 content: '';
+			 position: absolute;
+			 top: 50%;
+			 left: 50%;
+			 width: 13px;
+			 height: 3px;
+			 transform-origin: 0 0;
+			 background: brand(primary);
+		}
+		 #fixed_isi button.fixed_isi_trigger span:before {
+			 transform: translate(-50%, -50%);
+		}
+		 #fixed_isi button.fixed_isi_trigger span:after {
+			 transform: rotate(90deg) translate(-50%, -50%);
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 #fixed_isi button.fixed_isi_trigger {
+			 width: 34px;
+			 height: 34px;
+			 right: 40px;
+			 border: 3px solid #e7cae3;
+		}
+		 #fixed_isi button.fixed_isi_trigger span {
+			 position: absolute;
+			 top: 50%;
+			 left: 50%;
+			 width: 13px;
+			 height: 13px;
+			 transform: translate(-50%, -50%);
+		}
+		 #fixed_isi button.fixed_isi_trigger span:before, #fixed_isi button.fixed_isi_trigger span:after {
+			 content: '';
+			 position: absolute;
+			 top: 50%;
+			 left: 50%;
+			 width: 13px;
+			 height: 3px;
+			 transform-origin: 0 0;
+			 background: brand(primary);
+		}
+		 #fixed_isi button.fixed_isi_trigger span:before {
+			 transform: translate(-50%, -50%);
+		}
+		 #fixed_isi button.fixed_isi_trigger span:after {
+			 transform: rotate(90deg) translate(-50%, -50%);
+		}
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 #fixed_isi button.fixed_isi_trigger {
+			 right: 10px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 #fixed_isi button.fixed_isi_trigger {
+			 right: 10px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 #fixed_isi button.fixed_isi_trigger {
+			 right: 10px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 #fixed_isi button.fixed_isi_trigger {
+			 right: 10px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 #fixed_isi button.fixed_isi_trigger {
+			 right: 10px;
+		}
+	}
+}
+ #fixed_isi button.fixed_isi_trigger:focus, #fixed_isi button.fixed_isi_trigger:hover {
+	 box-shadow: none;
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 #fixed_isi button.fixed_isi_trigger:focus, #fixed_isi button.fixed_isi_trigger:hover {
+			 border: 2px solid brand(primary);
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 #fixed_isi button.fixed_isi_trigger:focus, #fixed_isi button.fixed_isi_trigger:hover {
+			 border: 2px solid brand(primary);
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 #fixed_isi button.fixed_isi_trigger:focus, #fixed_isi button.fixed_isi_trigger:hover {
+			 border: 2px solid brand(primary);
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 #fixed_isi button.fixed_isi_trigger:focus, #fixed_isi button.fixed_isi_trigger:hover {
+			 border: 2px solid brand(primary);
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 #fixed_isi button.fixed_isi_trigger:focus, #fixed_isi button.fixed_isi_trigger:hover {
+			 border: 2px solid brand(primary);
+		}
+	}
+}
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) {
+	 #fixed_isi button.fixed_isi_trigger:focus, #fixed_isi button.fixed_isi_trigger:hover {
+		 border: 3px solid brand(primary);
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 #fixed_isi button.fixed_isi_trigger:focus, #fixed_isi button.fixed_isi_trigger:hover {
+			 border: 3px solid brand(primary);
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 #fixed_isi button.fixed_isi_trigger:focus, #fixed_isi button.fixed_isi_trigger:hover {
+			 border: 3px solid brand(primary);
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 #fixed_isi button.fixed_isi_trigger:focus, #fixed_isi button.fixed_isi_trigger:hover {
+			 border: 3px solid brand(primary);
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 #fixed_isi button.fixed_isi_trigger:focus, #fixed_isi button.fixed_isi_trigger:hover {
+			 border: 3px solid brand(primary);
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 #fixed_isi button.fixed_isi_trigger:focus, #fixed_isi button.fixed_isi_trigger:hover {
+			 border: 3px solid brand(primary);
+		}
+	}
+}
+ #fixed_isi button.fixed_isi_trigger span:after {
+	 will-change: width;
+	 transition: all 300ms ease-in-out;
+}
+ #fixed_isi.expanded {
+	 height: 100%;
+	 overflow-y: auto;
+	 padding-bottom: 20px;
+	 z-index: 100;
+}
+ #fixed_isi.expanded article {
+	 overflow: hidden;
+}
+ #fixed_isi.expanded button.fixed_isi_trigger span:after {
+	 width: 0;
+}
+ #fixed_isi.expanded ul li:first-child {
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) {
+	 #fixed_isi.expanded ul li:first-child {
+		 line-height: 26px;
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 #fixed_isi.expanded ul li:first-child {
+			 line-height: 26px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 #fixed_isi.expanded ul li:first-child {
+			 line-height: 26px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 #fixed_isi.expanded ul li:first-child {
+			 line-height: 26px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 #fixed_isi.expanded ul li:first-child {
+			 line-height: 26px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 #fixed_isi.expanded ul li:first-child {
+			 line-height: 26px;
+		}
+	}
+}
+ #fixed_isi .isi-header {
+	 background: #f0deee;
+}
+ #fixed_isi h3 a {
+	 color: brand(primary);
+}
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) {
+	 #fixed_isi {
+		 height: 95px;
+	}
+	 #fixed_isi button.fixed_isi_trigger span:after {
+		 width: 13px;
+	}
+	 #fixed_isi h2 {
+		 padding: 11px 0 7px 0;
+		 margin-left: auto;
+		 margin-right: auto;
+		 line-height: 30px;
+		 margin-bottom: 4px;
+	}
+	 #fixed_isi ul, #fixed_isi h3, #fixed_isi p {
+		 margin-left: auto;
+		 margin-right: auto;
+	}
+	 #fixed_isi h2, #fixed_isi ul, #fixed_isi h3, #fixed_isi p {
+		/* from laptop to desktop */
+		/* only desktop */
+		/* only laptop */
+		/* only tablet */
+		/* only mobile */
+		/* only mobile small */
+		/* from laptop to desktop */
+		/* only desktop */
+		/* only laptop */
+		/* only tablet */
+		/* only mobile */
+		/* only mobile small */
+	}
+	 @else if $breakpoint == desktop {
+		 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+			 #fixed_isi h2, #fixed_isi ul, #fixed_isi h3, #fixed_isi p {
+				 padding-left: calc(75px + page-gutter(laptop));
+				 padding-right: calc(200px + page-gutter(laptop));
+				 max-width: max-page-width(laptop);
+			}
+		}
+	}
+	 @else if $breakpoint == laptop {
+		 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+			 #fixed_isi h2, #fixed_isi ul, #fixed_isi h3, #fixed_isi p {
+				 padding-left: calc(75px + page-gutter(laptop));
+				 padding-right: calc(200px + page-gutter(laptop));
+				 max-width: max-page-width(laptop);
+			}
+		}
+	}
+	 @else if $breakpoint == tablet {
+		 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+			 #fixed_isi h2, #fixed_isi ul, #fixed_isi h3, #fixed_isi p {
+				 padding-left: calc(75px + page-gutter(laptop));
+				 padding-right: calc(200px + page-gutter(laptop));
+				 max-width: max-page-width(laptop);
+			}
+		}
+	}
+	 @else if $breakpoint == mobile {
+		 @media screen and (max-width : mq(mobile)px) {
+			 #fixed_isi h2, #fixed_isi ul, #fixed_isi h3, #fixed_isi p {
+				 padding-left: calc(75px + page-gutter(laptop));
+				 padding-right: calc(200px + page-gutter(laptop));
+				 max-width: max-page-width(laptop);
+			}
+		}
+	}
+	 @else if $breakpoint == mobile-sm {
+		 @media screen and (max-width : mq(mobile-sm)px) {
+			 #fixed_isi h2, #fixed_isi ul, #fixed_isi h3, #fixed_isi p {
+				 padding-left: calc(75px + page-gutter(laptop));
+				 padding-right: calc(200px + page-gutter(laptop));
+				 max-width: max-page-width(laptop);
+			}
+		}
+	}
+	 @else if $breakpoint == desktop {
+		 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+			 #fixed_isi h2, #fixed_isi ul, #fixed_isi h3, #fixed_isi p {
+				 padding-left: calc(72px + page-gutter(desktop));
+				 padding-right: calc(200px + page-gutter(desktop));
+				 max-width: max-page-width(desktop);
+			}
+		}
+	}
+	 @else if $breakpoint == laptop {
+		 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+			 #fixed_isi h2, #fixed_isi ul, #fixed_isi h3, #fixed_isi p {
+				 padding-left: calc(72px + page-gutter(desktop));
+				 padding-right: calc(200px + page-gutter(desktop));
+				 max-width: max-page-width(desktop);
+			}
+		}
+	}
+	 @else if $breakpoint == tablet {
+		 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+			 #fixed_isi h2, #fixed_isi ul, #fixed_isi h3, #fixed_isi p {
+				 padding-left: calc(72px + page-gutter(desktop));
+				 padding-right: calc(200px + page-gutter(desktop));
+				 max-width: max-page-width(desktop);
+			}
+		}
+	}
+	 @else if $breakpoint == mobile {
+		 @media screen and (max-width : mq(mobile)px) {
+			 #fixed_isi h2, #fixed_isi ul, #fixed_isi h3, #fixed_isi p {
+				 padding-left: calc(72px + page-gutter(desktop));
+				 padding-right: calc(200px + page-gutter(desktop));
+				 max-width: max-page-width(desktop);
+			}
+		}
+	}
+	 @else if $breakpoint == mobile-sm {
+		 @media screen and (max-width : mq(mobile-sm)px) {
+			 #fixed_isi h2, #fixed_isi ul, #fixed_isi h3, #fixed_isi p {
+				 padding-left: calc(72px + page-gutter(desktop));
+				 padding-right: calc(200px + page-gutter(desktop));
+				 max-width: max-page-width(desktop);
+			}
+		}
+	}
+	 #fixed_isi:not(.expanded) ul li:first-child {
+		 line-height: 19px;
+	}
+	 #fixed_isi:not(.expanded) ul li:first-child:before {
+		 top: 7px;
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 #fixed_isi {
+			 height: 95px;
+		}
+		 #fixed_isi button.fixed_isi_trigger span:after {
+			 width: 13px;
+		}
+		 #fixed_isi h2 {
+			 padding: 11px 0 7px 0;
+			 margin-left: auto;
+			 margin-right: auto;
+			 line-height: 30px;
+			 margin-bottom: 4px;
+		}
+		 #fixed_isi ul, #fixed_isi h3, #fixed_isi p {
+			 margin-left: auto;
+			 margin-right: auto;
+		}
+		 #fixed_isi h2, #fixed_isi ul, #fixed_isi h3, #fixed_isi p {
+			/* from laptop to desktop */
+			/* only desktop */
+			/* only laptop */
+			/* only tablet */
+			/* only mobile */
+			/* only mobile small */
+			/* from laptop to desktop */
+			/* only desktop */
+			/* only laptop */
+			/* only tablet */
+			/* only mobile */
+			/* only mobile small */
+		}
+		 @else if $breakpoint == desktop {
+			 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+				 #fixed_isi h2, #fixed_isi ul, #fixed_isi h3, #fixed_isi p {
+					 padding-left: calc(75px + page-gutter(laptop));
+					 padding-right: calc(200px + page-gutter(laptop));
+					 max-width: max-page-width(laptop);
+				}
+			}
+		}
+		 @else if $breakpoint == laptop {
+			 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+				 #fixed_isi h2, #fixed_isi ul, #fixed_isi h3, #fixed_isi p {
+					 padding-left: calc(75px + page-gutter(laptop));
+					 padding-right: calc(200px + page-gutter(laptop));
+					 max-width: max-page-width(laptop);
+				}
+			}
+		}
+		 @else if $breakpoint == tablet {
+			 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+				 #fixed_isi h2, #fixed_isi ul, #fixed_isi h3, #fixed_isi p {
+					 padding-left: calc(75px + page-gutter(laptop));
+					 padding-right: calc(200px + page-gutter(laptop));
+					 max-width: max-page-width(laptop);
+				}
+			}
+		}
+		 @else if $breakpoint == mobile {
+			 @media screen and (max-width : mq(mobile)px) {
+				 #fixed_isi h2, #fixed_isi ul, #fixed_isi h3, #fixed_isi p {
+					 padding-left: calc(75px + page-gutter(laptop));
+					 padding-right: calc(200px + page-gutter(laptop));
+					 max-width: max-page-width(laptop);
+				}
+			}
+		}
+		 @else if $breakpoint == mobile-sm {
+			 @media screen and (max-width : mq(mobile-sm)px) {
+				 #fixed_isi h2, #fixed_isi ul, #fixed_isi h3, #fixed_isi p {
+					 padding-left: calc(75px + page-gutter(laptop));
+					 padding-right: calc(200px + page-gutter(laptop));
+					 max-width: max-page-width(laptop);
+				}
+			}
+		}
+		 @else if $breakpoint == desktop {
+			 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+				 #fixed_isi h2, #fixed_isi ul, #fixed_isi h3, #fixed_isi p {
+					 padding-left: calc(72px + page-gutter(desktop));
+					 padding-right: calc(200px + page-gutter(desktop));
+					 max-width: max-page-width(desktop);
+				}
+			}
+		}
+		 @else if $breakpoint == laptop {
+			 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+				 #fixed_isi h2, #fixed_isi ul, #fixed_isi h3, #fixed_isi p {
+					 padding-left: calc(72px + page-gutter(desktop));
+					 padding-right: calc(200px + page-gutter(desktop));
+					 max-width: max-page-width(desktop);
+				}
+			}
+		}
+		 @else if $breakpoint == tablet {
+			 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+				 #fixed_isi h2, #fixed_isi ul, #fixed_isi h3, #fixed_isi p {
+					 padding-left: calc(72px + page-gutter(desktop));
+					 padding-right: calc(200px + page-gutter(desktop));
+					 max-width: max-page-width(desktop);
+				}
+			}
+		}
+		 @else if $breakpoint == mobile {
+			 @media screen and (max-width : mq(mobile)px) {
+				 #fixed_isi h2, #fixed_isi ul, #fixed_isi h3, #fixed_isi p {
+					 padding-left: calc(72px + page-gutter(desktop));
+					 padding-right: calc(200px + page-gutter(desktop));
+					 max-width: max-page-width(desktop);
+				}
+			}
+		}
+		 @else if $breakpoint == mobile-sm {
+			 @media screen and (max-width : mq(mobile-sm)px) {
+				 #fixed_isi h2, #fixed_isi ul, #fixed_isi h3, #fixed_isi p {
+					 padding-left: calc(72px + page-gutter(desktop));
+					 padding-right: calc(200px + page-gutter(desktop));
+					 max-width: max-page-width(desktop);
+				}
+			}
+		}
+		 #fixed_isi:not(.expanded) ul li:first-child {
+			 line-height: 19px;
+		}
+		 #fixed_isi:not(.expanded) ul li:first-child:before {
+			 top: 7px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 #fixed_isi {
+			 height: 95px;
+		}
+		 #fixed_isi button.fixed_isi_trigger span:after {
+			 width: 13px;
+		}
+		 #fixed_isi h2 {
+			 padding: 11px 0 7px 0;
+			 margin-left: auto;
+			 margin-right: auto;
+			 line-height: 30px;
+			 margin-bottom: 4px;
+		}
+		 #fixed_isi ul, #fixed_isi h3, #fixed_isi p {
+			 margin-left: auto;
+			 margin-right: auto;
+		}
+		 #fixed_isi h2, #fixed_isi ul, #fixed_isi h3, #fixed_isi p {
+			/* from laptop to desktop */
+			/* only desktop */
+			/* only laptop */
+			/* only tablet */
+			/* only mobile */
+			/* only mobile small */
+			/* from laptop to desktop */
+			/* only desktop */
+			/* only laptop */
+			/* only tablet */
+			/* only mobile */
+			/* only mobile small */
+		}
+		 @else if $breakpoint == desktop {
+			 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+				 #fixed_isi h2, #fixed_isi ul, #fixed_isi h3, #fixed_isi p {
+					 padding-left: calc(75px + page-gutter(laptop));
+					 padding-right: calc(200px + page-gutter(laptop));
+					 max-width: max-page-width(laptop);
+				}
+			}
+		}
+		 @else if $breakpoint == laptop {
+			 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+				 #fixed_isi h2, #fixed_isi ul, #fixed_isi h3, #fixed_isi p {
+					 padding-left: calc(75px + page-gutter(laptop));
+					 padding-right: calc(200px + page-gutter(laptop));
+					 max-width: max-page-width(laptop);
+				}
+			}
+		}
+		 @else if $breakpoint == tablet {
+			 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+				 #fixed_isi h2, #fixed_isi ul, #fixed_isi h3, #fixed_isi p {
+					 padding-left: calc(75px + page-gutter(laptop));
+					 padding-right: calc(200px + page-gutter(laptop));
+					 max-width: max-page-width(laptop);
+				}
+			}
+		}
+		 @else if $breakpoint == mobile {
+			 @media screen and (max-width : mq(mobile)px) {
+				 #fixed_isi h2, #fixed_isi ul, #fixed_isi h3, #fixed_isi p {
+					 padding-left: calc(75px + page-gutter(laptop));
+					 padding-right: calc(200px + page-gutter(laptop));
+					 max-width: max-page-width(laptop);
+				}
+			}
+		}
+		 @else if $breakpoint == mobile-sm {
+			 @media screen and (max-width : mq(mobile-sm)px) {
+				 #fixed_isi h2, #fixed_isi ul, #fixed_isi h3, #fixed_isi p {
+					 padding-left: calc(75px + page-gutter(laptop));
+					 padding-right: calc(200px + page-gutter(laptop));
+					 max-width: max-page-width(laptop);
+				}
+			}
+		}
+		 @else if $breakpoint == desktop {
+			 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+				 #fixed_isi h2, #fixed_isi ul, #fixed_isi h3, #fixed_isi p {
+					 padding-left: calc(72px + page-gutter(desktop));
+					 padding-right: calc(200px + page-gutter(desktop));
+					 max-width: max-page-width(desktop);
+				}
+			}
+		}
+		 @else if $breakpoint == laptop {
+			 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+				 #fixed_isi h2, #fixed_isi ul, #fixed_isi h3, #fixed_isi p {
+					 padding-left: calc(72px + page-gutter(desktop));
+					 padding-right: calc(200px + page-gutter(desktop));
+					 max-width: max-page-width(desktop);
+				}
+			}
+		}
+		 @else if $breakpoint == tablet {
+			 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+				 #fixed_isi h2, #fixed_isi ul, #fixed_isi h3, #fixed_isi p {
+					 padding-left: calc(72px + page-gutter(desktop));
+					 padding-right: calc(200px + page-gutter(desktop));
+					 max-width: max-page-width(desktop);
+				}
+			}
+		}
+		 @else if $breakpoint == mobile {
+			 @media screen and (max-width : mq(mobile)px) {
+				 #fixed_isi h2, #fixed_isi ul, #fixed_isi h3, #fixed_isi p {
+					 padding-left: calc(72px + page-gutter(desktop));
+					 padding-right: calc(200px + page-gutter(desktop));
+					 max-width: max-page-width(desktop);
+				}
+			}
+		}
+		 @else if $breakpoint == mobile-sm {
+			 @media screen and (max-width : mq(mobile-sm)px) {
+				 #fixed_isi h2, #fixed_isi ul, #fixed_isi h3, #fixed_isi p {
+					 padding-left: calc(72px + page-gutter(desktop));
+					 padding-right: calc(200px + page-gutter(desktop));
+					 max-width: max-page-width(desktop);
+				}
+			}
+		}
+		 #fixed_isi:not(.expanded) ul li:first-child {
+			 line-height: 19px;
+		}
+		 #fixed_isi:not(.expanded) ul li:first-child:before {
+			 top: 7px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 #fixed_isi {
+			 height: 95px;
+		}
+		 #fixed_isi button.fixed_isi_trigger span:after {
+			 width: 13px;
+		}
+		 #fixed_isi h2 {
+			 padding: 11px 0 7px 0;
+			 margin-left: auto;
+			 margin-right: auto;
+			 line-height: 30px;
+			 margin-bottom: 4px;
+		}
+		 #fixed_isi ul, #fixed_isi h3, #fixed_isi p {
+			 margin-left: auto;
+			 margin-right: auto;
+		}
+		 #fixed_isi h2, #fixed_isi ul, #fixed_isi h3, #fixed_isi p {
+			/* from laptop to desktop */
+			/* only desktop */
+			/* only laptop */
+			/* only tablet */
+			/* only mobile */
+			/* only mobile small */
+			/* from laptop to desktop */
+			/* only desktop */
+			/* only laptop */
+			/* only tablet */
+			/* only mobile */
+			/* only mobile small */
+		}
+		 @else if $breakpoint == desktop {
+			 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+				 #fixed_isi h2, #fixed_isi ul, #fixed_isi h3, #fixed_isi p {
+					 padding-left: calc(75px + page-gutter(laptop));
+					 padding-right: calc(200px + page-gutter(laptop));
+					 max-width: max-page-width(laptop);
+				}
+			}
+		}
+		 @else if $breakpoint == laptop {
+			 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+				 #fixed_isi h2, #fixed_isi ul, #fixed_isi h3, #fixed_isi p {
+					 padding-left: calc(75px + page-gutter(laptop));
+					 padding-right: calc(200px + page-gutter(laptop));
+					 max-width: max-page-width(laptop);
+				}
+			}
+		}
+		 @else if $breakpoint == tablet {
+			 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+				 #fixed_isi h2, #fixed_isi ul, #fixed_isi h3, #fixed_isi p {
+					 padding-left: calc(75px + page-gutter(laptop));
+					 padding-right: calc(200px + page-gutter(laptop));
+					 max-width: max-page-width(laptop);
+				}
+			}
+		}
+		 @else if $breakpoint == mobile {
+			 @media screen and (max-width : mq(mobile)px) {
+				 #fixed_isi h2, #fixed_isi ul, #fixed_isi h3, #fixed_isi p {
+					 padding-left: calc(75px + page-gutter(laptop));
+					 padding-right: calc(200px + page-gutter(laptop));
+					 max-width: max-page-width(laptop);
+				}
+			}
+		}
+		 @else if $breakpoint == mobile-sm {
+			 @media screen and (max-width : mq(mobile-sm)px) {
+				 #fixed_isi h2, #fixed_isi ul, #fixed_isi h3, #fixed_isi p {
+					 padding-left: calc(75px + page-gutter(laptop));
+					 padding-right: calc(200px + page-gutter(laptop));
+					 max-width: max-page-width(laptop);
+				}
+			}
+		}
+		 @else if $breakpoint == desktop {
+			 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+				 #fixed_isi h2, #fixed_isi ul, #fixed_isi h3, #fixed_isi p {
+					 padding-left: calc(72px + page-gutter(desktop));
+					 padding-right: calc(200px + page-gutter(desktop));
+					 max-width: max-page-width(desktop);
+				}
+			}
+		}
+		 @else if $breakpoint == laptop {
+			 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+				 #fixed_isi h2, #fixed_isi ul, #fixed_isi h3, #fixed_isi p {
+					 padding-left: calc(72px + page-gutter(desktop));
+					 padding-right: calc(200px + page-gutter(desktop));
+					 max-width: max-page-width(desktop);
+				}
+			}
+		}
+		 @else if $breakpoint == tablet {
+			 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+				 #fixed_isi h2, #fixed_isi ul, #fixed_isi h3, #fixed_isi p {
+					 padding-left: calc(72px + page-gutter(desktop));
+					 padding-right: calc(200px + page-gutter(desktop));
+					 max-width: max-page-width(desktop);
+				}
+			}
+		}
+		 @else if $breakpoint == mobile {
+			 @media screen and (max-width : mq(mobile)px) {
+				 #fixed_isi h2, #fixed_isi ul, #fixed_isi h3, #fixed_isi p {
+					 padding-left: calc(72px + page-gutter(desktop));
+					 padding-right: calc(200px + page-gutter(desktop));
+					 max-width: max-page-width(desktop);
+				}
+			}
+		}
+		 @else if $breakpoint == mobile-sm {
+			 @media screen and (max-width : mq(mobile-sm)px) {
+				 #fixed_isi h2, #fixed_isi ul, #fixed_isi h3, #fixed_isi p {
+					 padding-left: calc(72px + page-gutter(desktop));
+					 padding-right: calc(200px + page-gutter(desktop));
+					 max-width: max-page-width(desktop);
+				}
+			}
+		}
+		 #fixed_isi:not(.expanded) ul li:first-child {
+			 line-height: 19px;
+		}
+		 #fixed_isi:not(.expanded) ul li:first-child:before {
+			 top: 7px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 #fixed_isi {
+			 height: 95px;
+		}
+		 #fixed_isi button.fixed_isi_trigger span:after {
+			 width: 13px;
+		}
+		 #fixed_isi h2 {
+			 padding: 11px 0 7px 0;
+			 margin-left: auto;
+			 margin-right: auto;
+			 line-height: 30px;
+			 margin-bottom: 4px;
+		}
+		 #fixed_isi ul, #fixed_isi h3, #fixed_isi p {
+			 margin-left: auto;
+			 margin-right: auto;
+		}
+		 #fixed_isi h2, #fixed_isi ul, #fixed_isi h3, #fixed_isi p {
+			/* from laptop to desktop */
+			/* only desktop */
+			/* only laptop */
+			/* only tablet */
+			/* only mobile */
+			/* only mobile small */
+			/* from laptop to desktop */
+			/* only desktop */
+			/* only laptop */
+			/* only tablet */
+			/* only mobile */
+			/* only mobile small */
+		}
+		 @else if $breakpoint == desktop {
+			 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+				 #fixed_isi h2, #fixed_isi ul, #fixed_isi h3, #fixed_isi p {
+					 padding-left: calc(75px + page-gutter(laptop));
+					 padding-right: calc(200px + page-gutter(laptop));
+					 max-width: max-page-width(laptop);
+				}
+			}
+		}
+		 @else if $breakpoint == laptop {
+			 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+				 #fixed_isi h2, #fixed_isi ul, #fixed_isi h3, #fixed_isi p {
+					 padding-left: calc(75px + page-gutter(laptop));
+					 padding-right: calc(200px + page-gutter(laptop));
+					 max-width: max-page-width(laptop);
+				}
+			}
+		}
+		 @else if $breakpoint == tablet {
+			 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+				 #fixed_isi h2, #fixed_isi ul, #fixed_isi h3, #fixed_isi p {
+					 padding-left: calc(75px + page-gutter(laptop));
+					 padding-right: calc(200px + page-gutter(laptop));
+					 max-width: max-page-width(laptop);
+				}
+			}
+		}
+		 @else if $breakpoint == mobile {
+			 @media screen and (max-width : mq(mobile)px) {
+				 #fixed_isi h2, #fixed_isi ul, #fixed_isi h3, #fixed_isi p {
+					 padding-left: calc(75px + page-gutter(laptop));
+					 padding-right: calc(200px + page-gutter(laptop));
+					 max-width: max-page-width(laptop);
+				}
+			}
+		}
+		 @else if $breakpoint == mobile-sm {
+			 @media screen and (max-width : mq(mobile-sm)px) {
+				 #fixed_isi h2, #fixed_isi ul, #fixed_isi h3, #fixed_isi p {
+					 padding-left: calc(75px + page-gutter(laptop));
+					 padding-right: calc(200px + page-gutter(laptop));
+					 max-width: max-page-width(laptop);
+				}
+			}
+		}
+		 @else if $breakpoint == desktop {
+			 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+				 #fixed_isi h2, #fixed_isi ul, #fixed_isi h3, #fixed_isi p {
+					 padding-left: calc(72px + page-gutter(desktop));
+					 padding-right: calc(200px + page-gutter(desktop));
+					 max-width: max-page-width(desktop);
+				}
+			}
+		}
+		 @else if $breakpoint == laptop {
+			 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+				 #fixed_isi h2, #fixed_isi ul, #fixed_isi h3, #fixed_isi p {
+					 padding-left: calc(72px + page-gutter(desktop));
+					 padding-right: calc(200px + page-gutter(desktop));
+					 max-width: max-page-width(desktop);
+				}
+			}
+		}
+		 @else if $breakpoint == tablet {
+			 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+				 #fixed_isi h2, #fixed_isi ul, #fixed_isi h3, #fixed_isi p {
+					 padding-left: calc(72px + page-gutter(desktop));
+					 padding-right: calc(200px + page-gutter(desktop));
+					 max-width: max-page-width(desktop);
+				}
+			}
+		}
+		 @else if $breakpoint == mobile {
+			 @media screen and (max-width : mq(mobile)px) {
+				 #fixed_isi h2, #fixed_isi ul, #fixed_isi h3, #fixed_isi p {
+					 padding-left: calc(72px + page-gutter(desktop));
+					 padding-right: calc(200px + page-gutter(desktop));
+					 max-width: max-page-width(desktop);
+				}
+			}
+		}
+		 @else if $breakpoint == mobile-sm {
+			 @media screen and (max-width : mq(mobile-sm)px) {
+				 #fixed_isi h2, #fixed_isi ul, #fixed_isi h3, #fixed_isi p {
+					 padding-left: calc(72px + page-gutter(desktop));
+					 padding-right: calc(200px + page-gutter(desktop));
+					 max-width: max-page-width(desktop);
+				}
+			}
+		}
+		 #fixed_isi:not(.expanded) ul li:first-child {
+			 line-height: 19px;
+		}
+		 #fixed_isi:not(.expanded) ul li:first-child:before {
+			 top: 7px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 #fixed_isi {
+			 height: 95px;
+		}
+		 #fixed_isi button.fixed_isi_trigger span:after {
+			 width: 13px;
+		}
+		 #fixed_isi h2 {
+			 padding: 11px 0 7px 0;
+			 margin-left: auto;
+			 margin-right: auto;
+			 line-height: 30px;
+			 margin-bottom: 4px;
+		}
+		 #fixed_isi ul, #fixed_isi h3, #fixed_isi p {
+			 margin-left: auto;
+			 margin-right: auto;
+		}
+		 #fixed_isi h2, #fixed_isi ul, #fixed_isi h3, #fixed_isi p {
+			/* from laptop to desktop */
+			/* only desktop */
+			/* only laptop */
+			/* only tablet */
+			/* only mobile */
+			/* only mobile small */
+			/* from laptop to desktop */
+			/* only desktop */
+			/* only laptop */
+			/* only tablet */
+			/* only mobile */
+			/* only mobile small */
+		}
+		 @else if $breakpoint == desktop {
+			 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+				 #fixed_isi h2, #fixed_isi ul, #fixed_isi h3, #fixed_isi p {
+					 padding-left: calc(75px + page-gutter(laptop));
+					 padding-right: calc(200px + page-gutter(laptop));
+					 max-width: max-page-width(laptop);
+				}
+			}
+		}
+		 @else if $breakpoint == laptop {
+			 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+				 #fixed_isi h2, #fixed_isi ul, #fixed_isi h3, #fixed_isi p {
+					 padding-left: calc(75px + page-gutter(laptop));
+					 padding-right: calc(200px + page-gutter(laptop));
+					 max-width: max-page-width(laptop);
+				}
+			}
+		}
+		 @else if $breakpoint == tablet {
+			 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+				 #fixed_isi h2, #fixed_isi ul, #fixed_isi h3, #fixed_isi p {
+					 padding-left: calc(75px + page-gutter(laptop));
+					 padding-right: calc(200px + page-gutter(laptop));
+					 max-width: max-page-width(laptop);
+				}
+			}
+		}
+		 @else if $breakpoint == mobile {
+			 @media screen and (max-width : mq(mobile)px) {
+				 #fixed_isi h2, #fixed_isi ul, #fixed_isi h3, #fixed_isi p {
+					 padding-left: calc(75px + page-gutter(laptop));
+					 padding-right: calc(200px + page-gutter(laptop));
+					 max-width: max-page-width(laptop);
+				}
+			}
+		}
+		 @else if $breakpoint == mobile-sm {
+			 @media screen and (max-width : mq(mobile-sm)px) {
+				 #fixed_isi h2, #fixed_isi ul, #fixed_isi h3, #fixed_isi p {
+					 padding-left: calc(75px + page-gutter(laptop));
+					 padding-right: calc(200px + page-gutter(laptop));
+					 max-width: max-page-width(laptop);
+				}
+			}
+		}
+		 @else if $breakpoint == desktop {
+			 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+				 #fixed_isi h2, #fixed_isi ul, #fixed_isi h3, #fixed_isi p {
+					 padding-left: calc(72px + page-gutter(desktop));
+					 padding-right: calc(200px + page-gutter(desktop));
+					 max-width: max-page-width(desktop);
+				}
+			}
+		}
+		 @else if $breakpoint == laptop {
+			 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+				 #fixed_isi h2, #fixed_isi ul, #fixed_isi h3, #fixed_isi p {
+					 padding-left: calc(72px + page-gutter(desktop));
+					 padding-right: calc(200px + page-gutter(desktop));
+					 max-width: max-page-width(desktop);
+				}
+			}
+		}
+		 @else if $breakpoint == tablet {
+			 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+				 #fixed_isi h2, #fixed_isi ul, #fixed_isi h3, #fixed_isi p {
+					 padding-left: calc(72px + page-gutter(desktop));
+					 padding-right: calc(200px + page-gutter(desktop));
+					 max-width: max-page-width(desktop);
+				}
+			}
+		}
+		 @else if $breakpoint == mobile {
+			 @media screen and (max-width : mq(mobile)px) {
+				 #fixed_isi h2, #fixed_isi ul, #fixed_isi h3, #fixed_isi p {
+					 padding-left: calc(72px + page-gutter(desktop));
+					 padding-right: calc(200px + page-gutter(desktop));
+					 max-width: max-page-width(desktop);
+				}
+			}
+		}
+		 @else if $breakpoint == mobile-sm {
+			 @media screen and (max-width : mq(mobile-sm)px) {
+				 #fixed_isi h2, #fixed_isi ul, #fixed_isi h3, #fixed_isi p {
+					 padding-left: calc(72px + page-gutter(desktop));
+					 padding-right: calc(200px + page-gutter(desktop));
+					 max-width: max-page-width(desktop);
+				}
+			}
+		}
+		 #fixed_isi:not(.expanded) ul li:first-child {
+			 line-height: 19px;
+		}
+		 #fixed_isi:not(.expanded) ul li:first-child:before {
+			 top: 7px;
+		}
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 #fixed_isi {
+			 height: 120px;
+		}
+		 #fixed_isi button.fixed_isi_trigger span:after {
+			 width: 7px;
+		}
+		 #fixed_isi h2 {
+			 padding: 8px page-gutter(mobile);
+			 font-size: 14px;
+			 margin-bottom: 5px;
+		}
+		 #fixed_isi ul {
+			 padding: 0 page-gutter(mobile);
+			 font-size: 14px;
+		}
+		 #fixed_isi h3, #fixed_isi p {
+			 padding: 0 page-gutter(mobile);
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 #fixed_isi {
+			 height: 120px;
+		}
+		 #fixed_isi button.fixed_isi_trigger span:after {
+			 width: 7px;
+		}
+		 #fixed_isi h2 {
+			 padding: 8px page-gutter(mobile);
+			 font-size: 14px;
+			 margin-bottom: 5px;
+		}
+		 #fixed_isi ul {
+			 padding: 0 page-gutter(mobile);
+			 font-size: 14px;
+		}
+		 #fixed_isi h3, #fixed_isi p {
+			 padding: 0 page-gutter(mobile);
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 #fixed_isi {
+			 height: 120px;
+		}
+		 #fixed_isi button.fixed_isi_trigger span:after {
+			 width: 7px;
+		}
+		 #fixed_isi h2 {
+			 padding: 8px page-gutter(mobile);
+			 font-size: 14px;
+			 margin-bottom: 5px;
+		}
+		 #fixed_isi ul {
+			 padding: 0 page-gutter(mobile);
+			 font-size: 14px;
+		}
+		 #fixed_isi h3, #fixed_isi p {
+			 padding: 0 page-gutter(mobile);
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 #fixed_isi {
+			 height: 120px;
+		}
+		 #fixed_isi button.fixed_isi_trigger span:after {
+			 width: 7px;
+		}
+		 #fixed_isi h2 {
+			 padding: 8px page-gutter(mobile);
+			 font-size: 14px;
+			 margin-bottom: 5px;
+		}
+		 #fixed_isi ul {
+			 padding: 0 page-gutter(mobile);
+			 font-size: 14px;
+		}
+		 #fixed_isi h3, #fixed_isi p {
+			 padding: 0 page-gutter(mobile);
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 #fixed_isi {
+			 height: 120px;
+		}
+		 #fixed_isi button.fixed_isi_trigger span:after {
+			 width: 7px;
+		}
+		 #fixed_isi h2 {
+			 padding: 8px page-gutter(mobile);
+			 font-size: 14px;
+			 margin-bottom: 5px;
+		}
+		 #fixed_isi ul {
+			 padding: 0 page-gutter(mobile);
+			 font-size: 14px;
+		}
+		 #fixed_isi h3, #fixed_isi p {
+			 padding: 0 page-gutter(mobile);
+		}
+	}
+}
+ html.fixed-isi-active {
+	 overflow: hidden;
+}
+ 

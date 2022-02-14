@@ -1,0 +1,1595 @@
+/***********************************/
+/**** **** MATRIX SETTINGS **** ***/
+/*********************************/
+/* Usage: Update matrix gutter HTML: <nav data-matrix=""> <a> <a> SASS: @include matrix_setting([number of matrix], [gutter space], '[child element]');
+ Example: @include matrix_setting(2, 30px, 'div');
+ */
+/************************************************/
+/**** **** TYPEFACE SETTINGS (LOCAL) v2 **** ***/
+/**********************************************/
+/* Usage: $local-font-settings: ( (Gotham, Gotham-Light_Web, '200'), (Gotham, Gotham-Book_Web, '400'), (Gotham, Gotham-Medium_Web, '500') );
+ $font_path : '../_assets/core/fonts';
+ Usage: @include localFontSetup($local-font-settings, $font_path);
+ Usage: @mixin gotham($font) {
+	 font-family: 'Gotham', sans-serif;
+	 @if $font == light {
+		 font-weight: 200;
+	}
+	 @else if $font == book {
+		 font-weight: 400;
+	}
+	 @else if $font == medium {
+		 font-weight: 500;
+	}
+}
+ body {
+	 @include gotham(book);
+}
+ */
+/*****************************/
+/**** **** ANIMATION **** ***/
+/***************************/
+/* Usage: @include animationFrames(fade) {
+	 0% {
+		 opacity: 1;
+	}
+	 50% {
+		 opacity: 0;
+	}
+}
+ */
+/* Usage: @include animation(300ms fade ease-in-out forwards, 100);
+ */
+/**************************************/
+/**** *** PAGE WIDTH SETTINGS **** ***/
+/************************************/
+/**** **** GRID MIXIN **** ***/
+/****************************/
+/**** **** FLEX SET **** ***/
+/**************************/
+/******************************/
+/**** **** RESET LIST **** ***/
+/****************************/
+/*****************************/
+/**** **** FOR PRINT **** ***/
+/***************************/
+/**** **** SETTING UP TYPEFACE **** ***/
+/**** **** PREMADE VIEWPORT **** ***/
+/**** **** CUSTOM VIEWPORT **** ***/
+/* Usage: @include viewport-custom(200, 300) {
+	 h1 {
+		 font-size: 20px;
+	}
+}
+ */
+/**** **** SPECIFIC VIEWPORT **** ***/
+/* ipad specific */
+/* iphone 6/7/8 specific */
+/* ie11 specific */
+/**** **** PRIMARY TYPE **** ***/
+/**** **** TEXT TYPE **** ***/
+/**** **** CLOSE **** ***/
+/* Usage: @include close-icon([width of icon], [height of icon], [icon colour]);
+ Examples: @include close-icon(25px, 3px, brand(primary));
+ @include close-icon($width: 25px);
+ @include close-icon;
+ */
+/* init */
+ [data-icon="close"] span {
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 width: 100%;
+	 height: 100%;
+	 transform: translate(-50%, -50%);
+}
+ [data-icon="close"] span:before, [data-icon="close"] span:after {
+	 content: '';
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 width: 100%;
+	 height: 3px;
+	 transform-origin: 0 0;
+	 background: brand(primary);
+}
+ [data-icon="close"] span:before {
+	 transform: rotate(45deg) translate(-50%, -50%);
+}
+ [data-icon="close"] span:after {
+	 transform: rotate(-45deg) translate(-50%, -50%);
+}
+/**** **** HAMBURGER **** ***/
+/* Usage: @include hamburger([width of icon], [height of icon], [space between lines], [icon colour]);
+ Examples: @include hamburger(25px, 2px, 1, #fff);
+ @include hamburger($width: 25px, $bg: #f00);
+ @include hamburger;
+ */
+/* init */
+ [data-icon="hamburger"] span {
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 width: 100%;
+	 height: 3px;
+	 transform: translate(-50%, -50%);
+	 background: brand(primary);
+}
+ [data-icon="hamburger"] span:before, [data-icon="hamburger"] span:after {
+	 content: '';
+	 position: absolute;
+	 left: 0;
+	 width: 100%;
+	 height: 3px;
+	 transform-origin: 0 0;
+	 background: brand(primary);
+}
+ [data-icon="hamburger"] span:before {
+	 bottom: 7.5px;
+}
+ [data-icon="hamburger"] span:after {
+	 top: 7.5px;
+}
+/**** **** PLUS/MINUS **** ***/
+/* Usage: @plus-minus-icon([width of icon], [height of icon], [icon colour]);
+ Examples: @plus-minus-icon(25px, 2px, #fff);
+ @include plus-minus-icon($width: 13px);
+ @plus-minus-icon;
+ */
+/* init */
+ [data-icon="plus-minus"] span {
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 width: 100%;
+	 height: 100%;
+	 transform: translate(-50%, -50%);
+}
+ [data-icon="plus-minus"] span:before, [data-icon="plus-minus"] span:after {
+	 content: '';
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 width: 100%;
+	 height: 3px;
+	 transform-origin: 0 0;
+	 background: brand(primary);
+}
+ [data-icon="plus-minus"] span:before {
+	 transform: translate(-50%, -50%);
+}
+ [data-icon="plus-minus"] span:after {
+	 transform: rotate(90deg) translate(-50%, -50%);
+}
+/**** **** YELLOW CIRCLE WORD ICONS **** ***/
+/* Usage: <p data-dot>Vs</p> */
+/****************************/
+/**** **** LANGUAGE **** ***/
+/**************************/
+/* en or cn */
+/***********************************/
+/**** **** LAYOUT SETTINGS **** ***/
+/*********************************/
+/*********************************/
+/**** **** GRID SETTINGS **** ***/
+/*******************************/
+/**********************************/
+/**** **** BRAND SETTINGS **** ***/
+/********************************/
+/* form */
+/*********************************/
+/**** **** PATH SETTINGS **** ***/
+/*******************************/
+/*************************************/
+/**** **** TYPEFACE SETTINGS **** ***/
+/***********************************/
+/**********************************/
+/**** **** INDICATION BAR **** ***/
+/********************************/
+ #first_section {
+	 position: relative;
+	 z-index: 3;
+}
+ #indication_bar {
+	 position: relative;
+	 width: 100%;
+	 background: none;
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+	/* layout */
+	/* typeface */
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 #indication_bar {
+			 top: -20px;
+			 margin-bottom: 0;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 #indication_bar {
+			 top: -20px;
+			 margin-bottom: 0;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 #indication_bar {
+			 top: -20px;
+			 margin-bottom: 0;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 #indication_bar {
+			 top: -20px;
+			 margin-bottom: 0;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 #indication_bar {
+			 top: -20px;
+			 margin-bottom: 0;
+		}
+	}
+}
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) {
+	 #indication_bar {
+		 top: -30px;
+		 margin-bottom: -30px;
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 #indication_bar {
+			 top: -30px;
+			 margin-bottom: -30px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 #indication_bar {
+			 top: -30px;
+			 margin-bottom: -30px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 #indication_bar {
+			 top: -30px;
+			 margin-bottom: -30px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 #indication_bar {
+			 top: -30px;
+			 margin-bottom: -30px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 #indication_bar {
+			 top: -30px;
+			 margin-bottom: -30px;
+		}
+	}
+}
+ #indication_bar > div > div {
+	 position: relative;
+	 margin: auto;
+	 width: 100%;
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+	/* trigger */
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 #indication_bar > div > div {
+			 padding: 0 page-gutter(mobile);
+			 max-width: max-page-width(mobile);
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 #indication_bar > div > div {
+			 padding: 0 page-gutter(mobile);
+			 max-width: max-page-width(mobile);
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 #indication_bar > div > div {
+			 padding: 0 page-gutter(mobile);
+			 max-width: max-page-width(mobile);
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 #indication_bar > div > div {
+			 padding: 0 page-gutter(mobile);
+			 max-width: max-page-width(mobile);
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 #indication_bar > div > div {
+			 padding: 0 page-gutter(mobile);
+			 max-width: max-page-width(mobile);
+		}
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 #indication_bar > div > div {
+			 padding: 0 page-gutter(laptop);
+			 max-width: max-page-width(laptop);
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 #indication_bar > div > div {
+			 padding: 0 page-gutter(laptop);
+			 max-width: max-page-width(laptop);
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 #indication_bar > div > div {
+			 padding: 0 page-gutter(laptop);
+			 max-width: max-page-width(laptop);
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 #indication_bar > div > div {
+			 padding: 0 page-gutter(laptop);
+			 max-width: max-page-width(laptop);
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 #indication_bar > div > div {
+			 padding: 0 page-gutter(laptop);
+			 max-width: max-page-width(laptop);
+		}
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 #indication_bar > div > div {
+			 padding: 0 page-gutter(desktop);
+			 max-width: max-page-width(desktop);
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 #indication_bar > div > div {
+			 padding: 0 page-gutter(desktop);
+			 max-width: max-page-width(desktop);
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 #indication_bar > div > div {
+			 padding: 0 page-gutter(desktop);
+			 max-width: max-page-width(desktop);
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 #indication_bar > div > div {
+			 padding: 0 page-gutter(desktop);
+			 max-width: max-page-width(desktop);
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 #indication_bar > div > div {
+			 padding: 0 page-gutter(desktop);
+			 max-width: max-page-width(desktop);
+		}
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 #indication_bar > div > div {
+			 padding: 15px 0 15px page-gutter(mobile);
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 #indication_bar > div > div {
+			 padding: 15px 0 15px page-gutter(mobile);
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 #indication_bar > div > div {
+			 padding: 15px 0 15px page-gutter(mobile);
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 #indication_bar > div > div {
+			 padding: 15px 0 15px page-gutter(mobile);
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 #indication_bar > div > div {
+			 padding: 15px 0 15px page-gutter(mobile);
+		}
+	}
+}
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) {
+	 #indication_bar > div > div {
+		 padding: 20px 0 20px 30px;
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 #indication_bar > div > div {
+			 padding: 20px 0 20px 30px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 #indication_bar > div > div {
+			 padding: 20px 0 20px 30px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 #indication_bar > div > div {
+			 padding: 20px 0 20px 30px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 #indication_bar > div > div {
+			 padding: 20px 0 20px 30px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 #indication_bar > div > div {
+			 padding: 20px 0 20px 30px;
+		}
+	}
+}
+ #indication_bar > div > div * {
+	 position: relative;
+	 z-index: 2;
+}
+ #indication_bar > div > div > #indication_content {
+	 overflow: hidden;
+	 will-change: max-height;
+	 -webkit-animation: indication_bar_expand 300ms ease-in forwards;
+	 -moz-animation: indication_bar_expand 300ms ease-in forwards;
+	 animation: indication_bar_expand 300ms ease-in forwards;
+	 -webkit-animation-delay: 0ms;
+	 -moz-animation-delay: 0ms;
+	 animation-delay: 0ms;
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 #indication_bar > div > div > #indication_content {
+			 padding: 15px 70px 0 0;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 #indication_bar > div > div > #indication_content {
+			 padding: 15px 70px 0 0;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 #indication_bar > div > div > #indication_content {
+			 padding: 15px 70px 0 0;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 #indication_bar > div > div > #indication_content {
+			 padding: 15px 70px 0 0;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 #indication_bar > div > div > #indication_content {
+			 padding: 15px 70px 0 0;
+		}
+	}
+}
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) {
+	 #indication_bar > div > div > #indication_content {
+		 padding: 15px 180px 0 0;
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 #indication_bar > div > div > #indication_content {
+			 padding: 15px 180px 0 0;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 #indication_bar > div > div > #indication_content {
+			 padding: 15px 180px 0 0;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 #indication_bar > div > div > #indication_content {
+			 padding: 15px 180px 0 0;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 #indication_bar > div > div > #indication_content {
+			 padding: 15px 180px 0 0;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 #indication_bar > div > div > #indication_content {
+			 padding: 15px 180px 0 0;
+		}
+	}
+}
+ #indication_bar > div > div .indications {
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) {
+	 #indication_bar > div > div .indications {
+		 padding-right: 25px;
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 #indication_bar > div > div .indications {
+			 padding-right: 25px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 #indication_bar > div > div .indications {
+			 padding-right: 25px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 #indication_bar > div > div .indications {
+			 padding-right: 25px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 #indication_bar > div > div .indications {
+			 padding-right: 25px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 #indication_bar > div > div .indications {
+			 padding-right: 25px;
+		}
+	}
+}
+ #indication_bar > div > div .indications + div {
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) {
+	 #indication_bar > div > div .indications + div {
+		 padding-left: 25px;
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 #indication_bar > div > div .indications + div {
+			 padding-left: 25px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 #indication_bar > div > div .indications + div {
+			 padding-left: 25px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 #indication_bar > div > div .indications + div {
+			 padding-left: 25px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 #indication_bar > div > div .indications + div {
+			 padding-left: 25px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 #indication_bar > div > div .indications + div {
+			 padding-left: 25px;
+		}
+	}
+}
+ #indication_bar > div > div:before {
+	 content: '';
+	 position: absolute;
+	 top: 0;
+	 width: 200vw;
+	 height: 100%;
+	 z-index: 1;
+	 box-shadow: 0 0 5px 2px rgba(0, 0, 0, );
+	 background: brand(light);
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 #indication_bar > div > div:before {
+			 right: page-gutter(mobile);
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 #indication_bar > div > div:before {
+			 right: page-gutter(mobile);
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 #indication_bar > div > div:before {
+			 right: page-gutter(mobile);
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 #indication_bar > div > div:before {
+			 right: page-gutter(mobile);
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 #indication_bar > div > div:before {
+			 right: page-gutter(mobile);
+		}
+	}
+}
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) {
+	 #indication_bar > div > div:before {
+		 right: 88px;
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 #indication_bar > div > div:before {
+			 right: 88px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 #indication_bar > div > div:before {
+			 right: 88px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 #indication_bar > div > div:before {
+			 right: 88px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 #indication_bar > div > div:before {
+			 right: 88px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 #indication_bar > div > div:before {
+			 right: 88px;
+		}
+	}
+}
+ #indication_bar > div > div button#indication_bar_trigger {
+	 position: absolute;
+	 top: 25px;
+	 border-radius: 100%;
+	 cursor: pointer;
+	 z-index: 3;
+	 will-change: border;
+	 transition: all 300ms ease-in-out;
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 #indication_bar > div > div button#indication_bar_trigger {
+			 width: 19px;
+			 height: 19px;
+			 right: 40px;
+			 border: 2px solid brand(primary_light);
+		}
+		 #indication_bar > div > div button#indication_bar_trigger span {
+			 position: absolute;
+			 top: 50%;
+			 left: 50%;
+			 width: 7px;
+			 height: 7px;
+			 transform: translate(-50%, -50%);
+		}
+		 #indication_bar > div > div button#indication_bar_trigger span:before, #indication_bar > div > div button#indication_bar_trigger span:after {
+			 content: '';
+			 position: absolute;
+			 top: 50%;
+			 left: 50%;
+			 width: 7px;
+			 height: 2px;
+			 transform-origin: 0 0;
+			 background: brand(primary);
+		}
+		 #indication_bar > div > div button#indication_bar_trigger span:before {
+			 transform: translate(-50%, -50%);
+		}
+		 #indication_bar > div > div button#indication_bar_trigger span:after {
+			 transform: rotate(90deg) translate(-50%, -50%);
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 #indication_bar > div > div button#indication_bar_trigger {
+			 width: 19px;
+			 height: 19px;
+			 right: 40px;
+			 border: 2px solid brand(primary_light);
+		}
+		 #indication_bar > div > div button#indication_bar_trigger span {
+			 position: absolute;
+			 top: 50%;
+			 left: 50%;
+			 width: 7px;
+			 height: 7px;
+			 transform: translate(-50%, -50%);
+		}
+		 #indication_bar > div > div button#indication_bar_trigger span:before, #indication_bar > div > div button#indication_bar_trigger span:after {
+			 content: '';
+			 position: absolute;
+			 top: 50%;
+			 left: 50%;
+			 width: 7px;
+			 height: 2px;
+			 transform-origin: 0 0;
+			 background: brand(primary);
+		}
+		 #indication_bar > div > div button#indication_bar_trigger span:before {
+			 transform: translate(-50%, -50%);
+		}
+		 #indication_bar > div > div button#indication_bar_trigger span:after {
+			 transform: rotate(90deg) translate(-50%, -50%);
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 #indication_bar > div > div button#indication_bar_trigger {
+			 width: 19px;
+			 height: 19px;
+			 right: 40px;
+			 border: 2px solid brand(primary_light);
+		}
+		 #indication_bar > div > div button#indication_bar_trigger span {
+			 position: absolute;
+			 top: 50%;
+			 left: 50%;
+			 width: 7px;
+			 height: 7px;
+			 transform: translate(-50%, -50%);
+		}
+		 #indication_bar > div > div button#indication_bar_trigger span:before, #indication_bar > div > div button#indication_bar_trigger span:after {
+			 content: '';
+			 position: absolute;
+			 top: 50%;
+			 left: 50%;
+			 width: 7px;
+			 height: 2px;
+			 transform-origin: 0 0;
+			 background: brand(primary);
+		}
+		 #indication_bar > div > div button#indication_bar_trigger span:before {
+			 transform: translate(-50%, -50%);
+		}
+		 #indication_bar > div > div button#indication_bar_trigger span:after {
+			 transform: rotate(90deg) translate(-50%, -50%);
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 #indication_bar > div > div button#indication_bar_trigger {
+			 width: 19px;
+			 height: 19px;
+			 right: 40px;
+			 border: 2px solid brand(primary_light);
+		}
+		 #indication_bar > div > div button#indication_bar_trigger span {
+			 position: absolute;
+			 top: 50%;
+			 left: 50%;
+			 width: 7px;
+			 height: 7px;
+			 transform: translate(-50%, -50%);
+		}
+		 #indication_bar > div > div button#indication_bar_trigger span:before, #indication_bar > div > div button#indication_bar_trigger span:after {
+			 content: '';
+			 position: absolute;
+			 top: 50%;
+			 left: 50%;
+			 width: 7px;
+			 height: 2px;
+			 transform-origin: 0 0;
+			 background: brand(primary);
+		}
+		 #indication_bar > div > div button#indication_bar_trigger span:before {
+			 transform: translate(-50%, -50%);
+		}
+		 #indication_bar > div > div button#indication_bar_trigger span:after {
+			 transform: rotate(90deg) translate(-50%, -50%);
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 #indication_bar > div > div button#indication_bar_trigger {
+			 width: 19px;
+			 height: 19px;
+			 right: 40px;
+			 border: 2px solid brand(primary_light);
+		}
+		 #indication_bar > div > div button#indication_bar_trigger span {
+			 position: absolute;
+			 top: 50%;
+			 left: 50%;
+			 width: 7px;
+			 height: 7px;
+			 transform: translate(-50%, -50%);
+		}
+		 #indication_bar > div > div button#indication_bar_trigger span:before, #indication_bar > div > div button#indication_bar_trigger span:after {
+			 content: '';
+			 position: absolute;
+			 top: 50%;
+			 left: 50%;
+			 width: 7px;
+			 height: 2px;
+			 transform-origin: 0 0;
+			 background: brand(primary);
+		}
+		 #indication_bar > div > div button#indication_bar_trigger span:before {
+			 transform: translate(-50%, -50%);
+		}
+		 #indication_bar > div > div button#indication_bar_trigger span:after {
+			 transform: rotate(90deg) translate(-50%, -50%);
+		}
+	}
+}
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) {
+	 #indication_bar > div > div button#indication_bar_trigger {
+		 width: 34px;
+		 height: 34px;
+		 right: 80px;
+		 border: 3px solid brand(primary_light);
+	}
+	 #indication_bar > div > div button#indication_bar_trigger span {
+		 position: absolute;
+		 top: 50%;
+		 left: 50%;
+		 width: 13px;
+		 height: 13px;
+		 transform: translate(-50%, -50%);
+	}
+	 #indication_bar > div > div button#indication_bar_trigger span:before, #indication_bar > div > div button#indication_bar_trigger span:after {
+		 content: '';
+		 position: absolute;
+		 top: 50%;
+		 left: 50%;
+		 width: 13px;
+		 height: 3px;
+		 transform-origin: 0 0;
+		 background: brand(primary);
+	}
+	 #indication_bar > div > div button#indication_bar_trigger span:before {
+		 transform: translate(-50%, -50%);
+	}
+	 #indication_bar > div > div button#indication_bar_trigger span:after {
+		 transform: rotate(90deg) translate(-50%, -50%);
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 #indication_bar > div > div button#indication_bar_trigger {
+			 width: 34px;
+			 height: 34px;
+			 right: 80px;
+			 border: 3px solid brand(primary_light);
+		}
+		 #indication_bar > div > div button#indication_bar_trigger span {
+			 position: absolute;
+			 top: 50%;
+			 left: 50%;
+			 width: 13px;
+			 height: 13px;
+			 transform: translate(-50%, -50%);
+		}
+		 #indication_bar > div > div button#indication_bar_trigger span:before, #indication_bar > div > div button#indication_bar_trigger span:after {
+			 content: '';
+			 position: absolute;
+			 top: 50%;
+			 left: 50%;
+			 width: 13px;
+			 height: 3px;
+			 transform-origin: 0 0;
+			 background: brand(primary);
+		}
+		 #indication_bar > div > div button#indication_bar_trigger span:before {
+			 transform: translate(-50%, -50%);
+		}
+		 #indication_bar > div > div button#indication_bar_trigger span:after {
+			 transform: rotate(90deg) translate(-50%, -50%);
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 #indication_bar > div > div button#indication_bar_trigger {
+			 width: 34px;
+			 height: 34px;
+			 right: 80px;
+			 border: 3px solid brand(primary_light);
+		}
+		 #indication_bar > div > div button#indication_bar_trigger span {
+			 position: absolute;
+			 top: 50%;
+			 left: 50%;
+			 width: 13px;
+			 height: 13px;
+			 transform: translate(-50%, -50%);
+		}
+		 #indication_bar > div > div button#indication_bar_trigger span:before, #indication_bar > div > div button#indication_bar_trigger span:after {
+			 content: '';
+			 position: absolute;
+			 top: 50%;
+			 left: 50%;
+			 width: 13px;
+			 height: 3px;
+			 transform-origin: 0 0;
+			 background: brand(primary);
+		}
+		 #indication_bar > div > div button#indication_bar_trigger span:before {
+			 transform: translate(-50%, -50%);
+		}
+		 #indication_bar > div > div button#indication_bar_trigger span:after {
+			 transform: rotate(90deg) translate(-50%, -50%);
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 #indication_bar > div > div button#indication_bar_trigger {
+			 width: 34px;
+			 height: 34px;
+			 right: 80px;
+			 border: 3px solid brand(primary_light);
+		}
+		 #indication_bar > div > div button#indication_bar_trigger span {
+			 position: absolute;
+			 top: 50%;
+			 left: 50%;
+			 width: 13px;
+			 height: 13px;
+			 transform: translate(-50%, -50%);
+		}
+		 #indication_bar > div > div button#indication_bar_trigger span:before, #indication_bar > div > div button#indication_bar_trigger span:after {
+			 content: '';
+			 position: absolute;
+			 top: 50%;
+			 left: 50%;
+			 width: 13px;
+			 height: 3px;
+			 transform-origin: 0 0;
+			 background: brand(primary);
+		}
+		 #indication_bar > div > div button#indication_bar_trigger span:before {
+			 transform: translate(-50%, -50%);
+		}
+		 #indication_bar > div > div button#indication_bar_trigger span:after {
+			 transform: rotate(90deg) translate(-50%, -50%);
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 #indication_bar > div > div button#indication_bar_trigger {
+			 width: 34px;
+			 height: 34px;
+			 right: 80px;
+			 border: 3px solid brand(primary_light);
+		}
+		 #indication_bar > div > div button#indication_bar_trigger span {
+			 position: absolute;
+			 top: 50%;
+			 left: 50%;
+			 width: 13px;
+			 height: 13px;
+			 transform: translate(-50%, -50%);
+		}
+		 #indication_bar > div > div button#indication_bar_trigger span:before, #indication_bar > div > div button#indication_bar_trigger span:after {
+			 content: '';
+			 position: absolute;
+			 top: 50%;
+			 left: 50%;
+			 width: 13px;
+			 height: 3px;
+			 transform-origin: 0 0;
+			 background: brand(primary);
+		}
+		 #indication_bar > div > div button#indication_bar_trigger span:before {
+			 transform: translate(-50%, -50%);
+		}
+		 #indication_bar > div > div button#indication_bar_trigger span:after {
+			 transform: rotate(90deg) translate(-50%, -50%);
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 #indication_bar > div > div button#indication_bar_trigger {
+			 width: 34px;
+			 height: 34px;
+			 right: 80px;
+			 border: 3px solid brand(primary_light);
+		}
+		 #indication_bar > div > div button#indication_bar_trigger span {
+			 position: absolute;
+			 top: 50%;
+			 left: 50%;
+			 width: 13px;
+			 height: 13px;
+			 transform: translate(-50%, -50%);
+		}
+		 #indication_bar > div > div button#indication_bar_trigger span:before, #indication_bar > div > div button#indication_bar_trigger span:after {
+			 content: '';
+			 position: absolute;
+			 top: 50%;
+			 left: 50%;
+			 width: 13px;
+			 height: 3px;
+			 transform-origin: 0 0;
+			 background: brand(primary);
+		}
+		 #indication_bar > div > div button#indication_bar_trigger span:before {
+			 transform: translate(-50%, -50%);
+		}
+		 #indication_bar > div > div button#indication_bar_trigger span:after {
+			 transform: rotate(90deg) translate(-50%, -50%);
+		}
+	}
+}
+ #indication_bar > div > div button#indication_bar_trigger:focus, #indication_bar > div > div button#indication_bar_trigger:hover {
+	 box-shadow: none;
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 #indication_bar > div > div button#indication_bar_trigger:focus, #indication_bar > div > div button#indication_bar_trigger:hover {
+			 border: 2px solid brand(primary);
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 #indication_bar > div > div button#indication_bar_trigger:focus, #indication_bar > div > div button#indication_bar_trigger:hover {
+			 border: 2px solid brand(primary);
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 #indication_bar > div > div button#indication_bar_trigger:focus, #indication_bar > div > div button#indication_bar_trigger:hover {
+			 border: 2px solid brand(primary);
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 #indication_bar > div > div button#indication_bar_trigger:focus, #indication_bar > div > div button#indication_bar_trigger:hover {
+			 border: 2px solid brand(primary);
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 #indication_bar > div > div button#indication_bar_trigger:focus, #indication_bar > div > div button#indication_bar_trigger:hover {
+			 border: 2px solid brand(primary);
+		}
+	}
+}
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) {
+	 #indication_bar > div > div button#indication_bar_trigger:focus, #indication_bar > div > div button#indication_bar_trigger:hover {
+		 border: 3px solid brand(primary);
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 #indication_bar > div > div button#indication_bar_trigger:focus, #indication_bar > div > div button#indication_bar_trigger:hover {
+			 border: 3px solid brand(primary);
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 #indication_bar > div > div button#indication_bar_trigger:focus, #indication_bar > div > div button#indication_bar_trigger:hover {
+			 border: 3px solid brand(primary);
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 #indication_bar > div > div button#indication_bar_trigger:focus, #indication_bar > div > div button#indication_bar_trigger:hover {
+			 border: 3px solid brand(primary);
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 #indication_bar > div > div button#indication_bar_trigger:focus, #indication_bar > div > div button#indication_bar_trigger:hover {
+			 border: 3px solid brand(primary);
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 #indication_bar > div > div button#indication_bar_trigger:focus, #indication_bar > div > div button#indication_bar_trigger:hover {
+			 border: 3px solid brand(primary);
+		}
+	}
+}
+ #indication_bar > div > div button#indication_bar_trigger span:after {
+	 width: 0;
+	 will-change: width;
+	 transition: all 300ms ease-in-out;
+}
+ #indication_bar h3 {
+	 color: brand(primary);
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 #indication_bar h3 {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 padding-right: 70px;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 #indication_bar h3 {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 padding-right: 70px;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 #indication_bar h3 {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 padding-right: 70px;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 #indication_bar h3 {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 padding-right: 70px;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 #indication_bar h3 {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 padding-right: 70px;
+		}
+		 @else if {
+			 font-size: 14px;
+		}
+	}
+}
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) {
+	 #indication_bar h3 {
+		 font-family: 'Gotham', sans-serif;
+		 font-weight: 700;
+		 margin-bottom: 0;
+		 padding-left: 40px;
+		 padding-right: 150px;
+	}
+	 @else if {
+		 font-size: 16px;
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 #indication_bar h3 {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 margin-bottom: 0;
+			 padding-left: 40px;
+			 padding-right: 150px;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 #indication_bar h3 {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 margin-bottom: 0;
+			 padding-left: 40px;
+			 padding-right: 150px;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 #indication_bar h3 {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 margin-bottom: 0;
+			 padding-left: 40px;
+			 padding-right: 150px;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 #indication_bar h3 {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 margin-bottom: 0;
+			 padding-left: 40px;
+			 padding-right: 150px;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 #indication_bar h3 {
+			 font-family: 'Gotham', sans-serif;
+			 font-weight: 700;
+			 margin-bottom: 0;
+			 padding-left: 40px;
+			 padding-right: 150px;
+		}
+		 @else if {
+			 font-size: 16px;
+		}
+	}
+}
+ #indication_bar p {
+	 font-family: 'Gotham', sans-serif;
+	 font-weight: 400;
+	 line-height: 16px;
+	 margin-bottom: 15px;
+}
+ @else if {
+	 font-size: 12px;
+}
+/**** **** CLOSE STATE **** ***/
+ #indication_bar.close [data-row] {
+	 display: none;
+}
+ #indication_bar.close button#indication_bar_trigger span:after {
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+	/* from laptop to desktop */
+	/* only desktop */
+	/* only laptop */
+	/* only tablet */
+	/* only mobile */
+	/* only mobile small */
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 #indication_bar.close button#indication_bar_trigger span:after {
+			 width: 7px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 #indication_bar.close button#indication_bar_trigger span:after {
+			 width: 7px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 #indication_bar.close button#indication_bar_trigger span:after {
+			 width: 7px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 #indication_bar.close button#indication_bar_trigger span:after {
+			 width: 7px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 #indication_bar.close button#indication_bar_trigger span:after {
+			 width: 7px;
+		}
+	}
+}
+ @media screen and (min-width: mq(laptop)px) and (max-width: 9999px) {
+	 #indication_bar.close button#indication_bar_trigger span:after {
+		 width: 13px;
+	}
+}
+ @else if $breakpoint == desktop {
+	 @media screen and (min-width: mq(desktop)px) and (max-width: 9999px) {
+		 #indication_bar.close button#indication_bar_trigger span:after {
+			 width: 13px;
+		}
+	}
+}
+ @else if $breakpoint == laptop {
+	 @media screen and (min-width: mq(laptop)px) and (max-width: mq(desktop)px) {
+		 #indication_bar.close button#indication_bar_trigger span:after {
+			 width: 13px;
+		}
+	}
+}
+ @else if $breakpoint == tablet {
+	 @media screen and (min-width: mq(mobile)px) and (max-width: mq(tablet)px) {
+		 #indication_bar.close button#indication_bar_trigger span:after {
+			 width: 13px;
+		}
+	}
+}
+ @else if $breakpoint == mobile {
+	 @media screen and (max-width : mq(mobile)px) {
+		 #indication_bar.close button#indication_bar_trigger span:after {
+			 width: 13px;
+		}
+	}
+}
+ @else if $breakpoint == mobile-sm {
+	 @media screen and (max-width : mq(mobile-sm)px) {
+		 #indication_bar.close button#indication_bar_trigger span:after {
+			 width: 13px;
+		}
+	}
+}
+/**** **** ANIMATION **** ***/
+ @-webkit-keyframes indication_bar_expand {
+	 0% {
+		 max-height: 0;
+	}
+	 100% {
+		 max-height: 800px;
+	}
+}
+ @-moz-keyframes indication_bar_expand {
+	 0% {
+		 max-height: 0;
+	}
+	 100% {
+		 max-height: 800px;
+	}
+}
+ @keyframes indication_bar_expand {
+	 0% {
+		 max-height: 0;
+	}
+	 100% {
+		 max-height: 800px;
+	}
+}
+ 
