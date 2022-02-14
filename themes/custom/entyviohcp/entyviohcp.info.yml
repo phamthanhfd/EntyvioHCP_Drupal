@@ -6,7 +6,7 @@ libraries:
   - entyviohcp/global-styling
 base theme: classy
 regions:
-  top-header: 'Top Header'
+  top_header: 'Top Header'
   header: 'Header'
   highlight: 'Highlight'
   about: "About"
