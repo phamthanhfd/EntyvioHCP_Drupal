@@ -12,5 +12,7 @@ regions:
   about: "About"
   services: 'Services'
   content: 'Content'
-  footer: 'Footer'
+  footer_logo: 'Footer Logo'
+  footer_menu: 'Footer Menu'
+  footer_content: 'Footer Content'
   sticky_bar: 'Sticky Bar'

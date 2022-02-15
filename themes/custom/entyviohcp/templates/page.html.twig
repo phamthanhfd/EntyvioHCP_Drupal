@@ -30,23 +30,29 @@
   {% endif %}
 
   {% if page.content %}
-   <main aria-label="Site main content" class="content main-content_container" id="content" role="main">
+   <main aria-label="Site main content" class="content main-content_container" id="page-content" role="main">
      {{ page.content }}
    </main>
    {% endif %}
 </section>
 <footer aria-label="Site footer" class="footer" id="footer" role="contentinfo">
-   <div class="footer_container">
+   <div class="footer_container" >
+    {% if page.footer_logo %}
     <div class="footer-logo">
-       {{ page.footer_logo }}
+       <a href="http://www.takeda.com/">{{ page.footer_logo }}</a>
     </div>
-    <div>
-      <div>
+    {% endif %}
+    <div class="footer-content">
+    {% if page.footer_menu %}
+      <div class="footer-menu">
        {{ page.footer_menu }}
       </div>
-      <div>
+      {% endif %}
+      {% if page.footer_content %}
+      <div class="footer-detail">
        {{ page.footer_content }}
        </div>
+       {% endif %}
     </div>
    </div>
 </footer>

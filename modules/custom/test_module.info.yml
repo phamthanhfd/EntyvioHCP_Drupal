@@ -1,0 +1,7 @@
+name: My First Custom Blockk
+type: module
+description: Here is My First Custom Block
+core_version_requirement: ^8 || ^9
+package: custom
+dependencies:
+  - block

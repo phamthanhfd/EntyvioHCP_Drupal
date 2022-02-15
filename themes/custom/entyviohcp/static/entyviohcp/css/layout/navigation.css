@@ -2384,7 +2384,7 @@
 			 font-weight: 700;
 			 margin-bottom: 25px;
 			 padding: 22px 40px 15px 0;
-			 color: brand(primary);
+			 color: red;
 			 display: inline-block;
 			 border-bottom: 1px solid brand(primary);
 		}
@@ -2764,4 +2764,3 @@
 		 top: 50%;
 	}
 }
- 

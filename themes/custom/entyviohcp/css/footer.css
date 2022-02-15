@@ -1,0 +1,98 @@
+#footer{
+  margin-top: 54px;
+  overflow: hidden;
+  background: #e6e7e8;
+}
+#footer .field__label{
+  display: none;
+}
+
+@media screen and (min-width: 1800px) and (max-width: 9999px){
+  #footer .footer_container {
+    padding: 0 30px;
+    max-width: 1366px;
+  }
+}
+@media screen and (min-width: 960px) and (max-width: 9999px){
+  #footer .footer_container {
+    padding: 0 200px 0 75px;
+}}
+@media screen and (max-width: 959px){
+  #footer .footer_container {
+    padding: 25px;
+    flex-wrap: wrap;
+}
+  #footer .footer-logo {
+    width: 125px;
+    display: block;
+  }
+  #footer .footer-menu .menu{
+    display: grid !important;
+    grid-template-columns: 50% 50%;
+  }
+  #footer .footer-menu .menu li{
+    margin-top: 20px;
+  }
+  #footer .footer-menu{
+    padding-top: 32px;
+  }
+  #footer [data-float="right"] {
+    float: none !important;
+    padding-top: 20px;
+    display: block;
+}
+}
+#footer .footer_container {
+    margin: auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+#footer .footer-menu .menu{
+  display: flex;
+  align-items: center;
+  margin: 0 0 20px 0;
+  flex-wrap: wrap;
+}
+@media screen and (min-width: 960px) and (max-width: 9999px){
+#footer .footer-logo {
+    margin: 32px 50px 0 0;
+    flex: 0 0 140px;
+    max-width: 140px;
+}}
+#footer .footer-logo img{
+  width: 100%;
+  height: auto
+}
+#footer .footer-menu{
+  padding-top: 25px;
+}
+@media screen and (min-width: 960px) and (max-width: 1318px){
+#footer .footer-menu .menu li {
+    margin-right: 15px;
+}}
+@media screen and (min-width: 960px) and (max-width: 9999px){
+#footer .footer-menu .menu li {
+    margin-right: 20px;
+}}
+#footer .footer-menu .menu li a{
+  font-family: 'Gotham', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  text-decoration: none;
+  color: var(--gb-primary);
+}
+#footer .footer-menu .menu li a:hover{
+  text-decoration: underline;
+}
+#footer .footer-content p, #footer .footer-content span{
+  font-family: 'Gotham', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  line-height: 16px;
+}
+#footer a {
+  color: var(--gb-primary);
+}

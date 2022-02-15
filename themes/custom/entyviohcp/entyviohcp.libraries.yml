@@ -16,6 +16,7 @@ global-styling:
       css/layout/body.css: {}
       css/style.css: {}
       css/header.css: {}
+      css/footer.css: {}
       'http://fonts.cdnfonts.com/css/gotham': { type: external, minified: true }
 
 
