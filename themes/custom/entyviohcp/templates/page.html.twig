@@ -5,7 +5,7 @@
       </div>
     {% endif %}
     {% if page.header %}
-      <div class="main-header">
+      <div class="main-header {% if is_front %} front-page {% endif %}">
         {{ page.header }}
       </div>
     {% endif %}

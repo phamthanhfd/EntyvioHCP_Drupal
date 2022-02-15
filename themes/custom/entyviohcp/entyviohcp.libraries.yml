@@ -1,6 +1,7 @@
 global-styling:
   version: 1.x
   js:
+    includes/jquery/jquery.js: {}
     js/entyviohcp.js: {}
     includes/bootstrap/js/bt.js: {}
   css:

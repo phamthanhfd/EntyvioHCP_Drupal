@@ -1,9 +1,22 @@
+
+#header{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  transition: all .2s linear;
+}
 .main-header{
   box-shadow: 0 2px 4px #9b288c42;
+  background: white;
 }
 .main-header .menu--main ul{
   display: flex;
   margin: 0;
+}
+#block-topheaderpushdown{
+  background-color: white;
 }
 #block-topheaderpushdown .layout{
   margin: auto;
@@ -38,7 +51,7 @@
 }
 
 #block-topheaderpushdown .block-field-blockblock-contentpushdown-block-typefield-learn-more-link a{
-  font-family: 'Gotham', sans-serif;
+  font-family: 'GothamMedium', sans-serif;
     font-size: 16px;
     font-weight: 700;
     position: relative;
@@ -129,7 +142,7 @@
 
 }
 #block-headerlinkslist .block-field-blockblock-contentlinks-listfield-link-in-links-list .field__items a, #block-headerlinkslist .block-field-blockblock-contentlinks-listfield-links-list-2 a{
-  font-family: 'Gotham', sans-serif;
+  font-family: 'GothamMedium', sans-serif;
   font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
@@ -142,7 +155,7 @@
 
 .block-field-blockblock-contentlinks-listfield-links-list-2 .field__item span{
   margin: 0;
-  font-family: 'Gotham', sans-serif;
+  font-family: 'GothamMedium', sans-serif;
   font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
@@ -168,14 +181,14 @@
   height: 79px;
   display: flex;
   align-items: center;
-  font-family: 'Gotham', sans-serif;
+  font-family: 'GothamMedium', sans-serif;
   font-size: 14px;
   font-weight: 500;
   color: #9b288c;
   text-decoration: none;
   line-height: 14px;
 }
-#block-entivyomainnavigation .field--name-field-link-in-main-navigation .field__items a:hover{
+#block-entivyomainnavigation .field--name-field-link-in-main-navigation .field__items a:hover, .front-page #block-entivyomainnavigation .field--name-field-link-in-main-navigation .field__items .field__item:first-child a{
   background: #ffcb03;
 }
 #page-content .section-content-homepage{
