@@ -109,16 +109,26 @@
   z-index: 3;
   position: relative;
 }
-
-#block-headerlinkslist .block-field-blockblock-contentlinks-listfield-link-in-links-list .field__items{
+#block-headerlinkslist .block-field-blockblock-contentlinks-listfield-link-in-links-list{
+  padding: 0 23px 0 5px;
+}
+#block-headerlinkslist .block-field-blockblock-contentlinks-listfield-links-list-2 {
+  padding: 0 5px 0px 23px;
+}
+#block-headerlinkslist .block-field-blockblock-contentlinks-listfield-link-in-links-list, #block-headerlinkslist .block-field-blockblock-contentlinks-listfield-links-list-2 {
+  width: 50%;
+}
+#block-headerlinkslist .block-field-blockblock-contentlinks-listfield-link-in-links-list .field__items, #block-headerlinkslist .block-field-blockblock-contentlinks-listfield-links-list-2 .field__items{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+
 }
 #block-headerlinkslist .block-field-blockblock-contentlinks-listfield-link-in-links-list .field__items .field__item:not(:first-child){
-  margin-left: 51px;
+
 }
-#block-headerlinkslist .block-field-blockblock-contentlinks-listfield-link-in-links-list .field__items a{
+#block-headerlinkslist .block-field-blockblock-contentlinks-listfield-link-in-links-list .field__items a, #block-headerlinkslist .block-field-blockblock-contentlinks-listfield-links-list-2 a{
   font-family: 'Gotham', sans-serif;
   font-size: 12px;
   font-weight: 700;
@@ -126,11 +136,11 @@
   color: white;
   text-decoration: none;
 }
-#block-headerlinkslist .block-field-blockblock-contentlinks-listfield-link-in-links-list .field__items a:hover{
+#block-headerlinkslist .block-field-blockblock-contentlinks-listfield-link-in-links-list .field__items a:hover, #block-headerlinkslist .block-field-blockblock-contentlinks-listfield-links-list-2 a:hover{
   text-decoration: underline;
 }
 
-.block-field-blockblock-contentlinks-listfield-text-in-links-lis .field__item p{
+.block-field-blockblock-contentlinks-listfield-links-list-2 .field__item span{
   margin: 0;
   font-family: 'Gotham', sans-serif;
   font-size: 12px;
@@ -169,7 +179,7 @@
   background: #ffcb03;
 }
 #page-content .section-content-homepage{
-  margin:0 auto;max-width:1366px;padding:75px 200px 0 75px;width:100%;
+  margin:0 auto;max-width:1366px;padding:75px 230px 0 105px;width:100%;
 }
 @media(max-width: 1396px){
   #block-topheaderpushdown .layout, #block-headerlinkslist .layout, #block-entivyomainnavigation{
@@ -179,12 +189,57 @@
     max-width: unset;
   }
 }
-@media(max-width: 960px){
+@media(max-width: 1250px){
   #block-entivyomainnavigation .field--name-field-link-in-main-navigation .field__items a{
     padding: 15px 17px !important;
   }
-  #page-content .section-content-homepage{
-    padding: 0 25px;
-    max-width: 100%;
+}
+@media(min-width: 960px){
+  #block-topheaderpushdown .layout, #block-headerlinkslist .layout, #block-entivyomainnavigation{
+    max-width: 1366px;
+    padding: 0 15px !important;
+  }
+  #block-entivyomainnavigation{
+    padding: 0 30px !important;
   }
 }
+@media(max-width: 959px){
+  .field--name-field-link-in-main-navigation{
+    display: none;
+  }
+  .block-field-blockblock-contentlinks-listfield-link-in-links-list{
+    display: none;
+  }
+  .block-field-blockblock-contentlinks-listfield-links-list-2 {
+    width: 100% !important;
+  }
+  #block-headerlinkslist .block-field-blockblock-contentlinks-listfield-links-list-2 .field__items{
+    justify-content: center !important;
+  }
+  #block-headerlinkslist .layout{
+    background: #f4e8f3;
+  }
+  .block-field-blockblock-contentlinks-listfield-links-list-2 a{
+    display: none;
+  }
+  .block-field-blockblock-contentlinks-listfield-links-list-2 span{
+    font-size: 13px !important;
+    font-weight: 400 !important;
+    color: var(--gb-primary) !important;
+    margin-bottom: 1px;
+  }
+  #block-headerlinkslist .layout:before, #block-headerlinkslist .layout:after{
+    display: none !important;
+  }
+  #block-headerlinkslist .layout__region.layout__region--content{
+    padding: 8px 0 !important;
+  }
+  #block-entivyomainnavigation{
+    height: 80px !important;
+  }
+  #block-entivyomainnavigation .field--name-field-logo.field--type-image{
+    margin-right: auto;
+  }
+}
+
+

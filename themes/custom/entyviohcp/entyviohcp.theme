@@ -1,0 +1,49 @@
+<?php
+use Drupal\node\NodeInterface;
+function entyviohcp_preprocess_node(&$vars) {
+
+
+  $node = $vars['node'];
+  if($node instanceof NodeInterface && $node->getType() == 'landing_page'){
+    $list_component = $node->get('field_section_1')->referencedEntities();
+    //dump($list_component);
+    //exit();
+    $title_color = [];
+    foreach ($list_component as $component){
+      $title_color[] = [
+       'id' => $component->id->value,
+       'titleColor' => $component->field_title_color->value
+      ];
+    }
+    $vars['title_Ccolor'] = $title_color;
+
+  }
+
+}
+/**
+ * Implements template_preprocess_paragraph().
+ *
+ * @param array $variables
+ *   An associative array containing:
+ *   - elements: An array of elements to display in view mode.
+ *   - paragraph: The paragraph object.
+ *   - view_mode: View mode; e.g., 'full', 'teaser'...
+ */
+
+function entyviohcp_preprocess_paragraph(&$variables) {
+  /** @var \Drupal\paragraphs\Entity\Paragraph $paragraph */
+  $paragraph = $variables['paragraph'];
+  //dump($paragraph->field_title_color->value);
+  //exit();
+  if($paragraph->getType() == 'pr_test'){
+    $variables['title_Ccolor'] = $paragraph->field_title_color->value;
+  }
+  if($paragraph->getType() == 'biologic_paragraph'){
+    $variables['title_bio'] = $paragraph->field_biologic_title->value;
+    $variables['desbio'] = $paragraph->field_biologic_description->value;
+    //dump($paragraph->field_biologic_description);
+    //exit();
+  }
+}
+
+?>

@@ -1,4 +1,35 @@
+@font-face {
+  font-family: Knockout50;
+  src: url(../fonts/Knockout50.woff2) format('woff2');
+}
+@font-face {
+  font-family: Knockout49;
+  src: url(../fonts/Knockout49.woff2) format('woff2');
+}
+@font-face {
+  font-family: Knockout30;
+  src: url(../fonts/Knockout30.woff2) format('woff2');
+}
+@font-face {
+  font-family: Knockout29;
+  src: url(../fonts/Knockout29.woff2) format('woff2');
+}
+@font-face {
+  font-family: Gotham;
+  src: url(../fonts/GothamBold.woff2) format('woff2');
+}
+@font-face {
+  font-family: GothamBook;
+  src: url(../fonts/GothamBook.woff2) format('woff2');
+}
+@font-face {
+  font-family: GothamMedium;
+  src: url(../fonts/GothamMedium.woff2) format('woff2');
+}
 html, body{
   font-family: 'Gotham', sans-serif;
   color: #58595b;
+}
+.field__label{
+  display: none;
 }
