@@ -271,19 +271,18 @@ article.first-line-biologic .legal{
 .sticky-bar{
   width: 100%;
   background: white;
-  top: 100%;
+  top: calc(100% - 95px);
   z-index: 10000;
   transition: all .2s linear;
   left: 0;
-  position: fixed; top: 100%;
-}
+  position: fixed; }
 .sticky-bar_container .section-content-homepage h3 strong{
   display: block;
   max-width: 100%;
   margin: 0 auto;
   padding: 11px 0 7px 0;
   line-height: 30px;
-  margin-bottom: 4px;
+  margin-bottom: 0 !important;
 }
 .sticky-bar_container .section-content-homepage ul{
   max-width: 100%;
@@ -307,6 +306,38 @@ article.first-line-biologic .legal{
 }
 .sticky-bar_container .section-content-homepage h3{
   background: #f0deee;
+  margin-bottom: 0 !important;
+  position: relative;
+}
+.sticky-bar_container .section-content-homepage h3:before{
+  position: absolute;
+  right: 60px;
+  top: 50%;
+  transform: translateY(-50%);
+  content:"+";
+  font-size: 25px;
+  color: var(--gb-primary);
+  z-index: 4;
+}
+.sticky-bar_container .section-content-homepage h3:after{
+  width: 34px;
+  height: 34px;
+  right: 51px;
+  border: 3px solid #e7cae3;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 100%;
+  cursor: pointer;
+  z-index: 3;
+  will-change: border;
+  transition: all 300ms ease-in-out;
+  background: #fff;
+  content: "";
+}
+.sticky-bar_container .section-content-homepage h3:before:hover, .sticky-bar_container .section-content-homepage h3:after:hover{
+  border-color: #9b288c;
+  cursor: pointer;
 }
 @media(min-width: 960px){
   .sticky-bar_container .section-content-homepage h3 strong, .sticky-bar_container .section-content-homepage ul{
