@@ -5,5 +5,10 @@ $( document ).ready(function() {
       } else {
         $('header').css("top","0");
       }
+      if ($(this).scrollTop() > 100) {
+        $('.sticky-bar').css("top","100%");
+      } else {
+        $('.sticky-bar').css("top","calc(100% - 95px)");
+      }
     });
 });

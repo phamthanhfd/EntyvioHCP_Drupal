@@ -268,3 +268,50 @@ article.first-line-biologic .legal{
   }
 }
 
+.sticky-bar{
+  width: 100%;
+  background: white;
+  top: 100%;
+  z-index: 10000;
+  transition: all .2s linear;
+  left: 0;
+  position: fixed; top: 100%;
+}
+.sticky-bar_container .section-content-homepage h3 strong{
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 11px 0 7px 0;
+  line-height: 30px;
+  margin-bottom: 4px;
+}
+.sticky-bar_container .section-content-homepage ul{
+  max-width: 100%;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+.sticky-bar_container .section-content-homepage ul .content-list{
+  padding-left: 10px;
+  position: relative;
+  list-style: none;
+}
+.sticky-bar_container .section-content-homepage ul .content-list:before{
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  border-radius: 100%;
+  background: #58595b;
+  top: 11px;
+}
+.sticky-bar_container .section-content-homepage h3{
+  background: #f0deee;
+}
+@media(min-width: 960px){
+  .sticky-bar_container .section-content-homepage h3 strong, .sticky-bar_container .section-content-homepage ul{
+    padding-left: calc(72px + 30px);
+    padding-right: calc(200px + 30px);
+    max-width: 1366px;
+  }
+}
