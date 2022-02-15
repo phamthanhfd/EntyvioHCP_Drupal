@@ -194,6 +194,9 @@
 #page-content .section-content-homepage{
   margin:0 auto;max-width:1366px;padding:75px 230px 0 105px;width:100%;
 }
+#block-entivyomainnavigation .field--name-field-logo{
+  margin-right: 30px;
+}
 @media(max-width: 1396px){
   #block-topheaderpushdown .layout, #block-headerlinkslist .layout, #block-entivyomainnavigation{
     max-width: 100%;

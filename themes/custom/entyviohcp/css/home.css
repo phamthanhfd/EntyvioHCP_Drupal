@@ -94,18 +94,20 @@
   top: 0;
   background: url(../images/desktop-home-doctor.png) top right no-repeat;
   background-size: cover;
-  width: 50%;
+  width: calc(50% + 1px);
   height: 100%;
   z-index: 2;
+  background-position-y: 70px;
 }
 .hero-container .left-image{
   right: calc(50% - 1px);
   top: 0;
   background: url(../images/desktop-home-ivette.png) top left no-repeat;
   background-size: cover;
-  width: 50%;
+  width: calc(50% + 1px);
   height: 100%;
   z-index: 2;
+  background-position-y: 70px;
 }
 .hero-container .article-content{
   position: relative;
