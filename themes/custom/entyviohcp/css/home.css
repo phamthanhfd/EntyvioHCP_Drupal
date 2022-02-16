@@ -658,3 +658,55 @@ article.first-line-biologic .legal{
     margin-top: 30px !important;
   }
 }
+
+
+.paragraph--type--home-title .field--name-field-content{
+  margin: auto;
+  width: 100%;
+}
+.paragraph--type--home-title .field--name-field-content h2{
+  color: #9b288c;
+  margin-top: 25px;
+  margin-bottom: 55px;
+  text-transform: uppercase;
+  font-family: 'Knockout29', sans-serif;
+  font-size: 72px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.paragraph--type--home-title .field--name-field-content h2 em{
+  font-family: 'Knockout29', sans-serif;
+  font-size: 36px;
+  position: absolute;
+  bottom: -23px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: 400;
+  text-transform: lowercase;
+  font-style: normal;
+}
+.paragraph--type--home-title .field--name-field-content h2 span{
+  margin: 0 11px;
+}
+@media screen and (min-width: 1800px) and (max-width: 9999px){
+  .paragraph--type--home-title .field--name-field-content{
+    padding: 0 30px;
+    max-width: 1366px;
+  }
+}
+
+@media screen and (min-width: 960x){
+  .paragraph--type--home-title .field--name-field-content{
+    padding: 0 23px;
+    max-width: 1366px;
+  }
+}
+
+@media screen and (max-width: 960x){
+  .paragraph--type--home-title .field--name-field-content{
+    padding: 0 25px;
+  }
+}
