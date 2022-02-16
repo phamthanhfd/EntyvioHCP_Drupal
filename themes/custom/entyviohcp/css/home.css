@@ -359,7 +359,7 @@ article.first-line-biologic .legal{
   padding: 75px 200px 0 75px;
 }
 .container-article article ul{
-
+  padding: 0;
 }
 .container-article article ul li{
   position: relative;
@@ -386,4 +386,33 @@ article.first-line-biologic .legal{
   margin-bottom: 12px;
   color: #9b288c;
   text-transform: uppercase;
+}
+.container-article h3{
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  margin-bottom: 4px;
+  color: #58595b;
+}
+.container-article a{
+  color: #9b288c;
+  text-decoration: none;
+  font-weight: 700;
+}
+#references h4{
+  font-family: 'Gotham', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #9b288c;
+}
+#references ol{
+  padding-left: 18px;
+}
+#references ol li{
+  font-family: 'Gotham', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  margin-bottom: 4px;
+  line-height: 12px;
 }
