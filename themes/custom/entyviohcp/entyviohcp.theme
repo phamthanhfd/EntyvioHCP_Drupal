@@ -44,6 +44,18 @@ function entyviohcp_preprocess_paragraph(&$variables) {
     //dump($paragraph->field_biologic_description);
     //exit();
   }
+
+  if($paragraph->getType() == 'article'){
+    $variables['title_art'] = $paragraph->field_title_article->value;
+    $variables['des_art'] = $paragraph->field_content_article;
+    $variables['title_ind'] = $paragraph->field_references->value;
+    $variables['content_ind'] = $paragraph->field_indications_content;
+    $variables['references'] = $paragraph->field_list_references;
+    //dump($paragraph->field_biologic_description);
+    //exit();
+  }
+
+
 }
 
 ?>

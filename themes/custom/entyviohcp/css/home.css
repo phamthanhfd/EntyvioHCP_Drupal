@@ -346,3 +346,44 @@ article.first-line-biologic .legal{
     max-width: 1366px;
   }
 }
+
+
+.container-article{
+  padding: 0 30px;
+  max-width: 1366px;
+  margin: auto;
+  width: 100%;
+}
+.container-article article
+{
+  padding: 75px 200px 0 75px;
+}
+.container-article article ul{
+
+}
+.container-article article ul li{
+  position: relative;
+  padding-left: 10px;
+  list-style: none;
+}
+.container-article article ul li:before{
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  border-radius: 100%;
+  background: #58595b;
+  top: 11px;
+}
+.container-article #references article{
+  padding: 30px 200px 0 75px;
+}
+.container-article h2{
+  font-family: 'Gotham', sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #9b288c;
+  text-transform: uppercase;
+}
