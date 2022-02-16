@@ -13,7 +13,7 @@ $( document ).ready(function() {
       if ($(this).scrollTop() < 600) {
         $('.back-to-top').css("right","-300px");
       } else {
-        $('.back-to-top').css("right","14px");
+        $('.back-to-top').css("right","-40px");
       }
     });
     $(".back-to-top").on("click", function() {

@@ -253,7 +253,7 @@ article.first-line-biologic .legal{
   }
   article.first-line-biologic h2{
     font-family: Knockout29;
-    font-size: 28px;
+    font-size: 36px;
     font-weight: 200;
     margin-bottom: 20px;
     line-height: 32px;
@@ -457,6 +457,7 @@ article.first-line-biologic .legal{
   content: '\00BB';
   left: 30px;
   top: 21px;
+  font-size: 23px;
 }
 
 .paragraph--type--pillars-p .field--name-field-ps1{
@@ -666,7 +667,7 @@ article.first-line-biologic .legal{
 }
 .paragraph--type--home-title .field--name-field-content h2{
   color: #9b288c;
-  margin-top: 25px;
+  margin-top: 10px;
   margin-bottom: 55px;
   text-transform: uppercase;
   font-family: 'Knockout29', sans-serif;
@@ -677,12 +678,26 @@ article.first-line-biologic .legal{
   justify-content: center;
   position: relative;
 }
+.paragraph--type--home-title .field--name-field-content h2:before{
+  content: '';
+  flex-grow: 1;
+  height: 4px;
+  background: #ffcb03;
+  margin-right: 20px;
+}
+.paragraph--type--home-title .field--name-field-content h2:after{
+  content: '';
+  flex-grow: 1;
+  height: 4px;
+  background: #ffcb03;
+  margin-left: 20px;
+}
 .paragraph--type--home-title .field--name-field-content h2 em{
-  font-family: 'Knockout29', sans-serif;
+  font-family: 'Knockout30', sans-serif;
   font-size: 36px;
   position: absolute;
   bottom: -23px;
-  left: 50%;
+  left: 45%;
   transform: translateX(-50%);
   font-weight: 400;
   text-transform: lowercase;
@@ -698,15 +713,30 @@ article.first-line-biologic .legal{
   }
 }
 
-@media screen and (min-width: 960x){
+@media screen and (min-width: 960px){
   .paragraph--type--home-title .field--name-field-content{
     padding: 0 23px;
     max-width: 1366px;
   }
 }
 
-@media screen and (max-width: 960x){
+@media screen and (max-width: 960px){
   .paragraph--type--home-title .field--name-field-content{
     padding: 0 25px;
+  }
+  .paragraph--type--home-title .field--name-field-content h2:before, .paragraph--type--home-title .field--name-field-content h2:after{
+    display: none;
+  }
+  .paragraph--type--home-title .field--name-field-content h2{
+    font-size: 42px;
+    justify-content: flex-start;
+  }
+  .paragraph--type--home-title .field--name-field-content h2 em{
+    font-size: 21px;
+    bottom: -13px;
+    left: 15%;
+  }
+  .paragraph--type--home-title .field--name-field-content h2 span{
+    margin: 0 9px;
   }
 }
