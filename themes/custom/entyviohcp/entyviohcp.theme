@@ -1,5 +1,6 @@
 <?php
 use Drupal\node\NodeInterface;
+
 function entyviohcp_preprocess_node(&$vars) {
 
 
@@ -54,6 +55,13 @@ function entyviohcp_preprocess_paragraph(&$variables) {
     //dump($paragraph->field_biologic_description);
     //exit();
   }
+
+  if($paragraph->getType() == 'pillars_items'){
+    $uri = $paragraph->field_image_item;
+    //dump($uri);
+    //exit();
+  }
+
 
 
 }

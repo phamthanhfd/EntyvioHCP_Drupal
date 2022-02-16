@@ -16,4 +16,14 @@ $( document ).ready(function() {
         $('.back-to-top').css("right","14px");
       }
     });
+    $(".back-to-top").on("click", function() {
+      $("html").scrollTop(0);
+    });
+
+    var _img = $(".field--name-field-image-item img");
+    $(_img).each(function(){
+      var parent = $(this).closest(".paragraph--type--pillars-items");
+      var img_src = $(this).attr('src');
+      $(parent).css('background','url('+img_src+')');
+    })
 });
