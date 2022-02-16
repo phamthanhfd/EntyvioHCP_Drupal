@@ -4,11 +4,35 @@
         {{ page.top_header }}
       </div>
     {% endif %}
-    {% if page.header %}
-      <div class="main-header {% if is_front %} front-page {% endif %}">
-        {{ page.header }}
+      <div class="top-menu-header">
+        <div class="top-menu-header_container">
+          <div class="top-menu-header_sm">FOR U.S. HEALTHCARE PROFESSIONALS</div>
+          {% if page.top_menu_left %}
+            <div class="top-menu-left">
+              {{ page.top_menu_left }}
+            </div>
+          {% endif %}
+          {% if page.top_menu_right %}
+            <div class="top-menu-right">
+              {{ page.top_menu_right }}
+            </div>
+          {% endif %}
+        </div>
       </div>
-    {% endif %}
+    <div class="main-header">
+        <div class="main-header_container">
+          {% if page.logo_header %}
+            <div class="logo-header">
+              {{ page.logo_header }}
+            </div>
+          {% endif %}
+          {% if page.main_menu_header %}
+            <div class="main-navigation-header {% if is_front %} front-page {% endif %}">
+              {{ page.main_menu_header }}
+            </div>
+          {% endif %}
+        </div>
+    </div>
 </header>
 <section class="main" id="main">
   {% if page.highlight %}
