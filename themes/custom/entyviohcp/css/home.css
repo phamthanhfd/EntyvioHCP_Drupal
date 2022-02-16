@@ -654,7 +654,7 @@ article.first-line-biologic .legal{
     right: unset;
     bottom: -44px;
   }
-  .field--name-field-ps1>.field__items>.field__item:not(:last-child) {
+  .field--name-field-ps1>.field__items>.field__item:not(:first-child) {
     margin-top: 30px !important;
   }
 }
