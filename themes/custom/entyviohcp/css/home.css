@@ -610,7 +610,7 @@ article.first-line-biologic .legal{
 }
 @media(min-width: 1800px){
   .paragraph--type--pillars-p .field--name-field-ps1{
-    padding: 0 30px;
+    padding: 0 23px;
     max-width: 1366px;
   }
 }
@@ -738,5 +738,344 @@ article.first-line-biologic .legal{
   }
   .paragraph--type--home-title .field--name-field-content h2 span{
     margin: 0 9px;
+  }
+}
+
+
+
+.paragraph--type--cta-section .field--name-field-paragraphs{
+  padding: 0 23px;
+  display: flex;
+  max-width: 1366px;
+  margin: auto;
+  width: 100%;
+}
+.paragraph--type--cta-section>div>.field__items{
+  display: flex;
+  justify-content: space-between;
+}
+.paragraph--type--cta-section>div>.field__items>.field__item{
+  width: calc(50% - 12px);
+}
+.paragraph--type--cta-section{
+  margin-top: 20px;
+}
+.paragraph--type--head-to-head, .paragraph--type--milestones{
+  padding: 32px 25px 119px 25px;
+  height: 980px;
+  overflow: hidden;
+  position: relative;
+  background-size: cover !important;
+  text-align: center;
+  background-repeat: no-repeat !important;
+  background-position: top right !important;
+  color: white !important;
+}
+
+.field--name-field-background-head, .field--name-field-milestone-background{
+  display: none;
+}
+
+.field--name-field-varsity-trial {
+  margin-top: 80px;
+  margin-bottom: 50px;
+}
+
+.field--name-field-varsity-trial img{
+  width: 240px;
+  height: 60px;
+}
+
+.field--name-field-top-title{
+  font-family: 'Knockout29', sans-serif;
+  font-size: 40px;
+  font-weight: 200;
+  line-height: 32px;
+  margin: 32px 0 16px;
+}
+
+.field--name-field-main-title{
+  font-family: 'Knockout29', sans-serif;
+  font-size: 100px;
+  font-weight: 700;
+  line-height: 82px;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  letter-spacing: -1px;
+}
+
+.field--name-field-bottom-title{
+  font-family: 'Knockout29', sans-serif;
+  font-size: 32px;
+  line-height: 48px;
+  font-weight: 200;
+  margin: 16px 0 36px;
+}
+.field--name-field-humira .field__items{
+  display: flex;
+  margin-top: 40px;
+  padding: 0 20px;
+  justify-content: center;
+  flex-direction: row-reverse;
+  position: relative;
+}
+.field--name-field-humira .field__items .field__item:last-child{
+  margin-right: 80px;
+  position: relative;
+}
+.field--name-field-humira .field__items .field__item:first-child{
+  position: relative;
+  right: -20px;
+}
+.field--name-field-humira .field__items .field__item:last-child:before{
+  margin: 15px 32px 0 32px;
+  padding-top: 1px;
+  font-style: normal !important;
+  position: relative;
+  font-family: 'Gotham', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 100%;
+  color: #9b288c;
+  background: #ffcb03;
+  position: absolute;
+  right: -103px;
+  z-index: 3;
+  content: "vs";
+}
+.field--name-field-humira .field__items h3{
+  font-family: 'Knockout29', sans-serif;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 40px;
+  color: #fff;
+  text-transform: uppercase;
+  position: relative;
+}
+.field--name-field-humira .field__items h3 em{
+  font-family: 'Gotham', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  text-transform: lowercase;
+  font-style: normal;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 100%;
+}
+
+.field--name-field-button{
+  margin: 78px 0 0 25px;
+}
+.field--name-field-button a{
+  padding: 20px 30px;
+  font-family: 'Gotham', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  position: relative;
+  text-decoration: none;
+  display: inline-block;
+  text-transform: uppercase;
+  will-change: color, border, box-shadow, background;
+  transition: all 300ms ease-in-out;
+  color: #9b288c;
+  border: 2px solid #cc91c6;
+  box-shadow: 0 2px 2px 0 rgb(61 5 58 / 30%);
+  background: #fff;
+}
+.field--name-field-milestone-button a{
+  font-family: 'Gotham', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    position: relative;
+    padding: 20px;
+    text-decoration: none;
+    display: inline-block;
+    text-transform: uppercase;
+    will-change: color, border, box-shadow, background;
+    transition: all 300ms ease-in-out;
+    color: #fff;
+    border: 2px solid #cc91c6;
+    box-shadow: 0 2px 2px 0 rgb(61 5 58 / 30%);
+    background: #9b288c;
+}
+.field--name-field-milestone-button a:hover{
+  box-shadow: 0 3px 8px 0 rgb(61 5 58 / 30%);
+  color: #9b288c;
+  background: #ffcb03;
+}
+.field--name-field-button a:hover{
+  box-shadow: 0 3px 8px 0 rgb(61 5 58 / 30%);
+  border: 2px solid #9b288c;
+  background: #f4e8f3;
+}
+
+.field.field--name-field-legal
+{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  text-align: left;
+  width: 50%;
+  padding: 15px 20px 20px 20px;
+  font-size: 12px;
+  line-height: 12px;
+
+}
+.field--name-field-title-main{
+  font-family: 'Knockout', sans-serif;
+    font-size: 50px;
+    font-weight: 200;
+    margin-bottom: 30px;
+    line-height: 52px;
+    position: relative;
+    text-transform: uppercase;
+    color: #9b288c;
+}
+.field--name-field-milestones-banner .field__item{
+  text-align: center;
+}
+.field--name-field-milestones-banner img{
+  width: 80%;
+}
+.field--name-field-image-item-1, .field--name-field-image-item-2{
+  width: 80px;
+  height: 80px;
+  margin-right: 10px;
+  margin-top: 25px;
+}
+.field--name-field-content-, .field--name-field-content-item-2{
+  color: #9b288c;
+  margin: 0;
+  text-align: left;
+  font-family: 'Gotham', sans-serif;
+  font-size: 16px;
+
+  display: none;
+}
+.field--name-field-content- span, .field--name-field-content-item-2 span{
+  font-family: 'Knockout29', sans-serif;
+  font-size: 26px;
+  text-transform: uppercase;
+
+}
+.field--name-field-legals p{
+  margin-top: 30px;
+  text-align: left;
+  font-family: 'Gotham', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #9b288c;
+}
+@media(max-width: 1250px){
+  .field--name-field-humira .field__items .field__item:last-child{
+    margin-right: 20px;
+    position: relative;
+  }
+  .field--name-field-humira .field__items .field__item:last-child:before{
+    margin: 12px 5px 0 5px;
+    right: -40px;
+  }
+  .paragraph--type--head-to-head{
+    padding: 32px 15px 125px 15px;
+  }
+  .paragraph--type--cta-section>div>.field__items>.field__item:first-child{
+    width: calc(55% - 12px);
+  }
+  .paragraph--type--cta-section>div>.field__items>.field__item:last-child{
+    width: calc(45% - 12px);
+  }
+  .field--name-field-milestone-button a{
+    padding: 20px 30px;
+  }
+}
+@media(max-width: 960px){
+  .field--name-field-varsity-trial img{
+    width: 100%;
+    height: auto;
+  }
+  .field--name-field-varsity-trial{
+    margin: 0;
+  }
+  .field--name-field-top-title{
+    margin-top: 30px;
+    font-size: 24px;
+    font-weight: 200;
+    line-height: 24px;
+    margin-bottom: 0 !important;
+  }
+  .field--name-field-main-title{
+    font-size: 55px;
+    font-weight: 700;
+    line-height: 44px;
+    position: relative;
+  }
+  .field--name-field-bottom-title{
+    margin-top: 0;
+    font-size: 18px;
+    line-height: 20px;
+  }
+  .field--name-field-humira .field__items{
+    justify-content: flex-end;
+  }
+  .field--name-field-humira .field__items h3{
+    font-family: 'Gotham', sans-serif;
+    font-size: 21px;
+    font-weight: 500;
+    line-height: 20px;
+  }
+  .field--name-field-humira .field__items h3 em{
+    font-size: 12px;
+    font-weight: 500;
+  }
+  .paragraph--type--head-to-head{
+    margin-bottom: 25px;
+    padding: 32px 15px 25px 15px;
+  }
+  .field--name-field-humira .field__items .field__item:last-child:before{
+    margin: -6px 12px 0 12px;
+    padding-top: 1px;
+    padding-right: 2px;
+    font-family: 'Gotham', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    font-style: italic !important;
+    right: -52px;
+  }
+  .field--name-field-humira .field__items .field__item:last-child{
+    margin-right: 30px;
+  }
+  .field--name-field-humira .field__items{
+    margin-top: 0;
+  }
+  .field--name-field-bottom-title{
+    margin-bottom: 20px;
+  }
+  .field--name-field-button a{
+    padding: 20px;
+  }
+  .field.field--name-field-legal{
+    bottom: 85px;
+    width: 100%;
+    text-align: center;
+  }
+  .paragraph--type--cta-section>div>.field__items{
+    flex-wrap: wrap;
+  }
+  .paragraph--type--cta-section>div>.field__items>.field__item
+  {
+    width: 100% !important;
+  }
+  .paragraph--type--head-to-head{
+    height: auto;
   }
 }

@@ -57,7 +57,7 @@ function entyviohcp_preprocess_paragraph(&$variables) {
   }
 
   if($paragraph->getType() == 'pillars_items'){
-    $uri = $paragraph->field_image_item;
+    //$uri = $paragraph->field_title_item->value;
     //dump($uri);
     //exit();
   }
