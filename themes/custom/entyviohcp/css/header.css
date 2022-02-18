@@ -521,22 +521,23 @@ transform: rotate(180deg);
 .navbar-we-mega-menu .we-mega-menu-col>* .block-inner .block-inner .container-fluid{
   display: block;
 }
+
 @media (min-width: 960px) and (max-width: 9999px){
   .header .top-menu-header .top-menu-header_container{
     max-width: 1366px;
-    padding: 0 30px;
+    padding: 0 15px;
   }
   .logo-header img{
     max-width: 176px;
   }
   .main-header{
-    padding: 0 32px;
+    padding: 0 15px;
   }
   .main-header .main-header_container{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 30px;
+    padding: 0 15px;
     max-width: 1366px;
   }
   .main-navigation-header {
@@ -554,6 +555,13 @@ transform: rotate(180deg);
 @media(max-width: 1250px){
   .header .top-menu-header{
     padding: 0;
+  }
+  .main-navigation-header .we-mega-menu-ul a{
+    padding: 15px 17px;
+    max-width: 137px;
+  }
+  .main-header .main-header_container{
+    padding: 0 !important;
   }
 }
 
@@ -606,5 +614,201 @@ transform: rotate(180deg);
   }
   .main-navigation-header .we-mega-menu-ul{
     margin-right: 0;
+  }
+}
+
+.main-menu-mb{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  background: white;
+  overflow: scroll;
+}
+.main-menu-mb .logo-mn{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 25px;
+}
+.main-menu-mb .close-menu{
+  position: relative;
+  margin-right: 25px;
+  width: 45px;
+  height: 45px;
+}
+.main-menu-mb .close-menu:after, .main-menu-mb .close-menu:before{
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 25px;
+  height: 3px;
+  transform-origin: 0 0;
+  background: #9b288c;
+}
+.main-menu-mb .close-menu:before{
+  transform: rotate(45deg) translate(-50%, -50%);
+}
+.main-menu-mb .close-menu:after{
+  transform: rotate(-45deg) translate(-50%, -50%);
+}
+.main-menu-mb  .we-mega-menu-ul>.we-mega-menu-li{
+  width: 100%;
+}
+.main-menu-mb .menu1>nav>.container-fluid>ul{
+  width: 100%;
+}
+
+.main-menu-mb .menu1>nav>.we-mega-menu-ul{
+  display: block;
+  width: 100%;
+}
+.main-menu-mb .menu1>nav>.container-fluid>ul.we-mega-menu-ul>.we-mega-menu-li>a{
+  padding: 21px 25px !important;
+  font-family: 'Gotham', sans-serif;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 700;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #9b288c;
+  border-bottom: 1px solid #9b288c;
+  text-decoration: none !important;
+  text-transform: capitalize;
+}
+.main-menu-mb .menu1>nav>.container-fluid>ul.we-mega-menu-ul>.we-mega-menu-li.dropdown-menu{
+  flex-direction: column;
+}
+.main-menu-mb .menu1>nav>.container-fluid>ul.we-mega-menu-ul>.we-mega-menu-li.dropdown-menu>a{
+  flex-direction: row-reverse;
+}
+.main-menu-mb .menu1>nav>.we-mega-menu-ul>li>a, .main-menu-mb .menu1>nav, .main-menu-mb .menu1>nav>.container-fluid>ul.we-mega-menu-ul>.we-mega-menu-li>a{
+  background: none !important;
+}
+.main-menu-mb .we-mega-menu-ul>.we-mega-menu-li{
+  border-left: none !important;
+}
+.main-menu-mb .menu1 .navbar{
+  margin: 0 !important;
+}
+.main-menu-mb .menu2{
+  padding: 14px 0;
+}
+.main-menu-mb .menu2 a{
+  font-family: 'Gotham', sans-serif;
+  font-size: 16px;
+  padding: 14px 25px;
+  display: block;
+  color: #9b288c;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 700;
+  width: 100%;
+}
+.main-menu-mb .we-mega-menu-ul{
+  width: 100%;
+}
+.main-menu-mb .we-mega-menu-ul .dropdown-menu >.we-mega-menu-submenu {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  left: 0;
+  position: relative;
+}
+.main-menu-mb .we-mega-menu-submenu.clinical_sub:before, .main-menu-mb .we-mega-menu-submenu.resources_sub:before{
+  display: none;
+}
+.main-menu-mb  .we-mega-menu-submenu{
+  width: 100% !important;
+  position: unset !important;
+}
+.main-menu-mb  .we-mega-menu-submenu .we-mega-menu-submenu-inner{
+  min-height: unset !important;
+}
+.main-menu-mb  .we-mega-menu-submenu .we-mega-menu-submenu-inner .we-mega-menu-row{
+  margin: 0 !important;
+  display: block !important;
+}
+.main-menu-mb  .we-mega-menu-submenu .we-mega-menu-submenu-inner .we-mega-menu-row .we-mega-menu-col{
+  max-width: 100% !important;
+  display: block !important;
+  margin: 0 !important;
+}
+.main-menu-mb  .we-mega-menu-submenu .we-mega-menu-submenu-inner .we-mega-menu-row .we-mega-menu-col h2{
+  padding: 25px 25px 0 !important;
+  border: none !important;
+  margin-bottom: 0 !important;
+}
+.main-menu-mb  .we-mega-menu-submenu .we-mega-menu-submenu-inner .we-mega-menu-row .we-mega-menu-col {
+  border-bottom: 1px solid #9b288c;
+}
+.main-menu-mb  .we-mega-menu-submenu .we-mega-menu-submenu-inner .we-mega-menu-row .navbar, .main-menu-mb .we-mega-menu-ul .we-mega-menu-li.dropdown-menu .we-mega-menu-submenu.clinical_sub, .main-menu-mb .we-mega-menu-ul .we-mega-menu-li.dropdown-menu .we-mega-menu-submenu.resources_sub{
+  background: none !important;
+  width: 100% !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+.main-menu-mb .we-mega-menu-ul .we-mega-menu-li.dropdown-menu .we-mega-menu-submenu.clinical_sub a:not(.navbar-toggle), .main-menu-mb .we-mega-menu-ul .we-mega-menu-li.dropdown-menu .we-mega-menu-submenu.resources_sub a:not(.navbar-toggle){
+  font-family: 'Gotham', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 21px 0;
+  width: 100%;
+  display: block;
+  color: #9b288c;
+  text-decoration: none;
+  border-bottom: 1px solid #9b288c !important;
+  letter-spacing: -1px;
+  margin-left: 37px;
+  padding: 21px 0 !important;
+}
+.main-menu-mb .we-mega-menu-ul .we-mega-menu-li.dropdown-menu .we-mega-menu-submenu.clinical_sub li:not(:last-child) a:not(.navbar-toggle), .main-menu-mb .we-mega-menu-ul .we-mega-menu-li.dropdown-menu .we-mega-menu-submenu.resources_sub li:not(:last-child) a:not(.navbar-toggle){
+  border-bottom: 1px solid #9b288c;
+  margin-bottom: 0;
+}
+.main-menu-mb .we-mega-menu-submenu .mg-sub li.we-mega-menu-li:last-child{
+  margin-bottom: 0 !important;
+}
+@media(max-width: 960px){
+  .main-navigation-header .we-mega-menu-ul{
+    margin-right: 0 !important;
+  }
+  .main-header{
+    overflow: hidden;
+  }
+}
+@media(max-width: 991px){
+  .main-menu-mb .menu1 .navbar{
+    display: block !important;
+    position: unset !important;
+    width: 100% !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+  }
+  .main-menu-mb .menu1 .navbar:after{
+    display: none !important;
+  }
+  .main-menu-mb .menu1 .nav:after{
+    display: none !important;
+  }
+  .main-menu-mb .navbar-we-mega-menu .type-of-block{
+    display: block !important;
+  }
+  .main-menu-mb .navbar-we-mega-menu .type-of-block .we-mega-menu-ul li.we-mega-menu-li:last-child a, .main-menu-mb .we-mega-menu-ul .we-mega-menu-li.dropdown-menu .we-mega-menu-submenu.clinical_sub li.we-mega-menu-li:last-child a:not(.navbar-toggle), .main-menu-mb .we-mega-menu-ul .we-mega-menu-li.dropdown-menu .we-mega-menu-submenu.resources_sub li.we-mega-menu-li:last-child a:not(.navbar-toggle){
+    border-bottom: none !important;
+  }
+  .main-menu-mb .region-we-mega-menu{
+    margin: 0 !important;
+    border: none !important;
+    background: none !important;
+    padding: 0 !important;
+  }
+  .main-menu-mb .navbar-we-mega-menu.navbar ul>li ul{
+    padding: 0 !important;
   }
 }

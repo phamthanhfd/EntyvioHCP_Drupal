@@ -45,4 +45,13 @@ $( document ).ready(function() {
       }
     });
 
+    var ctn = $('.main-menu-mb .main-menu-mb_container .logo');
+    var br = $('#block-sitebranding-2 img');
+    var main_navi = $('#block-mainnavigation-2>.region-we-mega-menu>nav');
+    var second_navi = $('.top-menu-header_container a');
+    var slg = $('.top-menu-header_container span');
+    $(br).clone().appendTo(ctn);
+    $(main_navi).clone().appendTo($('.main-menu-mb .main-menu-mb_container .menus .menu1'));
+    $(slg).clone().appendTo($('.main-menu-mb .main-menu-mb_container .sologan'));
+    $(second_navi).clone().appendTo($('.main-menu-mb .main-menu-mb_container .menus .menu2'));
 });
