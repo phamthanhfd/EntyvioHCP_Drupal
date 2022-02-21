@@ -33,3 +33,15 @@ html, body{
 .field__label{
   display: none;
 }
+
+@media  (max-width: 960px) {
+
+#toolbar-administration{
+  display: none;
+}
+.toolbar-icon-9.gin--classic-toolbar.toolbar-tray-open{
+  padding-top: 0 !important;
+  margin-left: 0 !important;
+}
+
+}

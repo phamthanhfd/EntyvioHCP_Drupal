@@ -1078,4 +1078,24 @@ article.first-line-biologic .legal{
   .paragraph--type--head-to-head{
     height: auto;
   }
+  .container-article article, .container-article #references article{
+    padding: 30px 0 0 0;
+  }
+  .container-article{
+    padding: 0 25px;
+  }
+  .back-to-top:after{
+    left: 20px;
+  }
+  #block-herosection{
+    margin-top: 179px;
+  }
+  .hero-container .article-content>div{
+    margin: auto;
+    text-align: center;
+  }
+  .hero-container .article-content h1{
+    margin: 100px auto !important;
+    left: 40px;
+  }
 }
