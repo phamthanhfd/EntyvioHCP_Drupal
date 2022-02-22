@@ -5,18 +5,3 @@ core_version_requirement: ^8 || ^9
 libraries:
   - entyviohcp/global-styling
 base theme: classy
-regions:
-  top_header: 'Top Header'
-  top_menu_left: 'Top Menu Left'
-  top_menu_right: 'Top Menu Right'
-  logo_header: 'Logo Header'
-  main_menu_header: 'Main Menu Header'
-  highlight: 'Highlight'
-  about: "About"
-  services: 'Services'
-  content: 'Content'
-  footer_logo: 'Footer Logo'
-  footer_menu: 'Footer Menu'
-  footer_content: 'Footer Content'
-  sticky_bar: 'Sticky Bar'
-

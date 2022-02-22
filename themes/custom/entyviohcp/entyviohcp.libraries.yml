@@ -20,5 +20,6 @@ global-styling:
       css/footer.css: {}
       css/home.css: {}
       'http://fonts.cdnfonts.com/css/gotham': { type: external, minified: true }
+      'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css': { type: external, minified: true }
 
 

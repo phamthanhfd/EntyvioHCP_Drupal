@@ -1,111 +1,170 @@
-<header aria-label="Site header" class="header" id="header" role="banner">
-    {% if page.top_header %}
-      <div class="top-header">
-        {{ page.top_header }}
-      </div>
-    {% endif %}
-      <div class="top-menu-header">
-        <div class="top-menu-header_container">
-          <div class="top-menu-header_sm">FOR U.S. HEALTHCARE PROFESSIONALS</div>
-          {% if page.top_menu_left %}
-            <div class="top-menu-left">
-              {{ page.top_menu_left }}
-            </div>
-          {% endif %}
-          {% if page.top_menu_right %}
-            <div class="top-menu-right">
-              {{ page.top_menu_right }}
-            </div>
-          {% endif %}
+<header data-device="desktop"  class="header"  >
+  <div class="header-container">
+    <div class="pushdown">
+      <div class="container">
+        <div class="flex-container">
+          <p class="description">See how we are providing support for your patients during CORONAVIRUS (COVID‑19)</p>
+          <a href="/covid19" class="btn btn-primary">LEARN MORE</a>
         </div>
       </div>
-    <div class="main-header">
-        <div class="main-header_container">
-          {% if page.logo_header %}
-            <div class="logo-header">
-              {{ page.logo_header }}
-            </div>
-          {% endif %}
-          {% if page.main_menu_header %}
-            <div class="main-navigation-header {% if is_front %} front-page {% endif %}">
-              {{ page.main_menu_header }}
-            </div>
-          {% endif %}
-          <button class="open-menu"><span></span></button>
-        </div>
     </div>
+    <div class="eyebrow">
+      <div class="container">
+        <nav data-row="">
+          <ul data-col="mobile-12 desktop-6">
+            <li><a href="#isi" target="_self">Important Safety Information</a></li>
+            <li><a href="https://general.takedapharm.com/ENTYVIOPI" target="_blank" rel="noreferrer">Prescribing Information</a></li>
+            <li><a href="https://general.takedapharm.com/ENTYVIOMG" target="_blank" rel="noreferrer">Medication Guide</a></li>
+          </ul>
+          <ul data-col="mobile-12 desktop-6">
+            <li><a href="https://www.entyvio.com/" data-modal="external" data-animation="slide" target="_blank" rel="noreferrer">Patient Site</a></li>
+            <li class="hcp-site">For U.S. Healthcare Professionals</li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="main-nav">
+      <div class="container">
+       <div class="hcp-text"><p>For U.S. Healthcare Professionals</p></div>
+        <div class="logo-container">
+          <a class="logo" href="{{ url('<front>') }}/" target="_self"><img src="{{ base_path ~ directory }}/images/logo-entyvio.png" alt="Entyvio® (vedolizumab) logo."></a>
+          <button data-mobile-menu="" aria-expanded="false" class="close-menu"  aria-label="Close Navigation Menu"><span></span></button>
+        </div>
+        <nav class="{% if is_front %} front-page {% endif %}">
+          <!-- NAVIGATION STARTS -->
+          <ul>
+          <li class="active"><a href="{{ url('<front>') }}/" title="Home" target="_self">Home</a></li>
+          <li class="has-submenu clinicalefficacy">
+            <a href="/clinical-efficacy/ulcerative-colitis/gemini-trial" aria-haspopup="true" aria-expanded="false" target="_self"><span>Clinical <br data-only="desktop">Efficacy</span></a>
+            <button  class="icon-trigger">
+              <i class="fa fa-angle-down"></i>
+            </button>
+            <div class="subnav clinicalefficacy">
+              <div class="uc">
+                <h3>UC</h3>
+                <ul>
+                  <li class=""><a href="/clinical-efficacy/ulcerative-colitis/gemini-trial" target="_self"> GEMINI I: ENTYVIO <em class="vs">vs.</em> PLACEBO</a></li>
+                  <li class=""><a href="/clinical-efficacy/ulcerative-colitis/varsity-trial" target="_self">VARSITY: HEAD-TO-HEAD STUDY</a></li>
+                </ul>
+              </div>
+
+              <div class="cd">
+                <h3>CD</h3>
+                <ul>
+                  <li class=""><a href="/clinical-efficacy/crohns-disease/entyvio-placebo-trial" target="_self">GEMINI II AND III: ENTYVIO <em class="vs">vs.</em> PLACEBO</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+
+          <li class=""><a href="/mechanism-of-action" target="_self"><span>Mechanism <br data-only="desktop">of Action</span></a></li>
+          <li class=""><a href="/safety-profile" target="_self"><span>Safety <br data-only="desktop">Profile</span></a></li>
+          <li class=""><a href="/dosing-administration" target="_self"><span>Dosing &amp; <br data-only="desktop">Administration</span></a></li>
+          <li class=""><a href="/access-support/insurance-support" target="_self"><span><em data-ec="">EntyvioConnect</em></span></a></li>
+
+          <li class="has-submenu resources">
+            <a href="/resources/professional-resources" aria-haspopup="true" aria-expanded="false" target="_self"><span>Resources</span></a>
+            <button  class="icon-trigger">
+              <i class="fa fa-angle-down"></i>
+            </button>
+            <div class="subnav resources">
+              <div class="">
+                <h3 class=""><a href="/resources/professional-resources" target="_self">FOR YOU</a></h3>
+                <ul>
+                  <li class=""><a href="/resources/virtual-congress" target="_self">ANNUAL CONGRESSES</a></li>
+                  <li><a href="https://www.entyviovirtualbooth.com/" data-modal="external" target="_blank">VIRTUAL CONGRESS BOOTH</a></li>
+                  <li class=""><a href="/resources/peer-perspective" target="_self">PEER PERSPECTIVES</a></li>
+                  <li class=""><a href="/resources/request-a-representative" target="_self">REQUEST A REPRESENTATIVE</a></li>
+                  <li class=""><a href="/resources/clinical-reprints" target="_self">CLINICAL REPRINTS</a></li>
+                </ul>
+              </div>
+
+              <div class="">
+                <h3 class=""><a href="/resources/patient-resources" target="_self">FOR YOUR PATIENTS</a></h3>
+                <ul>
+                  <li class=""><a href="https://locator.infusioncenter.org/" data-modal="external_third_party" target="_blank">INFUSION CENTER LOCATOR</a></li>
+                  <li><a href="https://www.entyvio.com/" data-modal="external" target="_blank" rel="noreferrer">ENTYVIO PATIENT SITE</a></li>
+                  <li><a href="/local-coverage" target="_self">ENTYVIO COVERAGE FINDER</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+
+          </ul>
+          <!-- NAVIGATION ENDS -->
+        </nav>
+      </div>
+    </div>
+  </div>
 </header>
-<section class="main" id="main">
-  {% if page.highlight %}
-  <div class="highlight_container">
-    {{ page.highlight }}
-  </div>
-  {% endif %}
-
-  {% if page.about %}
-  <div class="highlight_about">
-    {{ page.about }}
-  </div>
-  {% endif %}
-
-  {% if page.services %}
-  <div class="highlight_services">
-    {{ page.services }}
-  </div>
-  {% endif %}
-
-  {% if page.content %}
-   <main aria-label="Site main content" class="content main-content_container" id="page-content" role="main">
-     {{ page.content }}
-   </main>
-   {% endif %}
-</section>
-<footer aria-label="Site footer" class="footer" id="footer" role="contentinfo">
-   <div class="footer_container" >
-    {% if page.footer_logo %}
-    <div class="footer-logo">
-       <a href="http://www.takeda.com/">{{ page.footer_logo }}</a>
+<header data-device="mobile" class="header"  data-only="mobile"> <!-- Mobile only header; on desktop, this will hide -->
+    <div class="pushdown">
+        <div class="container">
+            <div class="flex-container">
+    <p class="description">See how we are providing support for your patients during CORONAVIRUS (COVID‑19)</p>
+    <a href="/covid19" class="btn btn-primary">LEARN MORE</a>
+</div>
+        </div>
     </div>
-    {% endif %}
-    <div class="footer-content">
-    {% if page.footer_menu %}
-      <div class="footer-menu">
-       {{ page.footer_menu }}
+	<div class="for-us-hcp">
+		<p>For U.S. Healthcare Professionals</p>
+	</div>
+	<div>
+		<a class="logo" href="{{ url('<front>') }}/" target="_self"><img src="{{ base_path ~ directory }}/images/logo-entyvio.png" alt="Entyvio® (vedolizumab) logo."></a>
+		<button data-mobile-menu="" aria-expanded="false" class="open-menu" aria-label="Close Navigation Menu"><span></span></button>
+	</div>
+	<div class="eyebrow">
+		<ul>
+			<li><a href="#isi" target="_self">Important Safety Information</a></li>
+			<li><a href="https://general.takedapharm.com/ENTYVIOPI" target="_blank" rel="noreferrer">Prescribing Information</a></li>
+			<li><a href="https://general.takedapharm.com/ENTYVIOMG" target="_blank" rel="noreferrer">Medication Guide</a></li>
+			<li><a href="https://www.entyvio.com/" data-modal="external" data-animation="slide" target="_blank" rel="noreferrer">Patient Site</a></li>
+		</ul>
+	</div>
+</header>
+<main class="content main-content_container" id="page-content" role="main">
+
+</main>
+<footer  class="footer" id="footer" data-device="global" role="contentinfo">
+  <div>
+    <div class="section">
+      <div class="footer-content">
+        <a class="takeda-logo" data-modal="external" data-animation="slide" href="http://www.takeda.com/" target="_blank" rel="noreferrer"><img src="{{ base_path ~ directory }}/images/logo-takeda.png" alt="Takeda Pharmaceuticals U.S.A., Inc. logo."></a>
+        <div class="nav-wrapper">
+          <nav>
+            <ul>
+              <li><a data-modal="external" data-animation="slide" href="https://www.takeda.com/en-us/terms-of-use" target="_blank" rel="noreferrer">Terms of Use</a></li>
+              <li><a data-modal="external" data-animation="slide" href="https://www.takeda.com/privacy-notice/" target="_blank" rel="noreferrer">Privacy Notice</a></li>
+              <li><a data-modal="external" data-animation="slide" href="https://www.takeda.com/en-us/who-we-are/contact-us" target="_blank" rel="noreferrer">Contact Us</a></li>
+              <li class=""><a href="/sitemap" target="_self">Site Map</a></li>
+            </ul>
+            <ul>
+              <li><a data-modal="external" data-animation="slide" href="https://www.takedahcp.com/unsubscribe/enrx" target="_blank" rel="noreferrer">Unsubscribe</a></li>
+              <li><a data-modal="external" data-animation="slide" href="https://www.takedahcp.com/" target="_blank" rel="noreferrer">Professional Support</a></li>
+              <li><a data-modal="external_medconnect" data-animation="slide" href="https://www.takedamedconnect.com/" target="_blank" rel="noreferrer">Medical Information</a></li>
+            </ul>
+          </nav>
+
+          <p>ENTYVIO is a trademark of Millennium Pharmaceuticals, Inc., registered with the U.S. Patent and Trademark Office and is used under license by Takeda Pharmaceuticals America, Inc. All other trademarks are the property of their respective owners.</p>
+
+          <p>If you are a Colorado prescriber, please see the Colorado WAC <a data-modal="external" href="https://www.takeda.com/siteassets/en-us/home/corporate-responsibility/culture-of-compliance/state/co_entyvio-product-form.pdf" target="_blank" rel="noreferrer">disclosure form</a>.</p>
+
+          <p>
+            ©2021 Takeda&nbsp;Pharmaceuticals U.S.A., Inc.<br>
+            This site is intended for use by U.S. residents only.
+          <span data-float="right">US-VED-1124v1.0 10/21</span>
+          </p>
+        </div>
       </div>
-      {% endif %}
-      {% if page.footer_content %}
-      <div class="footer-detail">
-       {{ page.footer_content }}
-       </div>
-       {% endif %}
     </div>
-   </div>
+  </div>
 </footer>
-{% if page.sticky_bar %}
+
 <section class="sticky-bar" style="">
     <div class="sticky-bar_container">
-      {{ page.sticky_bar }}
+
     </div>
 </section>
-{% endif %}
+
 <button class="back-to-top show" tabindex="0">Back to top</button>
-
-<section class="main-menu-mb" style="">
-    <div class="main-menu-mb_container">
-        <div class="sologan">
-        </div>
-      <div class="logo-mn">
-          <a href="/" class="logo">
-          </a>
-        <button class="close-menu"><span></span></button>
-      </div>
-      <div class="menus">
-          <div class="menu-list">
-            <div class="menu1 lmenu {% if is_front %} front-page {% endif %}"></div>
-            <div class="menu2 lmenu"></dic>
-          </div>
-
-      </div>
-    </div>
-</section>
 

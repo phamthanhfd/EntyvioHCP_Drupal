@@ -1,98 +1,107 @@
-#footer{
-  margin-top: 54px;
+footer {
+  margin-top: 554px;
   overflow: hidden;
   background: #e6e7e8;
 }
-#footer .field__label{
-  display: none;
+
+footer>div>.section {
+  margin: auto;
+  width: 100%;
+}
+footer a {
+  color: #9b288c;
+}
+footer .section>.footer-content>.nav-wrapper {
+  margin-top: 32px;
 }
 
-@media screen and (min-width: 1800px) and (max-width: 9999px){
-  #footer .footer_container {
-    padding: 0 30px;
-    max-width: 1366px;
-  }
-}
-@media screen and (min-width: 960px) and (max-width: 9999px){
-  #footer .footer_container {
-    padding: 0 200px 0 75px;
-}}
-@media screen and (max-width: 959px){
-  #footer .footer_container {
-    padding: 25px;
-    flex-wrap: wrap;
-}
-  #footer .footer-logo {
-    width: 125px;
-    display: block;
-  }
-  #footer .footer-menu .menu{
-    display: grid !important;
-    grid-template-columns: 50% 50%;
-  }
-  #footer .footer-menu .menu li{
-    margin-top: 20px;
-  }
-  #footer .footer-menu{
-    padding-top: 32px;
-  }
-  #footer [data-float="right"] {
-    float: none !important;
-    padding-top: 20px;
-    display: block;
-}
-}
-#footer .footer_container {
-    margin: auto;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-#footer .footer-menu .menu{
+footer nav {
   display: flex;
-  align-items: center;
-  margin: 0 0 20px 0;
   flex-wrap: wrap;
+  align-items: flex-start;
 }
-@media screen and (min-width: 960px) and (max-width: 9999px){
-#footer .footer-logo {
-    margin: 32px 50px 0 0;
-    flex: 0 0 140px;
-    max-width: 140px;
-}}
-#footer .footer-logo img{
-  width: 100%;
-  height: auto
-}
-#footer .footer-menu{
-  padding-top: 25px;
-}
-@media screen and (min-width: 960px) and (max-width: 1318px){
-#footer .footer-menu .menu li {
-    margin-right: 15px;
-}}
-@media screen and (min-width: 960px) and (max-width: 9999px){
-#footer .footer-menu .menu li {
-    margin-right: 20px;
-}}
-#footer .footer-menu .menu li a{
-  font-family: 'Gotham', sans-serif;
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 20px;
-  text-decoration: none;
-  color: var(--gb-primary);
-}
-#footer .footer-menu .menu li a:hover{
-  text-decoration: underline;
-}
-#footer .footer-content p, #footer .footer-content span{
+footer p {
   font-family: 'Gotham', sans-serif;
   font-size: 12px;
   font-weight: 400;
   margin-bottom: 20px;
   line-height: 16px;
 }
-#footer a {
-  color: var(--gb-primary);
+footer nav>ul a {
+  font-family: 'Gotham', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  text-decoration: none;
+  color: #9b288c;
+}
+footer nav>ul>li {
+  margin: 0;
+  padding: 0;
+}
+
+footer nav>ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+@media screen and (min-width: 1800px) and (max-width: 9999px){
+  footer>div>.section {
+    padding: 0 30px;
+    max-width: 1366px;
+  }
+}
+
+@media screen and (min-width: 960px) and (max-width: 9999px){
+  footer[data-device="global"]>div>.section {
+    padding: 0 200px 0 75px;
+  }
+  footer .section>.footer-content {
+    display: flex;
+    align-items: flex-start;
+  }
+  footer .takeda-logo {
+    margin: 32px 50px 0 0;
+    flex: 0 0 140px;
+    max-width: 140px;
+  }
+  footer .takeda-logo img {
+    width: 100%;
+  }
+
+  footer nav {
+    margin-bottom: 20px;
+  }
+  footer nav>ul li {
+    margin-right: 20px;
+  }
+  footer nav>ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 959px){
+  footer[data-device="global"]>div>.section {
+    padding: 25px;
+  }
+  footer nav>ul {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  footer nav>ul li {
+    margin-bottom: 20px;
+  }
+  footer .takeda-logo {
+    width: 125px;
+    display: block;
+  }
+  footer .takeda-logo img{
+    width: 100%;
+  }
+  footer p [data-float="right"] {
+    float: none;
+    padding-top: 20px;
+    display: block;
+  }
 }

@@ -21,6 +21,12 @@ function entyviohcp_preprocess_node(&$vars) {
   }
 
 }
+
+// File: THEMENAME.theme in your theme's root directory
+function entyviohcp_preprocess(&$variables, $hook)
+{
+    $variables['base_path'] = base_path();
+}
 /**
  * Implements template_preprocess_paragraph().
  *
@@ -56,14 +62,27 @@ function entyviohcp_preprocess_paragraph(&$variables) {
     //exit();
   }
 
-  if($paragraph->getType() == 'pillars_items'){
-    //$uri = $paragraph->field_title_item->value;
-    //dump($uri);
-    //exit();
+  if($paragraph->getType() == 'list_'){
+    $list=[];
+
+    foreach ($paragraph->get('field_tetttt') as $item) {
+      $list[] = $item->value;
+    }
+    $variables['listtext'] = $list;
+
+    $uri = $paragraph->get('field_img')->entity->uri->value;
+    $variables['background_image_url'] = file_create_url($uri);
+  }
+}
+  /**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function entyviohcp_theme_suggestions_paragraph_alter(&$suggestions, $variables) {
+  $paragraph = $variables['elements']['#paragraph'];
+  $parent = $paragraph->getParentEntity();
+  if ($parent) {
+    $suggestions[] = 'paragraph__' . $parent->bundle() . '__' .  $paragraph->id();
   }
 
-
-
 }
-
 ?>
