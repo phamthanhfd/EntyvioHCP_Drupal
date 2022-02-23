@@ -1,1101 +1,167 @@
-#page-content .section-content-homepage h3{
-  font-size: 26px;
+
+#references, #isi  {
+    margin: auto;
+    width: 100%;
+}
+#isi button.fixed_isi_trigger {
+  display: none;
+}
+#isi h2, #fixed_isi h2 {
   margin-bottom: 12px;
-  color: var(--gb-primary);
-  font-weight: 700;
+  color: #9b288c;
+  text-transform: uppercase;
 }
-#page-content .section-content-homepage ul{
-  padding-left: 0;
-}
-#page-content .section-content-homepage .content-list {
-  list-style: none;
-  position: relative;
-  font-family: 'Gotham', sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 26px;
-    padding-left: 10px;
-}
-#page-content .section-content-homepage .content-list:before{
-    content: '';
-    position: absolute;
-    left: 0;
-    width: 4px;
-    height: 4px;
-    border-radius: 100%;
-    background: #58595b;
-    top: 11px;
-}
-
-#block-references .layout{
-
-}
-#block-references .layout ol li {
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 12px;
-  margin-bottom: 4px;
-}
-#block-references .layout ol{
-  padding-left: 20px;
-}
-#block-references .layout h4{
-  font-size: 16px;
-  font-weight: 700;
-  margin-bottom: 15px;
-  color: var(--gb-primary);
-}
-#page-content .section-content-homepage h5{
-  font-size: 14px;
-  font-weight: 700;
+#isi h3, #fixed_isi h3 {
   line-height: 20px;
   margin-bottom: 4px;
 }
-#page-content .section-content-homepage {
-  font-size: 14px;
-  font-weight: 400;
+#isi p, #fixed_isi p {
   line-height: 20px;
   margin-bottom: 20px;
 }
-@media(max-width: 960px){
-
-  #page-content .section-content-homepage{
-    margin-bottom: 6px;
-  }
-  #page-content .section-content-homepage, #block-references .layout{
-    padding: 25px 25px;
-    max-width: 100%;
-  }
-  #page-content .section-content-homepage  li{
-    font-size: 14px !important;
-    font-weight: 400 ;
-    line-height: 20px !important;
-  }
-  #page-content .section-content-homepage h3{
-    font-size: 22px !important;
-  }
-}
-#block-references .layout {
-  padding: 0 25px;
-  max-width: 100%;
-  margin: 0 auto;
-}
-.hero-container{
-  max-width: 100%;
-  margin: 0 auto;
-}
-.hero-container .left-image, .hero-container .right-image{
-  position: absolute;
-  bottom: -70px;
-  content: "";
-}
-.hero-container .right-image{
-  left: calc(50% - 1px);
-  top: 0;
-  background: url(../images/desktop-home-doctor.png) top right no-repeat;
-  background-size: cover;
-  width: calc(50% + 1px);
-  height: 100%;
-  z-index: 2;
-  background-position-y: 70px;
-}
-.hero-container .left-image{
-  right: calc(50% - 1px);
-  top: 0;
-  background: url(../images/desktop-home-ivette.png) top left no-repeat;
-  background-size: cover;
-  width: calc(50% + 1px);
-  height: 100%;
-  z-index: 2;
-  background-position-y: 70px;
-}
-.hero-container .article-content{
+#isi ul li, #fixed_isi ul li {
   position: relative;
-  z-index: 3;
+  padding-left: 10px;
+  line-height: 20px;
+  margin-bottom: 0;
 }
-.hero-container:before{
+#isi ul li:before, #fixed_isi ul li:before {
+  content: '';
   position: absolute;
-  content: "";
-  left: calc(50% - 1px);
-  top: 0;
-  background: url(../images/img2.png) top left no-repeat;
-  background-size: cover;
-  width: 50%;
-  height: 100%;
-  z-index: 1;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  border-radius: 100%;
+  background: #58595b;
 }
-.hero-container:after{
-  position: absolute;
-  content: "";
-  right: calc(50% - 1px);
-  top: 0;
-  background: url(../images/img1.png) top right no-repeat;
-  background-size: cover;
-  width: 50%;
-  height: 100%;
-  z-index: 1;
+#isi a, #fixed_isi a {
+  color: #9b288c;
+  text-decoration: none;
 }
-.hero-container .article-content h1 {
-  position: relative;
-  margin: 0 auto 110px auto;
-  text-transform: uppercase;
-  text-align: left;
-  color: #fff;
-  display: inline-block;
+#isi a.hover, #isi a:hover, #fixed_isi a.hover, #fixed_isi a:hover {
+  text-decoration: underline;
 }
-.article-content h1 strong.super{
-  position: absolute;
+#isi ul, #fixed_isi ul {
+  list-style-type: none;
+  padding: 0;
 }
-@media screen and (min-width: 960px) and (max-width: 9999px){
-  #page-content .section-content-homepage  li{
-    font-family: 'Gotham', sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 26px;
-  }
-  #block-references .layout {
-    padding: 30px 230px 0 105px;
-    max-width: 1366px !important;
-  }
-  .hero-container{
-    max-width: 1440px !important;
-    position: relative;
-    min-height: 766px;
-  }
-  .hero-container .article-content{
-    width: 100%;
-    padding: 0 30px;
-    min-height: 440px;
-    position: absolute;
-    left: 0;
-    top: 240px;
-    max-width: 1440px !important;
-  }
-  .hero-container .article-content>div{
-    position: relative;
-    left: 60px;
-    width: 894px;
-    margin: auto;
-    text-align: center;
-  }
-  .hero-container .article-content h1 {
-    font-family: Knockout29, sans-serif;
-    font-size: 94px;
-    font-weight: 200;
-    line-height: 82px;
-    left: 33px;
-}
-.article-content h1 strong{
-  padding-left: 30px;
-  color: var(--gb-primary);
-  font-family: Knockout30, sans-serif;
-  font-size: 93px;
-}
-.article-content h1 strong.super{
-  font-family: Knockout29, sans-serif;
-  font-size: 255px;
-  font-weight: 400;
-  bottom: -50px;
-  right: 110px;
-}
-}
-
-article.first-line-biologic {
-  margin: 65px auto 0 auto;
-}
-article.first-line-biologic h2{
-  text-align: center;
-}
-article.first-line-biologic .legal{
-  text-align: center;
-  margin-top: 0;
+#references h3 {
   font-family: 'Gotham', sans-serif;
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #9b288c;
 }
-@media(min-width: 1800px){
-  article.first-line-biologic {
+#references ol li {
+  font-family: 'Gotham', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  margin-bottom: 4px;
+  line-height: 12px;
+}
+@media screen and (min-width: 1800px) and (max-width: 9999px){
+  #references, #isi  {
     padding: 0 30px;
     max-width: 1366px;
   }
 }
-@media(max-width: 1800px){
-  article.first-line-biologic {
+
+@media screen and (min-width: 960px) and (max-width: 9999px){
+  #isi, #references  {
     padding: 0 15px;
     max-width: 1366px;
   }
-}
-
-@media(min-width: 960px){
-  article.first-line-biologic h2{
-    font-family: Knockout29;
-    font-size: 50px;
-    font-weight: 200;
-    margin-bottom: 20px;
-    line-height: 52px;
-    color: var(--gb-primary);
+  #isi article {
+    padding: 75px 200px 0 75px;
   }
-  article.first-line-biologic p.legal{
-    color: #58595b;
-    font-size: 14px;
-    font-weight: 500;
-    padding: 0 80px;
-  }
-  .article-content strong{
-    font-size: 93px;
-  }
-}
-
-@media(max-width: 959px){
-  article.first-line-biologic {
-    padding: 0 25px;
-    max-width: 100%;
-  }
-  article.first-line-biologic h2{
-    font-family: Knockout29;
-    font-size: 36px;
-    font-weight: 200;
-    margin-bottom: 20px;
-    line-height: 32px;
-    color: var(--gb-primary);
-  }
-  article.first-line-biologic p.legal{
-    color: #58595b;
-    position: relative;
-    margin: 0 0 4px 0;
-    line-height: 12px;
+  #isi .section article .isi-header, #fixed_isi .section article .isi-header {
     padding: 0;
   }
-}
-
-.sticky-bar{
-  width: 100%;
-  background: white;
-  top: calc(100% - 95px);
-  z-index: 10000;
-  transition: all .2s linear;
-  left: 0;
-  position: fixed; }
-.sticky-bar_container .section-content-homepage h3 strong{
-  display: block;
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 11px 0 7px 0;
-  line-height: 30px;
-  margin-bottom: 0 !important;
-}
-.sticky-bar_container .section-content-homepage ul{
-  max-width: 100%;
-  padding: 0 30px;
-  margin: 0 auto;
-}
-.sticky-bar_container .section-content-homepage ul .content-list{
-  padding-left: 10px;
-  position: relative;
-  list-style: none;
-}
-.sticky-bar_container .section-content-homepage ul .content-list:before{
-  content: '';
-  position: absolute;
-  left: 0;
-  width: 4px;
-  height: 4px;
-  border-radius: 100%;
-  background: #58595b;
-  top: 11px;
-}
-.sticky-bar_container .section-content-homepage h3{
-  background: #f0deee;
-  margin-bottom: 0 !important;
-  position: relative;
-}
-.sticky-bar_container .section-content-homepage h3:before{
-  position: absolute;
-  right: 60px;
-  top: 50%;
-  transform: translateY(-50%);
-  content:"+";
-  font-size: 25px;
-  color: var(--gb-primary);
-  z-index: 4;
-}
-.sticky-bar_container .section-content-homepage h3:after{
-  width: 34px;
-  height: 34px;
-  right: 51px;
-  border: 3px solid #e7cae3;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  border-radius: 100%;
-  cursor: pointer;
-  z-index: 3;
-  will-change: border;
-  transition: all 300ms ease-in-out;
-  background: #fff;
-  content: "";
-}
-.sticky-bar_container .section-content-homepage h3:before:hover, .sticky-bar_container .section-content-homepage h3:after:hover{
-  border-color: #9b288c;
-  cursor: pointer;
-}
-@media(min-width: 960px){
-  .sticky-bar_container .section-content-homepage h3 strong, .sticky-bar_container .section-content-homepage ul{
-    padding-left: calc(72px + 30px);
-    padding-right: calc(200px + 30px);
-    max-width: 1366px;
+  #isi ul, #fixed_isi ul {
+    list-style-type: none;
   }
-}
-
-
-.container-article{
-  padding: 0 30px;
-  max-width: 1366px;
-  margin: auto;
-  width: 100%;
-}
-.container-article article
-{
-  padding: 75px 200px 0 75px;
-}
-.container-article article ul{
-  padding: 0;
-}
-.container-article article ul li{
-  position: relative;
-  padding-left: 10px;
-  list-style: none;
-}
-.container-article article ul li:before{
-  content: '';
-  position: absolute;
-  left: 0;
-  width: 4px;
-  height: 4px;
-  border-radius: 100%;
-  background: #58595b;
-  top: 11px;
-}
-.container-article #references article{
-  padding: 30px 200px 0 75px;
-}
-.container-article h2{
-  font-family: 'Gotham', sans-serif;
-  font-size: 26px;
-  font-weight: 700;
-  margin-bottom: 12px;
-  color: #9b288c;
-  text-transform: uppercase;
-}
-.container-article h3{
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 20px;
-  margin-bottom: 4px;
-  color: #58595b;
-}
-.container-article a{
-  color: #9b288c;
-  text-decoration: none;
-  font-weight: 700;
-}
-#references h4{
-  font-family: 'Gotham', sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  margin-bottom: 15px;
-  color: #9b288c;
-}
-#references ol{
-  padding-left: 18px;
-}
-#references ol li{
-  font-family: 'Gotham', sans-serif;
-  font-size: 12px;
-  font-weight: 400;
-  margin-bottom: 4px;
-  line-height: 12px;
-}
-
-.back-to-top{
-  padding: 20px 60px;
-  font-family: 'Gotham', sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  position: fixed;
-  z-index: 5;
-  right: -300px;
-  top: 70%;
-  position: fixed;
-  border-right: none;
-  transition: right 300ms ease-in-out;
-  will-change: right;
-
-  text-decoration: none;
-  display: inline-block;
-  text-transform: uppercase;
-  will-change: color, border, box-shadow, background;
-  transition: all 300ms ease-in-out;
-  color: #9b288c;
-  border: 2px solid #cc91c6;
-  box-shadow: 0 2px 2px 0 rgb(61 5 58 / 30%);
-  background: #fff;
-  line-height: 16px;
-}
-
-.back-to-top:hover{
-  box-shadow: 0 3px 8px 0 rgb(61 5 58 / 30%);
-  border: 2px solid #9b288c;
-  background: #f4e8f3;
-}
-
-.back-to-top:after {
-  color: #9b288c;
-  transform: rotate(270deg);
-  display: block;
-  position: absolute;
-  content: '\00BB';
-  left: 30px;
-  top: 21px;
-  font-size: 23px;
-}
-
-.paragraph--type--pillars-p .field--name-field-ps1{
-  padding: 0 23px;
-  justify-content: space-between;
-  position: relative;
-  display: flex;
-  margin: auto;
-  width: 100%;
-}
-.paragraph--type--pillars-p .field--name-field-ps1>.field__items{
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-.paragraph--type--pillars-p .field--name-field-ps1>.field__items>.field__item{
-  width: 33.333%;
-  flex: 0 0 calc(33.33333% - 20px);
-  max-width: calc(33.33333% - 20px);
-  box-shadow: 5px 5px 5px 0 rgb(155 40 140 / 8%);
-  min-height: 560px;
-  position: relative;
-  background-size: cover;
-  background: url(../images/img2.png) 0 0 no-repeat;
-  background-size: cover;
-  position: relative;
-}
-.paragraph--type--pillars-p .field--name-field-ps1>.field__items>.field__item:before{
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 6px;
-  background: #ffcb03;
-}
-.paragraph--type--pillars-p .field--name-field-image-item{
-  display: none;
-}
-.paragraph--type--pillars-items{
-  width: 100%;
-  height: 100%;
-  padding: 95px 0 0 25px;
-  background-repeat: no-repeat !important;
-  background-position: right !important;
-  position: relative;
-}
-.field--name-field-title-item .field__item{
-  font-family: 'Knockout29', sans-serif;
-  margin-bottom: 20px;
-  letter-spacing: -1px;
-  font-size: 45px;
-  font-weight: 200;
-  color: #58595b;
-  display: block;
-  line-height: 50px;;
-}
-.field--name-field-title-item .field__item strong{
-  font-family: 'Knockout29', sans-serif;
-  font-size: 72px;
-  font-weight: 700;
-  line-height: 50px;
-  text-transform: uppercase;
-  color: #9b288c;
-}
-.field--name-field-title-item .field__item strong sup{
-  top: -42px;
-}
-.field--name-field-title-item .field__item sup{
-  top: -22px;
-  font-size: 17px;
-  padding-left: 4px;
-}
-.field--name-field-description-item h4{
-  padding-right: 100px;
-  margin-bottom: 15px;
-  font-family: 'GothamMedium',sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-
-}
-.field--name-field-description-item p{
-  padding-right: 160px;
-  margin-bottom: 15px;
-  font-family: 'Gotham', sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 14px;
-}
-.field--name-field-description-item p.fornote{
-  font-size: 12px;
-  line-height: 12px;
-}
-.field--name-field-link {
-  position: absolute;
-  bottom: 70px;
-}
-.field--name-field-link .field__items{
-  display: flex;
-}
-.field--name-field-link .field__items .field__item:first-child{
-  margin-right: 10px;
-}
-.field--name-field-link a{
-  font-family: 'Gotham', sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  position: relative;
-  padding: 20px;
-  text-decoration: none;
-  display: inline-block;
-  text-transform: uppercase;
-  will-change: color, border, box-shadow, background;
-  transition: all 300ms ease-in-out;
-  color: #fff;
-  border: 2px solid #cc91c6;
-  box-shadow: 0 2px 2px 0 rgb(61 5 58 / 30%);
-  background: #9b288c;
-  line-height: 16px;
-}
-.field--name-field-link a:hover{
-  box-shadow: 0 3px 8px 0 rgb(61 5 58 / 30%);
-  color: #9b288c;
-  background: #ffcb03;
-}
-.field--name-field-ps1 .paragraph--type--pillars-items:before{
-  font-family: 'Gotham', sans-serif;
-  font-size: 20px;
-  font-weight: 500;
-  width: 61px;
-  height: 61px;
-  line-height: 61px;
-  font-style: italic;
-  text-align: center;
-  content: "AND";
-  text-transform: uppercase;
-  border-radius: 100%;
-  color: #9b288c;
-  background: #ffcb03;
-  flex: 0 0 61px;
-  max-width: 61px;
-  position: absolute;
-  top: 50%;
-  right: -44px;
-  transform: translateY(-50%);
-  z-index: 100;
-}
-.field--name-field-ps1>.field__items>.field__item:last-child .paragraph--type--pillars-items:before{
-  display: none;
-}
-@media(min-width: 1800px){
-  .paragraph--type--pillars-p .field--name-field-ps1{
-    padding: 0 23px;
-    max-width: 1366px;
+  #isi h2, #fixed_isi h2 {
+    font-family: 'Gotham', sans-serif;
+    font-size: 26px;
+    font-weight: 700;
   }
-}
-@media(max-width: 1799px){
-  .paragraph--type--pillars-p .field--name-field-ps1{
-    padding: 0 23px;
-    max-width: 1366px;
-  }
-}
-
-@media(max-width: 960px)
-{
-  .paragraph--type--pillars-p .field--name-field-ps1 >.field__items>.field__item{
-    width: 100%;
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-  .field--name-field-title-item .field__item{
-    font-size: 36px;
-    line-height: 40px;
-  }
-  .field--name-field-title-item .field__item strong{
-    font-size: 56px;
-  }
-  .field--name-field-title-item .field__item strong sup{
-    top: -33px;
-  }
-  .field--name-field-title-item .field__item sup{
-    top: -18px;
-  }
-  .field--name-field-description-item p{
-    max-width: 250px;
-    padding: 0;
-  }
-  .paragraph--type--pillars-p .field--name-field-ps1{
-    padding: 0;
-  }
-  .field--name-field-ps1 .paragraph--type--pillars-items:before{
-    top: unset;
-    left: 50%;
-    transform: translateX(-50%);
-    right: unset;
-    bottom: -44px;
-  }
-  .field--name-field-ps1>.field__items>.field__item:not(:first-child) {
-    margin-top: 30px !important;
-  }
-}
-
-
-.paragraph--type--home-title .field--name-field-content{
-  margin: auto;
-  width: 100%;
-}
-.paragraph--type--home-title .field--name-field-content h2{
-  color: #9b288c;
-  margin-top: 10px;
-  margin-bottom: 55px;
-  text-transform: uppercase;
-  font-family: 'Knockout29', sans-serif;
-  font-size: 72px;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-.paragraph--type--home-title .field--name-field-content h2:before{
-  content: '';
-  flex-grow: 1;
-  height: 4px;
-  background: #ffcb03;
-  margin-right: 20px;
-}
-.paragraph--type--home-title .field--name-field-content h2:after{
-  content: '';
-  flex-grow: 1;
-  height: 4px;
-  background: #ffcb03;
-  margin-left: 20px;
-}
-.paragraph--type--home-title .field--name-field-content h2 em{
-  font-family: 'Knockout30', sans-serif;
-  font-size: 36px;
-  position: absolute;
-  bottom: -23px;
-  left: 45%;
-  transform: translateX(-50%);
-  font-weight: 400;
-  text-transform: lowercase;
-  font-style: normal;
-}
-.paragraph--type--home-title .field--name-field-content h2 span{
-  margin: 0 11px;
-}
-@media screen and (min-width: 1800px) and (max-width: 9999px){
-  .paragraph--type--home-title .field--name-field-content{
-    padding: 0 30px;
-    max-width: 1366px;
-  }
-}
-
-@media screen and (min-width: 960px){
-  .paragraph--type--home-title .field--name-field-content{
-    padding: 0 23px;
-    max-width: 1366px;
-  }
-}
-
-@media screen and (max-width: 960px){
-  .paragraph--type--home-title .field--name-field-content{
-    padding: 0 25px;
-  }
-  .paragraph--type--home-title .field--name-field-content h2:before, .paragraph--type--home-title .field--name-field-content h2:after{
-    display: none;
-  }
-  .paragraph--type--home-title .field--name-field-content h2{
-    font-size: 42px;
-    justify-content: flex-start;
-  }
-  .paragraph--type--home-title .field--name-field-content h2 em{
-    font-size: 21px;
-    bottom: -13px;
-    left: 15%;
-  }
-  .paragraph--type--home-title .field--name-field-content h2 span{
-    margin: 0 9px;
-  }
-}
-
-
-
-.paragraph--type--cta-section .field--name-field-paragraphs{
-  padding: 0 23px;
-  display: flex;
-  max-width: 1366px;
-  margin: auto;
-  width: 100%;
-}
-.paragraph--type--cta-section>div>.field__items{
-  display: flex;
-  justify-content: space-between;
-}
-.paragraph--type--cta-section>div>.field__items>.field__item{
-  width: calc(50% - 12px);
-}
-.paragraph--type--cta-section{
-  margin-top: 20px;
-}
-.paragraph--type--head-to-head, .paragraph--type--milestones{
-  padding: 32px 25px 119px 25px;
-  height: 980px;
-  overflow: hidden;
-  position: relative;
-  background-size: cover !important;
-  text-align: center;
-  background-repeat: no-repeat !important;
-  background-position: top right !important;
-  color: white !important;
-}
-
-.field--name-field-background-head, .field--name-field-milestone-background{
-  display: none;
-}
-
-.field--name-field-varsity-trial {
-  margin-top: 80px;
-  margin-bottom: 50px;
-}
-
-.field--name-field-varsity-trial img{
-  width: 240px;
-  height: 60px;
-}
-
-.field--name-field-top-title{
-  font-family: 'Knockout29', sans-serif;
-  font-size: 40px;
-  font-weight: 200;
-  line-height: 32px;
-  margin: 32px 0 16px;
-}
-
-.field--name-field-main-title{
-  font-family: 'Knockout29', sans-serif;
-  font-size: 100px;
-  font-weight: 700;
-  line-height: 82px;
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  letter-spacing: -1px;
-}
-
-.field--name-field-bottom-title{
-  font-family: 'Knockout29', sans-serif;
-  font-size: 32px;
-  line-height: 48px;
-  font-weight: 200;
-  margin: 16px 0 36px;
-}
-.field--name-field-humira .field__items{
-  display: flex;
-  margin-top: 40px;
-  padding: 0 20px;
-  justify-content: center;
-  flex-direction: row-reverse;
-  position: relative;
-}
-.field--name-field-humira .field__items .field__item:last-child{
-  margin-right: 80px;
-  position: relative;
-}
-.field--name-field-humira .field__items .field__item:first-child{
-  position: relative;
-  right: -20px;
-}
-.field--name-field-humira .field__items .field__item:last-child:before{
-  margin: 15px 32px 0 32px;
-  padding-top: 1px;
-  font-style: normal !important;
-  position: relative;
-  font-family: 'Gotham', sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  width: 30px;
-  height: 30px;
-  line-height: 30px;
-  text-align: center;
-  text-transform: uppercase;
-  border-radius: 100%;
-  color: #9b288c;
-  background: #ffcb03;
-  position: absolute;
-  right: -103px;
-  z-index: 3;
-  content: "vs";
-}
-.field--name-field-humira .field__items h3{
-  font-family: 'Knockout29', sans-serif;
-  font-size: 60px;
-  font-weight: 700;
-  line-height: 40px;
-  color: #fff;
-  text-transform: uppercase;
-  position: relative;
-}
-.field--name-field-humira .field__items h3 em{
-  font-family: 'Gotham', sans-serif;
-  font-size: 20px;
-  font-weight: 400;
-  text-transform: lowercase;
-  font-style: normal;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 100%;
-}
-
-.field--name-field-button{
-  margin: 78px 0 0 25px;
-}
-.field--name-field-button a{
-  padding: 20px 30px;
-  font-family: 'Gotham', sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  position: relative;
-  text-decoration: none;
-  display: inline-block;
-  text-transform: uppercase;
-  will-change: color, border, box-shadow, background;
-  transition: all 300ms ease-in-out;
-  color: #9b288c;
-  border: 2px solid #cc91c6;
-  box-shadow: 0 2px 2px 0 rgb(61 5 58 / 30%);
-  background: #fff;
-}
-.field--name-field-milestone-button a{
-  font-family: 'Gotham', sans-serif;
+  #isi h3, #fixed_isi h3 {
+    font-family: 'Gotham', sans-serif;
     font-size: 16px;
     font-weight: 700;
-    position: relative;
-    padding: 20px;
-    text-decoration: none;
-    display: inline-block;
-    text-transform: uppercase;
-    will-change: color, border, box-shadow, background;
-    transition: all 300ms ease-in-out;
-    color: #fff;
-    border: 2px solid #cc91c6;
-    box-shadow: 0 2px 2px 0 rgb(61 5 58 / 30%);
-    background: #9b288c;
-}
-.field--name-field-milestone-button a:hover{
-  box-shadow: 0 3px 8px 0 rgb(61 5 58 / 30%);
-  color: #9b288c;
-  background: #ffcb03;
-}
-.field--name-field-button a:hover{
-  box-shadow: 0 3px 8px 0 rgb(61 5 58 / 30%);
-  border: 2px solid #9b288c;
-  background: #f4e8f3;
-}
-
-.field.field--name-field-legal
-{
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  text-align: left;
-  width: 50%;
-  padding: 15px 20px 20px 20px;
-  font-size: 12px;
-  line-height: 12px;
-
-}
-.field--name-field-title-main{
-  font-family: 'Knockout', sans-serif;
-    font-size: 50px;
-    font-weight: 200;
-    margin-bottom: 30px;
-    line-height: 52px;
-    position: relative;
-    text-transform: uppercase;
-    color: #9b288c;
-}
-.field--name-field-milestones-banner .field__item{
-  text-align: center;
-}
-.field--name-field-milestones-banner img{
-  width: 80%;
-}
-.field--name-field-image-item-1, .field--name-field-image-item-2{
-  width: 80px;
-  height: 80px;
-  margin-right: 10px;
-  margin-top: 25px;
-}
-.field--name-field-content-, .field--name-field-content-item-2{
-  color: #9b288c;
-  margin: 0;
-  text-align: left;
-  font-family: 'Gotham', sans-serif;
-  font-size: 16px;
-
-  display: none;
-}
-.field--name-field-content- span, .field--name-field-content-item-2 span{
-  font-family: 'Knockout29', sans-serif;
-  font-size: 26px;
-  text-transform: uppercase;
-
-}
-.field--name-field-legals p{
-  margin-top: 30px;
-  text-align: left;
-  font-family: 'Gotham', sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-  color: #9b288c;
-}
-@media(max-width: 1250px){
-  .field--name-field-humira .field__items .field__item:last-child{
-    margin-right: 20px;
-    position: relative;
   }
-  .field--name-field-humira .field__items .field__item:last-child:before{
-    margin: 12px 5px 0 5px;
-    right: -40px;
+  #isi p, #fixed_isi p {
+    font-family: 'Gotham', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
   }
-  .paragraph--type--head-to-head{
-    padding: 32px 15px 125px 15px;
+  #isi ul li, #fixed_isi ul li {
+    font-family: 'Gotham', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
   }
-  .paragraph--type--cta-section>div>.field__items>.field__item:first-child{
-    width: calc(55% - 12px);
+  #isi ul li:before, #fixed_isi ul li:before {
+    top: 11px;
   }
-  .paragraph--type--cta-section>div>.field__items>.field__item:last-child{
-    width: calc(45% - 12px);
-  }
-  .field--name-field-milestone-button a{
-    padding: 20px 30px;
-  }
-}
-@media(max-width: 960px){
-  .field--name-field-varsity-trial img{
-    width: 100%;
-    height: auto;
-  }
-  .field--name-field-varsity-trial{
-    margin: 0;
-  }
-  .field--name-field-top-title{
-    margin-top: 30px;
-    font-size: 24px;
-    font-weight: 200;
-    line-height: 24px;
-    margin-bottom: 0 !important;
-  }
-  .field--name-field-main-title{
-    font-size: 55px;
+  #isi a, #fixed_isi a {
+    font-family: 'Gotham', sans-serif;
+    font-size: 16px;
     font-weight: 700;
-    line-height: 44px;
-    position: relative;
   }
-  .field--name-field-bottom-title{
-    margin-top: 0;
-    font-size: 18px;
-    line-height: 20px;
+
+  #references article {
+    padding: 30px 200px 0 75px;
   }
-  .field--name-field-humira .field__items{
-    justify-content: flex-end;
+  #references ol {
+    margin-left: 20px;
   }
-  .field--name-field-humira .field__items h3{
-    font-family: 'Gotham', sans-serif;
-    font-size: 21px;
-    font-weight: 500;
-    line-height: 20px;
-  }
-  .field--name-field-humira .field__items h3 em{
-    font-size: 12px;
-    font-weight: 500;
-  }
-  .paragraph--type--head-to-head{
-    margin-bottom: 25px;
-    padding: 32px 15px 25px 15px;
-  }
-  .field--name-field-humira .field__items .field__item:last-child:before{
-    margin: -6px 12px 0 12px;
-    padding-top: 1px;
-    padding-right: 2px;
-    font-family: 'Gotham', sans-serif;
-    font-size: 10px;
-    font-weight: 500;
-    width: 28px;
-    height: 28px;
-    line-height: 28px;
-    font-style: italic !important;
-    right: -52px;
-  }
-  .field--name-field-humira .field__items .field__item:last-child{
-    margin-right: 30px;
-  }
-  .field--name-field-humira .field__items{
-    margin-top: 0;
-  }
-  .field--name-field-bottom-title{
-    margin-bottom: 20px;
-  }
-  .field--name-field-button a{
-    padding: 20px;
-  }
-  .field.field--name-field-legal{
-    bottom: 85px;
-    width: 100%;
-    text-align: center;
-  }
-  .paragraph--type--cta-section>div>.field__items{
-    flex-wrap: wrap;
-  }
-  .paragraph--type--cta-section>div>.field__items>.field__item
-  {
-    width: 100% !important;
-  }
-  .paragraph--type--head-to-head{
-    height: auto;
-  }
-  .container-article article, .container-article #references article{
+
+}
+
+@media screen and (max-width: 959px){
+  #isi article {
     padding: 30px 0 0 0;
   }
-  .container-article{
+  #references, #isi {
     padding: 0 25px;
+    max-width: 100%;
   }
-  .back-to-top:after{
-    left: 20px;
+  #isi ul li, #fixed_isi ul li {
+    font-family: 'Gotham', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
   }
-  #block-herosection{
-    margin-top: 179px;
+  #isi ul li:before, #fixed_isi ul li:before {
+    top: 7px;
   }
-  .hero-container .article-content>div{
-    margin: auto;
-    text-align: center;
+  #isi h2, #fixed_isi h2 {
+    font-family: 'Gotham', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
   }
-  .hero-container .article-content h1{
-    margin: 100px auto !important;
-    left: 40px;
+  #isi h2, #fixed_isi h2 {
+    font-family: 'Gotham', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
   }
+  #isi h3, #fixed_isi h3 {
+    font-family: 'Gotham', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+  }
+  #isi p, #fixed_isi p {
+    font-family: 'Gotham', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  #isi a, #fixed_isi a {
+    font-family: 'Gotham', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+  }
+  #references article {
+    padding: 30px 0 0 0;
+  }
+
 }

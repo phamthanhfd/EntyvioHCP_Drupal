@@ -27,7 +27,7 @@
       <div class="container">
        <div class="hcp-text"><p>For U.S. Healthcare Professionals</p></div>
         <div class="logo-container">
-          <a class="logo" href="{{ url('<front>') }}/" target="_self"><img src="{{ base_path ~ directory }}/images/logo-entyvio.png" alt="Entyvio® (vedolizumab) logo."></a>
+          <a class="logo" href="{{ url('<front>') }}/" target="_self"><img src="{{ base_path ~ directory }}/images/logo-entyvio.svg" alt="Entyvio® (vedolizumab) logo."></a>
           <button data-mobile-menu="" aria-expanded="false" class="close-menu"  aria-label="Close Navigation Menu"><span></span></button>
         </div>
         <nav class="{% if is_front %} front-page {% endif %}">
@@ -110,7 +110,7 @@
 		<p>For U.S. Healthcare Professionals</p>
 	</div>
 	<div>
-		<a class="logo" href="{{ url('<front>') }}/" target="_self"><img src="{{ base_path ~ directory }}/images/logo-entyvio.png" alt="Entyvio® (vedolizumab) logo."></a>
+		<a class="logo" href="{{ url('<front>') }}/" target="_self"><img src="{{ base_path ~ directory }}/images/logo-entyvio.svg" alt="Entyvio® (vedolizumab) logo."></a>
 		<button data-mobile-menu="" aria-expanded="false" class="open-menu" aria-label="Close Navigation Menu"><span></span></button>
 	</div>
 	<div class="eyebrow">
@@ -123,7 +123,7 @@
 	</div>
 </header>
 <main class="content main-content_container" id="page-content" role="main">
-
+  {{ page.content }}
 </main>
 <footer  class="footer" id="footer" data-device="global" role="contentinfo">
   <div>
@@ -144,7 +144,6 @@
               <li><a data-modal="external_medconnect" data-animation="slide" href="https://www.takedamedconnect.com/" target="_blank" rel="noreferrer">Medical Information</a></li>
             </ul>
           </nav>
-
           <p>ENTYVIO is a trademark of Millennium Pharmaceuticals, Inc., registered with the U.S. Patent and Trademark Office and is used under license by Takeda Pharmaceuticals America, Inc. All other trademarks are the property of their respective owners.</p>
 
           <p>If you are a Colorado prescriber, please see the Colorado WAC <a data-modal="external" href="https://www.takeda.com/siteassets/en-us/home/corporate-responsibility/culture-of-compliance/state/co_entyvio-product-form.pdf" target="_blank" rel="noreferrer">disclosure form</a>.</p>
@@ -160,11 +159,7 @@
   </div>
 </footer>
 
-<section class="sticky-bar" style="">
-    <div class="sticky-bar_container">
+<div id="fixed_isi" class="active"></div>
 
-    </div>
-</section>
-
-<button class="back-to-top show" tabindex="0">Back to top</button>
+<button class="back-to-top btn btn-secondary" tabindex="0">Back to top</button>
 

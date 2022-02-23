@@ -78,6 +78,27 @@ body {
   box-shadow: 0 2px 2px 0 rgb(61 5 58 / 30%);
   background: #9b288c;
 }
+.btn.btn-secondary {
+  font-family: 'Gotham', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  position: relative;
+  padding: 20px;
+  text-decoration: none;
+  display: inline-block;
+  text-transform: uppercase;
+  will-change: color, border, box-shadow, background;
+  transition: all 300ms ease-in-out;
+  color: #9b288c;
+  border: 2px solid #cc91c6;
+  box-shadow: 0 2px 2px 0 rgb(61 5 58 / 30%);
+  background: #fff;
+}
+.btn.btn-secondary.hover, .btn.btn-secondary:hover {
+  box-shadow: 0 3px 8px 0 rgb(61 5 58 / 30%);
+  border: 2px solid #9b288c;
+  background: #f4e8f3;
+}
 
 .btn.btn-primary.hover, .btn.btn-primary:hover {
   box-shadow: 0 3px 8px 0 rgb(61 5 58 / 30%);
@@ -126,10 +147,229 @@ body {
   width: 1px;
 }
 
+@media screen and (max-width: 959px)  {
+    [data-col*="mobile-12"] {
+      flex: 0 0 100%;
+      max-width: 100%;
+  }
+}
+
+.back-to-top.btn.btn-secondary {
+    font-family: 'Gotham', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    position: fixed;
+    z-index: 5;
+    right: -300px;
+    top: 70%;
+    border-right: none;
+    transition: right 300ms ease-in-out;
+    will-change: right;
+    line-height: 16px;
+}
+.back-to-top.btn.btn-secondary:after {
+  color: #9b288c;
+  transform: rotate(270deg);
+  display: block;
+  position: absolute;
+  content: '\00BB';
+}
+#fixed_isi {
+  width: 100%;
+  position: fixed;
+  bottom: -25vh;
+  background: #fff;
+  z-index: 3;
+  padding: 0;
+  max-width: 100%;
+  transition: bottom 300ms ease-in;
+}
+#fixed_isi.expanded {
+  height: 100%;
+  overflow-y: auto;
+  padding-bottom: 20px;
+  z-index: 1000;
+}
+#fixed_isi button.fixed_isi_trigger {
+  position: absolute;
+  top: 6px;
+  border-radius: 100%;
+  cursor: pointer;
+  z-index: 3;
+  will-change: border;
+  transition: all 300ms ease-in-out;
+  background: #fff;
+}
+#fixed_isi button.fixed_isi_trigger:focus, #fixed_isi button.fixed_isi_trigger:hover {
+  box-shadow: none;
+}
+#fixed_isi button.fixed_isi_trigger span:after {
+  will-change: width;
+  transition: all 300ms ease-in-out;
+}
+#fixed_isi .isi-header {
+  background: #f0deee;
+}
+#fixed_isi.active {
+    bottom: -1px;
+}
+#fixed_isi.expanded button.fixed_isi_trigger span:after {
+  width: 0;
+}
+@media screen and (min-width: 960px) and (max-width: 9999px) and (min-width: 960px) and (max-width: 1800px){
+  #fixed_isi h2, #fixed_isi ul, #fixed_isi h3, #fixed_isi p {
+    padding-left: calc(75px + 15px) !important;
+    padding-right: calc(200px + 15px) !important;
+    max-width: 1366px;
+  }
+}
+@media(min-width: 1800px){
+  #fixed_isi h2, #fixed_isi ul, #fixed_isi h3, #fixed_isi p {
+    padding-left: calc(75px + 15px) !important;
+    padding-right: calc(200px + 15px) !important;
+    max-width: 1366px;
+  }
+}
+
+@media screen and (min-width: 960px) and (max-width: 9999px){
+  #fixed_isi ul, #fixed_isi h3, #fixed_isi p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #fixed_isi:not(.expanded) ul li:first-child {
+    line-height: 19px;
+  }
+  #fixed_isi ul li{
+    line-height: 20px;
+  }
+  #fixed_isi h2 {
+    padding: 11px 0 7px 0;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 30px;
+    margin-bottom: 4px !important;
+  }
+  .back-to-top.btn.btn-secondary.show {
+    right: -40px;
+  }
+  .back-to-top.btn.btn-secondary {
+    padding: 20px 60px;
+  }
+  .back-to-top.btn.btn-secondary:after {
+    top: 20px;
+    left: 24px;
+    font-size: 28px;
+    color: #9b288c;
+    transform: rotate(270deg);
+    display: block;
+    position: absolute;
+    content: '\00BB';
+  }
+
+  #fixed_isi {
+    height: 95px;
+  }
+  #fixed_isi button.fixed_isi_trigger {
+    width: 34px;
+    height: 34px;
+    right: 40px;
+    border: 3px solid #e7cae3;
+  }
+  #fixed_isi button.fixed_isi_trigger:focus, #fixed_isi button.fixed_isi_trigger:hover {
+    border: 3px solid #9b288c;
+  }
+  #fixed_isi button.fixed_isi_trigger span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 13px;
+    height: 13px;
+    transform: translate(-50%, -50%);
+  }
+  #fixed_isi button.fixed_isi_trigger span:before, #fixed_isi button.fixed_isi_trigger span:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 13px;
+    height: 3px;
+    transform-origin: 0 0;
+    background: #9b288c;
+  }
+  #fixed_isi button.fixed_isi_trigger span:before {
+    transform: translate(-50%, -50%);
+  }
+  #fixed_isi button.fixed_isi_trigger span:after {
+    width: 13px;
+  }
+  #fixed_isi button.fixed_isi_trigger span:after {
+    transform: rotate(90deg) translate(-50%, -50%);
+  }
+  #fixed_isi h2 {
+    padding: 11px 0 7px 0;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 30px;
+    margin-bottom: 4px;
+  }
+}
 @media screen and (max-width: 959px)
 {
-  [data-col*="mobile-12"] {
-    flex: 0 0 100%;
-    max-width: 100%;
-}
+  .back-to-top.btn.btn-secondary.show {
+    right: -140px;
+  }
+  .back-to-top.btn.btn-secondary {
+    padding: 20px 25px 20px 40px;
+  }
+  .back-to-top.btn.btn-secondary:after {
+    top: 15px;
+    left: 13px;
+    font-size: 24px;
+  }
+  #fixed_isi ul {
+    padding: 0 25px !important;
+    font-size: 14px;
+  }
+  #fixed_isi h2 {
+    padding: 8px 25px !important;
+    font-size: 14px !important;
+    margin-bottom: 5px !important;
+  }
+  #fixed_isi button.fixed_isi_trigger {
+    width: 19px;
+    height: 19px;
+    right: 40px;
+    border: 2px solid #e7cae3;
+  }
+  #fixed_isi button.fixed_isi_trigger span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 7px;
+    height: 7px;
+    transform: translate(-50%, -50%);
+  }
+  #fixed_isi button.fixed_isi_trigger span:before, #fixed_isi button.fixed_isi_trigger span:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 7px;
+    height: 2px;
+    transform-origin: 0 0;
+    background: #9b288c;
+  }
+  #fixed_isi button.fixed_isi_trigger span:before {
+    transform: translate(-50%, -50%);
+  }
+  #fixed_isi button.fixed_isi_trigger span:after {
+    width: 7px;
+  }
+  #fixed_isi button.fixed_isi_trigger span:after {
+    transform: rotate(90deg) translate(-50%, -50%);
+  }
+  #fixed_isi {
+    height: 120px;
+  }
+
 }

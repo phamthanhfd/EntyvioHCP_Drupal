@@ -3,6 +3,9 @@
   font-weight: 700;
   color: #9b288c;
 }
+header{
+  background: white;
+}
 @media screen and (min-width: 960px) and (max-width: 9999px) and (min-width: 1800px) and (max-width: 9999px){
   header[data-device="desktop"]>div>div>.container {
     padding: 0 30px !important;
@@ -236,6 +239,7 @@
     text-align: center;
     height: fit-content;
     height: -moz-fit-content;
+    line-height: 16px;
   }
 
   header[data-device="desktop"]  .eyebrow {
@@ -698,6 +702,19 @@
   }
   .icon-trigger.active i{
     transform: rotate(-180deg);
+  }
+  header[data-device="mobile"] .pushdown .container .flex-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    height: 70px;
+  }
+  header[data-device="mobile"]>div.pushdown {
+    height: 70px;
+  }
+  header[data-device="mobile"] .pushdown .container{
+    padding: 0 !important;
   }
 }
 
