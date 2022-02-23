@@ -77,6 +77,7 @@ body {
   border: 2px solid #cc91c6;
   box-shadow: 0 2px 2px 0 rgb(61 5 58 / 30%);
   background: #9b288c;
+  line-height: 16px;
 }
 .btn.btn-secondary {
   font-family: 'Gotham', sans-serif;
@@ -93,6 +94,7 @@ body {
   border: 2px solid #cc91c6;
   box-shadow: 0 2px 2px 0 rgb(61 5 58 / 30%);
   background: #fff;
+  line-height: 16px;
 }
 .btn.btn-secondary.hover, .btn.btn-secondary:hover {
   box-shadow: 0 3px 8px 0 rgb(61 5 58 / 30%);
@@ -133,6 +135,9 @@ body {
   [data-col*="desktop-6"] {
     flex: 0 0 50%;
     max-width: 50%;
+  }
+  .btn.btn-primary {
+    padding: 20px 30px;
   }
 }
 
@@ -322,7 +327,7 @@ body {
     padding: 20px 25px 20px 40px;
   }
   .back-to-top.btn.btn-secondary:after {
-    top: 15px;
+    top: 20px;
     left: 13px;
     font-size: 24px;
   }
@@ -372,4 +377,14 @@ body {
     height: 120px;
   }
 
+}
+
+[data-nobr="all"] {
+  white-space: nowrap;
+}
+sup {
+  font-family: inherit;
+  position: relative;
+  top: -3px;
+  font-size: 9px;
 }

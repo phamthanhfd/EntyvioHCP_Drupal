@@ -165,3 +165,757 @@
   }
 
 }
+
+
+/* CTA section */
+#cta>article {
+  margin: auto;
+  width: 100%;
+}
+.homepage-content #cta>article {
+  display: flex;
+}
+.homepage-content #cta .head-to-head, .homepage-content #cta .first-line-biologic, .homepage-content #cta .milestones {
+  position: relative;
+}
+.homepage-content .head-to-head {
+  overflow: hidden;
+  background: url(../images/head-to-head-bg.svg) 0 0 no-repeat;
+  background-size: cover;
+  text-align: center;
+}
+.homepage-content .head-to-head:before {
+  -webkit-filter: blur(3px);
+  filter: blur(3px);
+  z-index: 1;
+}
+.homepage-content .head-to-head:before, .homepage-content .head-to-head:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.homepage-content .head-to-head:after {
+  z-index: 2;
+}
+.homepage-content .head-to-head>* {
+  position: relative;
+  z-index: 3;
+}
+.homepage-content .head-to-head h2 {
+  text-transform: uppercase;
+  color: #fff;
+}
+.homepage-content .head-to-head h2 .knockout-29 {
+  display: block;
+  font-size: 40px;
+  line-height: 32px;
+}
+.homepage-content .head-to-head h2 .knockout-49 {
+  letter-spacing: -1px;
+  display: block;
+  line-height: 85px;
+}
+.homepage-content .head-to-head h2 .knockout-29.subhead {
+  font-size: 32px;
+  line-height: 48px;
+}
+[data-page-id="Home"] .head-to-head h2 .knockout-29 sup {
+  position: relative;
+  top: -10px;
+  font-size: 16px;
+}
+[data-page-id="Home"] .head-to-head .entyvio-vs-humira {
+  display: flex;
+  justify-content: flex-start;
+}
+[data-page-id="Home"] .head-to-head .entyvio-vs-humira h3 {
+  position: relative;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+[data-page-id="Home"] .head-to-head .entyvio-vs-humira h3 em {
+  font-style: normal;
+  display: block;
+  text-transform: lowercase;
+}
+[data-page-id="Home"] .head-to-head .entyvio-vs-humira h3 .superscript-set {
+  position: absolute;
+}
+[data-page-id="Home"] .head-to-head .entyvio-vs-humira h3 .superscript-set sup {
+  position: relative;
+}
+[data-page-id="Home"] .head-to-head .legal {
+  position: relative;
+  color: #fff;
+}
+[data-page-id="Home"] .head-to-head .legal span {
+  position: absolute;
+}
+
+[data-page-id="Home"] .milestones {
+  overflow: hidden;
+  background: url(../images/homepage-milestones-bg.png) 0 0 no-repeat;
+  background-size: cover;
+  text-align: center;
+  min-height: 980px;
+}
+[data-page-id="Home"] .milestones h2 {
+  position: relative;
+  text-transform: uppercase;
+  color: #9b288c;
+}
+[data-page-id="Home"] .milestones .milestones-banner img {
+  width: 80%;
+}
+[data-page-id="Home"] .milestones .icon-list {
+  margin-top: 25px;
+}
+[data-page-id="Home"] .milestones .icon-list .icon-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+[data-page-id="Home"] .milestones .icon-list .icon-item img {
+  width: 80px;
+  height: 80px;
+  margin-right: 10px;
+}
+[data-page-id="Home"] .milestones .icon-list .icon-item p {
+  color: #9b288c;
+  margin: 0;
+  text-align: left;
+  font-family: 'Gotham', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+}
+[data-page-id="Home"] .milestones .icon-list .icon-item p span {
+  font-family: 'Knockout30', sans-serif;
+  font-size: 26px;
+  text-transform: uppercase;
+}
+[data-page-id="Home"] .milestones .legal {
+  margin-top: 30px;
+  text-align: left;
+  font-family: 'Gotham', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #9b288c;
+}
+
+@media screen and (min-width: 1800px) and (max-width: 9999px)
+{
+  #cta>article {
+    padding: 0 30px;
+    max-width: 1366px;
+  }
+}
+@media screen and (min-width: 960px) and (max-width: 9999px){
+  .homepage-content #cta>article {
+    padding: 0 23px;
+  }
+  .homepage-content #cta>article>div:nth-child(1) {
+    padding-right: 12px;
+  }
+  .homepage-content #cta>article>div {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .homepage-content #cta>article>div:nth-child(2) {
+    padding-left: 12px;
+  }
+  .homepage-content .head-to-head {
+    padding: 32px 25px 119px 25px;
+    height: 980px;
+    min-height: 100%;
+  }
+  .homepage-content .head-to-head:before {
+    background: url(../images/head-to-head1.svg) calc(100% + 4px) calc(100% + 4px) no-repeat;
+    background-size: 258px auto;
+  }
+  .homepage-content .head-to-head:after {
+    background: url(../images/head-to-head2.svg) 100% 100% no-repeat;
+    background-size: 258px auto;
+  }
+  .homepage-content .head-to-head .varsity-trial {
+    margin-top: 80px;
+    margin-bottom: 50px;
+  }
+  .homepage-content .head-to-head .varsity-trial img {
+    width: 240px;
+    height: 60px;
+  }
+  .homepage-content .head-to-head h2 {
+    padding: 25px 0 20px 20px;
+  }
+  .homepage-content .head-to-head h2 .knockout-29 {
+    font-family: 'Knockout29', sans-serif;
+    font-size: 40px;
+    font-weight: 200;
+    line-height: 32px;
+    margin: 8px 0 16px;
+  }
+  .homepage-content .head-to-head h2 .knockout-49 {
+    font-family: 'Knockout49', sans-serif;
+    font-size: 100px;
+    font-weight: 700;
+    line-height: 82px;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+  }
+  .homepage-content .head-to-head h2 .knockout-29 {
+    font-family: 'Knockout29', sans-serif;
+    font-size: 40px;
+    font-weight: 200;
+    line-height: 32px;
+    margin: 8px 0 16px;
+  }
+  [data-page-id="Home"] .head-to-head h2 .knockout-29 sup {
+    top: -12px;
+    font-size: 16px;
+  }
+  [data-page-id="Home"] .head-to-head .entyvio-vs-humira {
+    margin-top: 40px;
+    padding: 0 20px;
+    justify-content: center;
+  }
+  [data-page-id="Home"] .head-to-head .entyvio-vs-humira h3 {
+    font-family: 'Knockout29', sans-serif;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 40px;
+  }
+  [data-page-id="Home"] .head-to-head .entyvio-vs-humira h3 em {
+    font-family: 'Gotham', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+  }
+  [data-page-id="Home"] .head-to-head .entyvio-vs-humira [data-yellow-dot-word] {
+    margin: 15px 32px 0 32px;
+    padding-top: 1px;
+    font-style: normal !important;
+    position: relative;
+    font-family: 'Gotham', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 100%;
+    color: #9b288c;
+    background: #ffcb03;
+  }
+  [data-page-id="Home"] .head-to-head .entyvio-vs-humira h3 .superscript-set {
+    top: -5px;
+    font-size: 30px;
+  }
+  [data-page-id="Home"] .head-to-head .entyvio-vs-humira h3 .superscript-set sup {
+    top: -7px;
+    font-size: 20px;
+  }
+  [data-page-id="Home"] .head-to-head .legal {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: left;
+    width: 50%;
+    padding: 15px 20px 20px 20px;
+  }
+  [data-page-id="Home"] .head-to-head .legal span {
+    left: 14px;
+  }
+  p.legal sup {
+    font-size: 10px;
+  }
+  [data-page-id="Home"] .head-to-head .btn-wrapper {
+    margin: 30px 0 0 25px;
+  }
+  .btn.btn-secondary {
+    padding: 20px 30px;
+  }
+  .btn.btn-secondary.hover, .btn.btn-secondary:hover {
+    box-shadow: 0 3px 8px 0 rgb(61 5 58 / 30%);
+    border: 2px solid #9b288c;
+    background: #f4e8f3;
+  }
+
+  [data-page-id="Home"] .milestones {
+    padding: 32px 25px 119px 25px;
+    height: 980px;
+    min-height: 100%;
+  }
+  [data-page-id="Home"] .milestones h2 {
+    font-family: 'Knockout30', sans-serif;
+    font-size: 50px;
+    font-weight: 200;
+    margin-bottom: 30px;
+    line-height: 52px;
+  }
+  p.legal {
+    font-size: 12px;
+    line-height: 12px;
+  }
+}
+
+@media screen and (min-width: 960px) and (max-width: 1250px){
+  [data-page-id="Home"] .head-to-head {
+    padding: 32px 15px 125px 15px;
+  }
+  [data-page-id="Home"]  #cta>article>div:nth-child(1) {
+    flex: 0 0 55%;
+    max-width: 55%;
+  }
+  [data-page-id="Home"]  #cta>article>div:nth-child(2) {
+    flex: 0 0 45%;
+    max-width: 45%;
+  }
+  [data-page-id="Home"] .head-to-head .entyvio-vs-humira [data-yellow-dot-word] {
+    margin: 10px 5px 0 5px;
+  }
+  [data-page-id="Home"] .head-to-head .legal {
+    padding: 15px 0 20px 0;
+  }
+
+}
+
+@media screen and (max-width: 959px){
+  [data-page-id="Home"] .head-to-head {
+    margin-bottom: 25px;
+    padding: 32px 15px 25px 15px;
+  }
+  [data-page-id="Home"] .head-to-head:before {
+    background: url(../images/head-to-head1.svg) calc(100% + 4px) calc(100% + 4px) no-repeat;
+    background-size: 155px auto;
+  }
+  [data-page-id="Home"] .head-to-head:after {
+    background: url(../images/head-to-head2.svg) 100% 100% no-repeat;
+    background-size: 155px auto;
+  }
+  [data-page-id="Home"] .head-to-head .varsity-trial img {
+    width: 100%;
+  }
+  [data-page-id="Home"] .head-to-head h2 {
+    padding: 30px 0 20px 10px;
+  }
+  [data-page-id="Home"] .head-to-head h2 .knockout-29 {
+    font-family: 'Knockout29', sans-serif;
+    font-size: 24px;
+    font-weight: 200;
+    line-height: 24px;
+  }
+  [data-page-id="Home"] .head-to-head h2 .knockout-49 {
+    font-family: 'Knockout29', sans-serif;
+    font-size: 55px;
+    font-weight: 700;
+    line-height: 44px;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+  }
+  [data-page-id="Home"] .head-to-head h2 .knockout-29.subhead {
+    font-size: 18px;
+    line-height: 20px;
+  }
+  [data-page-id="Home"] .head-to-head h2 .knockout-29.subhead sup {
+    top: -8px;
+    font-size: 10px;
+  }
+  [data-page-id="Home"] .head-to-head h2 .knockout-29 sup {
+    top: -14px;
+    font-size: 15px;
+  }
+  [data-page-id="Home"] .head-to-head .entyvio-vs-humira {
+    padding: 0 20px;
+  }
+  [data-page-id="Home"] .head-to-head .entyvio-vs-humira h3 {
+    font-family: 'Gotham', sans-serif;
+    font-size: 21px;
+    font-weight: 500;
+    line-height: 20px;
+  }
+  [data-page-id="Home"] .head-to-head .entyvio-vs-humira h3 em {
+    font-family: 'Gotham', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+  }
+  [data-page-id="Home"] .head-to-head .entyvio-vs-humira [data-yellow-dot-word] {
+    margin: -6px 12px 0 12px;
+    padding-top: 1px;
+    padding-right: 2px;
+    position: relative;
+    font-family: 'Gotham', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    font-style: italic;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 100%;
+    color: #9b288c;
+    background: #ffcb03;
+  }
+  [data-page-id="Home"] .head-to-head .entyvio-vs-humira h3 .superscript-set {
+    top: -1px;
+    font-size: 18px;
+  }
+  [data-page-id="Home"] .head-to-head .entyvio-vs-humira h3 .superscript-set sup {
+    top: -5px;
+    font-size: 10px;
+  }
+  [data-page-id="Home"] .head-to-head .entyvio-vs-humira h3 em {
+    font-family: 'Gotham', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+  }
+  [data-page-id="Home"] .head-to-head .legal {
+    padding: 15px 20px 25px 23px;
+    line-height: 12px;
+  }
+  [data-page-id="Home"] .head-to-head .legal span {
+    left: 30px;
+  }
+  [data-page-id="Home"] .head-to-head .legal sup {
+    top: -2px;
+  }
+  [data-page-id="Home"] .head-to-head .btn-wrapper {
+    margin: 0 0 0 10px;
+  }
+  [data-page-id="Home"] .milestones {
+    padding: 32px 25px 119px 25px;
+    height: 980px;
+    min-height: 100%;
+  }
+  [data-page-id="Home"] .milestones h2 {
+    font-family: 'Knockout30', sans-serif;
+    font-size: 36px;
+    font-weight: 200;
+    margin-bottom: 45px;
+    line-height: 35px;
+  }
+  [data-page-id="Home"] .milestones .icon-list .icon-item p {
+    font-size: 14px;
+  }
+  [data-page-id="Home"] .milestones .icon-list .icon-item p span {
+    font-size: 18px;
+  }
+  [data-page-id="Home"] .milestones .legal {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 12px;
+  }
+  p.legal sup {
+    font-size: 10px;
+  }
+  [data-page-id="Home"]  #cta>article {
+    flex-direction: column;
+  }
+  .homepage-content #cta>article{
+    padding: 0 25px;
+    max-width: 100%;
+  }
+  p.legal {
+    font-size: 10px;
+  }
+
+}
+
+@media screen and (max-width: 374px){
+  [data-page-id="Home"] .head-to-head .entyvio-vs-humira {
+    padding: 0 10px;
+  }
+  [data-page-id="Home"] .head-to-head .legal {
+    padding-left: 10px;
+  }
+  [data-page-id="Home"] .head-to-head .legal span {
+    left: 4px;
+  }
+  [data-page-id="Home"] .head-to-head .entyvio-vs-humira [data-yellow-dot-word] {
+    margin: 0 6px 0 6px;
+  }
+  [data-page-id="Home"] .head-to-head .entyvio-vs-humira h3 {
+    letter-spacing: -1px;
+  }
+  [data-page-id="Home"] .milestones .icon-list .icon-item p{
+    line-height: 14px;
+  }
+}
+
+
+#indication_bar {
+  position: relative;
+  width: 100%;
+  background: none;
+}
+#indication_bar>div>div {
+  position: relative;
+  margin: auto;
+  width: 100%;
+}
+#indication_bar>div>div:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 200vw;
+  height: 100%;
+  z-index: 1;
+  box-shadow: 0 0 5px 2px rgb(155 40 140 / 8%);
+  background: #fff;
+}
+#indication_bar>div>div * {
+  position: relative;
+  z-index: 2;
+}
+#indication_bar h3 {
+  color: #9b288c;
+}
+
+@media screen and (min-width: 1800px){
+  #indication_bar>div>div {
+    padding: 0 30px;
+    max-width: 1366px;
+  }
+}
+
+@media screen and (min-width: 960px) and (max-width: 9999px){
+  #indication_bar {
+    top: -30px;
+    margin-bottom: -30px;
+  }
+  #indication_bar>div>div {
+    padding: 20px 0 20px 30px;
+  }
+  #indication_bar>div>div:before {
+    right: 88px;
+  }
+  #indication_bar h3 {
+    font-family: 'Gotham', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 0;
+    padding-left: 40px;
+    padding-right: 150px;
+  }
+}
+@media screen and (max-width: 959px){
+  #indication_bar {
+    top: -20px;
+    margin-bottom: 0;
+  }
+
+  #indication_bar>div>div {
+    max-width: 100%;
+    padding: 15px 0 15px 25px;
+  }
+  #indication_bar>div>div:before {
+    right: 25px;
+  }
+  #indication_bar h3 {
+    font-family: 'Gotham', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    padding-right: 70px;
+    margin-bottom: 0;
+  }
+}
+
+
+
+[data-page-id="Home"] .first-line-biologic {
+  margin-bottom: 20px;
+  padding: 20px 12px 20px 32px;
+}
+[data-page-id="Home"] .first-line-biologic {
+  color: #9b288c;
+}
+[data-page-id="Home"] .first-line-biologic div {
+  margin-top: 36px;
+  text-align: center;
+}
+[data-page-id="Home"] .first-line-biologic h2 {
+  position: relative;
+  text-transform: uppercase;
+}
+[data-page-id="Home"] .first-line-biologic div {
+  margin-top: 36px;
+  text-align: center;
+}
+[data-page-id="Home"] .first-line-biologic .legal {
+  margin-top: 0;
+  font-family: 'Gotham', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+}
+[data-page-id="Home"] .first-line-biologic .legal {
+  margin-top: 0;
+  font-family: 'Gotham', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+}
+[data-page-id="Home"] .first-line-biologic .legal p {
+  color: #58595b;
+  position: relative;
+  padding: 0 80px;
+}
+
+[data-page-id="Home"] .first-line-biologic {
+  margin: auto;
+  width: 100%;
+}
+@media screen and (min-width: 960px) and (max-width: 9999px){
+  [data-page-id="Home"] .first-line-biologic h2 {
+    font-family: 'Knockout29', sans-serif;
+    font-size: 50px;
+    font-weight: 200;
+    margin-bottom: 20px;
+    line-height: 52px;
+  }
+  [data-page-id="Home"] .first-line-biologic h2 strong {
+    font-family: 'Knockout29', sans-serif;
+    font-size: 50px;
+    font-weight: 700;
+  }
+  [data-page-id="Home"] .first-line-biologic .legal p {
+    position: relative;
+    margin: 0;
+  }
+  [data-page-id="Home"] .first-line-biologic {
+    padding: 0 30px;
+    max-width: 1366px;
+  }
+  [data-page-id="Home"] .first-line-biologic h2 sup {
+    top: -18px;
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 959px){
+  [data-page-id="Home"] .first-line-biologic h2 sup {
+    top: -12px;
+    font-size: 17px;
+  }
+  [data-page-id="Home"] .first-line-biologic {
+    padding: 0 25px;
+    max-width: 100%;
+  }
+  [data-page-id="Home"] .first-line-biologic h2 {
+    font-family: 'Knockout29', sans-serif;
+    font-size: 28px;
+    font-weight: 200;
+    margin-bottom: 20px;
+    line-height: 32px;
+  }
+  [data-page-id="Home"] .first-line-biologic h2 strong {
+    font-family: 'Knockout29', sans-serif;
+    font-size: 33px;
+    font-weight: 700;
+    display: block;
+  }
+  [data-page-id="Home"] .first-line-biologic .legal {
+    margin-bottom: 24px;
+  }
+  [data-page-id="Home"] .first-line-biologic .legal p {
+    position: relative;
+    margin: 0 0 4px 0;
+    line-height: 12px;
+    padding: 0;
+  }
+}
+
+#home_title>article {
+  margin: auto;
+  width: 100%;
+}
+
+@media screen and (min-width: 1800px){
+  #home_title>article {
+    padding: 0 30px;
+    max-width: 1366px;
+  }
+}
+@media screen and (min-width: 960px) and (max-width: 9999px){
+  #home_title>article {
+    padding: 0 23px;
+  }
+  [data-page-id="Home"]  #home_title>article h2 {
+    color: #9b288c;
+    margin-top: 25px;
+    margin-bottom: 55px;
+    text-transform: uppercase;
+    font-family: 'Knockout29', sans-serif;
+    font-size: 72px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+  }
+  [data-page-id="Home"]  #home_title>article h2:before, [data-page-id="Home"] #home_title>article h2:after {
+    content: '';
+    flex-grow: 1;
+    height: 4px;
+    background: #ffcb03;
+  }
+  [data-page-id="Home"]  #home_title>article h2>span {
+    padding: 0 20px;
+  }
+  [data-page-id="Home"]  #home_title>article h2>span span {
+    position: relative;
+  }
+  [data-page-id="Home"] #home_title>article h2>span em {
+    font-family: 'Knockout30', sans-serif;
+    font-size: 36px;
+    position: absolute;
+    bottom: -23px;
+    left: 0;
+    font-weight: 400;
+    text-transform: lowercase;
+    font-style: normal;
+  }
+}
+@media screen and (max-width: 959px){
+  [data-page-id="Home"] #home_title>article {
+    padding: 0 25px;
+    max-width: 100%;
+  }
+  [data-page-id="Home"]  #home_title>article h2 {
+    font-family: 'Knockout29', sans-serif;
+    font-size: 42px;
+    font-weight: 700;
+    color: #9b288c;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+  }
+  [data-page-id="Home"]  #home_title>article h2>span span {
+    position: relative;
+    display: inline-block;
+  }
+  [data-page-id="Home"]  #home_title>article h2>span em {
+    position: absolute;
+    bottom: -12px;
+    left: 0;
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 400;
+    text-transform: lowercase;
+    letter-spacing: 0;
+  }
+  [data-page-id="Home"] #home_title{
+    margin-bottom: 50px;
+  }
+}
+
+@media screen  and (max-width: 374px){
+  [data-page-id="Home"]  #home_title>article h2 {
+    line-height: 52px;
+  }
+  [data-page-id="Home"]  #home_title>article h2>span em {
+    bottom: -27px;
+  }
+}
