@@ -1,6 +1,6 @@
 <header data-device="desktop"  class="header"  >
   <div class="header-container">
-    <div class="pushdown">
+    <div class="pushdown" {% if is_front %} {% else %} style="display: none" {% endif %}>
       <div class="container">
         <div class="flex-container">
           <p class="description">See how we are providing support for your patients during CORONAVIRUS (COVID‑19)</p>
@@ -43,7 +43,7 @@
               <div class="uc">
                 <h3>UC</h3>
                 <ul>
-                  <li class=""><a href="/clinical-efficacy/ulcerative-colitis/gemini-trial" target="_self"> GEMINI I: ENTYVIO <em class="vs">vs.</em> PLACEBO</a></li>
+                  <li class=""><a href="{{ base_path }}clinical-efficacy/ulcerative-colitis/gemini-trial" target="_self"> GEMINI I: ENTYVIO <em class="vs">vs.</em> PLACEBO</a></li>
                   <li class=""><a href="/clinical-efficacy/ulcerative-colitis/varsity-trial" target="_self">VARSITY: HEAD-TO-HEAD STUDY</a></li>
                 </ul>
               </div>
@@ -98,13 +98,13 @@
   </div>
 </header>
 <header data-device="mobile" class="header"  data-only="mobile"> <!-- Mobile only header; on desktop, this will hide -->
-    <div class="pushdown">
+    <div class="pushdown" {% if is_front %} {% else %} style="display: none" {% endif %}>
         <div class="container">
-            <div class="flex-container">
-    <p class="description">See how we are providing support for your patients during CORONAVIRUS (COVID‑19)</p>
-    <a href="/covid19" class="btn btn-primary">LEARN MORE</a>
-</div>
+          <div class="flex-container">
+          <p class="description">See how we are providing support for your patients during CORONAVIRUS (COVID‑19)</p>
+          <a href="/covid19" class="btn btn-primary">LEARN MORE</a>
         </div>
+      </div>
     </div>
 	<div class="for-us-hcp">
 		<p>For U.S. Healthcare Professionals</p>

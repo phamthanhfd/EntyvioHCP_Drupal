@@ -724,6 +724,7 @@
     font-weight: 700;
     padding-right: 70px;
     margin-bottom: 0;
+    line-height: 14px;
   }
 }
 
@@ -1522,4 +1523,7 @@ ul[data-bullet]>li:before {
   [data-page-id="Home"] #hero {
     margin-top: 227px;
   }
+}
+#references ol{
+  padding-left: 0;
 }
