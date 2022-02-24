@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="419px" height="555px" viewBox="0 0 419 555" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>homepage-3-cta</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <radialGradient cx="60.0046633%" cy="51.4841092%" fx="60.0046633%" fy="51.4841092%" r="88.9943609%" gradientTransform="translate(0.600047,0.514841),scale(1.000000,0.756318),rotate(-1.263447),translate(-0.600047,-0.514841)" id="radialGradient-1">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#E6E6E6" offset="62.6818264%"></stop>
+            <stop stop-color="#B8B8B8" offset="100%"></stop>
+        </radialGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle" fill="url(#radialGradient-1)" x="0" y="1" width="419" height="554"></rect>
+    </g>
+</svg>

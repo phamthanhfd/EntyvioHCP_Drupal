@@ -67,8 +67,38 @@
  *
  */
 #}
-  <div data-page-id="Home" class="page-content homepage-content" style="margin-top: 2000px">
+  <div data-page-id="Home" class="page-content homepage-content" >
     <div class="article homepage-article">
+      <div id="hero">
+        <div>
+          <picture>
+            <source media="screen and (max-width: 959px)" srcset="{{ base_path ~ directory }}/images/mobile-home-ivette.png">
+            <source media="screen and (max-width: 9999px) and (min-width: 960px)" srcset="{{ base_path ~ directory }}/images/desktop-home-ivette.png">
+            <img src="{{ base_path ~ directory }}/images/desktop-home-ivette.png" alt="Patient.">
+          </picture>
+          <article>
+            <div>
+              <h1>
+                Made for <strong>Selectivity</strong><br>
+                Made for <strong>Remission</strong><br>
+                Made for <strong class="super">Now</strong>
+              </h1>
+            </div>
+            <div class="extra-list">
+              <ul data-bullet="primary">
+                <li>Entyvio works through a gut-selective MOA by specifically binding to the α4β7 integrin and blocking its interaction with MAdCAM-1, which is mainly expressed on gut endothelial cells.<sup>1-7</sup></li>
+                <li>Remission was evaluated at Week 52.<sup>1</sup> Individual results may vary.</li>
+              </ul>
+            </div>
+          </article>
+          <picture>
+            <source media="screen and (max-width: 959px)" srcset="{{ base_path ~ directory }}/images/mobile-home-doctor.png">
+            <source media="screen and (max-width: 9999px) and (min-width: 960px)" srcset="{{ base_path ~ directory }}/images/desktop-home-doctor.png">
+            <img src="{{ base_path ~ directory }}/images/desktop-home-doctor.png" alt="Healthcare professional.">
+          </picture>
+        </div>
+      </div>
+
       <div id="indication_bar" class="close">
         <div>
           <div class="section">
@@ -91,6 +121,59 @@
         <article>
           <div>
             <h2><span>Only <span>Entyvio <em>(vedolizumab)</em></span> Combines</span></h2>
+          </div>
+        </article>
+      </div>
+      <div id="pillars">
+        <article>
+          <div class="selectivity">
+            <section class="content-area">
+              <h2><span class="knockout-29">Gut</span> Selectivity<sup>2-7</sup></h2>
+              <h3>Entyvio helps address inflammation where it occurs—the gut.<sup>1</sup></h3>
+              <p>Entyvio specifically binds to the α4β7 integrin and blocks the interaction between the α4β7 integrin and MAdCAM-1, which is mainly expressed on the GI tract endothelial cells.</p>
+            </section>
+            <div class="btn-wrapper">
+              <p><a href="/mechanism-of-action" class="btn btn-primary" target="_self">Discover the MOA</a></p>
+            </div>
+            <picture>
+              <source srcset="{{ base_path ~ directory }}/images/homepage-doctor-selectivity.webp" type="image/webp">
+              <source srcset="{{ base_path ~ directory }}/images/homepage-doctor-selectivity.png" type="image/jpeg">
+              <img class="bg" src="{{ base_path ~ directory }}/images/homepage-doctor-selectivity.png" alt="Healthcare professional.">
+            </picture>
+          </div>
+          <p data-yellow-dot-word="">and</p>
+          <div class="remission">
+            <section class="content-area">
+              <h2><span class="knockout-29">Long-Term</span> Remission<sup>1,9,10</sup></h2>
+              <p>UC and CD patients achieved remission at Week 52 vs placebo in study populations that included bio‑naïve and anti‑TNFα‑<br data-only="mobile">experienced patients.<sup>1,9,10</sup></p>
+              <p>Individual results may vary.</p>
+              <h3>Week 6 and Week 52:</h3>
+            </section>
+            <div class="btn-wrapper">
+              <p><a href="/clinical-efficacy/ulcerative-colitis/gemini-trial" class="btn btn-primary" target="_self">View UC Data</a></p>
+              <p><a href="/clinical-efficacy/crohns-disease/entyvio-placebo-trial" class="btn btn-primary" target="_self">View CD Data</a></p>
+            </div>
+            <picture>
+              <source srcset="{{ base_path ~ directory }}/images/homepage-doctor-remission.webp" type="image/webp">
+              <source srcset="{{ base_path ~ directory }}/images/homepage-doctor-remission.png" type="image/jpeg">
+              <img class="bg" src="{{ base_path ~ directory }}/images/homepage-doctor-remission.png" alt="Healthcare professional.">
+            </picture>
+          </div>
+          <p data-yellow-dot-word="">and</p>
+          <div class="safety">
+            <section class="content-area">
+              <h2>Safety Data<span class="knockout-29">For the Long Term<sup>1,11-13</sup></span></h2>
+              <p>Clinical trials evaluated safety in more than 3300 adults (UC, CD, and healthy volunteers).<sup>1</sup> A separate open-label study of up to 7 years demonstrated consistent results across safety parameters.<sup>11-13†</sup></p>
+              <p class="footnote"><sup>†</sup>In a single-arm, open-label extension study of 2243 patients who received Entyvio with a median exposure of 1072&nbsp;days (range 1 to 3412 days).<sup>11-13</sup></p>
+            </section>
+            <div class="btn-wrapper">
+              <p><a href="/safety-profile" class="btn btn-primary" target="_self">View Safety Profile</a></p>
+            </div>
+            <picture>
+              <source srcset="{{ base_path ~ directory }}/images/homepage-doctor-safety.webp" type="image/webp">
+              <source srcset="{{ base_path ~ directory }}/images/homepage-doctor-safety.png" type="image/jpeg">
+              <img class="bg" src="{{ base_path ~ directory }}/images/homepage-doctor-safety.png" alt="Healthcare professional.">
+            </picture>
           </div>
         </article>
       </div>

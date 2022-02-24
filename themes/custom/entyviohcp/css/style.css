@@ -61,7 +61,9 @@ body {
     margin-left: 0 !important;
   }
 }
-
+.btn{
+  border-radius: 0 !important;
+}
 .btn.btn-primary {
   font-family: 'Gotham', sans-serif;
   font-size: 16px;
