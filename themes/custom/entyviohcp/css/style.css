@@ -50,6 +50,16 @@ body {
 .field__label{
   display: none;
 }
+#bodyy>div[id]>div>article {
+  margin: auto;
+  width: 100%;
+}
+@media screen and (min-width: 960px) and (max-width: 1800px){
+  #bodyy>div[id]>div>article {
+    padding: 0 15px;
+    max-width: 1366px;
+  }
+}
 
 @media  (max-width: 991px) {
 

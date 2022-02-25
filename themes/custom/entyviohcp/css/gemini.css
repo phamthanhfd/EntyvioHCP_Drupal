@@ -187,7 +187,7 @@ h2.border:after {
   position: relative;
   z-index: 3;
 }
-.page-content #body{
+.page-content #bodyy{
   background-color: white !important;
 }
 .border{
@@ -210,8 +210,11 @@ h2.border:after {
 [data-page-category="ClinicalEfficacy"] #first_section .overview-trial-data .half .btn.btn-secondary {
   margin-bottom: 30px;
 }
+[data-page-category="ClinicalEfficacy"] .container {
+  background: #fff;
+}
 @media screen and (min-width: 1800px) and (max-width: 9999px){
-  #body>div[id]>div>article {
+  #bodyy>div[id]>div>article {
     padding: 0 30px;
     max-width: 1366px;
   }
@@ -248,6 +251,8 @@ h2.border:after {
   }
   [data-page-category="ClinicalEfficacy"]  .overview-trial-data .container {
     padding: 55px 90px;
+    margin: 0;
+    max-width: 100%;
   }
   [data-page-category="ClinicalEfficacy"] .container {
     background: #fff;
@@ -341,6 +346,13 @@ h2.border:after {
   [data-page-category="ClinicalEfficacy"] article>div[id] .footnote.acronyms {
     padding-top: 10px;
   }
+  [data-page-category="ClinicalEfficacy"] #bodyy #references article {
+    padding: 30px 200px 0 75px !important;
+  }
+  [data-page-category="ClinicalEfficacy"] #first_section {
+    padding-bottom: 70px;
+  }
+
 }
 [data-page-category="ClinicalEfficacy"] .footnote{
   padding-bottom: 5px;
@@ -356,6 +368,120 @@ nobr, .nobr {
 @media screen and (min-width: 960px) and (max-width: 9999px) and (min-width: 1132px) and (max-width: 9999px){
   [data-page-category="ClinicalEfficacy"] #first_section .overview-trial-data .tile h3 br.special-breakpoint-4 {
     display: none;
+  }
 }
+
+@media screen and (max-width: 959px){
+  [data-page-category="ClinicalEfficacy"] #first_section, [data-page-category="ClinicalEfficacy"] #third_section {
+    background-size: cover;
+  }
+  #indication_bar {
+    top: -20px;
+    margin-bottom: 0;
+  }
+  #bodyy>div[id]>div>article {
+    padding: 0 25px;
+    max-width: 100%;
+  }
+  [data-page-category="ClinicalEfficacy"] article>div {
+    padding: 0;
+  }
+  [data-page-category="ClinicalEfficacy"] #first_section .overview-trial-data {
+    padding-bottom: 50px;
+  }
+  h2.border, h2.border-center {
+    font-family: 'Knockout29', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    line-height: 36px;
+    padding-top: 25px;
+  }
+  [data-page-category="ClinicalEfficacy"] #first_section h2 {
+    margin-bottom: 20px;
+  }
+  [data-page-category="ClinicalEfficacy"] #first_section .overview-trial-data p {
+    margin-bottom: 0;
+    line-height: 18px;
+  }
+  [data-page-category="ClinicalEfficacy"] article>div .container {
+    padding: 20px;
+  }
+  [data-page-category="ClinicalEfficacy"] #first_section .overview-trial-data .flex-container .graph-1 {
+    order: 1;
+  }
+  [data-col*="mobile-12"] {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  [data-page-category="ClinicalEfficacy"] #first_section .overview-trial-data .end-point-heading {
+    margin-bottom: 0;
+    padding-bottom: 20px;
+  }
+  [data-page-category="ClinicalEfficacy"] #first_section .overview-trial-data .tile {
+    margin-bottom: 20px;
+  }
+  [data-page-category="ClinicalEfficacy"] #first_section .overview-trial-data .tile h3 {
+    font-family: 'Knockout30', sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    padding: 15px 10px;
+  }
+  [data-only*="desktop"] {
+    display: none;
+  }
+  [data-page-category="ClinicalEfficacy"] #first_section .overview-trial-data .tile h3 sup {
+    font-size: 12px;
+    top: -10px;
+  }
+  [data-page-category="ClinicalEfficacy"] #first_section .overview-trial-data .tile img {
+    width: 100%;
+    padding: 15px 10px;
+  }
+  [data-page-category="ClinicalEfficacy"] #first_section .overview-trial-data .flex-container .graph-2 {
+    order: 2;
+  }
+  [data-page-category="ClinicalEfficacy"] #first_section .overview-trial-data .flex-container .text-description {
+    order: 4;
+  }
+  [data-page-category="ClinicalEfficacy"] #first_section .overview-trial-data .end-point-description {
+    font-size: 14px;
+  }
+  [data-page-category="ClinicalEfficacy"] article>div p sup {
+    top: -5px;
+    font-size: 10px;
+  }
+  [data-page-category="ClinicalEfficacy"] #first_section .overview-trial-data .flex-container .graph-3 {
+    order: 3;
+  }
+  [data-page-category="ClinicalEfficacy"] #first_section .overview-trial-data .flex-container .button-and-footnotes {
+    order: 5;
+  }
+  [data-page-category="ClinicalEfficacy"] article>div .btn-container {
+    text-align: center;
+  }
+  [data-page-category="ClinicalEfficacy"] #first_section .overview-trial-data p.footnote {
+    line-height: 10px;
+  }
+  [data-page-category="ClinicalEfficacy"]  .overview-trial-data .container {
+    max-width: 100%;
+  }
+  [data-page-category="ClinicalEfficacy"] article>div p {
+    font-family: 'Gotham', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    padding-bottom: 25px;
+  }
+  h2.border:after {
+    content: none;
+  }
+  [data-page-category="ClinicalEfficacy"] article>div p.footnote {
+    font-family: 'Gotham', sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 10px;
+    padding-bottom: 3px;
+  }
 }
 
