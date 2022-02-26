@@ -1454,6 +1454,11 @@ h2.banner {
     border: 1px solid #abadb3;
     margin-bottom: 20px;
   }
+  [data-page-category="ClinicalEfficacy"] #first_section h2.border{
+    font-family: 'Knockout29',sans-serif;
+    font-size: 36px;
+    padding-bottom: 0;
+  }
 }
 
 ul[data-bullet] {
