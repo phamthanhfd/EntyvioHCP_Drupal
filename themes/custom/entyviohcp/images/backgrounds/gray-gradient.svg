@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="451px" height="407px" viewBox="0 0 451 407" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>gray-gradient</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <radialGradient cx="-16.718812%" cy="-21.893087%" fx="-16.718812%" fy="-21.893087%" r="166.840662%" gradientTransform="translate(-0.167188,-0.218931),scale(0.902439,1.000000),rotate(45.349372),scale(1.000000,0.783746),translate(0.167188,0.218931)" id="radialGradient-1">
+            <stop stop-color="#616161" offset="0%"></stop>
+            <stop stop-color="#F3F3F2" offset="49.011349%"></stop>
+            <stop stop-color="#F3F3F2" offset="66.5180804%"></stop>
+            <stop stop-color="#F2F2F2" offset="82.7024621%"></stop>
+            <stop stop-color="#D8D8D8" offset="100%"></stop>
+        </radialGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle" fill="url(#radialGradient-1)" x="-1.13686838e-13" y="0" width="451" height="407"></rect>
+        <g id="SLICES" transform="translate(-1670.000000, -1540.000000)"></g>
+    </g>
+</svg>

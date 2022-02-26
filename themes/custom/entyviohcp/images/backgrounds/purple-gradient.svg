@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="451px" height="407px" viewBox="0 0 451 407" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>purple-gradient</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <radialGradient cx="0%" cy="74.8427444%" fx="0%" fy="74.8427444%" r="111.898784%" gradientTransform="translate(0.000000,0.748427),scale(0.902439,1.000000),rotate(-7.996254),scale(1.000000,0.787469),translate(-0.000000,-0.748427)" id="radialGradient-1">
+            <stop stop-color="#C4569C" offset="0%"></stop>
+            <stop stop-color="#C15199" offset="67.4607228%"></stop>
+            <stop stop-color="#923B7B" offset="85.0177233%"></stop>
+            <stop stop-color="#572056" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="-14.0321969%" cy="-18.6913357%" fx="-14.0321969%" fy="-18.6913357%" r="174.639154%" gradientTransform="translate(-0.140322,-0.186913),scale(0.902439,1.000000),rotate(46.779590),scale(1.000000,0.783746),translate(0.140322,0.186913)" id="radialGradient-2">
+            <stop stop-color="#9A999A" offset="0%"></stop>
+            <stop stop-color="#F3F3F2" offset="49.011349%"></stop>
+            <stop stop-color="#F3F3F2" offset="66.5180804%"></stop>
+            <stop stop-color="#F2F2F2" offset="82.7024621%"></stop>
+            <stop stop-color="#D8D8D8" offset="100%"></stop>
+        </radialGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle" fill="url(#radialGradient-1)" x="0" y="0" width="451" height="407"></rect>
+        <rect id="Rectangle" fill="url(#radialGradient-2)" x="451" y="0" width="451" height="407"></rect>
+        <g id="SLICES" transform="translate(-1219.000000, -1540.000000)"></g>
+    </g>
+</svg>
