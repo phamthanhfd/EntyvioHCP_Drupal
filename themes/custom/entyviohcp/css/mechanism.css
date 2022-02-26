@@ -130,7 +130,6 @@ sup {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  max-width:100%;
   padding:0px;
 }
 [data-row] {
@@ -425,7 +424,7 @@ body div[id]>div>article {
     padding: 0 20px;
   }
   [data-page-id="MechanismOfAction"] #hero > div > article > div {
-    margin-top: 268px;
+    margin-top: 275px;
   }
   [data-page-id="MechanismOfAction"]  #hero > div > article .extra-list {
     font-family: 'Gotham', sans-serif;
@@ -449,7 +448,6 @@ body div[id]>div>article {
     font-family: 'Gotham', sans-serif;
     font-size: 51px;
     font-weight: 400;
-    margin-top: 2px;
     line-height: 56px;
   }
   [data-page-id="MechanismOfAction"] #hero>div>article h2 strong {
@@ -484,7 +482,7 @@ body div[id]>div>article {
       padding-right: 150px;
   }
   [data-page-id="MechanismOfAction"] h2.border, h2.border-center {
-      font-family: 'Knockout29', sans-serif;
+      font-family: 'Knockout', sans-serif;
       font-size: 42px;
       font-weight: 700;
       padding-top: 45px;
@@ -555,7 +553,7 @@ body div[id]>div>article {
       max-width: 40%;
   }
   .accordion div[data-empty-button], .accordion button[aria-expanded] {
-      font-family: 'Knockout30', sans-serif;
+      font-family: 'Knockout', sans-serif;
       font-size: 30px;
       font-weight: 400;
   }
@@ -744,7 +742,7 @@ body div[id]>div>article {
       padding-right: 70px;
   }
   h2.border, h2.border-center {
-      font-family: 'Knockout29', sans-serif;
+      font-family: 'Knockout', sans-serif;
       font-size: 36px;
       font-weight: 700;
       margin-bottom: 15px;
@@ -800,7 +798,7 @@ body div[id]>div>article {
       padding: 10px;
   }
   h2.border, h2.border-center {
-      font-family: 'Knockout29', sans-serif;
+      font-family: 'Knockout', sans-serif;
       font-size: 36px;
       font-weight: 700;
       margin-bottom: 15px;
@@ -812,7 +810,7 @@ body div[id]>div>article {
       max-width: 100%;
   }
   .accordion div[data-empty-button], .accordion button[aria-expanded] {
-      font-family: 'Knockout29', sans-serif;
+      font-family: 'Knockout', sans-serif;
       font-size: 22px;
       font-weight: 400;
   }
