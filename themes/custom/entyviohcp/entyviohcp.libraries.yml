@@ -23,5 +23,96 @@ global-styling:
       css/login.css: {}
       'http://fonts.cdnfonts.com/css/gotham': { type: external, minified: true }
       'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css': { type: external, minified: true }
+gemini2-styling:
+  version: 1.x
+  css:
+    theme:
+      css/gemini2.css: {}
+
+varsity-styling:
+  version: 1.x
+  css:
+    theme:
+      css/varsity.css: {}
+mechanism-styling:
+  version: 1.x
+  css:
+    theme:
+      css/mechanism.css: {}
+safety-styling:
+  version: 1.x
+  css:
+    theme:
+      css/safety.css: {}
+dosing-styling:
+  version: 1.x
+  css:
+    theme:
+      css/dosing.css: {}
+entyvioconnect-insurance-support-styling:
+  version: 1.x
+  css:
+    theme:
+      css/entyvioconnect-insurance-support.css: {}
+entyvioconnect-affordability-styling:
+  version: 1.x
+  css:
+    theme:
+      css/entyvioconnect-affordability.css: {}
+patient-education-styling:
+  version: 1.x
+  css:
+    theme:
+      css/patient-education.css: {}
+forms-resources-styling:
+  version: 1.x
+  css:
+    theme:
+      css/forms-resources.css: {}
+healthcare-professional-resource-styling:
+  version: 1.x
+  css:
+    theme:
+      css/healthcare-professional-resource.css: {}
+virtual-congress-styling:
+  version: 1.x
+  css:
+    theme:
+      css/virtual-congress.css: {}
+peer-perspectives-styling:
+  version: 1.x
+  css:
+    theme:
+      css/peer-perspectives.css: {}
+request-an-representative-styling:
+  version: 1.x
+  css:
+    theme:
+      css/request-an-representative.css: {}
+articles-for-healthcare-styling:
+  version: 1.x
+  css:
+    theme:
+      css/articles-for-healthcare.css: {}
+patient-resources-styling:
+  version: 1.x
+  css:
+    theme:
+      css/patient-resources.css: {}
+local-coverage-styling:
+  version: 1.x
+  css:
+    theme:
+      css/local-coverage.css: {}
+site-map-styling:
+  version: 1.x
+  css:
+    theme:
+      css/site-map.css: {}
+coronavirus-covid-19-styling:
+  version: 1.x
+  css:
+    theme:
+      css/coronavirus-covid-19.css: {}
 
 
