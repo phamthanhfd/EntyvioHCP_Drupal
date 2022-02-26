@@ -27,13 +27,13 @@
       <div class="container">
        <div class="hcp-text"><p>For U.S. Healthcare Professionals</p></div>
         <div class="logo-container">
-          <a class="logo" href="{{ url('<front>') }}/" target="_self"><img src="{{ base_path ~ directory }}/images/logo-entyvio.svg" alt="Entyvio® (vedolizumab) logo."></a>
+          <a class="logo" href="{{ url('<front>') }}" target="_self"><img src="{{ base_path ~ directory }}/images/logo-entyvio.svg" alt="Entyvio® (vedolizumab) logo."></a>
           <button data-mobile-menu="" aria-expanded="false" class="close-menu"  aria-label="Close Navigation Menu"><span></span></button>
         </div>
         <nav class="{% if is_front %} front-page {% endif %}">
           <!-- NAVIGATION STARTS -->
           <ul>
-          <li class="active"><a href="{{ url('<front>') }}/" title="Home" target="_self">Home</a></li>
+          <li class="active" homepage="{% if is_front %}true{% endif %}"><a href="{{ url('<front>') }}" title="Home" target="_self">Home</a></li>
           <li class="has-submenu clinicalefficacy">
             <a href="{{ base_path }}clinical-efficacy/ulcerative-colitis/gemini-trial" aria-haspopup="true" aria-expanded="false" target="_self"><span>Clinical <br data-only="desktop">Efficacy</span></a>
             <button  class="icon-trigger">
@@ -110,7 +110,7 @@
 		<p>For U.S. Healthcare Professionals</p>
 	</div>
 	<div>
-		<a class="logo" href="{{ url('<front>') }}/" target="_self"><img src="{{ base_path ~ directory }}/images/logo-entyvio.svg" alt="Entyvio® (vedolizumab) logo."></a>
+		<a class="logo" href="{{ url('<front>') }}" target="_self"><img src="{{ base_path ~ directory }}/images/logo-entyvio.svg" alt="Entyvio® (vedolizumab) logo."></a>
 		<button data-mobile-menu="" aria-expanded="false" class="open-menu" aria-label="Close Navigation Menu"><span></span></button>
 	</div>
 	<div class="eyebrow">

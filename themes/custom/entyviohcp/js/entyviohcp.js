@@ -1,5 +1,21 @@
 
 $( document ).ready(function() {
+    var pathname = window.location.pathname;
+    var la = $('.main-nav>.container>nav>ul>li');
+    la.each(function(){
+      var _this = $(this);
+      $(this).removeClass('active');
+      var link = $(this).find('a');
+
+      link.each(function(){
+        var hr = $(this).attr('href');
+        if(hr == pathname){
+          $(_this).addClass('active');
+        }
+      })
+    })
+    var it_home = $('.main-nav>.container>nav>ul>li[homepage="true"]');
+    it_home.addClass('active');
 
     if( $('#isi').length ){
       $( "#isi>.section").clone().appendTo( "#fixed_isi" );
@@ -8,7 +24,7 @@ $( document ).ready(function() {
     var lastScrollTop = 0;
     $(window).scroll(function(event){
 
-      var nav_position = $('#second_section').offset().top;
+      var nav_position = $('#second_section').length ? $('#second_section').offset().top : 99999;
       if (nav_position < $(window).scrollTop()){
         $('html').addClass('move-ahead-sticky');
         $(window).resize(function() {

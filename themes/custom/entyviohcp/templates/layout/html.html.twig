@@ -32,7 +32,7 @@
   ]
 %}
 <!DOCTYPE html>
-<html{{ html_attributes }}>
+<html{{ html_attributes }} user-login="{% if logged_in %}true{% else %}false{% endif %}" homepage="{% if is_front %}true{% endif %}">
   <head>
     <head-placeholder token="{{ placeholder_token }}">
     <title>{{ head_title|safe_join(' | ') }}</title>
