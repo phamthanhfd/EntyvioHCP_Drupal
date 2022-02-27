@@ -132,6 +132,31 @@ $( document ).ready(function() {
         $(this).closest('#fixed_isi').addClass('expanded')
       }
     })
+
+    /* accordion animation mechanism page */
+
+    $("#first_section div[data-accordion-type] li").on("click",function(){
+      $("#first_section div[data-accordion-type] li.active").find("button").attr("aria-expanded","false");
+      $("#first_section div[data-accordion-type] li.active").find("div[aria-hidden]").attr("aria-hidden","true");
+      $("#first_section div[data-accordion-type] li.active").removeClass("active");
+      
+
+      $(this).addClass("active");
+      $(this).find("button").attr("aria-expanded","true");
+      $(this).find("[id^='accordion_content_']").attr("aria-hidden","false");
+
+      var vParent = $(this).closest("div[data-accordion-type]").find(".desktop-image").parent();
+      $(this).find("figure.figure-content").clone().appendTo(vParent);
+      vParent.find(".desktop-image").remove();
+      vParent.find("figure").addClass("desktop-image");
+      vParent.find("figure").removeClass("figure-content");
+
+      $('html, body').stop().animate({
+          scrollTop: $("div[data-accordion-type]").offset().top
+      }, 1000);
+      
+    })
+
 });
 
 

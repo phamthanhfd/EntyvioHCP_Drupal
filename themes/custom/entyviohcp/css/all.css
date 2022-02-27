@@ -106,6 +106,9 @@ em {
 h1{
     margin:0px;
 }
+figure{
+    margin:0px;
+}
 [data-row] {
     display: flex;
     flex-wrap: wrap;
@@ -10707,6 +10710,9 @@ footer a {
     [data-page-id="MechanismOfAction"] #first_section .video-container,
     [data-page-id="MechanismOfAction"] #first_section .accordion-container {
         padding: 10px;
+    }
+    [data-page-id="MechanismOfAction"] #first_section .accordion-container .accordion{
+        display:block;
     }
     [data-page-id="MechanismOfAction"] #first_section .video-container .figure-content figcaption,
     [data-page-id="MechanismOfAction"] #first_section .accordion-container .figure-content figcaption {
