@@ -5,8 +5,7 @@ global-styling:
     js/entyviohcp.js: {}
     includes/bootstrap/js/bt.js: {}
   css:
-    theme:
-      includes/bootstrap/css/style.css: {}
+    theme:    
       css/core/reset.css: {}
       css/core/global.css: {}
       css/core/grid.css: {}
@@ -20,99 +19,99 @@ global-styling:
       css/footer.css: {}
       css/home.css: {}
       css/gemini.css: {}
-      css/login.css: {}
-      'http://fonts.cdnfonts.com/css/gotham': { type: external, minified: true }
+      css/login.css: {}  
+      css/font.css: {}    
       'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css': { type: external, minified: true }
 gemini2-styling:
   version: 1.x
   css:
     theme:
-      css/gemini2.css: {}
+      css/all.css: {}
 
 varsity-styling:
   version: 1.x
   css:
     theme:
-      css/varsity.css: {}
+      css/all.css: {}
 mechanism-styling:
   version: 1.x
   css:
-    theme:
-      css/mechanism.css: {}
+    theme:      
+      css/all.css: {}
 safety-styling:
   version: 1.x
   css:
     theme:
-      css/safety.css: {}
+      css/all.css: {}
 dosing-styling:
   version: 1.x
   css:
     theme:
-      css/dosing.css: {}
+      css/all.css: {}
 entyvioconnect-insurance-support-styling:
   version: 1.x
   css:
     theme:
-      css/entyvioconnect-insurance-support.css: {}
+      css/all.css: {}
 entyvioconnect-affordability-styling:
   version: 1.x
   css:
     theme:
-      css/entyvioconnect-affordability.css: {}
+      css/all.css: {}
 patient-education-styling:
   version: 1.x
   css:
     theme:
-      css/patient-education.css: {}
+      css/all.css: {}
 forms-resources-styling:
   version: 1.x
   css:
     theme:
-      css/forms-resources.css: {}
+      css/all.css: {}
 healthcare-professional-resource-styling:
   version: 1.x
   css:
     theme:
-      css/healthcare-professional-resource.css: {}
+      css/all.css: {}
 virtual-congress-styling:
   version: 1.x
   css:
     theme:
-      css/virtual-congress.css: {}
+      css/all.css: {}
 peer-perspectives-styling:
   version: 1.x
   css:
     theme:
-      css/peer-perspectives.css: {}
+      css/all.css: {}
 request-an-representative-styling:
   version: 1.x
   css:
     theme:
-      css/request-an-representative.css: {}
+      css/all.css: {}
 articles-for-healthcare-styling:
   version: 1.x
   css:
     theme:
-      css/articles-for-healthcare.css: {}
+      css/all.css: {}
 patient-resources-styling:
   version: 1.x
   css:
     theme:
-      css/patient-resources.css: {}
+      css/all.css: {}
 local-coverage-styling:
   version: 1.x
   css:
     theme:
-      css/local-coverage.css: {}
+      css/all.css: {}
 site-map-styling:
   version: 1.x
   css:
     theme:
-      css/site-map.css: {}
+      css/all.css: {}
 coronavirus-covid-19-styling:
   version: 1.x
   css:
     theme:
-      css/coronavirus-covid-19.css: {}
+      css/all.css: {}
 
 

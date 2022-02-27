@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="49px" viewBox="0 0 48 49" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>Group 35</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-35" transform="translate(0.000000, 0.500000)">
+            <line x1="35.3137" y1="12.6864" x2="40.2627" y2="7.7364" id="Stroke-1" stroke="#99258E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></line>
+            <line x1="7.7365" y1="40.2635" x2="12.6855" y2="35.3135" id="Stroke-2" stroke="#99258E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></line>
+            <line x1="37.4348" y1="4.908" x2="43.0918" y2="10.565" id="Stroke-3" stroke="#99258E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></line>
+            <line x1="4.9084" y1="37.4349" x2="10.5644" y2="43.0919" id="Stroke-4" stroke="#99258E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></line>
+            <g id="Group-13" transform="translate(0.000000, 19.999900)" stroke="#99258E" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                <line x1="46.9953" y1="3.9999" x2="40.0093" y2="3.9999" id="Stroke-5"></line>
+                <line x1="7.9914" y1="3.9999" x2="1.0054" y2="3.9999" id="Stroke-7"></line>
+                <line x1="47.0002" y1="-0.0001" x2="47.0002" y2="7.9999" id="Stroke-9"></line>
+                <line x1="1.0002" y1="-0.0001" x2="1.0002" y2="7.9999" id="Stroke-11"></line>
+            </g>
+            <line x1="40.2629" y1="40.2635" x2="35.3139" y2="35.3135" id="Stroke-14" stroke="#99258E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></line>
+            <line x1="12.6858" y1="12.6864" x2="7.7368" y2="7.7364" id="Stroke-15" stroke="#99258E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></line>
+            <line x1="43.092" y1="37.4349" x2="37.435" y2="43.0919" id="Stroke-16" stroke="#99258E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></line>
+            <line x1="10.5647" y1="4.908" x2="4.9087" y2="10.565" id="Stroke-17" stroke="#99258E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></line>
+            <g id="Group-34" transform="translate(7.000000, -0.000100)">
+                <path d="M28.3137,35.3139 C25.1887,38.4389 21.0937,40.0019 17.0007,40.0089 C12.9057,40.0019 8.8117,38.4389 5.6857,35.3139 C2.5607,32.1889 0.9987,28.0939 0.9917,23.9999 C0.9987,19.9059 2.5607,15.8119 5.6857,12.6869 C8.8117,9.5609 12.9057,7.9979 17.0007,7.9909 C21.0937,7.9979 25.1887,9.5609 28.3137,12.6869 C31.4387,15.8119 33.0017,19.9059 33.0087,23.9999 C33.0017,28.0939 31.4387,32.1889 28.3137,35.3139" id="Fill-18" fill="#E1CDE4"></path>
+                <path d="M28.3137,35.3139 C25.1887,38.4389 21.0937,40.0019 17.0007,40.0089 C12.9057,40.0019 8.8117,38.4389 5.6857,35.3139 C2.5607,32.1889 0.9987,28.0939 0.9917,23.9999 C0.9987,19.9059 2.5607,15.8119 5.6857,12.6869 C8.8117,9.5609 12.9057,7.9979 17.0007,7.9909 C21.0937,7.9979 25.1887,9.5609 28.3137,12.6869 C31.4387,15.8119 33.0017,19.9059 33.0087,23.9999 C33.0017,28.0939 31.4387,32.1889 28.3137,35.3139 Z" id="Stroke-20" stroke="#99258E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                <line x1="17.0002" y1="46.9951" x2="17.0002" y2="40.0091" id="Stroke-22" stroke="#99258E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></line>
+                <line x1="17.0002" y1="7.9911" x2="17.0002" y2="1.0051" id="Stroke-24" stroke="#99258E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></line>
+                <line x1="21.0002" y1="46.9999" x2="13.0002" y2="46.9999" id="Stroke-26" stroke="#99258E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></line>
+                <line x1="21.0002" y1="0.9999" x2="13.0002" y2="0.9999" id="Stroke-28" stroke="#99258E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></line>
+                <path d="M21.9494,28.9496 C24.6834,26.2166 24.6834,21.7836 21.9494,19.0506 C19.2164,16.3166 14.7834,16.3166 12.0504,19.0506 C9.3164,21.7836 9.3164,26.2166 12.0504,28.9496 C14.7834,31.6836 19.2164,31.6836 21.9494,28.9496 Z" id="Stroke-30" stroke="#99258E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M19.1213,21.8788 C17.9493,20.7068 16.0503,20.7068 14.8783,21.8788" id="Stroke-32" stroke="#99258E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </g>
+        </g>
+    </g>
+</svg>

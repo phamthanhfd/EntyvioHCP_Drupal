@@ -1,0 +1,49 @@
+@font-face {
+	font-family: "Gotham";
+	src: url("../fonts/GothamMedium.woff2") format("woff2");
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+  }
+  @font-face {
+	font-family: "Gotham";
+	src: url("../fonts/GothamBold.woff2") format("woff2");
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+  }
+  @font-face {
+	font-family: "Gotham";
+	src: url("../fonts/GothamBook.woff2") format("woff2");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+  }
+  @font-face {
+    font-family: "Knockout";
+    src: url("../fonts/Knockout29.woff2") format("woff2");
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Knockout";
+    src: url("../fonts/Knockout30.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Knockout";
+    src: url("../fonts/Knockout49.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Knockout";
+    src: url("../fonts/Knockout50.woff2") format("woff2");
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
