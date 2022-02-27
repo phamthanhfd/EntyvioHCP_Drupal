@@ -462,7 +462,7 @@ h2.border-center:after {
         font-weight: 700;
         margin-bottom: 15px;
         line-height: 36px;
-        padding-top: 25px;       
+        padding-top: 25px;
     }
     h2.border sup,
     h2.border-center sup {
@@ -972,7 +972,7 @@ table tbody td {
 }
 @media screen and (min-width: 960px) and (max-width: 9999px) {
     #page-content {
-        background-color: #502351;
+        background-color: white;
     }
 }
 .page-content > div[id] > div > article {
@@ -4131,6 +4131,7 @@ html.fixed-isi-active {
 #references {
     margin: auto;
     width: 100%;
+    background: white !important;
 }
 @media screen and (max-width: 959px) {
     #references {
@@ -13191,6 +13192,7 @@ footer a {
         margin: 10pt 0;
         padding: 10pt;
         border: 1px solid #58595b;
+        background: white !important;
     }
     .page-content #indication_bar {
         top: 0;
@@ -13521,3 +13523,5 @@ footer a {
         width: 400pt;
     }
 }
+
+
