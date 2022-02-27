@@ -232,14 +232,14 @@ h2.border:after {
     padding: 0 50px;
   }
   h2.border, h2.border-center {
-    font-family: 'Knockout29', sans-serif;
+    font-family: 'Knockout', sans-serif;
     font-size: 42px;
     font-weight: 700;
     padding-top: 45px;
     padding-bottom: 25px;
   }
   #second_section  h2.border-center{
-    font-family: 'Knockout29', sans-serif;
+    font-family: 'Knockout', sans-serif;
   }
   [data-page-category="ClinicalEfficacy"] article>div[id] .subheading {
     font-family: 'Gotham', sans-serif;
@@ -275,7 +275,7 @@ h2.border:after {
     margin-bottom: 25px;
   }
   [data-page-category="ClinicalEfficacy"] #first_section .overview-trial-data .tile h3 {
-    font-family: 'Knockout30', sans-serif;
+    font-family: 'Knockout', sans-serif;
     font-size: 30px;
     font-weight: 400;
     padding: 25px 20px;
@@ -393,7 +393,7 @@ nobr, .nobr {
     padding-bottom: 50px;
   }
   h2.border, h2.border-center {
-    font-family: 'Knockout29', sans-serif;
+    font-family: 'Knockout', sans-serif;
     font-size: 36px;
     font-weight: 700;
     margin-bottom: 15px;
@@ -425,7 +425,7 @@ nobr, .nobr {
     margin-bottom: 20px;
   }
   [data-page-category="ClinicalEfficacy"] #first_section .overview-trial-data .tile h3 {
-    font-family: 'Knockout30', sans-serif;
+    font-family: 'Knockout', sans-serif;
     font-size: 22px;
     font-weight: 400;
     padding: 15px 10px;
@@ -503,7 +503,7 @@ h2.border, h2.border-center {
   color: #fff;
 }
 h2.border, h2.border-center {
-  font-family: 'Knockout30', sans-serif;
+  font-family: 'Knockout', sans-serif;
   font-size: 42px;
   font-weight: 700;
   padding-top: 45px;
@@ -644,7 +644,7 @@ h2.border span, h2.border-center span {
     padding: 0;
   }
   [data-page-category="ClinicalEfficacy"] #second_section h2.border, h2.border-center {
-    font-family: 'Knockout29', sans-serif;
+    font-family: 'Knockout', sans-serif;
     font-size: 36px;
     font-weight: 700;
     margin-bottom: 15px;
@@ -767,7 +767,7 @@ h2.banner {
     margin-top: 0;
   }
   h2.banner {
-    font-family: 'Knockout29', sans-serif;
+    font-family: 'Knockout', sans-serif;
     font-size: 42px;
     font-weight: 700;
     padding: 25px 0;
@@ -808,7 +808,7 @@ h2.banner {
     padding: 0 5px 0 0;
   }
   .accordion div[data-empty-button], .accordion button[aria-expanded] {
-    font-family: 'Knockout30', sans-serif;
+    font-family: 'Knockout', sans-serif;
     font-size: 30px;
     font-weight: 400;
   }
@@ -894,7 +894,7 @@ h2.banner {
     margin-bottom: 0;
   }
   [data-page-category="ClinicalEfficacy"] #third_section .accordion .desktop-image h3 {
-    font-family: 'Knockout30', sans-serif;
+    font-family: 'Knockout', sans-serif;
     font-size: 30px;
     font-weight: 400;
     color: #9b288c;
@@ -1031,7 +1031,7 @@ h2.banner {
     margin-top: 0;
   }
   h2.banner {
-    font-family: 'Knockout29', sans-serif;
+    font-family: 'Knockout', sans-serif;
     font-size: 36px;
     font-weight: 700;
     line-height: 36px;
@@ -1117,7 +1117,7 @@ h2.banner {
     margin: 0;
   }
   [data-page-category="ClinicalEfficacy"] #third_section .accordion figure h3 {
-    font-family: 'Knockout30', sans-serif;
+    font-family: 'Knockout', sans-serif;
     font-size: 22px;
     font-weight: 400;
     color: #9b288c;
@@ -1175,7 +1175,7 @@ h2.banner {
     margin: 0;
   }
   [data-page-category="ClinicalEfficacy"] #third_section .accordion figure h3 {
-    font-family: 'Knockout29', sans-serif;
+    font-family: 'Knockout', sans-serif;
     font-size: 22px;
     font-weight: 400;
     color: #9b288c;
@@ -1211,7 +1211,7 @@ h2.banner {
     max-width: 100%;
   }
   [data-page-category="ClinicalEfficacy"] #third_section .clinical-response-rates .figure-container figcaption {
-    font-family: 'Knockout29', sans-serif;
+    font-family: 'Knockout', sans-serif;
     font-size: 22px;
     font-weight: 400;
     padding: 10px 0;
@@ -1294,7 +1294,7 @@ h2.banner {
     background: none;
   }
   .accordion div[data-empty-button], .accordion button[aria-expanded] {
-    font-family: 'Knockout30', sans-serif;
+    font-family: 'Knockout', sans-serif;
     font-size: 22px;
     font-weight: 400;
   }
@@ -1325,7 +1325,7 @@ h2.banner {
     margin: 0;
   }
   [data-page-category="ClinicalEfficacy"] #third_section .accordion figure h3 {
-    font-family: 'Knockout29', sans-serif;
+    font-family: 'Knockout', sans-serif;
     font-size: 22px;
     font-weight: 400;
     color: #9b288c;
@@ -1455,7 +1455,7 @@ h2.banner {
     margin-bottom: 20px;
   }
   [data-page-category="ClinicalEfficacy"] #first_section h2.border{
-    font-family: 'Knockout29',sans-serif;
+    font-family: 'Knockout',sans-serif;
     font-size: 36px;
     padding-bottom: 0;
   }

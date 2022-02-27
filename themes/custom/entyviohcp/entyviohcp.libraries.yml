@@ -5,7 +5,7 @@ global-styling:
     js/entyviohcp.js: {}
     includes/bootstrap/js/bt.js: {}
   css:
-    theme:    
+    theme:
       css/core/reset.css: {}
       css/core/global.css: {}
       css/core/grid.css: {}
@@ -15,12 +15,13 @@ global-styling:
       css/elements/table.css: {}
       css/layout/body.css: {}
       css/style.css: {}
-      css/header.css: {}
-      css/footer.css: {}
+      css/login.css: {}
+      css/font.css: {}
+      css/all.css: {}
       css/home.css: {}
       css/gemini.css: {}
-      css/login.css: {}  
-      css/font.css: {}          
+      css/header.css: {}
+      css/footer.css: {}
 gemini2-styling:
   version: 1.x
   css:
@@ -35,7 +36,7 @@ varsity-styling:
 mechanism-styling:
   version: 1.x
   css:
-    theme:      
+    theme:
       css/all.css: {}
 safety-styling:
   version: 1.x
