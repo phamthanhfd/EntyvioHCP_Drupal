@@ -15,7 +15,7 @@
   src: url(../fonts/Knockout29.woff2) format('woff2');
 }
 @font-face {
-  font-family: Gotham;
+  font-family: Gothamm;
   src: url(../fonts/GothamBold.woff2) format('woff2');
 }
 @font-face {
@@ -242,8 +242,8 @@ body {
 }
 @media(min-width: 1800px){
   #fixed_isi h2, #fixed_isi ul, #fixed_isi h3, #fixed_isi p {
-    padding-left: calc(75px + 15px) !important;
-    padding-right: calc(200px + 15px) !important;
+    padding-left: calc(75px + 30px) !important;
+    padding-right: calc(200px + 30px) !important;
     max-width: 1366px;
   }
 }
