@@ -273,7 +273,7 @@ body {
     padding: 20px 60px;
   }
   .back-to-top.btn.btn-secondary:after {
-    top: 20px;
+    top: 20px !important;
     left: 24px;
     font-size: 28px;
     color: #9b288c;
@@ -339,7 +339,7 @@ body {
     padding: 20px 25px 20px 40px;
   }
   .back-to-top.btn.btn-secondary:after {
-    top: 20px;
+    top: 20px !important;
     left: 13px;
     font-size: 24px;
   }

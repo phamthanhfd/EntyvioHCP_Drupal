@@ -23,6 +23,9 @@ nav,
 section {
     display: block;
 }
+html {
+  scroll-behavior: smooth !important;
+}
 html,
 body {
     height: 100%;

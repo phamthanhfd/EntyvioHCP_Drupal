@@ -94,6 +94,30 @@ header{
     text-decoration: none;
     line-height: 14px;
   }
+  @-webkit-keyframes mobile_nav_expand {
+    0% {
+        max-height: 0;
+    }
+    100% {
+        max-height: 800px;
+    }
+}
+@-moz-keyframes mobile_nav_expand {
+    0% {
+        max-height: 0;
+    }
+    100% {
+        max-height: 800px;
+    }
+}
+@keyframes mobile_nav_expand {
+    0% {
+        max-height: 0;
+    }
+    100% {
+        max-height: 800px;
+    }
+}
   header[data-device="desktop"] .main-nav nav a {
     color: #9b288c;
   }
@@ -116,9 +140,7 @@ header{
   header[data-device="desktop"] .main-nav nav li.has-submenu:hover .icon-trigger {
     transform: translateY(-50%) rotate(-180deg);
   }
-  header[data-device="desktop"] .main-nav nav li.has-submenu .subnav {
-    display: none;
-  }
+
   header[data-device="desktop"] .main-nav .logo {
     width: 100%;
     display: block;
@@ -257,7 +279,7 @@ header{
   }
   header[data-device="desktop"] .eyebrow:before {
     right: calc(50% - 1px);
-    background: url(../images/img1.png) top right no-repeat;
+
     background-size: cover;
   }
   header[data-device="desktop"] .eyebrow:after {
@@ -484,7 +506,7 @@ header{
     position: relative;
     padding: 0 10px;
     text-align: center;
-    line-height: 11px;
+    line-height: 12px;
   }
   header[data-device="mobile"] .eyebrow li a {
     font-family: 'Gotham', sans-serif;
@@ -698,9 +720,7 @@ header{
   header[data-device="desktop"] .main-nav nav li.has-submenu{
     position: relative;
   }
-  header[data-device="desktop"] .main-nav nav li.has-submenu .subnav{
-    display: none;
-  }
+
   header[data-device="desktop"] .main-nav nav li.has-submenu .subnav.open, header[data-device="desktop"] .main-nav nav li.has-submenu a.active{
     background: #ffcb03;;
   }

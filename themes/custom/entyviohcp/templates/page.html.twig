@@ -36,7 +36,7 @@
           <li {% if is_front %}class="active" homepage="true" {% endif %}><a href="{{ url('<front>') }}" title="Home" target="_self">Home</a></li>
           <li class="has-submenu clinicalefficacy">
             <a href="{{ base_path }}clinical-efficacy/ulcerative-colitis/gemini-trial" aria-haspopup="true" aria-expanded="false" target="_self"><span>Clinical <br data-only="desktop">Efficacy</span></a>
-            <button id="mobile_nav_trigger_clinicalefficacy" aria-expanded="true"><span class="visuallyhidden">show submenu for Clinical Efficacy</span></button>
+            <button id="mobile_nav_trigger_clinicalefficacy" class="icon-trigger" aria-expanded="true"><span class="visuallyhidden">show submenu for Clinical Efficacy</span></button>
             <div class="subnav clinicalefficacy">
               <div class="uc">
                 <h3>UC</h3>
@@ -62,7 +62,7 @@
 
           <li class="has-submenu resources">
             <a href="{{ base_path }}resources/professional-resources" aria-haspopup="true" aria-expanded="false" target="_self"><span>Resources</span></a>
-            <button id="mobile_nav_trigger_resources" aria-expanded="false"><span class="visuallyhidden">show submenu for Resources</span></button>
+            <button id="mobile_nav_trigger_resources" class="icon-trigger" aria-expanded="false"><span class="visuallyhidden">show submenu for Resources</span></button>
             <div class="subnav resources">
               <div class="">
                 <h3 class=""><a href="{{ base_path }}resources/professional-resources" target="_self">FOR YOU</a></h3>

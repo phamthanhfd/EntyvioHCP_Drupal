@@ -61,10 +61,13 @@ $( document ).ready(function() {
 
 
         if($(window).scrollTop() > 190){
-          $('header').css("top","-190px");
+          var width = $(window).width();
+          if (width > 959){
+          $('header').css("top","-190px");}
         }else{
           $('header').css("top","0");
         }
+
         $('.back-to-top').removeClass('show');
       } else {
 
@@ -104,6 +107,9 @@ $( document ).ready(function() {
     });
 
     $(".back-to-top").on("click", function() {
+      /*var body = $("html, body");
+      body.stop().animate({scrollTop:0}, 1000, 'swing', function() {
+      }); */
       $("html").scrollTop(0);
     });
 
@@ -123,17 +129,19 @@ $( document ).ready(function() {
     })
 
     $('.icon-trigger').click(function(){
-      if($(this).hasClass('active'))
+      if($(this).closest('.has-submenu').hasClass('active'))
       {
+        $(this).closest('.has-submenu').removeClass('active')
         $(this).removeClass('active');
         $(this).siblings('.subnav').removeClass('open');
-        $(this).siblings('.subnav').slideUp();
+        //$(this).siblings('.subnav').slideUp();
         $(this).siblings('a').removeClass('active')
       }else{
+        $(this).closest('.has-submenu').addClass('active')
         $(this).addClass('active');
         $(this).siblings('a').addClass('active')
         $(this).siblings('.subnav').addClass('open');
-        $(this).siblings('.subnav').slideDown();
+       // $(this).siblings('.subnav').slideDown();
       }
     })
 
@@ -167,6 +175,16 @@ $( document ).ready(function() {
           scrollTop: $("div[data-accordion-type]").offset().top
       }, 1000);
 
+    })
+
+    $("#expand_varsity-adverse-events").click(function(){
+      if($(this).attr("aria-expanded") == "false"){
+        $(this).attr("aria-expanded","true");
+        $(this).closest('.expand-trigger').siblings("#varsity-adverse-events-content").attr("aria-hidden","false");
+      }else{
+        $(this).attr("aria-expanded","false");
+        $(this).closest('.expand-trigger').siblings("#varsity-adverse-events-content").attr("aria-hidden","true");
+      }
     })
 
 });

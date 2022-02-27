@@ -1230,12 +1230,12 @@
 }
 #hero:before {
   right: calc(50% - 1px);
-  background: url(../images/img1.png) top right no-repeat;
+
   background-size: cover;
 }
 #hero:after {
   left: calc(50% - 1px);
-  background: url(../images/img2.png) top left no-repeat;
+
   background-size: cover;
 }
 [data-page-id="Home"] #hero>div>picture>img, [data-page-id="Home"] #hero>div>picture {
