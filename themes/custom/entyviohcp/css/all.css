@@ -459,7 +459,7 @@ h2.border-center:after {
         font-weight: 700;
         margin-bottom: 15px;
         line-height: 36px;
-        padding-top: 25px;
+        padding-top: 25px;       
     }
     h2.border sup,
     h2.border-center sup {
@@ -12483,6 +12483,7 @@ footer a {
     }
     [data-page-id="SafetyProfile"] #first_section h2 {
         margin-bottom: 20px;
+        padding-bottom:0px;
     }
     [data-page-id="SafetyProfile"] #first_section .long-safety-profile {
         padding-top: 5px;
