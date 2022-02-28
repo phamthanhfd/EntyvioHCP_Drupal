@@ -23,9 +23,7 @@ nav,
 section {
     display: block;
 }
-html {
-  scroll-behavior: smooth !important;
-}
+
 html,
 body {
     height: 100%;
@@ -9594,7 +9592,7 @@ footer a {
         font-size: 12px;
     }
     [data-page-category="ClinicalEfficacy"] #second_section {
-        background-size: 100% auto;
+        background-size: 101% auto;
         padding-bottom: 50px;
     }
     [data-page-category="ClinicalEfficacy"] #third_section div[id] > .subheading {
@@ -10260,6 +10258,9 @@ footer a {
     }
     [data-page-id="VarsityTrial"] #third_section #clinical-response-rates .copy-container.varsity .btn-container {
         display: block;
+    }
+    [data-page-id="VarsityTrial"] #third_section #long-term-remission .accordion>div:last-child,[data-page-id="VarsityTrial"] #third_section #clinical-response-rates .accordion>div:last-child{
+      display: none;
     }
 }
 @media screen and (min-width: 960px) and (max-width: 9999px) {

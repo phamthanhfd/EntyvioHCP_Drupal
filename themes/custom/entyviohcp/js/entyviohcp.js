@@ -108,9 +108,12 @@ $( document ).ready(function() {
 
     $(".back-to-top").on("click", function() {
       /*var body = $("html, body");
-      body.stop().animate({scrollTop:0}, 1000, 'swing', function() {
-      }); */
-      $("html").scrollTop(0);
+        body.stop().animate({scrollTop:0}, 1000, 'swing', function() {
+      });*/
+      //$("html").scrollTop(0);
+      $('html, body').animate({
+        scrollTop: 0
+      }, 1000);
     });
 
     $(this).on('wheel', function(event) {
@@ -153,6 +156,47 @@ $( document ).ready(function() {
       }
     })
 
+    // Select all links with hashes
+    $("[href^='#']").click(function() {
+      id=$(this).attr("href")
+      $('html, body').animate({
+          scrollTop: $(id).offset().top
+      }, 1000);
+    });
+
+     /* accordion animation varsity page */
+    $("#expand_varsity-adverse-events").click(function(){
+      if($(this).attr("aria-expanded") == "false"){
+        $(this).attr("aria-expanded","true");
+        $(this).closest('.expand-trigger').siblings("#varsity-adverse-events-content").attr("aria-hidden","false");
+      }else{
+        $(this).attr("aria-expanded","false");
+        $(this).closest('.expand-trigger').siblings("#varsity-adverse-events-content").attr("aria-hidden","true");
+      }
+    })
+
+    $("#third_section div[data-accordion-type] li").on("click",function(){
+      $("#third_section div[data-accordion-type] li.active").find("button").attr("aria-expanded","false");
+      $("#third_section div[data-accordion-type] li.active").find("div[aria-hidden]").attr("aria-hidden","true");
+      $("#third_section div[data-accordion-type] li.active").removeClass("active");
+
+
+      $(this).addClass("active");
+      $(this).find("button").attr("aria-expanded","true");
+      $(this).find("[id^='humira_content_']").attr("aria-hidden","false");
+
+      var vParent = $(this).closest("div[data-accordion-type]").find(".desktop-image").parent();
+      $(this).find("figure.figure-content").clone().appendTo(vParent);
+      vParent.find(".desktop-image").remove();
+      vParent.find("figure").addClass("desktop-image");
+      vParent.find("figure").removeClass("figure-content");
+
+      $('html, body').animate({
+          scrollTop: $("div[data-accordion-type]").offset().top - 170
+      }, 800);
+
+    })
+
     /* accordion animation mechanism page */
 
     $("#first_section div[data-accordion-type] li").on("click",function(){
@@ -177,15 +221,8 @@ $( document ).ready(function() {
 
     })
 
-    $("#expand_varsity-adverse-events").click(function(){
-      if($(this).attr("aria-expanded") == "false"){
-        $(this).attr("aria-expanded","true");
-        $(this).closest('.expand-trigger').siblings("#varsity-adverse-events-content").attr("aria-hidden","false");
-      }else{
-        $(this).attr("aria-expanded","false");
-        $(this).closest('.expand-trigger').siblings("#varsity-adverse-events-content").attr("aria-hidden","true");
-      }
-    })
+
+
 
 });
 
