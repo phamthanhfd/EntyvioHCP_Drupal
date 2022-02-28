@@ -2584,54 +2584,54 @@ table tbody td {
     }
 }
 @media screen and (max-width: 959px) {
-    [data-page-id="CrohnsDisease"] .page-content #hero {
+    [data-page-id="CrohnsDisease"].page-content #hero {
         height: 282px;
     }
-    [data-page-id="CrohnsDisease"] .page-content #hero > div > picture {
+    [data-page-id="CrohnsDisease"].page-content #hero > div > picture {
         top: 0;
         bottom: auto;
         height: 215px;
     }
 }
 @media screen and (min-width: 960px) and (max-width: 9999px) {
-    [data-page-id="CrohnsDisease"] .page-content #hero > div > picture > img {
+    [data-page-id="CrohnsDisease"].page-content #hero > div > picture > img {
         bottom: -10px;
     }
 }
-[data-page-id="CrohnsDisease"] .page-content #hero > div > article {
+[data-page-id="CrohnsDisease"].page-content #hero > div > article {
     flex-wrap: wrap;
 }
 @media screen and (max-width: 959px) {
-    [data-page-id="CrohnsDisease"] .page-content #hero > div > article {
+    [data-page-id="CrohnsDisease"].page-content #hero > div > article {
         position: static;
         padding: 0;
     }
 }
 @media screen and (max-width: 959px) {
-    [data-page-id="CrohnsDisease"] .page-content #hero > div > article > div {
+    [data-page-id="CrohnsDisease"].page-content #hero > div > article > div {
         position: relative;
         z-index: 3;
     }
-    [data-page-id="CrohnsDisease"] .page-content #hero > div > article > div:nth-child(1) {
+    [data-page-id="CrohnsDisease"].page-content #hero > div > article > div:nth-child(1) {
         padding: 0 8px 0 calc(25px + 8px);
     }
-    [data-page-id="CrohnsDisease"] .page-content #hero > div > article > div:nth-child(2) {
+    [data-page-id="CrohnsDisease"].page-content #hero > div > article > div:nth-child(2) {
         padding: 0 calc(25px + 8px) 0 8px;
     }
 }
 @media screen and (min-width: 960px) and (max-width: 9999px) {
-    [data-page-id="CrohnsDisease"] .page-content #hero > div > article > div {
+    [data-page-id="CrohnsDisease"].page-content #hero > div > article > div {
         margin-top: 275px;
     }
 }
-[data-page-id="CrohnsDisease"] .page-content #hero > div > article .extra-list {
+[data-page-id="CrohnsDisease"].page-content #hero > div > article .extra-list {
     flex: 0 0 100%;
     max-width: 100%;
     width: 100%;
     margin-top: 0;
 }
 @media screen and (max-width: 959px) {
-    [data-page-id="CrohnsDisease"] .page-content #hero > div > article .extra-list {
+    [data-page-id="CrohnsDisease"].page-content #hero > div > article .extra-list {
         font-family: "Gotham", sans-serif;
         font-size: 12px;
         font-weight: 700;
@@ -2642,7 +2642,7 @@ table tbody td {
     }
 }
 @media screen and (min-width: 960px) and (max-width: 9999px) {
-    [data-page-id="CrohnsDisease"] .page-content #hero > div > article .extra-list {
+    [data-page-id="CrohnsDisease"].page-content #hero > div > article .extra-list {
         font-family: "Gotham", sans-serif;
         font-size: 16px;
         font-weight: 700;
@@ -2650,17 +2650,17 @@ table tbody td {
     }
 }
 @media screen and (min-width: 960px) and (max-width: 1250px) {
-    [data-page-id="CrohnsDisease"] .page-content #hero > div > article .extra-list {
+    [data-page-id="CrohnsDisease"].page-content #hero > div > article .extra-list {
         padding-top: 180px;
     }
 }
 @media screen and (min-width: 960px) and (max-width: 1399px) {
-    [data-page-id="CrohnsDisease"] .page-content #hero > div > article .extra-list {
+    [data-page-id="CrohnsDisease"].page-content #hero > div > article .extra-list {
         padding: 220px 200px 40px calc(50% + 25px);
     }
 }
 @media screen and (max-width: 959px) {
-    [data-page-id="CrohnsDisease"] .page-content #hero > div > article h1 {
+    [data-page-id="CrohnsDisease"].page-content #hero > div > article h1 {
         font-family: "Gotham", sans-serif;
         font-size: 28px;
         font-weight: 700;
@@ -2669,7 +2669,7 @@ table tbody td {
     }
 }
 @media screen and (min-width: 960px) and (max-width: 9999px) {
-    [data-page-id="CrohnsDisease"] .page-content #hero > div > article h1 {
+    [data-page-id="CrohnsDisease"].page-content #hero > div > article h1 {
         font-family: "Gotham", sans-serif;
         font-size: 100px;
         font-weight: 700;
@@ -2678,7 +2678,7 @@ table tbody td {
     }
 }
 @media screen and (min-width: 960px) and (max-width: 1250px) {
-    [data-page-id="CrohnsDisease"] .page-content #hero > div > article h1 {
+    [data-page-id="CrohnsDisease"].page-content #hero > div > article h1 {
         font-family: "Gotham", sans-serif;
         font-size: 74px;
         font-weight: 700;
@@ -2687,33 +2687,33 @@ table tbody td {
     }
 }
 @media screen and (min-width: 1400px) and (max-width: 9999px) {
-    [data-page-id="CrohnsDisease"] .page-content #hero > div > article h1 .breakpoint {
+    [data-page-id="CrohnsDisease"].page-content #hero > div > article h1 .breakpoint {
         display: none;
     }
 }
 @media screen and (max-width: 959px) {
-    [data-page-id="CrohnsDisease"] .page-content #hero > div > article h1 strong {
+    [data-page-id="CrohnsDisease"].page-content #hero > div > article h1 strong {
         font-family: "Gotham", sans-serif;
         font-size: 20px;
         font-weight: 500;
     }
 }
 @media screen and (min-width: 960px) and (max-width: 9999px) {
-    [data-page-id="CrohnsDisease"] .page-content #hero > div > article h1 strong {
+    [data-page-id="CrohnsDisease"].page-content #hero > div > article h1 strong {
         font-family: "Gotham", sans-serif;
         font-size: 45px;
         font-weight: 500;
     }
 }
 @media screen and (min-width: 960px) and (max-width: 1250px) {
-    [data-page-id="CrohnsDisease"] .page-content #hero > div > article h1 strong {
+    [data-page-id="CrohnsDisease"].page-content #hero > div > article h1 strong {
         font-family: "Gotham", sans-serif;
         font-size: 38px;
         font-weight: 500;
     }
 }
 @media screen and (max-width: 959px) {
-    [data-page-id="CrohnsDisease"] .page-content #hero > div > article h2 {
+    [data-page-id="CrohnsDisease"].page-content #hero > div > article h2 {
         font-family: "Gotham", sans-serif;
         font-size: 22px;
         font-weight: 400;
@@ -2721,14 +2721,14 @@ table tbody td {
     }
 }
 @media screen and (min-width: 960px) and (max-width: 9999px) {
-    [data-page-id="CrohnsDisease"] .page-content #hero > div > article h2 {
+    [data-page-id="CrohnsDisease"].page-content #hero > div > article h2 {
         font-family: "Gotham", sans-serif;
         font-size: 51px;
         font-weight: 400;
     }
 }
 @media screen and (min-width: 960px) and (max-width: 1250px) {
-    [data-page-id="CrohnsDisease"] .page-content #hero > div > article h2 {
+    [data-page-id="CrohnsDisease"].page-content #hero > div > article h2 {
         font-family: "Gotham", sans-serif;
         font-size: 46px;
         font-weight: 400;
@@ -2736,33 +2736,33 @@ table tbody td {
     }
 }
 @media screen and (min-width: 1300px) and (max-width: 9999px) {
-    [data-page-id="CrohnsDisease"] .page-content #hero > div > article h2 .breakpoint {
+    [data-page-id="CrohnsDisease"].page-content #hero > div > article h2 .breakpoint {
         display: none;
     }
 }
 @media screen and (max-width: 959px) {
-    [data-page-id="CrohnsDisease"] .page-content #hero > div > article h2 strong {
+    [data-page-id="CrohnsDisease"].page-content #hero > div > article h2 strong {
         font-family: "Gotham", sans-serif;
         font-size: 32px;
         font-weight: 700;
     }
 }
 @media screen and (min-width: 960px) and (max-width: 9999px) {
-    [data-page-id="CrohnsDisease"] .page-content #hero > div > article h2 strong {
+    [data-page-id="CrohnsDisease"].page-content #hero > div > article h2 strong {
         font-family: "Gotham", sans-serif;
         font-size: 62px;
         font-weight: 700;
     }
 }
 @media screen and (min-width: 960px) and (max-width: 1250px) {
-    [data-page-id="CrohnsDisease"] .page-content #hero > div > article h2 strong {
+    [data-page-id="CrohnsDisease"].page-content #hero > div > article h2 strong {
         font-family: "Gotham", sans-serif;
         font-size: 50px;
         font-weight: 700;
     }
 }
 @media screen and (max-width: 959px) {
-    [data-page-id="CrohnsDisease"] .page-content #hero > div > article p {
+    [data-page-id="CrohnsDisease"].page-content #hero > div > article p {
         padding: 0;
         font-size: 12px;
         line-height: 14px;
@@ -9088,7 +9088,7 @@ footer a {
         top: 50%;
         left: 10px;
         transform: translateY(-50%);
-        background-image: url(../images/icons/scroll-hand.svg);
+        background-image: url(../images/scroll-hand.svg);
         background-size: 100% 100%;
         background-repeat: no-repeat;
         width: 38px;
