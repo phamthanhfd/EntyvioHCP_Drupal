@@ -37,6 +37,7 @@ $( document ).ready(function() {
     $(window).scroll(function(event){
 
       var nav_position = $('#second_section').length ? $('#second_section').offset().top : 99999;
+      nav_position = nav_position + 80;
       if (nav_position < $(window).scrollTop()){
         $('html').addClass('move-ahead-sticky');
         $(window).resize(function() {
@@ -159,9 +160,16 @@ $( document ).ready(function() {
     // Select all links with hashes
     $("[href^='#']").click(function() {
       id=$(this).attr("href")
-      $('html, body').animate({
-          scrollTop: $(id).offset().top
-      }, 1000);
+      var scr_top = $(window).scrollTop();
+      if($(id).offset().top > scr_top){
+        $('html, body').animate({
+            scrollTop: $(id).offset().top - 50
+        }, 1000);
+      }else{
+        $('html, body').animate({
+          scrollTop: $(id).offset().top - 165
+        }, 1000);
+      }
     });
 
      /* accordion animation varsity page */

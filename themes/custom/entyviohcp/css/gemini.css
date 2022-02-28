@@ -762,6 +762,11 @@ h2.banner {
   font-weight: bold;
   font-size: 14px;
 }
+@media screen and (min-width: 960px) and (max-width: 1800px){
+  [data-only*="desktop"] {
+    display: unset !important;
+  }
+}
 @media screen and (min-width: 960px) and (max-width: 9999px){
   h2.banner.below-nav {
     margin-top: 0;
