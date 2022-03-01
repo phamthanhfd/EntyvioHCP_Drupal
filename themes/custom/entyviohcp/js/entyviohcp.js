@@ -161,14 +161,29 @@ $( document ).ready(function() {
     $("[href^='#']").click(function() {
       id=$(this).attr("href")
       var scr_top = $(window).scrollTop();
-      if($(id).offset().top > scr_top){
-        $('html, body').animate({
-            scrollTop: $(id).offset().top - 50
-        }, 1000);
+
+      if($('.dosing-content').length){
+        if($(id).offset().top > scr_top){
+
+          $('html, body').animate({
+              scrollTop: $(id).offset().top - 30
+          }, 1000);
+        }else{
+          $('html, body').animate({
+            scrollTop: $(id).offset().top - 135
+          }, 1000);
+        }
       }else{
-        $('html, body').animate({
-          scrollTop: $(id).offset().top - 165
-        }, 1000);
+        if($(id).offset().top > scr_top){
+
+          $('html, body').animate({
+              scrollTop: $(id).offset().top - 50
+          }, 1000);
+        }else{
+          $('html, body').animate({
+            scrollTop: $(id).offset().top - 165
+          }, 1000);
+        }
       }
     });
 
