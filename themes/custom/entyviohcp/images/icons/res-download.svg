@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="68px" height="68px" viewBox="0 0 68 68" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>download</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="download">
+            <circle id="Oval" stroke="#9B288C" stroke-width="2" fill="#FFFFFF" fill-rule="nonzero" cx="34.0091275" cy="33.9452349" r="32.9269799"/>
+            <g id="Group" transform="translate(23.092617, 11.226846)" fill="#9B288C" fill-rule="nonzero">
+                <rect id="Rectangle" transform="translate(10.958332, 10.282020) rotate(-180.000000) translate(-10.958332, -10.282020) " x="7.59940617" y="0.00899973154" width="6.71785235" height="20.5460403"/>
+                <polygon id="Path" points="10.9621477 35.4786577 0.0547651007 18.5927517 21.8604027 18.5927517"/>
+            </g>
+            <line x1="12.6324832" y1="51.7665101" x2="55.4679195" y2="51.7665101" id="Path" stroke="#9B288C" stroke-width="2"/>
+        </g>
+    </g>
+</svg>

@@ -3314,72 +3314,72 @@ table tbody td {
     }
 }
 @media screen and (max-width: 959px) {
-    [data-page-category="AccessSupport"] .page-content #hero {
+    [data-page-category="AccessSupport"].page-content #hero {
         height: 290px;
     }
-    [data-page-category="AccessSupport"] .page-content #hero:after {
+    [data-page-category="AccessSupport"].page-content #hero:after {
         background: #fff;
     }
 }
 @media screen and (min-width: 960px) and (max-width: 9999px) {
-    [data-page-category="AccessSupport"] .page-content #hero {
+    [data-page-category="AccessSupport"].page-content #hero {
         height: 673px;
     }
 }
-[data-page-category="AccessSupport"] .page-content #hero > div > picture > img {
+[data-page-category="AccessSupport"].page-content #hero > div > picture > img {
     width: auto;
     height: 80%;
 }
 @media screen and (max-width: 959px) {
-    [data-page-category="AccessSupport"] .page-content #hero > div > picture > img {
+    [data-page-category="AccessSupport"].page-content #hero > div > picture > img {
         top: -6px;
     }
 }
 @media screen and (min-width: 960px) and (max-width: 9999px) {
-    [data-page-category="AccessSupport"] .page-content #hero > div > picture > img {
+    [data-page-category="AccessSupport"].page-content #hero > div > picture > img {
         top: 100px;
         left: auto;
     }
 }
 @media screen and (max-width: 374px) {
-    [data-page-category="AccessSupport"] .page-content #hero > div > article {
+    [data-page-category="AccessSupport"].page-content #hero > div > article {
         display: none !important;
     }
 }
 @media screen and (max-width: 959px) {
-    [data-page-category="AccessSupport"] .page-content #hero > div > article {
+    [data-page-category="AccessSupport"].page-content #hero > div > article {
         display: none !important;
     }
 }
 @media screen and (max-width: 959px) {
-    [data-page-category="AccessSupport"] .page-content #hero > div > article > div {
+    [data-page-category="AccessSupport"].page-content #hero > div > article > div {
         padding: 36px 0 0 17px;
     }
 }
 @media screen and (min-width: 960px) and (max-width: 9999px) {
-    [data-page-category="AccessSupport"] .page-content #hero > div > article > div {
+    [data-page-category="AccessSupport"].page-content #hero > div > article > div {
         padding: 258px 0 0 64px;
     }
 }
 @media screen and (max-width: 959px) {
-    [data-page-category="AccessSupport"] .page-content #hero .btn.btn-secondary {
+    [data-page-category="AccessSupport"].page-content #hero .btn.btn-secondary {
         padding: 10px;
         text-align: center;
     }
 }
 @media screen and (max-width: 374px) {
-    [data-page-category="AccessSupport"] .page-content #hero .btn.btn-secondary {
+    [data-page-category="AccessSupport"].page-content #hero .btn.btn-secondary {
         padding: 5px;
     }
 }
 @media screen and (max-width: 959px) {
-    [data-page-category="AccessSupport"] .page-content #hero .entyvioconnect-logo {
+    [data-page-category="AccessSupport"].page-content #hero .entyvioconnect-logo {
         margin-bottom: 15px;
         width: 145px;
     }
 }
 @media screen and (min-width: 960px) and (max-width: 9999px) {
-    [data-page-category="AccessSupport"] .page-content #hero .entyvioconnect-logo {
+    [data-page-category="AccessSupport"].page-content #hero .entyvioconnect-logo {
         position: relative;
         left: 6px;
         margin-bottom: 60px;
@@ -3387,12 +3387,12 @@ table tbody td {
     }
 }
 @media screen and (max-width: 374px) {
-    [data-page-category="AccessSupport"] .page-content #hero .entyvioconnect-logo {
+    [data-page-category="AccessSupport"].page-content #hero .entyvioconnect-logo {
         margin-bottom: 5px;
         width: 135px;
     }
 }
-[data-page-category="AccessSupport"] .page-content #hero div > article h1 {
+[data-page-category="AccessSupport"].page-content #hero div > article h1 {
     font-family: "Gotham", sans-serif;
     font-size: 32px;
     font-weight: 400;
@@ -3402,26 +3402,26 @@ table tbody td {
     text-transform: uppercase;
 }
 @media screen and (max-width: 374px) {
-    [data-page-category="AccessSupport"] .page-content #hero div > article h1 {
+    [data-page-category="AccessSupport"].page-content #hero div > article h1 {
         margin-bottom: 5px;
     }
 }
 @media screen and (max-width: 959px) {
-    [data-page-category="AccessSupport"] .page-content #hero div > article h1 {
+    [data-page-category="AccessSupport"].page-content #hero div > article h1 {
         line-height: 11px;
     }
 }
 @media screen and (min-width: 960px) and (max-width: 9999px) {
-    [data-page-category="AccessSupport"] .page-content #hero div > article h1 {
+    [data-page-category="AccessSupport"].page-content #hero div > article h1 {
         font-size: 32px;
     }
 }
-[data-page-category="AccessSupport"] .page-content #hero div > article h1 a {
+[data-page-category="AccessSupport"].page-content #hero div > article h1 a {
     margin-top: 20px;
     color: #9b288c;
     display: inline-block;
 }
-[data-page-category="AccessSupport"] .page-content #hero div > article p {
+[data-page-category="AccessSupport"].page-content #hero div > article p {
     font-family: "Gotham", sans-serif;
     font-size: 20px;
     font-weight: 400;
@@ -7799,7 +7799,7 @@ footer a {
         font-weight: 500;
     }
 }
-[data-page-category="AccessSupport"] .page-content {
+[data-page-category="AccessSupport"].page-content {
     background: #fff;
 }
 [data-page-category="AccessSupport"] h2.primary {
@@ -7849,6 +7849,7 @@ footer a {
     [data-page-category="AccessSupport"] .btn.btn-secondary:not(.back-to-top) {
         padding: 20px;
         font-size: 18px;
+        line-height: 18px;
     }
 }
 [data-page-category="AccessSupport"] #indication_bar {
@@ -7888,11 +7889,15 @@ footer a {
         padding: 0 90px;
         max-width: 1366px;
     }
+
 }
 @media screen and (min-width: 1800px) and (max-width: 9999px) {
     [data-page-category="AccessSupport"] .navigation-wrapper > section {
         padding: 0 90px;
         max-width: 1366px;
+    }
+    [data-page-category="AccessSupport"] [data-only*="desktop"]{
+      display: unset !important;
     }
 }
 [data-page-category="AccessSupport"] .navigation-wrapper h2 {
@@ -13393,10 +13398,10 @@ footer a {
         padding: 10pt !important;
         border: 1px solid #58595b;
     }
-    [data-page-category="AccessSupport"] .page-content #hero .entyvioconnect-logo {
+    [data-page-category="AccessSupport"].page-content #hero .entyvioconnect-logo {
         width: 200pt;
     }
-    [data-page-category="AccessSupport"] .page-content #hero > div > article > div {
+    [data-page-category="AccessSupport"].page-content #hero > div > article > div {
         flex: auto;
         max-width: none;
     }
