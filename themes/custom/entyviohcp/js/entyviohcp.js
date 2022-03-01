@@ -166,7 +166,7 @@ $( document ).ready(function() {
         if($(id).offset().top > scr_top){
 
           $('html, body').animate({
-              scrollTop: $(id).offset().top - 30
+              scrollTop: $(id).offset().top - 50
           }, 1000);
         }else{
           $('html, body').animate({
