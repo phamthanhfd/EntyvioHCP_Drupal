@@ -7901,6 +7901,9 @@ footer a {
     [data-page-category="AccessSupport"] .insurance-support[data-only*="desktop"]{
       display: unset !important;
     }
+    [data-page-category="AccessSupport"] #affordability [data-only*="desktop"]{
+      display: unset !important;
+    }
 }
 [data-page-category="AccessSupport"] .navigation-wrapper h2 {
     color: #fff;
