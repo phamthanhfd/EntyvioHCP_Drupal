@@ -751,7 +751,7 @@ $settings['entity_update_backup'] = TRUE;
  * node migrations.
  */
 $settings['migrate_node_migrate_type_classic'] = FALSE;
-
+$settings['rebuild_access'] = TRUE;
 /**
  * Load local development override configuration, if available.
  *

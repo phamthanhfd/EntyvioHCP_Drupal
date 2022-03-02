@@ -3,7 +3,6 @@ global-styling:
   js:
     includes/jquery/jquery.js: {}
     js/entyviohcp.js: {}
-    includes/bootstrap/js/bt.js: {}
   css:
     theme:
       css/core/reset.css: {}
