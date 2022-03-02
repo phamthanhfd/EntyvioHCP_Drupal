@@ -63,8 +63,9 @@ $( document ).ready(function() {
 
         if($(window).scrollTop() > 190){
           var width = $(window).width();
-          if (width > 959){
-          $('header').css("top","-190px");}
+          //if (width > 959){
+            $('header').css("top","-190px");
+          //}
         }else{
           $('header').css("top","0");
         }

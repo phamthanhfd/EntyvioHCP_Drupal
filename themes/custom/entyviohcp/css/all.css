@@ -7889,14 +7889,16 @@ footer a {
         padding: 0 90px;
         max-width: 1366px;
     }
-
+    [data-page-category="AccessSupport"] #hero [data-only*="desktop"]{
+      display: flex !important;
+    }
 }
 @media screen and (min-width: 1800px) and (max-width: 9999px) {
     [data-page-category="AccessSupport"] .navigation-wrapper > section {
         padding: 0 90px;
         max-width: 1366px;
     }
-    [data-page-category="AccessSupport"] [data-only*="desktop"]{
+    [data-page-category="AccessSupport"] .insurance-support[data-only*="desktop"]{
       display: unset !important;
     }
 }
