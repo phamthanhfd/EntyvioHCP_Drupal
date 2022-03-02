@@ -1,4 +1,4 @@
-<header data-device="desktop"  class="header" {% if logged_in %} style="position: unset !important;" {% endif %}  >
+<header data-device="desktop"  class="header" {% if logged_in %} login="true" {% endif %}  >
   <div class="header-container">
     <div class="pushdown" {% if is_front %} {% else %} style="display: none" {% endif %}>
       <div class="container">
@@ -93,7 +93,7 @@
     </div>
   </div>
 </header>
-<header data-device="mobile" class="header"  data-only="mobile" {% if logged_in %} style="position: unset !important;" {% endif %}> <!-- Mobile only header; on desktop, this will hide -->
+<header data-device="mobile" class="header"  data-only="mobile" {% if logged_in %} login="true" {% endif %}> <!-- Mobile only header; on desktop, this will hide -->
     <div class="pushdown" {% if is_front %} {% else %} style="display: none" {% endif %}>
         <div class="container">
           <div class="flex-container">

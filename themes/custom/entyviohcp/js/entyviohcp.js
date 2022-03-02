@@ -63,11 +63,17 @@ $( document ).ready(function() {
 
         if($(window).scrollTop() > 190){
           var width = $(window).width();
-          //if (width > 959){
+          if ($('header[login="true"]').length){
+            $('header').css("top","-229px");
+          }else{
             $('header').css("top","-190px");
-          //}
+          }
         }else{
-          $('header').css("top","0");
+          if ($('header[login="true"]').length){
+            $('header').css("top","39px");
+          }else{
+            $('header').css("top","0");
+          }
         }
 
         $('.back-to-top').removeClass('show');
@@ -76,7 +82,11 @@ $( document ).ready(function() {
         $('html').addClass('scroll-state-up');
         $('html').removeClass('scroll-state-down');
 
-        $('header').css("top","0");
+        if ($('header[login="true"]').length){
+          $('header').css("top","39px");
+        }else{
+          $('header').css("top","0");
+        }
         if ($(window).scrollTop() < 300) {
           $('.back-to-top').removeClass('show');
         } else {
