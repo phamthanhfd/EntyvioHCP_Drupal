@@ -998,6 +998,9 @@ table tbody td {
         padding: 0 30px;
         max-width: 1366px;
     }
+    [data-page-id="PatientCare"] #entyvioconnect_contact  [data-only*="desktop"] {
+        display: block;
+    }
 }
 @media screen and (max-width: 959px) {
     header[data-device="mobile"] {
@@ -10469,6 +10472,10 @@ footer a {
     }
     [data-page-id="DosingAdministration"] #first_section h2 {
         margin-bottom: 20px;
+        padding-bottom: 0 !important;
+    }
+    [data-page-id="DosingAdministration"] #second_section .move-ahead .border-center {
+      padding-bottom: 0 !important;
     }
     [data-page-id="DosingAdministration"] article > div {
         padding: 0;
@@ -13537,6 +13544,11 @@ footer a {
     [data-page-id="PeerPerspective"] .carousel .carousel-video-controller figure img {
         width: 400pt;
     }
+}
+@media screen and (max-width: 959px){
+  [data-page-id="GeminiTrial"] #overview-trial-data h2.border, h2.border-center {
+    padding-top: 25px !important;
+  }
 }
 
 

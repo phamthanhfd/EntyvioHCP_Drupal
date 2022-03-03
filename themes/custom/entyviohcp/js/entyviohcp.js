@@ -12,6 +12,7 @@ $( document ).ready(function() {
       }
     }
 
+    //Handle main nav
     var pathname = window.location.pathname;
     var la = $('.main-nav>.container>nav>ul>li');
     la.each(function(){
@@ -28,6 +29,55 @@ $( document ).ready(function() {
     })
     var it_home = $('.main-nav>.container>nav>ul>li[homepage="true"]');
     it_home.addClass('active');
+
+    let contain_clinicalefficacy = pathname.includes("clinical-efficacy/ulcerative-colitis");
+    if(contain_clinicalefficacy){
+      $('.clinicalefficacy-item').addClass('active');
+    }
+
+    let contain_accesssupport = pathname.includes("access-support");
+    if(contain_accesssupport){
+      $('.access-support-item').addClass('active');
+    }
+
+    let contain_resources = pathname.includes("resources");
+    if(contain_resources){
+      $('.resources-item').addClass('active');
+    }
+
+    //Handle link in submenu
+    let contain_clinicalefficacy1 = pathname.includes("clinical-efficacy/ulcerative-colitis/gemini-trial");
+    if(contain_clinicalefficacy1){
+      $('.sub_gemini-trial').addClass('active');
+    }
+    let contain_clinicalefficacy2 = pathname.includes("clinical-efficacy/ulcerative-colitis/varsity-trial");
+    if(contain_clinicalefficacy2){
+      $('.sub_varsity-trial').addClass('active');
+    }
+    let contain_clinicalefficacy3 = pathname.includes("clinical-efficacy/crohns-disease/entyvio-placebo-trial");
+    if(contain_clinicalefficacy3){
+      $('.sub_entyvio-placebo-trial').addClass('active');
+    }
+    let contain_resources1 = pathname.includes("resources/virtual-congress");
+    if(contain_resources1){
+      $('.sub_professional-resources').addClass('active');
+    }
+    let contain_resources2 = pathname.includes("resources/peer-perspective");
+    if(contain_resources2){
+      $('.sub_peer-perspective').addClass('active');
+    }
+    let contain_resources3 = pathname.includes("resources/request-a-representative");
+    if(contain_resources3){
+      $('.sub_request-a-representative').addClass('active');
+    }
+    let contain_resources4 = pathname.includes("resources/clinical-reprints");
+    if(contain_resources4){
+      $('.sub_clinical-reprints').addClass('active');
+    }
+    //End handle link in submenu
+
+    //End handle main nav
+
 
     if( $('#isi').length ){
       $( "#isi>.section").clone().appendTo( "#fixed_isi" );
@@ -256,7 +306,37 @@ $( document ).ready(function() {
     })
 
 
-
+    // Modal
+    $('[data-modal="external"]').click(function(e){
+      e.preventDefault();
+      var hr = $(this).attr('href');
+      $('#modal [data-modal-content="external"] a.external').attr('href',hr);
+      $('[data-modal-content="external"]').addClass('active');
+      $('#modal').addClass('active')
+    })
+    $('[data-modal="external_third_party"]').click(function(e){
+      e.preventDefault();
+      var hr = $(this).attr('href');
+      $('#modal [data-modal-content="external_third_party"] a.external').attr('href',hr);
+      $('[data-modal-content="external_third_party"]').addClass('active');
+      $('#modal').addClass('active')
+    })
+    $('[data-modal="external_medconnect"]').click(function(e){
+      e.preventDefault();
+      var hr = $(this).attr('href');
+      $('#modal [data-modal-content="external_medconnect"] a.external').attr('href',hr);
+      $('[data-modal-content="external_medconnect"]').addClass('active');
+      $('#modal').addClass('active')
+    })
+    $('#modal button.close').click(function(){
+      $('[data-modal-content]').removeClass('active');
+      $('#modal').removeClass('active')
+    })
+    $('#modal a.external').click(function(){
+      $('[data-modal-content]').removeClass('active');
+      $('#modal').removeClass('active')
+    })
+    //End modal
 
 });
 

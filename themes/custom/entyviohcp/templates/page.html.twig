@@ -34,22 +34,22 @@
           <!-- NAVIGATION STARTS -->
           <ul>
           <li {% if is_front %}class="active" homepage="true" {% endif %}><a href="{{ url('<front>') }}" title="Home" target="_self">Home</a></li>
-          <li class="has-submenu clinicalefficacy">
+          <li class="has-submenu clinicalefficacy clinicalefficacy-item">
             <a href="{{ base_path }}clinical-efficacy/ulcerative-colitis/gemini-trial" aria-haspopup="true" aria-expanded="false" target="_self"><span>Clinical <br data-only="desktop">Efficacy</span></a>
             <button id="mobile_nav_trigger_clinicalefficacy" class="icon-trigger" aria-expanded="true"><span class="visuallyhidden">show submenu for Clinical Efficacy</span></button>
             <div class="subnav clinicalefficacy">
               <div class="uc">
                 <h3>UC</h3>
                 <ul>
-                  <li class=""><a href="{{ base_path }}clinical-efficacy/ulcerative-colitis/gemini-trial" target="_self"> GEMINI I: ENTYVIO <em class="vs">vs.</em> PLACEBO</a></li>
-                  <li class=""><a href="{{ base_path }}clinical-efficacy/ulcerative-colitis/varsity-trial" target="_self">VARSITY: HEAD-TO-HEAD STUDY</a></li>
+                  <li class="sub_gemini-trial"><a href="{{ base_path }}clinical-efficacy/ulcerative-colitis/gemini-trial" target="_self"> GEMINI I: ENTYVIO <em class="vs">vs.</em> PLACEBO</a></li>
+                  <li class="sub_varsity-trial"><a href="{{ base_path }}clinical-efficacy/ulcerative-colitis/varsity-trial" target="_self">VARSITY: HEAD-TO-HEAD STUDY</a></li>
                 </ul>
               </div>
 
               <div class="cd">
                 <h3>CD</h3>
                 <ul>
-                  <li class=""><a href="{{ base_path }}clinical-efficacy/crohns-disease/entyvio-placebo-trial" target="_self">GEMINI II AND III: ENTYVIO <em class="vs">vs.</em> PLACEBO</a></li>
+                  <li class="sub_entyvio-placebo-trial"><a href="{{ base_path }}clinical-efficacy/crohns-disease/entyvio-placebo-trial" target="_self">GEMINI II AND III: ENTYVIO <em class="vs">vs.</em> PLACEBO</a></li>
                 </ul>
               </div>
             </div>
@@ -58,20 +58,20 @@
           <li class=""><a href="{{ base_path }}mechanism-of-action" target="_self"><span>Mechanism <br data-only="desktop">of Action</span></a></li>
           <li class=""><a href="{{ base_path }}safety-profile" target="_self"><span>Safety <br data-only="desktop">Profile</span></a></li>
           <li class=""><a href="{{ base_path }}dosing-administration" target="_self"><span>Dosing &amp; <br data-only="desktop">Administration</span></a></li>
-          <li class=""><a href="{{ base_path }}access-support/insurance-support" target="_self"><span><em data-ec="">EntyvioConnect</em></span></a></li>
+          <li class="access-support-item"><a href="{{ base_path }}access-support/insurance-support" target="_self"><span><em data-ec="">EntyvioConnect</em></span></a></li>
 
-          <li class="has-submenu resources">
+          <li class="has-submenu resources resources-item">
             <a href="{{ base_path }}resources/professional-resources" aria-haspopup="true" aria-expanded="false" target="_self"><span>Resources</span></a>
             <button id="mobile_nav_trigger_resources" class="icon-trigger" aria-expanded="false"><span class="visuallyhidden">show submenu for Resources</span></button>
             <div class="subnav resources">
               <div class="">
                 <h3 class=""><a href="{{ base_path }}resources/professional-resources" target="_self">FOR YOU</a></h3>
                 <ul>
-                  <li class=""><a href="{{ base_path }}resources/virtual-congress" target="_self">ANNUAL CONGRESSES</a></li>
+                  <li class="sub_professional-resources"><a href="{{ base_path }}resources/virtual-congress" target="_self">ANNUAL CONGRESSES</a></li>
                   <li><a href="https://www.entyviovirtualbooth.com/" data-modal="external" target="_blank">VIRTUAL CONGRESS BOOTH</a></li>
-                  <li class=""><a href="{{ base_path }}resources/peer-perspective" target="_self">PEER PERSPECTIVES</a></li>
-                  <li class=""><a href="{{ base_path }}resources/request-a-representative" target="_self">REQUEST A REPRESENTATIVE</a></li>
-                  <li class=""><a href="{{ base_path }}resources/clinical-reprints" target="_self">CLINICAL REPRINTS</a></li>
+                  <li class="sub_peer-perspective"><a href="{{ base_path }}resources/peer-perspective" target="_self">PEER PERSPECTIVES</a></li>
+                  <li class="sub_request-a-representative"><a href="{{ base_path }}resources/request-a-representative" target="_self">REQUEST A REPRESENTATIVE</a></li>
+                  <li class="sub_clinical-reprints"><a href="{{ base_path }}resources/clinical-reprints" target="_self">CLINICAL REPRINTS</a></li>
                 </ul>
               </div>
 
@@ -148,7 +148,7 @@
           <p>
             ©2021 Takeda&nbsp;Pharmaceuticals U.S.A., Inc.<br>
             This site is intended for use by U.S. residents only.
-          <span data-float="right">US-VED-1124v1.0 10/21</span>
+          {% if is_front %}<span data-float="right">US-VED-1124v1.0 10/21</span> {% endif %}
           </p>
         </div>
       </div>
@@ -159,4 +159,42 @@
 <div id="fixed_isi" class=""></div>
 
 <button class="back-to-top btn btn-secondary" tabindex="0">Back to top</button>
+
+<div id="modal" role="dialog" aria-modal="true" aria-labelledby="modal_content" data-modal-animation="slide" class="">
+	<div id="modal_content">
+		<button class="close" aria-label="Close"><span></span></button>
+
+		<section class="content" data-modal-content="external_medconnect">
+			<h2>You are about to leave this website.</h2>
+			<p>By clicking "Continue," you will leave this site and enter TakedaMedConnect.com. The information contained on Takeda MedConnect is intended for U.S. healthcare professionals only in response to a specific request for medical information.</p>
+			<div class="modal-footer">
+				<button class="btn btn-secondary close">Cancel</button>
+				<a class="btn btn-secondary external" href="" target="_blank" rel="noreferrer">Continue</a>
+			</div>
+		</section>
+
+
+		<section class="content" data-modal-content="external">
+			<h2>You are about to leave this website.</h2>
+			<div class="modal-footer">
+				<button class="btn btn-secondary close">Cancel</button>
+				<a class="btn btn-secondary external" href="https://www.entyvio.com/" target="_blank" rel="noreferrer">Continue</a>
+			</div>
+		</section>
+
+
+		<section class="content" data-modal-content="external_third_party">
+			<h2>You are about to leave this website and enter a website operated by an independent third party.</h2>
+			<p>The links to third-party websites contained on this website are provided solely for your convenience. Takeda does not control the content contained on any third-party website linked from this website. Your activities at those websites will be governed by the policies and practices of those third parties.</p>
+
+			<p>Please select "Continue" if you wish to be taken to this third-party website.</p>
+			<div class="modal-footer">
+				<button class="btn btn-secondary close">Cancel</button>
+				<a class="btn btn-secondary external" href="" target="_blank" rel="noreferrer">Continue</a>
+			</div>
+		</section>
+
+	</div>
+	<strong></strong>
+</div>
 
