@@ -3906,7 +3906,7 @@ table tbody td {
 }
 @media screen and (min-width: 1800px) and (max-width: 9999px) {
     #isi {
-        padding: 0 30px;
+        padding: 0 30px !important;
         max-width: 1366px;
     }
 }
@@ -10755,7 +10755,7 @@ footer a {
 }
 @media screen and (min-width: 960px) and (max-width: 9999px) {
     [data-page-id="MechanismOfAction"] #first_section {
-        background-size: 100% auto;
+        background-size: 101% auto;
     }
     [data-page-id="MechanismOfAction"] #first_section .moa-intro .key-point p {
         font-family: "Gotham", sans-serif;

@@ -40,7 +40,7 @@ $( document ).ready(function() {
       $('.access-support-item').addClass('active');
     }
 
-    let contain_resources = pathname.includes("resources");
+    let contain_resources = pathname.includes("/resources");
     if(contain_resources){
       $('.resources-item').addClass('active');
     }
@@ -90,10 +90,19 @@ $( document ).ready(function() {
       nav_position = nav_position + 80;
       if (nav_position < $(window).scrollTop()){
         $('html').addClass('move-ahead-sticky');
+        if($('[data-page-category="DosingAdministration"]').length){
+          var height_menu = '180px';
+        }else{
+          var height_menu = '230px';
+        }
+        var wwidth = $(window).width();
+        if (wwidth > 959){
+          $('.move-ahead-header').css('height',height_menu);
+        }
         $(window).resize(function() {
           var width = $(window).width();
           if (width > 959){
-            $('.move-ahead-header').css('height','230px');
+            $('.move-ahead-header').css('height',height_menu);
           }
         });
         //console.log('move-ahead-sticky '+ nav_position +' < '+ $(window).scrollTop())
@@ -218,34 +227,50 @@ $( document ).ready(function() {
       }
     })
 
-    // Select all links with hashes
+    // Anchor links
     $("[href^='#']").click(function() {
+      _this = $(this);
       id=$(this).attr("href")
       var scr_top = $(window).scrollTop();
+      var el_top = $(id).offset().top;
+      if($(_this).attr("href") == '#isi'){
+        el_top += 30;
+      }else if($(_this).attr("href") == '#at-a-glance'){
+        el_top += 35;
+      }
 
-      if($('.dosing-content').length){
-        if($(id).offset().top > scr_top){
+      var _pos = 0;
 
-          $('html, body').animate({
-              scrollTop: $(id).offset().top - 50
-          }, 1000);
+      if($('[data-page-category="DosingAdministration"]').length){
+        if(el_top > scr_top){
+          console.log('dossing')
+          _pos = el_top - 30;
         }else{
-          $('html, body').animate({
-            scrollTop: $(id).offset().top - 135
-          }, 1000);
+          _pos = el_top - 145;
+        }
+      }else if($('[data-page-category="ClinicalEfficacy"]').length){
+        if(el_top > scr_top){
+          console.log('dossing')
+          _pos = el_top - 50;
+        }else{
+          _pos = el_top - 165;
+        }
+      }else if($('.path-frontpage')){
+        if(el_top > scr_top){
+          _pos = el_top;
+        }else{
+          _pos = el_top - 195;
         }
       }else{
-        if($(id).offset().top > scr_top){
-
-          $('html, body').animate({
-              scrollTop: $(id).offset().top - 50
-          }, 1000);
+        if(el_top > scr_top){
+          _pos = el_top;
         }else{
-          $('html, body').animate({
-            scrollTop: $(id).offset().top - 165
-          }, 1000);
+          _pos = el_top - 135;
         }
       }
+      $('html, body').animate({
+        scrollTop: _pos
+      }, 1000);
     });
 
      /* accordion animation varsity page */
