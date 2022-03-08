@@ -10811,7 +10811,7 @@ footer a {
 }
 [data-page-category="Resources"] #first_section {
     background: url(../images/backgrounds/sitemap_bg.svg) 50% 0 repeat-y;
-    background-size: 100% auto;
+    background-size: 101% auto;
 }
 [data-page-category="Resources"] .body-content > article {
     overflow: hidden;

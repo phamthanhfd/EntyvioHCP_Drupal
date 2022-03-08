@@ -79,6 +79,8 @@ virtual-congress-styling:
       css/all.css: {}
 peer-perspectives-styling:
   version: 1.x
+  js:
+    includes/brightcove-player-loader/player-loader.js: {}
   css:
     theme:
       css/all.css: {}
