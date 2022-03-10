@@ -363,6 +363,33 @@ $( document ).ready(function() {
     })
     //End modal
 
+
+    $('.toggle-transcript').click(function(){
+      $(this).closest('.bottom-content').toggleClass('active-transcript');
+    })
+    $('.toggle-synopsis').click(function(){
+      $(this).closest('.bottom-content').toggleClass('active-synopsis');
+    })
+    $('#video-gallery .gallery-item .poster-image').click(function(){
+      $(this).hide();
+      $(this).siblings('[data-application-id]').show();
+      //$(this).siblings('[data-application-id] .vjs-play-control.vjs-control.vjs-button');
+      $(this).siblings('[data-application-id]').find('video').trigger("click");
+    })
+
+    $('#video-gallery .desktop-video-selector .video-selector').click(function(){
+      $('#video-gallery .desktop-video-selector .video-selector').removeClass('active');
+      $(this).addClass('active');
+      var id = $(this).attr('data-video-id');
+      if(!$('#video-gallery .gallery-items .gallery-item.active .video-js[data-application-id]').hasClass('vjs-paused')){
+        $('#video-gallery .gallery-items .gallery-item.active .video-js[data-application-id] video').trigger("click");
+      }
+      $('#video-gallery .gallery-items .gallery-item').removeClass('active');
+      $('#video-gallery .gallery-items .gallery-item[data-video-id='+id+']').addClass('active');
+    })
+
+
+    
 });
 
 

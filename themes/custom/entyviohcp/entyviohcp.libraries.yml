@@ -3,6 +3,8 @@ global-styling:
   js:
     includes/jquery/jquery.js: {}
     js/entyviohcp.js: {}
+    https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js: { type: external, minified: true }
+    https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/additional-methods.min.js: { type: external, minified: true }
   css:
     theme:
       css/core/reset.css: {}

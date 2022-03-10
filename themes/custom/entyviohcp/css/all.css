@@ -11606,6 +11606,9 @@ footer a {
         padding: 0;
         background: none;
     }
+    [data-page-id="PeerPerspective"] .body-content > article .title-area h2 {
+        padding-bottom: 0;
+    }
     [data-page-id="PeerPerspective"] .btn.btn-secondary[data-only="desktop"] {
         display: none;
     }
@@ -11933,6 +11936,11 @@ footer a {
 [data-page-id="RequestARepresentative"] input[type="tel"],
 [data-page-id="RequestARepresentative"] input[type="email"] {
     background: #fff;
+}
+[data-page-id="RequestARepresentative"] fieldset{
+  border: none;
+  margin: 0;
+  padding: 0;
 }
 [data-page-id="RequestARepresentative"] #State {
     background: url("../images/icons/request-a-rep-dropdown-brand.svg") calc(100% - 10px) 50% no-repeat #fff;
