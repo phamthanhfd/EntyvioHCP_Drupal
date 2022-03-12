@@ -106,6 +106,7 @@ local-coverage-styling:
   css:
     theme:
       css/all.css: {}
+      css/local-coverage.css: {}
 site-map-styling:
   version: 1.x
   css:

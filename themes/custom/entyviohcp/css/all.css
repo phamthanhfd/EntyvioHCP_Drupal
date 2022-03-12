@@ -7511,7 +7511,7 @@ footer a {
     [data-page-id="Sitemap"] #hero:after {
         content: none;
     }
-    [data-page-id="Sitemap"] .page-content {
+    [data-page-id="Sitemap"].page-content {
         background: url(../images/backgrounds/sitemap_bg.svg) 0 -390px repeat-y;
         background-size: 100% auto;
     }
@@ -7551,10 +7551,10 @@ footer a {
     }
 }
 @media screen and (min-width: 960px) and (max-width: 9999px) {
-    [data-page-id="Sitemap"] header[data-device="desktop"] .eyebrow:before {
+    .page-node-type-site-map header[data-device="desktop"] .eyebrow:before {
         content: none;
     }
-    [data-page-id="Sitemap"] header[data-device="desktop"] .eyebrow:after {
+    .page-node-type-site-map header[data-device="desktop"] .eyebrow:after {
         width: 100%;
         left: 0;
         background: url(../images/backgrounds/sitemap_bg.svg) 0 -390px no-repeat;
@@ -7569,10 +7569,10 @@ footer a {
         content: none;
     }
     [data-page-id="Sitemap"] #hero:after {
-        left: 0;
+        left: -1px;
         width: 100%;
         background: url(../images/backgrounds/sitemap_bg.svg) 0 calc(100% + 200px) no-repeat;
-        background-size: 100% auto;
+        background-size: 101% auto;
     }
     [data-page-id="Sitemap"] #first_section {
         background: url(../images/backgrounds/sitemap_bg.svg) 50% top no-repeat;
@@ -7685,7 +7685,7 @@ footer a {
         line-height: 34px;
         text-align: left;
     }
-    [data-page-id="Covid"] .page-content {
+    [data-page-id="Covid"].page-content {
         background: url(../images/backgrounds/sitemap_bg.svg) 0 -390px repeat-y;
         background-size: 100% auto;
     }
@@ -7732,14 +7732,14 @@ footer a {
     }
 }
 @media screen and (min-width: 960px) and (max-width: 9999px) {
-    [data-page-id="Covid"] header[data-device="desktop"] .eyebrow:before {
+    .page-node-type-coronavirus-covid-19-information header[data-device="desktop"] .eyebrow:before {
         content: none;
     }
-    [data-page-id="Covid"] header[data-device="desktop"] .eyebrow:after {
+    .page-node-type-coronavirus-covid-19-information header[data-device="desktop"] .eyebrow:after {
         width: 100%;
-        left: 0;
+        left: -1px;
         background: url(../images/backgrounds/sitemap_bg.svg) 0 -390px no-repeat;
-        background-size: 100% auto;
+        background-size: 101% auto;
     }
     [data-page-id="Covid"] #hero {
         min-height: 280px;
@@ -7750,10 +7750,10 @@ footer a {
         content: none;
     }
     [data-page-id="Covid"] #hero:after {
-        left: 0;
+        left: -1px;
         width: 100%;
         background: url(../images/backgrounds/sitemap_bg.svg) 0 calc(100% + 200px) no-repeat;
-        background-size: 100% auto;
+        background-size: 101% auto;
     }
     [data-page-id="Covid"] #hero h1 {
         font-family: "Knockout", sans-serif;
