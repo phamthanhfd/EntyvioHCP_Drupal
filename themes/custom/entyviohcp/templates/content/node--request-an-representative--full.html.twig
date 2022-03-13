@@ -52,7 +52,7 @@
 				</div>
 
 				<div class="main-container">
-					<form action="{{ base_path }}vital/requestrep" method="post" class="requestRep" id="requestRep" name="requestRep" novalidate="novalidate">
+					<form action="/vital/requestrep" method="post" class="requestRep" id="requestRep" name="requestRep" novalidate="novalidate">
 						<input name="__RequestVerificationToken" type="hidden" value="MAy9uKkRHTW5k9NEJ3IaJbLqf_RjveAHxRIeJskSNpZim52FzvESAuQOj0XQC7a-mTgA3bX8UZnkH5VSHPMUqPsVOVtAjLBZro8UrOEI-MQ1">
 						<section data-step="1">
 							<div>
@@ -284,3 +284,38 @@
 	</aside>
 
 </div>
+
+<script>
+  const pauseVideo = (id, time) => {
+      const video = document.getElementById(id);
+      video.pause();
+      video.classList.add('playing');
+      video.currentTime = time;
+  },
+  homepage_hover = () => {
+      document.querySelector('.head-to-head .btn').classList.add('hover');
+      document.querySelector('.btn[href="/mechanism-of-action"]').classList.add('hover');
+  },
+  Extra_Form_Errors = () => {
+      setTimeout(function () {
+          document.querySelectorAll('input, select').forEach(element => element.blur());
+          document.getElementById('Email-error').innerHTML = '<span class="ed-templating">[</span>Please enter your email address.<span class="ed-templating">]</span><br /><span class="ed-templating">[</span>Please enter a valid email address.<span class="ed-templating">]</span>';
+          document.getElementById('Zip-error').innerHTML = '<span class="ed-templating">[</span>Please enter your ZIP code.<span class="ed-templating">]</span><br /><span class="ed-templating">[</span>Please enter a valid ZIP code.<span class="ed-templating">]</span>';
+          document.getElementById('Server-error').innerHTML = 'Sorry, an error occurred while processing your request.';
+      }, 1000);
+  };
+</script>
+
+<script type="text/javascript" id="">
+var pulsePointPageConv={"/":"502363","/clinical-efficacy/ulcerative-colitis/gemini-trial":"502364","/clinical-efficacy/crohns-disease/entyvio-placebo-trial":"502365","/mechanism-of-action":"502366","/safety-profile":"502968","/clinical-efficacy/ulcerative-colitis/varsity-trial":"502368","/resources/clinical-reprints":"502369","/clinical-efficacy/crohns-disease/entyvio-placebo-trial":"502500","/clinical-efficacy/ulcerative-colitis/gemini-trial":"502501","/resources/peer-perspective":"502502","/local-coverage":"503415",
+"/#isi":"503417"},pulsePointPageRet={"/":{vid:"5720",token:"C20G50"},"/clinical-data/uc-data":{vid:"5720",token:"WELCZN"},"/clinical-data/cd-data":{vid:"5720",token:"RCD24A"},"/mechanism-of-action":{vid:"5720",token:"AFZLUC"},"/safety-profile":{vid:"5720",token:"MHVJZX"},"/clinical-efficacy/ulcerative-colitis/varsity-trial":{vid:"5720",token:"T3VKUO"},"/resources/clinical-reprints":{vid:"5720",token:"J72ZVR"},"/clinical-efficacy/crohns-disease/entyvio-placebo-trial":{vid:"5720",token:"PMPJGL"},"/clinical-efficacy/ulcerative-colitis/gemini-trial":{vid:"5720",
+token:"CZOXCQ"},"/resources/peer-perspective":{vid:"5720",token:"Y0ARNC"},"/local-coverage":{vid:"5720",token:"LYTEQ0"},"/#isi":{vid:"5720",token:"JJJQSF"}},sendPPConvTag=function(a){window.dataLayer.push({event:"intouch.ppconv","intouch.ppcv":a})},sendPPRetTag=function(a){window.dataLayer.push({event:"intouch.ppretarg","intouch.ppadvid":a.vid,"intouch.pptoken":a.token})};
+(function(a,b,c,d){void 0!=b[a]&&sendPPConvTag(b[a]);void 0!=b[a+d]&&sendPPConvTag(b[a+d]);void 0!=c[a]&&sendPPRetTag(c[a]);void 0!=c[a+d]&&sendPPRetTag(c[a+d])})(document.location.pathname.toLowerCase(),pulsePointPageConv,pulsePointPageRet,document.location.hash.toLowerCase());
+</script>
+<script type="text/javascript" id="">(function(){!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("dataProcessingOptions",["LDU"],0,0);fbq("init","225690442257893");fbq("track","PageView")})();</script>
+<script type="text/javascript" id="">
+var fl_page={"/clinical-data/cd-data":{type:"entyv0",cat:"taked000"},"/clinical-efficacy/ulcerative-colitis/varsity-trial":{type:"entyv0",cat:"taked003"},"/resources/clinical-reprints":{type:"entyv0",cat:"taked004"},"/clinical-efficacy/ulcerative-colitis/gemini-trial":{type:"entyv0",cat:"taked006"},"/clinical-efficacy/crohns-disease/entyvio-placebo-trial":{type:"entyv0",cat:"taked005"},"/":{type:"entyv0",cat:"taked0"},"/mechanism-of-action":{type:"entyv0",cat:"taked001"},"/safety-profile":{type:"entyv0",
+cat:"taked008"},"/clinical-data/uc-data":{type:"entyv0",cat:"taked00"},"/resources/peer-perspective":{type:"entyv0",cat:"taked007"},"#isi":{page:"/",type:"entyv0",cat:"taked00a"},"/local-coverage":{type:"entyv0",cat:"taked009"}},path=document.location.pathname.toLowerCase(),hash=document.location.hash.toLowerCase(),fl_account="DC-9400057";
+(function(a,c,d,e){var g=function(f){window.gtag("event","conversion",{allow_custom_scripts:!0,send_to:c+"/"+f.type+"/"+f.cat+"+standard"})},b=document.createElement("script");b.src="https://www.googletagmanager.com/gtag/js?id\x3d"+c;b.async=!0;b.onload=function(){window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments)};window.gtag("js",new Date);window.gtag("config",c);try{void 0!=a[d]&&g(a[d]),void 0!=a[e]&&a[e].page==d&&g(a[e])}catch(f){}};document.getElementsByTagName("body")[0].appendChild(b)})(fl_page,
+fl_account,path,hash);
+</script>

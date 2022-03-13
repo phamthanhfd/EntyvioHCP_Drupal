@@ -88,6 +88,9 @@ peer-perspectives-styling:
       css/all.css: {}
 request-an-representative-styling:
   version: 1.x
+  js:
+    includes/validation/validation.js: {}
+    js/form-request-rep.js: {}
   css:
     theme:
       css/all.css: {}
