@@ -90,7 +90,7 @@ request-an-representative-styling:
   version: 1.x
   js:
     includes/validation/validation.js: {}
-    js/form-request-rep.js: {}
+    js/main.js: {}
   css:
     theme:
       css/all.css: {}
