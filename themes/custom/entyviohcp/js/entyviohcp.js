@@ -233,7 +233,6 @@ $( document ).ready(function() {
         $(this).closest('.has-submenu').removeClass('active')
         $(this).removeClass('active');
         $(this).siblings('.subnav').removeClass('open');
-        //$(this).siblings('.subnav').slideUp();
         $(this).siblings('a').removeClass('active')
       }else{
         $(this).closest('.has-submenu').addClass('active')
